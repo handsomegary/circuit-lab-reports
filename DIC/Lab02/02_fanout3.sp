@@ -2,7 +2,7 @@ DIC Lab 2 step 2: 02_fanout3
 * Rewritten from DIC Lab.pdf, Lab 2; original files are references only.
 * supplied-model teaching adaptation: 1.0 V operating range, not a model rating claim.
 * HSPICE syntax; run this file directly in batch.
-.include '../../models/process.lib'
+* MODEL_SETUP_REQUIRED
 .option post=2 nomod measdgt=8 numdgt=8
 .temp 25
 .option runlvl=6

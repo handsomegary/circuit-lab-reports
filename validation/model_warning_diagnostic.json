@@ -3,7 +3,6 @@
   "report_date": "2026-10-17",
   "simulator": "PrimeSim HSPICE S-2021.09 win64",
   "scope": "One representative diagnostic deck; final decks and model were not modified.",
-  "model_filename": "process.lib",
   "original_batch_batch": {
     "deck_count": 17,
     "suppression_notice_count": 17,

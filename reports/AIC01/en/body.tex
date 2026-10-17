@@ -1,5 +1,5 @@
 \section{Objective}
-Rewrite and compare the current sources, simple mirror, cascode, high-swing cascode, Wilson, modified Wilson, regulated and complete regulated mirrors in Chapter 1, ``Current Sinks and Sources,'' of \textit{AIC Lab.pdf} (physical PDF pages 2--21). This delivery previews AIC Lab 1 only. Existing code supplies geometry and provenance references; the handout's circuits, questions and measurements define the coverage checklist.
+Rewrite and compare the current sources, simple mirror, cascode, high-swing cascode, Wilson, modified Wilson, regulated and complete regulated mirrors in Chapter 1, ``Current Sinks and Sources,'' of \textit{AIC Lab.pdf} (physical PDF pages 2--21). Existing code supplies geometry and provenance references; the handout's circuits, questions and measurements define the coverage checklist.
 
 The model library, supplied separately by the user, is used at 1.0 V. The handout's 0.35 $\mu$m, 3.3 V model, threshold and numerical plots are not acceptance targets for the supplied model. The 1 V supply is a teaching design condition, not a certification of the encrypted model's voltage rating.
 
@@ -40,7 +40,7 @@ Case 0 of decks 02--06 retains $W_{unit}=3\,\mu$m, $L=1.4\,\mu$m and $I_{ref}=50
 Deck 04 adds cases 4/5 at 1 $\mu$A and $W_{unit}=3\,\mu$m with M4 lengths of 3.5/14 $\mu$m (baseline 7 $\mu$m). Deck 06 adds case 4 with $W_{unit}=30\,\mu$m, MC2 width 120 $\mu$m and MC5/MC6 widths 300 $\mu$m; other dimensions remain as in case 3. This improves the amplifier-load headroom. The added complete-regulated PMOS dimensions are design choices here, not numerical values supplied by the handout.
 
 \section{Simulation Setup}
-Each of the seven standalone \texttt{.sp} decks directly includes the specified model and can be opened in the simulator without another subcircuit file. Actual runs used PrimeSim HSPICE S-2021.09 win64 at 27 $^\circ$C. All 30 base/alter cases completed without an error or failed measurement. Deck 01 covers four lengths, each with 11 gate voltages and 101 drain voltages.
+Each of the seven standalone \texttt{.sp} decks marks the model setup location. Private execution copies load the separately supplied library and require no other subcircuit file. Actual runs used PrimeSim HSPICE S-2021.09 win64 at 27 $^\circ$C. All 30 base/alter cases completed without an error or failed measurement. Deck 01 covers four lengths, each with 11 gate voltages and 101 drain voltages.
 
 DC output sweeps cover 0--1 V in 1 mV steps; all primary comparisons use $V_o=0.8$ V. A 1 V AC test gives $R_o=1/|I_{ac}|$ at 1 Hz. In the simple mirror, only VTEST has AC=1; the other fixed output sources have AC=0. This measures a single output-port impedance. A DC central difference at 0.799/0.801 V independently checks the result. The primary comparison cases agree within 0.56\%, with near-zero 1 Hz phase, supporting the low-frequency resistance approximation. The fixed M1--M4 table reports intrinsic device $1/g_{ds}$, a different definition from the complete output-port measurement.
 

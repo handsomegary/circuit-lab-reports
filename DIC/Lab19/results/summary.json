@@ -1,0 +1,56 @@
+{
+  "metrics": [
+    {
+      "deck": "01_ir_drop_decoupling",
+      "case": 0,
+      "rail_min": 0.93452821,
+      "rail_max": 0.99787859,
+      "supply_min": 0.96726585,
+      "ground_max": 0.032737637,
+      "rp_peak": 0.032734154,
+      "rn_peak": 0.032737637,
+      "power": 0.009923044,
+      "temper": 27.0,
+      "alter#": 1.0
+    },
+    {
+      "deck": "01_ir_drop_decoupling",
+      "case": 1,
+      "rail_min": 0.9348574,
+      "rail_max": 0.99715882,
+      "supply_min": 0.96743008,
+      "ground_max": 0.032572682,
+      "rp_peak": 0.032569922,
+      "rn_peak": 0.032572682,
+      "power": 0.0099302325,
+      "temper": 27.0,
+      "alter#": 2.0
+    },
+    {
+      "deck": "01_ir_drop_decoupling",
+      "case": 2,
+      "rail_min": 0.94510338,
+      "rail_max": 0.99601619,
+      "supply_min": 0.97255265,
+      "ground_max": 0.027449265,
+      "rp_peak": 0.027447352,
+      "rn_peak": 0.027449265,
+      "power": 0.0099745939,
+      "temper": 27.0,
+      "alter#": 3.0
+    },
+    {
+      "deck": "01_ir_drop_decoupling",
+      "case": 3,
+      "rail_min": 0.96779051,
+      "rail_max": 0.99121576,
+      "supply_min": 0.98249262,
+      "ground_max": 0.017282916,
+      "rp_peak": 0.017507383,
+      "rn_peak": 0.017282916,
+      "power": 0.0095201906,
+      "temper": 27.0,
+      "alter#": 4.0
+    }
+  ]
+}

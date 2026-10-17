@@ -1,0 +1,46 @@
+{
+  "source": "DIC Lab.pdf",
+  "pdf_pages": [
+    26,
+    30
+  ],
+  "decks": [
+    {
+      "netlist": "01_ring_oscillators.sp",
+      "cases": [
+        {
+          "PB": 0,
+          "NB": 0
+        },
+        {
+          "PB": 0.2,
+          "NB": 0
+        },
+        {
+          "PB": 0,
+          "NB": 0.2
+        },
+        {
+          "PB": 0.2,
+          "NB": 0.2
+        }
+      ],
+      "requirements": [
+        "Steps 1-2: N=3/5/7; nominal, PMOS-only, NMOS-only and dual reverse body bias"
+      ],
+      "notes": [
+        "The handout 0.5 V body offset at 2.5 V is scaled to 0.2 V at 1 V."
+      ]
+    },
+    {
+      "netlist": "02_body_threshold.sp",
+      "cases": [
+        {}
+      ],
+      "requirements": [
+        "Step 3: NMOS and PMOS threshold versus source-body reverse bias"
+      ],
+      "notes": []
+    }
+  ]
+}

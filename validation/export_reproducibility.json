@@ -1,5 +1,5 @@
 {
-  "input": "Final batch multi-job batch recorded in batch_execution.json",
+  "input": "Initial DIC01/DIC02/AIC01 batch; retained comparison of regenerated exports with archived data.",
   "DIC": {
     "exporter": "scripts/export_dic_results.py",
     "csv_files_compared": 9,

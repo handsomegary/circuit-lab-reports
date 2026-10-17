@@ -1,9 +1,9 @@
 # Local model library
 
-Place a locally authorized, flat model library here as `process.lib`. It must define the `nmos` and `pmos` model names used by the lab netlists. Model files are excluded from version control and are not supplied with these reports.
+Model libraries and their loading paths are supplied privately at execution time and are not included in the uploaded netlists. Ordinary decks expect `nmos` and `pmos`; the corner lab uses `n_18` and `p_18` from a separately supplied sectioned library.
 
-The 17 lab netlists use `.include '../../models/process.lib'` relative to their own lab directories. Run from the directory containing the netlist, or use `scripts/stage_batch.py` to resolve paths before running elsewhere.
+Each public deck contains a `MODEL_SETUP_REQUIRED` comment. The staging script replaces this comment only in the local execution copy, using the model selected at run time. A section name following the comment selects that named section in the corner library.
 
-The `.lib` filename extension alone does not select the SPICE command. Use `.include 'path/process.lib'` for a flat file; use `.lib 'path/corners.lib' SECTION` only if the library actually defines that named section with `.LIB SECTION` and `.ENDL SECTION`.
+Do not upload staged execution copies or model libraries. The extension of a model file does not establish the existence of selectable process corners. Section names must actually exist in the selected library.
 
-See `examples/include_path.sp` and `examples/library_section.sp`. The section name `TT` in the second example is a placeholder, not a statement about an available or verified corner. Check model names, operating limits and library documentation before using a different library. The supplied report data are from the original local simulations; another library can produce different results.
+The examples also omit loading paths. Check device names, operating limits and library documentation before using a different library; another model can produce different results.

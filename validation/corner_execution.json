@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "decks": 8,
+    "completed": 8,
+    "cases": 17,
+    "errors": 0,
+    "failed": 0,
+    "different_measurement_files": 0
+  },
+  "decks": [
+    {
+      "source": "DIC/Lab15/01_inverter_tt.sp",
+      "source_sha256": "7e47c5fa92e0212f12473abba177b3a70dc0eeb7dfdaadff18d332f4c508e910",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab15_01_inverter_tt.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab15/02_inverter_ff.sp",
+      "source_sha256": "984d484e1a1b483738df16b97966877e7637b7db3cffbad2e1ecf2389ce8acb2",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 2,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab15_02_inverter_ff.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab15_02_inverter_ff.mt1",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab15/03_inverter_ss.sp",
+      "source_sha256": "991d580ea0dc45221080d875bf76575334fe494a77a58492945a4b571553399d",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 2,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab15_03_inverter_ss.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab15_03_inverter_ss.mt1",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab15/04_dc_tt.sp",
+      "source_sha256": "0220aed4e1fe125c1c2e7ec668a8cec9e2d917d41083bde0ff3ed4cb208ce83e",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 4,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab15_04_dc_tt.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab15_04_dc_tt.ms1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab15_04_dc_tt.ms2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab15_04_dc_tt.ms3",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab15/05_dc_ff.sp",
+      "source_sha256": "71700dad9acd1e303eadacaf54279ef6c993a344643b35015ddea673499eb232",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 3,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab15_05_dc_ff.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab15_05_dc_ff.ms1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab15_05_dc_ff.ms2",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab15/06_dc_ss.sp",
+      "source_sha256": "6be5a5e546bca741c214605f98ad413a27199069dba2edfa8e42a3c9afd89f1f",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 3,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab15_06_dc_ss.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab15_06_dc_ss.ms1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab15_06_dc_ss.ms2",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab15/07_dc_sf.sp",
+      "source_sha256": "62fe17a56028b1daee682c6a1c899d635d15cb3b92c828b2514f5a1d6de1935b",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab15_07_dc_sf.ms0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab15/08_dc_fs.sp",
+      "source_sha256": "13e3442e1a3f852a6875b087d319760def54cdf1b6b5c0378e6e2f977c25e40c",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab15_08_dc_fs.ms0",
+          "same_reported_values": true
+        }
+      ]
+    }
+  ]
+}

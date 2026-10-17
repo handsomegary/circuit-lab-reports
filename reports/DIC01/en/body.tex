@@ -43,7 +43,7 @@ S=\left(\frac{d\log_{10}|I_D|}{d|V_{GS}|}\right)^{-1},
 in V/dec. A larger S means a smaller current slope on the semilog plot.
 
 \section{Simulation setup}
-PrimeSim HSPICE S-2021.09 win64 was used at 25\,$^\circ$C. Every deck directly includes the supplied model. The seven independent \texttt{.sp} files can be opened separately in the simulator; \texttt{.alter} defines parameter comparisons. Outputs include \texttt{.sw*} waveforms, \texttt{.ms*} measurements and printed data in \texttt{.lis}.
+PrimeSim HSPICE S-2021.09 win64 was used at 25\,$^\circ$C. Public decks mark the model setup location; private execution copies load the separately supplied library. The seven independent \texttt{.sp} files can be opened separately in the simulator; \texttt{.alter} defines parameter comparisons. Outputs include \texttt{.sw*} waveforms, \texttt{.ms*} measurements and printed data in \texttt{.lis}.
 
 \begin{itemize}
 \item Diode connection: $|V_{GS}|=|V_{DS}|=0$--1 V in 1 mV steps; W is 1, 2 or 4 times its baseline value.

@@ -1,0 +1,187 @@
+{
+  "source": "DIC Lab.pdf",
+  "pdf_pages": [
+    39,
+    43
+  ],
+  "decks": [
+    {
+      "netlist": "01_size_load.sp",
+      "cases": [
+        {
+          "SIZE": 1,
+          "LOAD": "0p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.1p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.2p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.3p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 2,
+          "LOAD": "0p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 2,
+          "LOAD": "0.1p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 2,
+          "LOAD": "0.2p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 2,
+          "LOAD": "0.3p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 3,
+          "LOAD": "0p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 3,
+          "LOAD": "0.1p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 3,
+          "LOAD": "0.2p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 3,
+          "LOAD": "0.3p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 4,
+          "LOAD": "0p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 4,
+          "LOAD": "0.1p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 4,
+          "LOAD": "0.2p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 4,
+          "LOAD": "0.3p",
+          "SLEW": "0.2n"
+        }
+      ],
+      "requirements": [
+        "Steps 1-3: four sizes x four loads with fixed input rise/fall"
+      ],
+      "notes": []
+    },
+    {
+      "netlist": "02_slew_load.sp",
+      "cases": [
+        {
+          "SIZE": 1,
+          "LOAD": "0p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.1p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.2p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.3p",
+          "SLEW": "0.2n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0p",
+          "SLEW": "0.4n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.1p",
+          "SLEW": "0.4n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.2p",
+          "SLEW": "0.4n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.3p",
+          "SLEW": "0.4n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0p",
+          "SLEW": "0.6n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.1p",
+          "SLEW": "0.6n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.2p",
+          "SLEW": "0.6n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.3p",
+          "SLEW": "0.6n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0p",
+          "SLEW": "0.8n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.1p",
+          "SLEW": "0.8n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.2p",
+          "SLEW": "0.8n"
+        },
+        {
+          "SIZE": 1,
+          "LOAD": "0.3p",
+          "SLEW": "0.8n"
+        }
+      ],
+      "requirements": [
+        "Step 4: Table 10.1 slew/load matrix and bilinear fit"
+      ],
+      "notes": []
+    }
+  ]
+}

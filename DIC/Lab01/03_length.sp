@@ -2,7 +2,7 @@ DIC Lab 1 step 3: channel-length dependence, both polarities
 * Rewritten from DIC Lab.pdf, Lab 1; original files are references only.
 * supplied-model teaching adaptation: 1.0 V operating range, not a model rating claim.
 * HSPICE syntax; run this file directly in batch.
-.include '../../models/process.lib'
+* MODEL_SETUP_REQUIRED
 .option post=2 nomod measdgt=8 numdgt=8
 .temp 25
 * Retain handout lengths 0.25, 0.5, 0.75, 1.0 um and widths 0.6/1.8 um.

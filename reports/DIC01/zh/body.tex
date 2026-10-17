@@ -43,7 +43,7 @@ S=\left(\frac{d\log_{10}|I_D|}{d|V_{GS}|}\right)^{-1},
 其單位為 V/dec；S 越大，半對數圖上的電流斜率越小。
 
 \section{模擬設定}
-使用 PrimeSim HSPICE S-2021.09 win64、25\,$^\circ$C，所有 deck 直接 include 本次模型。七份獨立 \texttt{.sp} 可在模擬器中個別開啟；\texttt{.alter} 產生同一電路的參數比較。各檔輸出 \texttt{.sw*} 波形、\texttt{.ms*} 量測與 \texttt{.lis} 列印資料。
+使用 PrimeSim HSPICE S-2021.09 win64、25\,$^\circ$C，公開 deck 以註記保留模型設定位置；本機執行副本才載入另行提供的模型。七份獨立 \texttt{.sp} 可在模擬器中個別開啟；\texttt{.alter} 產生同一電路的參數比較。各檔輸出 \texttt{.sw*} 波形、\texttt{.ms*} 量測與 \texttt{.lis} 列印資料。
 
 \begin{itemize}
 \item 二極體接法：$|V_{GS}|=|V_{DS}|=0$--1 V、步距 1 mV；W 為基準的 1、2、4 倍。

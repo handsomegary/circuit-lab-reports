@@ -1,0 +1,7 @@
+{
+  "format": "per-deck-json-v1",
+  "files": {
+    "01_mux_truth_table": "01_mux_truth_table_data.json",
+    "02_mux_delay_load": "02_mux_delay_load_data.json"
+  }
+}

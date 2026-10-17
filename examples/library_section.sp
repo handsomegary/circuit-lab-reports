@@ -1,9 +1,7 @@
 MOS DC example - sectioned model library
 * Template only: TT must match a real .LIB/.ENDL section in your library.
-* Replace both the path and section name using the library documentation.
-.lib '../models/corners.lib' TT
-* Absolute-path alternative:
-* .lib 'D:/models/corners.lib' TT
+* Add local section selection to a private execution copy.
+* MODEL_SETUP_REQUIRED TT
 .option post=2
 .temp 25
 VGS gate 0 0.6

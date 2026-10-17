@@ -1,0 +1,35 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec,xeCJK}
+\IfFontExistsTF{Microsoft JhengHei}{
+  \setCJKmainfont{Microsoft JhengHei}
+  \setCJKsansfont{Microsoft JhengHei}
+  \setCJKmonofont{Microsoft JhengHei}
+}{
+  \setCJKmainfont{Noto Serif CJK TC}
+  \setCJKsansfont{Noto Sans CJK TC}
+  \setCJKmonofont{Noto Sans CJK TC}
+}
+\usepackage[margin=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,longtable,array,xcolor,hyperref,listings,fancyhdr}
+\definecolor{accent}{HTML}{173C57}
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,pdftitle={DIC19 - 電源 IR 壓降與去耦電容}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.2}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,frame=single}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small DIC19 / 本次模型}
+\fancyhead[R]{\small 實驗報告}
+\fancyfoot[C]{\thepage}
+\title{\color{accent}DIC19\\[4pt]電源 IR 壓降與去耦電容}
+\author{依講義規格重寫之實驗報告}
+\date{17 October 2026}
+\begin{document}
+\maketitle
+\begin{center}\small\textbf{中文版}\\
+HSPICE S-2021.09 \quad | \quad 模型庫另行提供
+\end{center}
+\input{body.tex}
+\end{document}

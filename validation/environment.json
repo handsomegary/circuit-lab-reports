@@ -1,11 +1,25 @@
 {
   "model": {
     "external_dependency": true,
-    "include_path": "models/process.lib",
     "expected_device_models": [
       "nmos",
       "pmos"
-    ]
+    ],
+    "corner_exception": {
+      "lab": "DIC15",
+      "library": "User-supplied CIC 0.18 micron library",
+      "expected_device_models": [
+        "n_18",
+        "p_18"
+      ],
+      "sections": [
+        "TT",
+        "FF",
+        "SS",
+        "SF",
+        "FS"
+      ]
+    }
   },
   "DIC_handout": {
     "filename": "DIC Lab.pdf",
@@ -19,9 +33,39 @@
   "report_date": "2026-10-17",
   "time_zone": "America/Chicago",
   "scope": [
-    "DIC Lab 1",
-    "DIC Lab 2",
-    "AIC Lab 1"
+    "DIC01",
+    "DIC02",
+    "DIC04",
+    "DIC05",
+    "DIC06",
+    "DIC07",
+    "DIC08",
+    "DIC09",
+    "DIC10",
+    "DIC11",
+    "DIC12",
+    "DIC13",
+    "DIC14",
+    "DIC15",
+    "DIC16",
+    "DIC17",
+    "DIC19",
+    "DIC20",
+    "DIC21",
+    "DIC22",
+    "DIC23",
+    "DIC24",
+    "DIC25",
+    "DIC26",
+    "DIC27",
+    "DIC28",
+    "AIC01",
+    "AIC02",
+    "AIC03",
+    "AIC04",
+    "AIC05"
   ],
-  "model_included_in_repository": false
+  "model_included_in_repository": false,
+  "execution": "Actual installed simulator; later batches use background command-line invocation with -i and -o.",
+  "public_model_paths_included": false
 }

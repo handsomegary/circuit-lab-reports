@@ -1,0 +1,1078 @@
+{
+  "01_basic_differential": {
+    "cmrr_dB": 81.183775,
+    "psrr_plus_dB": 39.59823601346,
+    "psrr_minus_dB": 81.143298
+  },
+  "02_load_cascode": {
+    "cmrr_dB": 87.026418,
+    "psrr_plus_dB": 46.8222261381,
+    "psrr_minus_dB": 86.726128
+  },
+  "03_full_cascode": {
+    "cmrr_dB": 130.178303,
+    "psrr_plus_dB": 68.2564172204,
+    "psrr_minus_dB": 108.070627
+  },
+  "icmr_b": [
+    0.2,
+    1.0
+  ],
+  "icmr_c": [
+    0.2,
+    0.95
+  ],
+  "icmr_f": [
+    0.2,
+    0.55
+  ],
+  "metrics": [
+    {
+      "deck": "01_basic_differential",
+      "case": 0,
+      "gain_V_per_V": 95.476151,
+      "gain_dB": 39.597898053121945,
+      "f3dB_Hz": 620350.6823530612,
+      "unity_Hz": 59217061.53573145,
+      "gain_bandwidth_Hz": 59228695.42129391,
+      "phase_at_unity_deg": -103.66375637352888,
+      "output_V": 0.70021474,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "01_basic_differential",
+      "case": 1,
+      "gain_V_per_V": 0.0083311729,
+      "gain_dB": -41.58587704715967,
+      "f3dB_Hz": 3205714601.899991,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 26707362.61648349,
+      "output_V": 0.70021474,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "01_basic_differential",
+      "case": 2,
+      "gain_V_per_V": 0.99996109,
+      "gain_dB": -0.00033797454115447735,
+      "f3dB_Hz": 699475.3504664578,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 699448.1338805711,
+      "output_V": 0.70021474,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "01_basic_differential",
+      "case": 3,
+      "gain_V_per_V": 0.0083700874,
+      "gain_dB": -41.54540014207137,
+      "f3dB_Hz": null,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": null,
+      "output_V": 0.70021474,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "01_basic_differential",
+      "case": 4,
+      "gain_V_per_V": 187.04822,
+      "gain_dB": 45.439071593870146,
+      "f3dB_Hz": 197285.99164729027,
+      "unity_Hz": 32929983.007486537,
+      "gain_bandwidth_Hz": 36901993.56856051,
+      "phase_at_unity_deg": -120.54484734514448,
+      "output_V": 0.69213303,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "01_basic_differential",
+      "case": 5,
+      "gain_V_per_V": 212.0066,
+      "gain_dB": 46.52698762413766,
+      "f3dB_Hz": 125985.40013007965,
+      "unity_Hz": 22035027.551424965,
+      "gain_bandwidth_Hz": 26709736.331217743,
+      "phase_at_unity_deg": -124.0449869172323,
+      "output_V": 0.69066674,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "01_basic_differential",
+      "case": 6,
+      "gain_V_per_V": 42.558847,
+      "gain_dB": 32.57979707167941,
+      "f3dB_Hz": 21770.952465910006,
+      "unity_Hz": 873898.8017579507,
+      "gain_bandwidth_Hz": 926546.6350409366,
+      "phase_at_unity_deg": -100.52932156226325,
+      "output_V": 0.88847117,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "02_load_cascode",
+      "case": 0,
+      "gain_V_per_V": 219.26135,
+      "gain_dB": 46.81924167494966,
+      "f3dB_Hz": 4259.458580441268,
+      "unity_Hz": 750060.0624263808,
+      "gain_bandwidth_Hz": 933934.638616636,
+      "phase_at_unity_deg": -109.16673342847741,
+      "output_V": 0.75295994,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "02_load_cascode",
+      "case": 1,
+      "gain_V_per_V": 0.0097643022,
+      "gain_dB": -40.207175757236584,
+      "f3dB_Hz": 1935635951.4341657,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 18900134.37898772,
+      "output_V": 0.75295994,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "02_load_cascode",
+      "case": 2,
+      "gain_V_per_V": 0.9996565,
+      "gain_dB": -0.002984115641884203,
+      "f3dB_Hz": 4412.464761619013,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 4410.949079973397,
+      "output_V": 0.75295994,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "02_load_cascode",
+      "case": 3,
+      "gain_V_per_V": 0.010107778,
+      "gain_dB": -39.90688610360944,
+      "f3dB_Hz": null,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": null,
+      "output_V": 0.75295994,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "02_load_cascode",
+      "case": 4,
+      "gain_V_per_V": 114.36155,
+      "gain_dB": 41.165600658777635,
+      "f3dB_Hz": 608640.2508838779,
+      "unity_Hz": 55648789.285077855,
+      "gain_bandwidth_Hz": 69605042.48346914,
+      "phase_at_unity_deg": -118.08043127997276,
+      "output_V": 0.34274051,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "03_full_cascode",
+      "case": 0,
+      "gain_V_per_V": 2589.1784,
+      "gain_dB": 68.26323950592652,
+      "f3dB_Hz": 348.88877769539386,
+      "unity_Hz": 729883.8430896197,
+      "gain_bandwidth_Hz": 903335.2872113155,
+      "phase_at_unity_deg": -112.23021609839127,
+      "output_V": 0.75225732,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "03_full_cascode",
+      "case": 1,
+      "gain_V_per_V": 0.00080213374,
+      "gain_dB": -61.91506431257906,
+      "f3dB_Hz": 317988714.75527954,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 255069.47704444555,
+      "output_V": 0.75225732,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "03_full_cascode",
+      "case": 2,
+      "gain_V_per_V": 1.0007857,
+      "gain_dB": 0.006821823885916234,
+      "f3dB_Hz": 361.59844310996635,
+      "unity_Hz": 14.115988745297924,
+      "gain_bandwidth_Hz": 361.88255100671785,
+      "phase_at_unity_deg": -1.8863879361715095,
+      "output_V": 0.75225732,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "03_full_cascode",
+      "case": 3,
+      "gain_V_per_V": 0.01022423,
+      "gain_dB": -39.80738778737682,
+      "f3dB_Hz": 618.6408068682077,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 6.325125896806136,
+      "output_V": 0.75225732,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "03_full_cascode",
+      "case": 4,
+      "gain_V_per_V": 535.86928,
+      "gain_dB": 54.58117721555429,
+      "f3dB_Hz": 125026.30902970357,
+      "unity_Hz": 54085176.1840301,
+      "gain_bandwidth_Hz": 66997758.20080475,
+      "phase_at_unity_deg": -121.17303968158973,
+      "output_V": 0.34275702,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 0,
+      "topology": "b",
+      "common_mode_V": 0.0,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mbtail;mb3;mb4"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 1,
+      "topology": "b",
+      "common_mode_V": 0.05,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mbtail"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 2,
+      "topology": "b",
+      "common_mode_V": 0.1,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mbtail"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 3,
+      "topology": "b",
+      "common_mode_V": 0.15,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mbtail"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 4,
+      "topology": "b",
+      "common_mode_V": 0.2,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 5,
+      "topology": "b",
+      "common_mode_V": 0.25,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 6,
+      "topology": "b",
+      "common_mode_V": 0.3,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 7,
+      "topology": "b",
+      "common_mode_V": 0.35,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 8,
+      "topology": "b",
+      "common_mode_V": 0.4,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 9,
+      "topology": "b",
+      "common_mode_V": 0.45,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 10,
+      "topology": "b",
+      "common_mode_V": 0.5,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 11,
+      "topology": "b",
+      "common_mode_V": 0.55,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 12,
+      "topology": "b",
+      "common_mode_V": 0.6,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 13,
+      "topology": "b",
+      "common_mode_V": 0.65,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 14,
+      "topology": "b",
+      "common_mode_V": 0.7,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 15,
+      "topology": "b",
+      "common_mode_V": 0.75,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 16,
+      "topology": "b",
+      "common_mode_V": 0.8,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 17,
+      "topology": "b",
+      "common_mode_V": 0.85,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 18,
+      "topology": "b",
+      "common_mode_V": 0.9,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 19,
+      "topology": "b",
+      "common_mode_V": 0.95,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 20,
+      "topology": "b",
+      "common_mode_V": 1.0,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 0,
+      "topology": "c",
+      "common_mode_V": 0.0,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mctail;mc5;mc6"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 1,
+      "topology": "c",
+      "common_mode_V": 0.05,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mctail"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 2,
+      "topology": "c",
+      "common_mode_V": 0.1,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mctail"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 3,
+      "topology": "c",
+      "common_mode_V": 0.15,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mctail"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 4,
+      "topology": "c",
+      "common_mode_V": 0.2,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 5,
+      "topology": "c",
+      "common_mode_V": 0.25,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 6,
+      "topology": "c",
+      "common_mode_V": 0.3,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 7,
+      "topology": "c",
+      "common_mode_V": 0.35,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 8,
+      "topology": "c",
+      "common_mode_V": 0.4,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 9,
+      "topology": "c",
+      "common_mode_V": 0.45,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 10,
+      "topology": "c",
+      "common_mode_V": 0.5,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 11,
+      "topology": "c",
+      "common_mode_V": 0.55,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 12,
+      "topology": "c",
+      "common_mode_V": 0.6,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 13,
+      "topology": "c",
+      "common_mode_V": 0.65,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 14,
+      "topology": "c",
+      "common_mode_V": 0.7,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 15,
+      "topology": "c",
+      "common_mode_V": 0.75,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 16,
+      "topology": "c",
+      "common_mode_V": 0.8,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 17,
+      "topology": "c",
+      "common_mode_V": 0.85,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 18,
+      "topology": "c",
+      "common_mode_V": 0.9,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 19,
+      "topology": "c",
+      "common_mode_V": 0.95,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 20,
+      "topology": "c",
+      "common_mode_V": 1.0,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mc1;mc2"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 0,
+      "topology": "f",
+      "common_mode_V": 0.0,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mftail;mf5;mf6;mf3;mf4"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 1,
+      "topology": "f",
+      "common_mode_V": 0.05,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mftail"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 2,
+      "topology": "f",
+      "common_mode_V": 0.1,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mftail"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 3,
+      "topology": "f",
+      "common_mode_V": 0.15,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mftail"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 4,
+      "topology": "f",
+      "common_mode_V": 0.2,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 5,
+      "topology": "f",
+      "common_mode_V": 0.25,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 6,
+      "topology": "f",
+      "common_mode_V": 0.3,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 7,
+      "topology": "f",
+      "common_mode_V": 0.35,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 8,
+      "topology": "f",
+      "common_mode_V": 0.4,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 9,
+      "topology": "f",
+      "common_mode_V": 0.45,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 10,
+      "topology": "f",
+      "common_mode_V": 0.5,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 11,
+      "topology": "f",
+      "common_mode_V": 0.55,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 12,
+      "topology": "f",
+      "common_mode_V": 0.6,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mf1;mf2"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 13,
+      "topology": "f",
+      "common_mode_V": 0.65,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mf1;mf2"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 14,
+      "topology": "f",
+      "common_mode_V": 0.7,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mf1;mf2"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 15,
+      "topology": "f",
+      "common_mode_V": 0.75,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mf1;mf2"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 16,
+      "topology": "f",
+      "common_mode_V": 0.8,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mf1;mf2"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 17,
+      "topology": "f",
+      "common_mode_V": 0.85,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mf1;mf2"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 18,
+      "topology": "f",
+      "common_mode_V": 0.9,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mf1;mf2"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 19,
+      "topology": "f",
+      "common_mode_V": 0.95,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mf1;mf2"
+    },
+    {
+      "deck": "04_common_mode_operating_points",
+      "case": 20,
+      "topology": "f",
+      "common_mode_V": 1.0,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mf1;mf2"
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 0,
+      "topology": "s",
+      "gain_A_per_A": 0.50083706,
+      "rin_ohm": 4060.685,
+      "output_V": 0.013312582,
+      "f3dB_Hz": 112679099.8249725,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 56433869.079785734,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "ms2"
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 0,
+      "topology": "c",
+      "gain_A_per_A": 0.50303584,
+      "rin_ohm": 9127.1431,
+      "output_V": 0.013595873,
+      "f3dB_Hz": 340870112.4996298,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 171469883.37214577,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "mc2;mc8"
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 0,
+      "topology": "d",
+      "gain_A_per_A": 0.73112095,
+      "rin_ohm": 7958.0137,
+      "output_V": 0.013312343,
+      "f3dB_Hz": 49272643.57081525,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 36024261.97650584,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "md8"
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 1,
+      "topology": "s",
+      "gain_A_per_A": 1.9159592,
+      "rin_ohm": 4060.6341,
+      "output_V": 0.51238739,
+      "f3dB_Hz": 777604.8364083626,
+      "unity_Hz": 1449689.7396810027,
+      "gain_bandwidth_Hz": 1489859.1402810973,
+      "rout_ohm": 15814.101,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 1,
+      "topology": "c",
+      "gain_A_per_A": 1.8643678,
+      "rin_ohm": 9132.6594,
+      "output_V": 0.51364434,
+      "f3dB_Hz": 792354.6674645126,
+      "unity_Hz": 1436700.1338416026,
+      "gain_bandwidth_Hz": 1477240.5282005449,
+      "rout_ohm": 16391.97,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 1,
+      "topology": "d",
+      "gain_A_per_A": 2.7970796,
+      "rin_ohm": 7957.9819,
+      "output_V": 0.51238839,
+      "f3dB_Hz": 793743.668199689,
+      "unity_Hz": 9568136.565808233,
+      "gain_bandwidth_Hz": 2220164.221950519,
+      "rout_ohm": 15814.028,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 2,
+      "topology": "s",
+      "gain_A_per_A": 18.414665,
+      "rin_ohm": 4058.603,
+      "output_V": 0.50245511,
+      "f3dB_Hz": 459223.0337159143,
+      "unity_Hz": 57027031.33583346,
+      "gain_bandwidth_Hz": 8456438.326162267,
+      "rout_ohm": 9521.9068,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 2,
+      "topology": "c",
+      "gain_A_per_A": 18.271063,
+      "rin_ohm": 9133.5023,
+      "output_V": 0.51467411,
+      "f3dB_Hz": 443441.4654615456,
+      "unity_Hz": 25150149.5183546,
+      "gain_bandwidth_Hz": 8102146.952260225,
+      "rout_ohm": 12146.058,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 2,
+      "topology": "d",
+      "gain_A_per_A": 158.91763,
+      "rin_ohm": 36989.62,
+      "output_V": 0.5020762,
+      "f3dB_Hz": 440185.119433738,
+      "unity_Hz": 50164566.76935495,
+      "gain_bandwidth_Hz": 69953175.94167659,
+      "rout_ohm": 9525.0986,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 3,
+      "topology": "s",
+      "gain_A_per_A": 127.90731,
+      "rin_ohm": 4009.4042,
+      "output_V": 0.43646464,
+      "f3dB_Hz": 25079.052033382897,
+      "unity_Hz": 7779814.828318869,
+      "gain_bandwidth_Hz": 3207794.0829400364,
+      "rout_ohm": 1743.5105,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 3,
+      "topology": "c",
+      "gain_A_per_A": 150.94064,
+      "rin_ohm": 9134.5919,
+      "output_V": 0.53383565,
+      "f3dB_Hz": 21765.942695051166,
+      "unity_Hz": 6687268.01176833,
+      "gain_bandwidth_Hz": 3285365.320594348,
+      "rout_ohm": 3315.5117,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 3,
+      "topology": "d",
+      "gain_A_per_A": 1511.73,
+      "rin_ohm": 121389.73,
+      "output_V": 0.082172585,
+      "f3dB_Hz": 21799.337227872595,
+      "unity_Hz": 3414302.2911126423,
+      "gain_bandwidth_Hz": 32954712.067491837,
+      "rout_ohm": 270.76109,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 7,
+      "topology": "s",
+      "gain_A_per_A": 1.9159592,
+      "rin_ohm": 4060.6341,
+      "output_V": 0.51238739,
+      "f3dB_Hz": 777604.8364083626,
+      "unity_Hz": 1449689.7396810027,
+      "gain_bandwidth_Hz": 1489859.1402810973,
+      "rout_ohm": 15814.101,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 7,
+      "topology": "c",
+      "gain_A_per_A": 0.93517528,
+      "rin_ohm": 8949.1066,
+      "output_V": 0.52319811,
+      "f3dB_Hz": 809929.8041485838,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 757426.331374997,
+      "rout_ohm": 16336.78,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 7,
+      "topology": "d",
+      "gain_A_per_A": 2.7970796,
+      "rin_ohm": 7957.9819,
+      "output_V": 0.51238839,
+      "f3dB_Hz": 793743.668199689,
+      "unity_Hz": 9568136.565808233,
+      "gain_bandwidth_Hz": 2220164.221950519,
+      "rout_ohm": 15814.028,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 8,
+      "topology": "s",
+      "gain_A_per_A": 1.9159592,
+      "rin_ohm": 4060.6341,
+      "output_V": 0.51238739,
+      "f3dB_Hz": 777604.8364083626,
+      "unity_Hz": 1449689.7396810027,
+      "gain_bandwidth_Hz": 1489859.1402810973,
+      "rout_ohm": 15814.101,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 8,
+      "topology": "c",
+      "gain_A_per_A": 0.93632363,
+      "rin_ohm": 8528.208,
+      "output_V": 0.52304671,
+      "f3dB_Hz": 792913.9531007551,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 742424.0708449488,
+      "rout_ohm": 16336.626,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 8,
+      "topology": "d",
+      "gain_A_per_A": 2.7970796,
+      "rin_ohm": 7957.9819,
+      "output_V": 0.51238839,
+      "f3dB_Hz": 793743.668199689,
+      "unity_Hz": 9568136.565808233,
+      "gain_bandwidth_Hz": 2220164.221950519,
+      "rout_ohm": 15814.028,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 9,
+      "topology": "s",
+      "gain_A_per_A": 1.9159592,
+      "rin_ohm": 4060.6341,
+      "output_V": 0.51238739,
+      "f3dB_Hz": 777604.8364083626,
+      "unity_Hz": 1449689.7396810027,
+      "gain_bandwidth_Hz": 1489859.1402810973,
+      "rout_ohm": 15814.101,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 9,
+      "topology": "c",
+      "gain_A_per_A": 0.89544936,
+      "rin_ohm": 7674.3313,
+      "output_V": 0.52226464,
+      "f3dB_Hz": 533071.3331566209,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 477338.3841094429,
+      "rout_ohm": 16324.551,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 9,
+      "topology": "d",
+      "gain_A_per_A": 2.7970796,
+      "rin_ohm": 7957.9819,
+      "output_V": 0.51238839,
+      "f3dB_Hz": 793743.668199689,
+      "unity_Hz": 9568136.565808233,
+      "gain_bandwidth_Hz": 2220164.221950519,
+      "rout_ohm": 15814.028,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 13,
+      "topology": "s",
+      "gain_A_per_A": 0.75070414,
+      "rin_ohm": 2113.5452,
+      "output_V": 0.9213027,
+      "f3dB_Hz": 301535.1161032744,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 226363.66001410875,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 13,
+      "topology": "c",
+      "gain_A_per_A": 0.67791023,
+      "rin_ohm": 4770.1076,
+      "output_V": 0.92283902,
+      "f3dB_Hz": 319396.1052702146,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 216521.8871848354,
+      "all_abs_vds_ge_vdsat": true,
+      "failed_devices": ""
+    },
+    {
+      "deck": "05_current_amplifiers",
+      "case": 13,
+      "topology": "d",
+      "gain_A_per_A": 0.00735437,
+      "rin_ohm": 4192.4274,
+      "output_V": 0.53281565,
+      "f3dB_Hz": 290716975.856725,
+      "unity_Hz": null,
+      "gain_bandwidth_Hz": 2138040.2057314226,
+      "all_abs_vds_ge_vdsat": false,
+      "failed_devices": "md2;md7"
+    }
+  ]
+}

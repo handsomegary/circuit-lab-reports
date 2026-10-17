@@ -1,0 +1,6 @@
+{
+  "format": "per-deck-json-v1",
+  "files": {
+    "01_ir_drop_decoupling": "01_ir_drop_decoupling_data.json"
+  }
+}

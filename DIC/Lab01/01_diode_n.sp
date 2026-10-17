@@ -2,7 +2,7 @@ DIC Lab 1 step 1: diode-connected NMOS
 * Rewritten from DIC Lab.pdf, Lab 1; original files are references only.
 * supplied-model teaching adaptation: 1.0 V operating range, not a model rating claim.
 * HSPICE syntax; run this file directly in batch.
-.include '../../models/process.lib'
+* MODEL_SETUP_REQUIRED
 .option post=2 nomod measdgt=8 numdgt=8
 .temp 25
 .param WCH=0.6u LCH=0.25u

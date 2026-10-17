@@ -1,9 +1,7 @@
 MOS DC example - flat model library
-* Run from this directory, or replace the quoted path with an absolute path.
 * The library is supplied separately and must define nmos and pmos.
-.include '../models/process.lib'
-* Absolute-path alternative (uncomment it and remove the line above):
-* .include 'D:/models/process.lib'
+* Add the local model configuration to a private execution copy.
+* MODEL_SETUP_REQUIRED
 .option post=2
 .temp 25
 VGS gate 0 0.6

@@ -1,56 +1,622 @@
 [
   {
-    "report": "reports/AIC01/en/main.pdf",
-    "pages": 7,
-    "sha256": "663586748e419444fcc6c2917d74399347cb21c330d39164566a3cb31196a094",
-    "compiler_success": true,
-    "identifier_scan": "No requested identifiers in extracted text or metadata",
-    "overfull_boxes": false,
-    "missing_characters": false
-  },
-  {
     "report": "reports/AIC01/zh/main.pdf",
     "pages": 6,
-    "sha256": "9e668b576333f07bbde4df342d0ad8016ccbf125ce76042d8540d424644848bc",
+    "sha256": "ea7187263d16b5812af2717e8a150c1f954da4078ae5e0d2634088f5774c0acb",
+    "current_build": true,
     "compiler_success": true,
-    "identifier_scan": "No requested identifiers in extracted text or metadata",
     "overfull_boxes": false,
-    "missing_characters": false
+    "missing_characters": false,
+    "visual_review_current": true
   },
   {
-    "report": "reports/DIC01/en/main.pdf",
-    "pages": 5,
-    "sha256": "51972d101cb64f0f3cb58dbaca03c4041c0cbcaafd2e2aebe25c6384351b08ec",
+    "report": "reports/AIC01/en/main.pdf",
+    "pages": 7,
+    "sha256": "c15d1c7b0f5a7ce9206f6f94d38f1a927f5296b6e01bef95436161b9ac38e415",
+    "current_build": true,
     "compiler_success": true,
-    "identifier_scan": "No requested identifiers in extracted text or metadata",
     "overfull_boxes": false,
-    "missing_characters": false
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/AIC02/zh/main.pdf",
+    "pages": 4,
+    "sha256": "a974b84b6f938c10ee3943d3ea0056c926024487e9024152ebc12b8904cdcef1",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/AIC02/en/main.pdf",
+    "pages": 4,
+    "sha256": "c706046667fd5f04a3fb08271ea662456bc8e63b76a343c9e717b580a85f43b3",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/AIC03/zh/main.pdf",
+    "pages": 5,
+    "sha256": "e51352b7c76cf60275afcde7821e51de56dbd5a7a76b803af2626968bc36a431",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/AIC03/en/main.pdf",
+    "pages": 5,
+    "sha256": "b2ed6c77cec1fe3e8b8db1c8375cb93fe788dcb1ee5db5db80f3a7b793bc826a",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/AIC04/zh/main.pdf",
+    "pages": 4,
+    "sha256": "a8a7cc46416a37e67d730302e05eaa4b64f4fdd139dd2ed366daa6a38497d62d",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/AIC04/en/main.pdf",
+    "pages": 4,
+    "sha256": "a9ac51e5a6f6379d4b15431eb714b61f2460b7d1ea21290219e4782fb68e8ef2",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/AIC05/zh/main.pdf",
+    "pages": 4,
+    "sha256": "0d84f97a95ef4ed1986c7b335688cfd0d6b4a4d9bca17ccdbe3a1542bd45d0fb",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/AIC05/en/main.pdf",
+    "pages": 5,
+    "sha256": "a732c062e668de05b60f14b46425816908d4150a484be070ee99e53c0e19c3a2",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
   },
   {
     "report": "reports/DIC01/zh/main.pdf",
     "pages": 5,
-    "sha256": "adc17742b46b4e45ce973695fc4f92958cb5ed6598b022d77fd5acec55011ba8",
+    "sha256": "ccf2fdcf0c8fd8eb31d1e1b17ac3934bd5fcdcfade71dfe102b702ad15600872",
+    "current_build": true,
     "compiler_success": true,
-    "identifier_scan": "No requested identifiers in extracted text or metadata",
     "overfull_boxes": false,
-    "missing_characters": false
+    "missing_characters": false,
+    "visual_review_current": true
   },
   {
-    "report": "reports/DIC02/en/main.pdf",
-    "pages": 4,
-    "sha256": "e6870005863a601be04dfe6856ccf90397d774ea80195a3fc002cb32ecf83686",
+    "report": "reports/DIC01/en/main.pdf",
+    "pages": 5,
+    "sha256": "984760c9e884a744de18354f1342d3464adfd483ff3f021999b70615f67466a3",
+    "current_build": true,
     "compiler_success": true,
-    "identifier_scan": "No requested identifiers in extracted text or metadata",
     "overfull_boxes": false,
-    "missing_characters": false
+    "missing_characters": false,
+    "visual_review_current": true
   },
   {
     "report": "reports/DIC02/zh/main.pdf",
     "pages": 4,
-    "sha256": "209ef5594d1bee882de98841dfe48013995a5b5553028fc35e53d142a7a1d965",
+    "sha256": "320b491319f9e3db3e5fab8d35aed7b9174e1143f0279913d8a03a8956146cef",
+    "current_build": true,
     "compiler_success": true,
-    "identifier_scan": "No requested identifiers in extracted text or metadata",
     "overfull_boxes": false,
-    "missing_characters": false
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC02/en/main.pdf",
+    "pages": 4,
+    "sha256": "6516f13b88be43f7f8d932c82a9c4a8ae6782d3d89e3e8045fe844129d051398",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC04/zh/main.pdf",
+    "pages": 3,
+    "sha256": "b10180a628e722ec4abc5953139847bf0652f06192ab5bab31cb269414bfa701",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC04/en/main.pdf",
+    "pages": 3,
+    "sha256": "932d378ef85886ef202234a032dd084b3f34dace28efff07df6ac08ee6d23bc9",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC05/zh/main.pdf",
+    "pages": 3,
+    "sha256": "1af9efa46f49e160b39a4445ec9651fd1c3d5068747d9713239b7c2410b2581b",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC05/en/main.pdf",
+    "pages": 3,
+    "sha256": "f339a9c7faa7e262ba775b29db9e23c3edb4fd0a749e24ebba7adc64c92b4aad",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC06/zh/main.pdf",
+    "pages": 3,
+    "sha256": "f20f47b6b23dd6adf5ca1666add92d985b42c69b12a2c941dfddf2f1c0b49148",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC06/en/main.pdf",
+    "pages": 3,
+    "sha256": "eb63966fcb4f8a58c18a30cb78ae3841ffafa681dff0f1137d14645f272f4ba1",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC07/zh/main.pdf",
+    "pages": 3,
+    "sha256": "743d30943c4034ab5873b7961b869748b58cc1a048294512c9d0ee045ab6251f",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC07/en/main.pdf",
+    "pages": 3,
+    "sha256": "4b138a97a1a51070abea81b75dbae60ecc066a3805540698844c6391408862af",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC08/zh/main.pdf",
+    "pages": 3,
+    "sha256": "406555f3d74fd76b75b49a640ff41b148bb514c108ccc6d03b2eb4340598621d",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC08/en/main.pdf",
+    "pages": 3,
+    "sha256": "36efe3976626d9a7e34696457a1ad0453da40a0955d6e36f397a8d8739d32167",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC09/zh/main.pdf",
+    "pages": 4,
+    "sha256": "a02406e757278523ba516abccd837c32e202c6ba9570de427bf41907d3703d15",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC09/en/main.pdf",
+    "pages": 4,
+    "sha256": "38c78e464a62aa56b3af5329c5c966472081883f63fb336e5d7648100a75ce4a",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC10/zh/main.pdf",
+    "pages": 3,
+    "sha256": "a9ff69e0a49ada2195e647bc57bbc3f49fd289e9467cd7a40bcb138518f7ddd3",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC10/en/main.pdf",
+    "pages": 3,
+    "sha256": "0c3b776667c8c9873d630aa3c2518790b05dbebb2cca4f5ae0a366a243516d15",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC11/zh/main.pdf",
+    "pages": 4,
+    "sha256": "198978a17be7d6840e5870bfb0d7f99ddbe0258515e23beaf9e0cf4c6d0260a8",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC11/en/main.pdf",
+    "pages": 4,
+    "sha256": "150e7f2c62c750e8c8f975ebcb27dd6bb212eaae55d1a58cb9d977673b66d7ed",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC12/zh/main.pdf",
+    "pages": 3,
+    "sha256": "bc2baa1f604f75ced649f0930b51c210f537ac02396c680ced2fd03856b7d510",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC12/en/main.pdf",
+    "pages": 3,
+    "sha256": "3625c0768123e276de990259f66308b4ad4ec73070579f54114e7ba4cf1ab954",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC13/zh/main.pdf",
+    "pages": 3,
+    "sha256": "1c69ea5d188210517e545d541c2f8eee00945a6d14ba6513c3d880d0e7314fc3",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC13/en/main.pdf",
+    "pages": 3,
+    "sha256": "4864018ceb7f0e7dfe73fb05b4e0ff0de8ba1125b72a43f28400b078f4756bac",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC14/zh/main.pdf",
+    "pages": 3,
+    "sha256": "7a6738d348a78b72b02ab878d56cb322ebed23830d7ffb6ea78602edbdb610c7",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC14/en/main.pdf",
+    "pages": 4,
+    "sha256": "5289091231775d583ade00f4eee17341d099a75c50066e88c7653c01ebd018a7",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC15/zh/main.pdf",
+    "pages": 4,
+    "sha256": "aef66d667ca8da246bfc9bc7f33b1751fca6f08f2cb9f35aec03cba032d2181c",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC15/en/main.pdf",
+    "pages": 4,
+    "sha256": "239b45a99b329d0db8d0707f0300c5d35080370745bf7edc58c7fca1085e90b8",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC16/zh/main.pdf",
+    "pages": 5,
+    "sha256": "25f1466f545c5ff930537ef7b634eb9174d04e90760c3680ab297311ad1283b1",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC16/en/main.pdf",
+    "pages": 6,
+    "sha256": "704bbcbb2ba02cfea09c517d1af5294573610904aa32ccf18a3b47d3b2dcd392",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC17/zh/main.pdf",
+    "pages": 4,
+    "sha256": "6836f1b951801bf626d670d78509f15f6d22f721d66310b080a70de44d962854",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC17/en/main.pdf",
+    "pages": 5,
+    "sha256": "786fd1d893bfffd78a476400ef5577830dd5bdf8e65689d41a9f5f34bc8a1edb",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC19/zh/main.pdf",
+    "pages": 3,
+    "sha256": "16406c261a0493f20b1cc3a0e41247c2ee398b54b554e9ba2c1fd7b3a51ffefd",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC19/en/main.pdf",
+    "pages": 3,
+    "sha256": "b12bc3ad74b0343e47e98a4b259809354710a4167a7b0a6ad9a2fec1ac349cfc",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC20/zh/main.pdf",
+    "pages": 3,
+    "sha256": "e47e0da3ca99c7c0a935a4eafa6881e4dc514b13d249aef464fe441b3d31d158",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC20/en/main.pdf",
+    "pages": 3,
+    "sha256": "2da54c1e87204d57f2fe79804d487deba8be3880cf529cae61a411a831d99633",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC21/zh/main.pdf",
+    "pages": 5,
+    "sha256": "fc19df0265bfc31a450986563da17cef0914e4773be852bc37bdd82895fc19bc",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC21/en/main.pdf",
+    "pages": 5,
+    "sha256": "af7f405cf92c620be821c7fd77e05004fa3e6513b36dc1c405586f5f118d105b",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC22/zh/main.pdf",
+    "pages": 3,
+    "sha256": "9d206390ae13e5b9fa506f2b6395d43e9ed42791e51e4191a5e22c38fd43dbcb",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC22/en/main.pdf",
+    "pages": 4,
+    "sha256": "2817fcfcbc25745eb775ad5c361abd3e991a47bc3739be520e4d538fdfcf170a",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC23/zh/main.pdf",
+    "pages": 3,
+    "sha256": "a360637baf195828435e6a855cd73333f959b7803c3d3bc3ba442d3f2d6c3b6e",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC23/en/main.pdf",
+    "pages": 3,
+    "sha256": "d5d2e55c31f06d30f0dc062a43d599e0757a5bf3bb442882e76a4f9f34b80ed4",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC24/zh/main.pdf",
+    "pages": 4,
+    "sha256": "92dc01bf84eafed964466cca3b253c401bf84280d2fa13420527b36d06151a68",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC24/en/main.pdf",
+    "pages": 4,
+    "sha256": "1fb5dd7761d4f2eea5955651c0649c60eb03a6c53130e83023682b890ed1724d",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC25/zh/main.pdf",
+    "pages": 5,
+    "sha256": "71b0194d819a0aa6066cdc5af1c95b3b1a94ad1a4dafe8adc46b211863096294",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC25/en/main.pdf",
+    "pages": 5,
+    "sha256": "16afcd84da16bd84699d1f946d01fc42bbb3406f5f4cd910ab3bfcb4b7c29915",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC26/zh/main.pdf",
+    "pages": 3,
+    "sha256": "69512646e4ab558416b55385e6ebc5076b90f29eb23cd1c8030ba0e0c0e1adc4",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC26/en/main.pdf",
+    "pages": 4,
+    "sha256": "c1458283f1338445d68887d6fd56a1f7be36203fcd5f14b10ee48c648b1f75f6",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC27/zh/main.pdf",
+    "pages": 4,
+    "sha256": "a85558dbec920ef574b30ef926f039f1f75514b2668de9dd35c0ec8d0dbd102b",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC27/en/main.pdf",
+    "pages": 4,
+    "sha256": "d2e3732ac971633a4be45ddb7d42b6b3155c055646587e6f6c01a6687c975118",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC28/zh/main.pdf",
+    "pages": 6,
+    "sha256": "878d007f0f8b3c569f1be179d6d69330c3a999ebb42690c8c7cafe2013e6a670",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
+  },
+  {
+    "report": "reports/DIC28/en/main.pdf",
+    "pages": 7,
+    "sha256": "5fb9224c781e7886272cb20ad7f264403c598a8cb43b18bbfbbf31f2fe829409",
+    "current_build": true,
+    "compiler_success": true,
+    "overfull_boxes": false,
+    "missing_characters": false,
+    "visual_review_current": true
   }
 ]

@@ -1,0 +1,18 @@
+{
+  "lab": "DIC27",
+  "requirements": [
+    {
+      "lab": 27,
+      "deck": "01_four_topologies.sp",
+      "title": "Four two-phase circuits with overlap and fixed-input tests",
+      "pdf_pages": "111-114",
+      "specs": [
+        "Step1: all four circuits with and without clock skew",
+        "Q1: each topology with input fixed low and high",
+        "Q2: compare glitch magnitude and race protection of b/c/d"
+      ]
+    }
+  ],
+  "model_setup": "Local model configuration required; loading paths and model content are omitted from public decks.",
+  "layout_status": "Not a layout exercise."
+}

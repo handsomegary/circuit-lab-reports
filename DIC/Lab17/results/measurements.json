@@ -1,0 +1,448 @@
+[
+  {
+    "deck": "01_hazards.sp",
+    "case_index": 0,
+    "case_directives": [
+      ".param VDDVAL=1",
+      ".temp 25",
+      ".param PER=20n SLEW=20p"
+    ],
+    "measurements": {
+      "qs_0": 0.99998183,
+      "qs_1": 3.6236808e-06,
+      "qs_2": 4.6613536e-06,
+      "qs_3": 4.3541791e-06,
+      "qd_0": 0.99999606,
+      "qd_1": 3.8142638e-06,
+      "qd_2": 4.0509434e-06,
+      "qd_3": 3.9570981e-06,
+      "qk_0": 0.99989577,
+      "qk_1": 8.0925618e-06,
+      "qk_2": 4.5493415e-06,
+      "qk_3": 3.1788632e-06,
+      "temper": 25.0,
+      "alter#": 1.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "02_noise.sp",
+    "case_index": 0,
+    "case_directives": [
+      ".param VDDVAL=1",
+      ".temp 25",
+      ".param PER=20n SLEW=20p",
+      ".param CCOUP=1f"
+    ],
+    "measurements": {
+      "qs_noise": 0.0026338072,
+      "qd_noise": 0.012081661,
+      "qk_noise": 0.01641001,
+      "temper": 25.0,
+      "alter#": 1.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "02_noise.sp",
+    "case_index": 1,
+    "case_directives": [
+      ".param CCOUP=5f"
+    ],
+    "measurements": {
+      "qs_noise": 0.0037530475,
+      "qd_noise": 0.0081423346,
+      "qk_noise": 0.011718352,
+      "temper": 25.0,
+      "alter#": 2.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "02_noise.sp",
+    "case_index": 2,
+    "case_directives": [
+      ".param CCOUP=20f"
+    ],
+    "measurements": {
+      "qs_noise": 0.060414048,
+      "qd_noise": 1.041477,
+      "qk_noise": 0.99971549,
+      "temper": 25.0,
+      "alter#": 3.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_frequency_sweep.sp",
+    "case_index": 0,
+    "case_directives": [
+      ".param VDDVAL=1",
+      ".temp 25",
+      ".param PER=20n SLEW=20p"
+    ],
+    "measurements": {
+      "qs2": 4.4342248e-06,
+      "qs3": 0.9999811,
+      "qs4": 4.3956925e-06,
+      "qs5": 0.99998184,
+      "qs6": 4.9778959e-06,
+      "qs7": 0.99998258,
+      "qs8": 4.2828622e-06,
+      "qs9": 0.99998166,
+      "qd2": 4.0504053e-06,
+      "qd3": 0.99999794,
+      "qd4": 4.1545265e-06,
+      "qd5": 0.99999788,
+      "qd6": 3.7428177e-06,
+      "qd7": 0.99999775,
+      "qd8": 4.138463e-06,
+      "qd9": 0.99999861,
+      "temper": 25.0,
+      "alter#": 1.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_frequency_sweep.sp",
+    "case_index": 1,
+    "case_directives": [
+      ".param PER=10n"
+    ],
+    "measurements": {
+      "qs2": 4.5765907e-06,
+      "qs3": 0.99998122,
+      "qs4": 4.5991653e-06,
+      "qs5": 0.99998268,
+      "qs6": 4.576012e-06,
+      "qs7": 0.99998123,
+      "qs8": 4.5950503e-06,
+      "qs9": 0.99998267,
+      "qd2": 3.6819304e-06,
+      "qd3": 0.99999795,
+      "qd4": 3.5529941e-06,
+      "qd5": 0.99999801,
+      "qd6": 3.6818343e-06,
+      "qd7": 0.99999795,
+      "qd8": 3.5557806e-06,
+      "qd9": 0.99999801,
+      "temper": 25.0,
+      "alter#": 2.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_frequency_sweep.sp",
+    "case_index": 2,
+    "case_directives": [
+      ".param PER=5n"
+    ],
+    "measurements": {
+      "qs2": 1.011049e-05,
+      "qs3": 0.99998196,
+      "qs4": 1.0204423e-05,
+      "qs5": 0.99998218,
+      "qs6": 1.0034893e-05,
+      "qs7": 0.99998187,
+      "qs8": 9.9963339e-06,
+      "qs9": 0.99998204,
+      "qd2": 4.8335567e-06,
+      "qd3": 0.99999802,
+      "qd4": 4.6660468e-06,
+      "qd5": 0.99999812,
+      "qd6": 4.8198755e-06,
+      "qd7": 0.99999803,
+      "qd8": 4.9234631e-06,
+      "qd9": 0.99999802,
+      "temper": 25.0,
+      "alter#": 3.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_frequency_sweep.sp",
+    "case_index": 3,
+    "case_directives": [
+      ".param PER=2n"
+    ],
+    "measurements": {
+      "qs2": 0.0075572426,
+      "qs3": 0.99539948,
+      "qs4": 0.0075840696,
+      "qs5": 0.99539948,
+      "qs6": 0.0075670635,
+      "qs7": 0.99536573,
+      "qs8": 0.0075561818,
+      "qs9": 0.99539948,
+      "qd2": 0.0011691283,
+      "qd3": 0.99986776,
+      "qd4": 0.0011693691,
+      "qd5": 0.99986776,
+      "qd6": 0.0011692002,
+      "qd7": 0.99986745,
+      "qd8": 0.0011690986,
+      "qd9": 0.99986776,
+      "temper": 25.0,
+      "alter#": 4.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_frequency_sweep.sp",
+    "case_index": 4,
+    "case_directives": [
+      ".param PER=1n"
+    ],
+    "measurements": {
+      "qs2": 0.75420337,
+      "qs3": 0.69944985,
+      "qs4": 0.75433047,
+      "qs5": 0.69945804,
+      "qs6": 0.75420245,
+      "qs7": 0.69944834,
+      "qs8": 0.75433075,
+      "qs9": 0.699458,
+      "qd2": 0.44771242,
+      "qd3": 0.97058445,
+      "qd4": 0.44804267,
+      "qd5": 0.97058598,
+      "qd6": 0.44771106,
+      "qd7": 0.9705841,
+      "qd8": 0.44804195,
+      "qd9": 0.97058597,
+      "temper": 25.0,
+      "alter#": 5.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_frequency_sweep.sp",
+    "case_index": 5,
+    "case_directives": [
+      ".param PER=.5n"
+    ],
+    "measurements": {
+      "qs2": 1.0417069,
+      "qs3": 0.97332226,
+      "qs4": 1.0441064,
+      "qs5": 0.97883886,
+      "qs6": 1.0440235,
+      "qs7": 0.97892423,
+      "qs8": 1.0440237,
+      "qs9": 0.97892485,
+      "qd2": 1.0365188,
+      "qd3": 0.50022517,
+      "qd4": 1.0373984,
+      "qd5": 0.50151874,
+      "qd6": 1.0372397,
+      "qd7": 0.50151079,
+      "qd8": 1.0372395,
+      "qd9": 0.50151036,
+      "temper": 25.0,
+      "alter#": 6.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_frequency_sweep.sp",
+    "case_index": 6,
+    "case_directives": [
+      ".param PER=.25n"
+    ],
+    "measurements": {
+      "qs2": -0.0018711455,
+      "qs3": -0.0054124041,
+      "qs4": -0.0029385783,
+      "qs5": -0.0055210938,
+      "qs6": -0.0029560314,
+      "qs7": -0.0055219103,
+      "qs8": -0.0029564867,
+      "qs9": -0.0055219919,
+      "qd2": 0.014156729,
+      "qd3": -0.005461293,
+      "qd4": 0.009289231,
+      "qd5": -0.0056926263,
+      "qd6": 0.0082305757,
+      "qd7": -0.0057595627,
+      "qd8": 0.0079453509,
+      "qd9": -0.0057793605,
+      "temper": 25.0,
+      "alter#": 7.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_frequency_sweep.sp",
+    "case_index": 7,
+    "case_directives": [
+      ".param PER=.1n"
+    ],
+    "measurements": {
+      "qs2": 0.12564641,
+      "qs3": 0.018140605,
+      "qs4": 0.0054264059,
+      "qs5": 0.0040001241,
+      "qs6": 0.0019158014,
+      "qs7": 0.0025700528,
+      "qs8": 0.0013052697,
+      "qs9": 0.0023566604,
+      "qd2": -0.0027572237,
+      "qd3": -0.003412627,
+      "qd4": -0.0082640202,
+      "qd5": -0.0072096132,
+      "qd6": -0.010506132,
+      "qd7": -0.0087171486,
+      "qd8": -0.011160021,
+      "qd9": -0.0093246814,
+      "temper": 25.0,
+      "alter#": 8.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_frequency_sweep.sp",
+    "case_index": 8,
+    "case_directives": [
+      ".param PER=1.2n"
+    ],
+    "measurements": {
+      "qs2": 0.49020567,
+      "qs3": 0.84428935,
+      "qs4": 0.49020911,
+      "qs5": 0.84430676,
+      "qs6": 0.49020533,
+      "qs7": 0.84428936,
+      "qs8": 0.49020911,
+      "qs9": 0.84430676,
+      "qd2": 0.051052127,
+      "qd3": 0.99037521,
+      "qd4": 0.051023718,
+      "qd5": 0.99037717,
+      "qd6": 0.051056268,
+      "qd7": 0.99037521,
+      "qd8": 0.051023718,
+      "qd9": 0.99037717,
+      "temper": 25.0,
+      "alter#": 9.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_frequency_sweep.sp",
+    "case_index": 9,
+    "case_directives": [
+      ".param PER=1.4n"
+    ],
+    "measurements": {
+      "qs2": 0.21465315,
+      "qs3": 0.93644601,
+      "qs4": 0.21465317,
+      "qs5": 0.93644601,
+      "qs6": 0.21465317,
+      "qs7": 0.93644601,
+      "qs8": 0.21465317,
+      "qs9": 0.93644601,
+      "qd2": 0.0060559916,
+      "qd3": 0.99674472,
+      "qd4": 0.0060560318,
+      "qd5": 0.99674472,
+      "qd6": 0.0060560318,
+      "qd7": 0.99674472,
+      "qd8": 0.0060560318,
+      "qd9": 0.99674472,
+      "temper": 25.0,
+      "alter#": 10.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_frequency_sweep.sp",
+    "case_index": 10,
+    "case_directives": [
+      ".param PER=1.6n"
+    ],
+    "measurements": {
+      "qs2": 0.077956628,
+      "qs3": 0.97368729,
+      "qs4": 0.077974407,
+      "qs5": 0.97367074,
+      "qs6": 0.077956645,
+      "qs7": 0.97368737,
+      "qs8": 0.077974395,
+      "qs9": 0.97367074,
+      "qd2": 0.0030838935,
+      "qd3": 0.99886293,
+      "qd4": 0.0030841433,
+      "qd5": 0.99886196,
+      "qd6": 0.0030838943,
+      "qd7": 0.99886294,
+      "qd8": 0.0030841431,
+      "qd9": 0.99886196,
+      "temper": 25.0,
+      "alter#": 11.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_frequency_sweep.sp",
+    "case_index": 11,
+    "case_directives": [
+      ".param PER=1.8n"
+    ],
+    "measurements": {
+      "qs2": 0.02548535,
+      "qs3": 0.98902649,
+      "qs4": 0.025485482,
+      "qs5": 0.98902649,
+      "qs6": 0.025485482,
+      "qs7": 0.98902649,
+      "qs8": 0.025485482,
+      "qs9": 0.98902649,
+      "qd2": 0.00188234,
+      "qd3": 0.9996055,
+      "qd4": 0.0018823409,
+      "qd5": 0.9996055,
+      "qd6": 0.0018823409,
+      "qd7": 0.9996055,
+      "qd8": 0.0018823409,
+      "qd9": 0.9996055,
+      "temper": 25.0,
+      "alter#": 12.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "04_async_reset.sp",
+    "case_index": 0,
+    "case_directives": [
+      ".param VDDVAL=1",
+      ".temp 25",
+      ".param PER=20n SLEW=20p"
+    ],
+    "measurements": {
+      "q_reset_high_phase": 0.00019758688,
+      "q_reset_low_phase": 3.3946131e-06,
+      "q_recapture": 0.99997853,
+      "temper": 25.0,
+      "alter#": 1.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  }
+]

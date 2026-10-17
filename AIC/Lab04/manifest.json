@@ -1,0 +1,141 @@
+{
+  "lab": "AIC04",
+  "handout": "AIC Lab.pdf",
+  "supply_V": 1.0,
+  "model": "User-supplied external process library",
+  "case_indexing": "zero-based; baseline=0",
+  "decks": {
+    "01_basic_differential": {
+      "title": "Differential voltage amplifier AC families",
+      "pages": "41-44",
+      "cases": [
+        "baseline",
+        "common_mode",
+        "supply_positive",
+        "supply_negative",
+        "geometry_scale3",
+        "geometry_scale5",
+        "matched_low_current"
+      ]
+    },
+    "02_load_cascode": {
+      "title": "Differential voltage amplifier AC families",
+      "pages": "41-44",
+      "cases": [
+        "baseline",
+        "common_mode",
+        "supply_positive",
+        "supply_negative",
+        "original_current_headroom"
+      ]
+    },
+    "03_full_cascode": {
+      "title": "Differential voltage amplifier AC families",
+      "pages": "41-44",
+      "cases": [
+        "baseline",
+        "common_mode",
+        "supply_positive",
+        "supply_negative",
+        "original_current_headroom"
+      ]
+    },
+    "04_common_mode_operating_points": {
+      "title": "Input common-mode range with device checks",
+      "pages": "42",
+      "cases": [
+        "baseline",
+        "common_mode_01",
+        "common_mode_02",
+        "common_mode_03",
+        "common_mode_04",
+        "common_mode_05",
+        "common_mode_06",
+        "common_mode_07",
+        "common_mode_08",
+        "common_mode_09",
+        "common_mode_10",
+        "common_mode_11",
+        "common_mode_12",
+        "common_mode_13",
+        "common_mode_14",
+        "common_mode_15",
+        "common_mode_16",
+        "common_mode_17",
+        "common_mode_18",
+        "common_mode_19",
+        "common_mode_20"
+      ]
+    },
+    "05_current_amplifiers": {
+      "title": "Simple, cascode and differential current amplifiers",
+      "pages": "45-47",
+      "cases": [
+        "baseline",
+        "biased_load_ratio2",
+        "biased_load_ratio20",
+        "biased_load_ratio200",
+        "output_resistance_ratio2",
+        "output_resistance_ratio20",
+        "output_resistance_ratio200",
+        "cascode_lower_width_100u",
+        "cascode_lower_width_1000u",
+        "cascode_lower_width_10000u",
+        "cascode_lower_rout_100u",
+        "cascode_lower_rout_1000u",
+        "cascode_lower_rout_10000u",
+        "pmos_current_source_widths"
+      ]
+    }
+  },
+  "spec_requirements": [
+    {
+      "zh": "三種差動電壓放大器（41--42）",
+      "en": "Three differential voltage amplifiers (41--42)",
+      "deck_check": "D01--03",
+      "status": "S+D"
+    },
+    {
+      "zh": "ICMR 與各元件飽和檢查（42）",
+      "en": "ICMR and device saturation checks (42)",
+      "deck_check": "D04; 21 points",
+      "status": "S+D"
+    },
+    {
+      "zh": "增益、GB、CMRR、PSRR（43--44）",
+      "en": "Gain, GB, CMRR and PSRR (43--44)",
+      "deck_check": "D01--03; AC families",
+      "status": "S+D"
+    },
+    {
+      "zh": "等 W/L 尺度與 cascode 比較（44）",
+      "en": "Equal-W/L scaling and cascode comparison (44)",
+      "deck_check": "D01/C4--6; D02--03",
+      "status": "S+D"
+    },
+    {
+      "zh": "三種電流放大器及 1 kOhm 負載（45--47）",
+      "en": "Three current amplifiers and 1 kOhm load (45--47)",
+      "deck_check": "D05",
+      "status": "S+D"
+    },
+    {
+      "zh": "100/1000/10000 um 尺寸與 Rin/Rout（46--47）",
+      "en": "100/1000/10000 um widths and Rin/Rout (46--47)",
+      "deck_check": "D05/C1--12",
+      "status": "S+D"
+    },
+    {
+      "zh": "PMOS 電流源尺寸及優缺點（47）",
+      "en": "PMOS source dimensions and tradeoffs (47)",
+      "deck_check": "D05/C13",
+      "status": "S+D"
+    }
+  ],
+  "validation": "Actual installed HSPICE simulations completed; results apply only to the stated adapted conditions.",
+  "limits": [
+    "Original-process numerical targets are not reproduced by a process-name substitution.",
+    "No foundry voltage-rating, process-corner, mismatch, layout or silicon guarantee is asserted.",
+    "Every printed failed-region or unstable result is retained."
+  ]
+}

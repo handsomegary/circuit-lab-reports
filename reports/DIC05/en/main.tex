@@ -1,0 +1,35 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec,xeCJK}
+\IfFontExistsTF{Microsoft JhengHei}{
+  \setCJKmainfont{Microsoft JhengHei}
+  \setCJKsansfont{Microsoft JhengHei}
+  \setCJKmonofont{Microsoft JhengHei}
+}{
+  \setCJKmainfont{Noto Serif CJK TC}
+  \setCJKsansfont{Noto Sans CJK TC}
+  \setCJKmonofont{Noto Sans CJK TC}
+}
+\usepackage[margin=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,graphicx,booktabs,longtable,array,xcolor,hyperref,listings,fancyhdr}
+\definecolor{accent}{HTML}{173C57}
+\hypersetup{colorlinks=true,linkcolor=accent,urlcolor=accent,pdftitle={DIC05 - Miller Capacitance}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.2}
+\lstset{basicstyle=\ttfamily\small,breaklines=true,columns=fullflexible,frame=single}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small DIC05 / Supplied model}
+\fancyhead[R]{\small Laboratory report}
+\fancyfoot[C]{\thepage}
+\title{\color{accent}DIC05\\[4pt]Miller Capacitance}
+\author{Specification-based laboratory report}
+\date{17 October 2026}
+\begin{document}
+\maketitle
+\begin{center}\small\textbf{English edition}\\
+HSPICE S-2021.09 \quad | \quad Model library supplied separately
+\end{center}
+\input{body.tex}
+\end{document}

@@ -1,8 +1,8 @@
 {
-  "scope": "AIC Lab1 preview only; AIC Labs2-5 explicitly deferred by user scope change.",
+  "scope": "AIC Lab 1: current sources and mirrors.",
   "handout": "AIC Lab.pdf",
   "pdf_pages": "2-21",
-  "model": "models/process.lib",
+  "model": "externally supplied model",
   "simulator": "PrimeSim HSPICE S-2021.09 win64",
   "temperature_C": 27,
   "supply_V": 1,

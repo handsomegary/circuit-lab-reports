@@ -1,0 +1,45 @@
+{
+  "lab": "DIC17",
+  "requirements": [
+    {
+      "lab": 17,
+      "deck": "01_hazards.sp",
+      "title": "Static dynamic and weak-keeper DFF with data hazards",
+      "pdf_pages": "74-77",
+      "specs": [
+        "Step1: latch transparency, edge capture and between-edge hazards",
+        "Fig17.1c weak keeper comparison"
+      ]
+    },
+    {
+      "lab": 17,
+      "deck": "02_noise.sp",
+      "title": "Equal capacitive noise at master and slave storage nodes",
+      "pdf_pages": "76-77",
+      "specs": [
+        "Step2: identical coupled noise, static versus dynamic immunity"
+      ]
+    },
+    {
+      "lab": 17,
+      "deck": "03_frequency_sweep.sp",
+      "title": "Sampled capture versus clock period",
+      "pdf_pages": "75-77",
+      "specs": [
+        "Step1: estimate maximum operating frequency using a declared finite sweep"
+      ]
+    },
+    {
+      "lab": 17,
+      "deck": "04_async_reset.sp",
+      "title": "Static DFF with asynchronous output reset",
+      "pdf_pages": "77",
+      "specs": [
+        "Q4: output reset low during both clock phases",
+        "Q1-3: overlap, clock slope and setup/hold relation, discussed"
+      ]
+    }
+  ],
+  "model_setup": "Local model configuration required; loading paths and model content are omitted from public decks.",
+  "layout_status": "Not a layout exercise."
+}

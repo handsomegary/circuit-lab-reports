@@ -1,0 +1,30 @@
+{
+  "lab": "DIC26",
+  "requirements": [
+    {
+      "lab": 26,
+      "deck": "01_unsafe_cascade.sp",
+      "pdf_pages": "107-110",
+      "specs": [
+        "Step1: Fig26.1 same-type dynamic cascading causes erroneous discharge"
+      ]
+    },
+    {
+      "lab": 26,
+      "deck": "02_noise_immunity.sp",
+      "pdf_pages": "107-110",
+      "specs": [
+        "Step2: equal coupling disturbance on N-domino and alternating N-P, nominal10fF plus sweep"
+      ]
+    },
+    {
+      "lab": 26,
+      "deck": "03_speed_comparison.sp",
+      "pdf_pages": "107-110",
+      "specs": [
+        "Q1: equal input timing and output load speed comparison"
+      ]
+    }
+  ],
+  "model_setup": "Local configuration required; model and loading paths omitted."
+}

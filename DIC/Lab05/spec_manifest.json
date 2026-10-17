@@ -1,0 +1,34 @@
+{
+  "lab": 5,
+  "source": "DIC Lab.pdf",
+  "supply_V": 1,
+  "temperature_C": 25,
+  "specifications": [
+    {
+      "pages": "21-23",
+      "requirement": "three-stage intrinsic coupling",
+      "implementation": "01_miller case0",
+      "status": "simulated"
+    },
+    {
+      "pages": "21-23",
+      "requirement": "vary coupling including 5 fF",
+      "implementation": "01_miller cases1-3",
+      "status": "simulated"
+    },
+    {
+      "pages": "21-23",
+      "requirement": "increase load",
+      "implementation": "01_miller cases4-5",
+      "status": "simulated"
+    }
+  ],
+  "limitations": [
+    "1 V adaptation; original-process voltage curves not reproduced.",
+    "Rail excursions do not establish physical safety."
+  ],
+  "decks": [
+    "01_miller.sp"
+  ],
+  "results_status": "Actual local simulator results; final batch validation recorded separately."
+}

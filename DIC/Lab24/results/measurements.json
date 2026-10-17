@@ -1,0 +1,133 @@
+[
+  {
+    "deck": "01_counters.sp",
+    "case_index": 0,
+    "measurements": {
+      "sync_power": 1.6508486e-05,
+      "async_power": 6.0340111e-06,
+      "clock_charge": 7.3923402e-14,
+      "temper": 25.0,
+      "alter#": 1.0
+    },
+    "completed": true,
+    "warning_status": "Encrypted-block warning details suppressed by simulator."
+  },
+  {
+    "deck": "01_counters.sp",
+    "case_index": 1,
+    "measurements": {
+      "sync_power": 3.2086656e-05,
+      "async_power": 1.1911349e-05,
+      "clock_charge": 7.7498667e-14,
+      "temper": 25.0,
+      "alter#": 2.0
+    },
+    "completed": true,
+    "warning_status": "Encrypted-block warning details suppressed by simulator."
+  },
+  {
+    "deck": "01_counters.sp",
+    "case_index": 2,
+    "measurements": {
+      "sync_power": 6.3178972e-05,
+      "async_power": 2.3658084e-05,
+      "clock_charge": 7.7485829e-14,
+      "temper": 25.0,
+      "alter#": 3.0
+    },
+    "completed": true,
+    "warning_status": "Encrypted-block warning details suppressed by simulator."
+  },
+  {
+    "deck": "01_counters.sp",
+    "case_index": 3,
+    "measurements": {
+      "sync_power": 0.00010308724,
+      "async_power": 3.9356256e-05,
+      "clock_charge": 7.7471503e-14,
+      "temper": 25.0,
+      "alter#": 4.0
+    },
+    "completed": true,
+    "warning_status": "Encrypted-block warning details suppressed by simulator."
+  },
+  {
+    "deck": "01_counters.sp",
+    "case_index": 4,
+    "measurements": {
+      "sync_power": 0.00015770285,
+      "async_power": 5.8923809e-05,
+      "clock_charge": 7.8463967e-14,
+      "temper": 25.0,
+      "alter#": 5.0
+    },
+    "completed": true,
+    "warning_status": "Encrypted-block warning details suppressed by simulator."
+  },
+  {
+    "deck": "01_counters.sp",
+    "case_index": 5,
+    "measurements": {
+      "sync_power": 0.00025304198,
+      "async_power": 7.8318601e-05,
+      "clock_charge": 7.7088134e-14,
+      "temper": 25.0,
+      "alter#": 6.0
+    },
+    "completed": true,
+    "warning_status": "Encrypted-block warning details suppressed by simulator."
+  },
+  {
+    "deck": "01_counters.sp",
+    "case_index": 6,
+    "measurements": {
+      "sync_power": 0.00026727592,
+      "async_power": 0.0001162938,
+      "clock_charge": 7.679746e-14,
+      "temper": 25.0,
+      "alter#": 7.0
+    },
+    "completed": true,
+    "warning_status": "Encrypted-block warning details suppressed by simulator."
+  },
+  {
+    "deck": "02_clock_loading.sp",
+    "case_index": 0,
+    "measurements": {
+      "sync_power": 1.6511429e-05,
+      "async_power": 6.0345121e-06,
+      "sync_clock_charge": 6.0449642e-14,
+      "async_clock_charge": 1.347376e-14,
+      "temper": 25.0,
+      "alter#": 1.0
+    },
+    "completed": true,
+    "warning_status": "Encrypted-block warning details suppressed by simulator."
+  },
+  {
+    "deck": "03_period_refinement.sp",
+    "case_index": 0,
+    "measurements": {
+      "sync_power": 5.2812829e-05,
+      "async_power": 1.9741707e-05,
+      "clock_charge": 7.7488029e-14,
+      "temper": 25.0,
+      "alter#": 1.0
+    },
+    "completed": true,
+    "warning_status": "Encrypted-block warning details suppressed by simulator."
+  },
+  {
+    "deck": "03_period_refinement.sp",
+    "case_index": 1,
+    "measurements": {
+      "sync_power": 0.00012439271,
+      "async_power": 4.7214743e-05,
+      "clock_charge": 7.8348756e-14,
+      "temper": 25.0,
+      "alter#": 2.0
+    },
+    "completed": true,
+    "warning_status": "Encrypted-block warning details suppressed by simulator."
+  }
+]

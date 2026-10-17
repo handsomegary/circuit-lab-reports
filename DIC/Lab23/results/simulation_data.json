@@ -1,0 +1,9 @@
+{
+  "format": "per-deck-json-v1",
+  "files": {
+    "01_two_to_four_load": "01_two_to_four_load_data.json",
+    "02_three_to_eight_truth": "02_three_to_eight_truth_data.json",
+    "03_eight_to_256_truth": "03_eight_to_256_truth_data.json",
+    "04_eight_to_256_timing": "04_eight_to_256_timing_data.json"
+  }
+}

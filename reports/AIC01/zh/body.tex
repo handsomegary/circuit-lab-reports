@@ -1,5 +1,5 @@
 \section{目的}
-依據 \textit{AIC Lab.pdf} 的 Chapter 1「Current Sinks and Sources」（PDF 實體頁碼 2--21），重寫並比較基本電流源、簡單電流鏡、cascode、高擺幅 cascode、Wilson、修正 Wilson、regulated 及 complete regulated 電流鏡。本次只交付 AIC Lab 1 預覽；原始程式作為尺寸與來源參考，講義的電路、問題與量測項目才是核對依據。
+依據 \textit{AIC Lab.pdf} 的 Chapter 1「Current Sinks and Sources」（PDF 實體頁碼 2--21），重寫並比較基本電流源、簡單電流鏡、cascode、高擺幅 cascode、Wilson、修正 Wilson、regulated 及 complete regulated 電流鏡。原始程式作為尺寸與來源參考，講義的電路、問題與量測項目才是核對依據。
 
 本報告採用由使用者另行提供的模型庫，供應電壓為 1.0 V。講義的 0.35 $\mu$m、3.3 V 模型、臨界電壓與數值圖表不能直接當作本次模型的驗收目標。1 V 是本次教學設計條件，並非對加密模型額定電壓的認證。
 
@@ -40,7 +40,7 @@ Deck 02--06 的 case 0 保留 $W_{unit}=3\,\mu$m、$L=1.4\,\mu$m、$I_{ref}=50\,
 Deck 04 額外 case 4/5 在 1 $\mu$A、$W_{unit}=3\,\mu$m 下比較 M4 的 $L=3.5/14\,\mu$m（基準 7 $\mu$m）。Deck 06 的額外 case 4 採用 $W_{unit}=30\,\mu$m、MC2 寬度 120 $\mu$m、MC5/MC6 寬度 300 $\mu$m，其餘保持 case 3，以改善放大器負載的 headroom。新增完整 regulated 電路的 PMOS 尺寸屬本次設計，不是講義提供的數值。
 
 \section{模擬設定}
-七個獨立 \texttt{.sp} 均直接 include 指定模型，可由模擬器開啟；不依賴其他子電路檔。實際執行版本為 PrimeSim HSPICE S-2021.09 win64，溫度 27 $^\circ$C，共 30 個 base/alter 案例均完成，未出現 error 或 failed 量測。Deck 01 含四種長度，每種掃 11 個閘極電壓與 101 個汲極電壓。
+七個獨立 \texttt{.sp} 均保留模型設定註記；本機執行副本載入另行提供的模型後即可模擬，不依賴其他子電路檔。實際執行版本為 PrimeSim HSPICE S-2021.09 win64，溫度 27 $^\circ$C，共 30 個 base/alter 案例均完成，未出現 error 或 failed 量測。Deck 01 含四種長度，每種掃 11 個閘極電壓與 101 個汲極電壓。
 
 輸出 DC 掃描 0--1 V、步進 1 mV；公平比較點固定 $V_o=0.8$ V。AC 以 1 V 擾動量得 1 Hz 的 $R_o=1/|I_{ac}|$。簡單鏡只有 VTEST 設為 AC=1，其餘固定輸出電壓源皆 AC=0；因此量的是單一輸出埠阻抗。以 0.799/0.801 V 的 DC 中央差分獨立核對。主要比較案例兩者差異小於 0.56\%，且 1 Hz 相位接近零；故此處將低頻阻抗大小近似為電阻。固定 M1--M4 支路表列的 $1/g_{ds}$ 是元件本身的小訊號電阻，與完整輸出埠量測的定義不同。
 

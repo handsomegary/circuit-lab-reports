@@ -1,0 +1,1148 @@
+{
+  "summary": {
+    "decks": 36,
+    "completed": 36,
+    "cases": 161,
+    "errors": 0,
+    "failed": 0,
+    "different_measurement_files": 0
+  },
+  "decks": [
+    {
+      "source": "AIC/Lab02/01_two_device_divider.sp",
+      "source_sha256": "ee5f08a69add7ca33a54cdd0366e7e88dcc4d3f2cadf9f36a4093700537133cb",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 3,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab02_01_two_device_divider.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_01_two_device_divider.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_01_two_device_divider.ma2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_01_two_device_divider.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_01_two_device_divider.ms1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_01_two_device_divider.ms2",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab02/02_three_device_divider.sp",
+      "source_sha256": "ee758b24f204674c151d17ca7516d6a492ba0de649ffe0f17d309e3df0466369",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 3,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab02_02_three_device_divider.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_02_three_device_divider.ms1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_02_three_device_divider.ms2",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab02/03_threshold_self_bias.sp",
+      "source_sha256": "1ea9483f0b35f773c497e30434ff8d4d19c18f1308bcd50e713017f7d6d507b2",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 2,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab02_03_threshold_self_bias.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_03_threshold_self_bias.ms1",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab02/04_startup_cell.sp",
+      "source_sha256": "e2f238235184dff3a60c0ec5f423291ffacede9cd82935e9ab0a0aa1c60ede95",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 4,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab02_04_startup_cell.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_04_startup_cell.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_04_startup_cell.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_04_startup_cell.mt3",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab02/05_complete_reference.sp",
+      "source_sha256": "ed7f58f96b4933301723760b9d0837f0d8558417855262f401e9efaeafe32a4a",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 5,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab02_05_complete_reference.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_05_complete_reference.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_05_complete_reference.ma2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_05_complete_reference.ma3",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_05_complete_reference.ma4",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_05_complete_reference.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_05_complete_reference.ms1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_05_complete_reference.ms2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_05_complete_reference.ms3",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_05_complete_reference.ms4",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab02/06_complete_startup.sp",
+      "source_sha256": "89363f3c2009e6c82e232e9135a6cd6b26f2a72cf62f48c6b61c4c5f1f943394",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 5,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab02_06_complete_startup.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_06_complete_startup.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_06_complete_startup.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_06_complete_startup.mt3",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab02_06_complete_startup.mt4",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab03/01_p_diode_load.sp",
+      "source_sha256": "bafdd253ce28179c40dddafa5a69d7af8235783499b43b6895aaaa1298cc69d8",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 3,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab03_01_p_diode_load.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_01_p_diode_load.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_01_p_diode_load.ma2",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab03/02_n_diode_load.sp",
+      "source_sha256": "8da8648a9750a6c25ccb8d8001c50b72c8cfcafed6d99a382f1b656e469c9d26",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 3,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab03_02_n_diode_load.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_02_n_diode_load.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_02_n_diode_load.ma2",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab03/03_current_source_load.sp",
+      "source_sha256": "e6836dff655cdb971e693dcb4ecc4e0b8a996cb762cbf8606f7309a5ca8d5a04",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 10,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab03_03_current_source_load.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_03_current_source_load.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_03_current_source_load.ma2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_03_current_source_load.ma3",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_03_current_source_load.ma4",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_03_current_source_load.ma5",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_03_current_source_load.ma6",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_03_current_source_load.ma7",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_03_current_source_load.ma8",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_03_current_source_load.ma9",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab03/04_source_followers.sp",
+      "source_sha256": "416a5163603bff64c3c92122a47eb9d83606b1c5b2be326a93c1348a970c6272",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 4,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab03_04_source_followers.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_04_source_followers.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_04_source_followers.ma2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_04_source_followers.ma3",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab03/05_small_signal_transient.sp",
+      "source_sha256": "bcd8b37051bdd965c71cc2b0a07d9ec4ef4c2d621faf9106d802ff3030312a52",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 3,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab03_05_small_signal_transient.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_05_small_signal_transient.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab03_05_small_signal_transient.mt2",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab04/01_basic_differential.sp",
+      "source_sha256": "04ec93b401837b7cebd14c4e2c5af19f833a5e8e709891aed937969397d706bc",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 7,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab04_01_basic_differential.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_01_basic_differential.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_01_basic_differential.ma2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_01_basic_differential.ma3",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_01_basic_differential.ma4",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_01_basic_differential.ma5",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_01_basic_differential.ma6",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab04/02_load_cascode.sp",
+      "source_sha256": "53db7ac3badee3a259c527a6a9ded19af111a315859d609052dcb5712e01be5b",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 5,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab04_02_load_cascode.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_02_load_cascode.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_02_load_cascode.ma2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_02_load_cascode.ma3",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_02_load_cascode.ma4",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab04/03_full_cascode.sp",
+      "source_sha256": "203048f3e922e43fa6c3c0a0441f8a0b8afda66a172d93bcb2436a1178d54af2",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 5,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab04_03_full_cascode.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_03_full_cascode.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_03_full_cascode.ma2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_03_full_cascode.ma3",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_03_full_cascode.ma4",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab04/04_common_mode_operating_points.sp",
+      "source_sha256": "cda9fc9f4b2509a603a5bd51c0b2662e692b7128bc04261003366d22f36869fa",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 21,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms10",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms11",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms12",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms13",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms14",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms15",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms16",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms17",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms18",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms19",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms20",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms3",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms4",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms5",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms6",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms7",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms8",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_04_common_mode_operating_points.ms9",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab04/05_current_amplifiers.sp",
+      "source_sha256": "4409bfcd50a3158a3a448f1d23185e749469f7e3eb746ccc01901c883823d804",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 14,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma10",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma11",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma12",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma13",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma3",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma4",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma5",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma6",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma7",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma8",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab04_05_current_amplifiers.ma9",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab05/01_open_loop_compensation.sp",
+      "source_sha256": "0616b31e4a8b3d5d0b97df66f8f738aba58b35fd3978ebc88087a2a28c3a871d",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 5,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab05_01_open_loop_compensation.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_01_open_loop_compensation.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_01_open_loop_compensation.ma2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_01_open_loop_compensation.ma3",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_01_open_loop_compensation.ma4",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab05/02_rejection_families.sp",
+      "source_sha256": "491570b927b46acde056d6d58685167de38362d73f5cfd44aed741da2e81badf",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 4,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab05_02_rejection_families.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_02_rejection_families.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_02_rejection_families.ma2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_02_rejection_families.ma3",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab05/03_unity_buffer_dc.sp",
+      "source_sha256": "d3c588373b1baa1b9758fcce1ad5fb6e0719d343287de440543695a0b7c9d4f3",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 3,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab05_03_unity_buffer_dc.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_03_unity_buffer_dc.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_03_unity_buffer_dc.ma2",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab05/04_inverting_output_swing.sp",
+      "source_sha256": "1fae000c84a484f6671d60cba3ff49b043d9c318f53c14f98143395a6457d1c6",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 3,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab05_04_inverting_output_swing.ma0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_04_inverting_output_swing.ma1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_04_inverting_output_swing.ma2",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "AIC/Lab05/05_unity_buffer_steps.sp",
+      "source_sha256": "0061f401acf74fa19c9d4594df613d09df6cc45dc8386406990742607ac092c0",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 4,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "AIC_Lab05_05_unity_buffer_steps.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_05_unity_buffer_steps.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_05_unity_buffer_steps.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "AIC_Lab05_05_unity_buffer_steps.mt3",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab05/01_miller.sp",
+      "source_sha256": "72bc48b960854cc457d8fe6dbd770fc3e1a9a7c5f7781c1d966612f7e3261c1d",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 6,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab05_01_miller.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab05_01_miller.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab05_01_miller.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab05_01_miller.mt3",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab05_01_miller.mt4",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab05_01_miller.mt5",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab06/01_gate_load.sp",
+      "source_sha256": "d9f7552a25195b19df1af4f876f486a6973bdd126dc0805370d0ae2acd2ae90f",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 4,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab06_01_gate_load.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab06_01_gate_load.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab06_01_gate_load.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab06_01_gate_load.mt3",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab08/01_dc_transfer.sp",
+      "source_sha256": "efdc1143d37274b6f9ea947546598a9961ac4a15cad9523c96d68604c4cceb48",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab08_01_dc_transfer.ms0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab08/02_noise_cascade.sp",
+      "source_sha256": "f6ab10a1eb6c2ae6c8f5f613cf064c3661c3fdffa17ad856569a6acf9938a0de",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab08_02_noise_cascade.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab09/01_inverter_sizing.sp",
+      "source_sha256": "6356d06f35b1cb25d59e0bc8cc289a46cbdc989eb9a75a10c367e568a5475b9c",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 5,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab09_01_inverter_sizing.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_01_inverter_sizing.ms1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_01_inverter_sizing.ms2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_01_inverter_sizing.ms3",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_01_inverter_sizing.ms4",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_01_inverter_sizing.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_01_inverter_sizing.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_01_inverter_sizing.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_01_inverter_sizing.mt3",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_01_inverter_sizing.mt4",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab09/02_nand.sp",
+      "source_sha256": "d3636024fa0fd88127ba27cd568b9a466b56f579af749390b9837faf1ef8b309",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 4,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab09_02_nand.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_02_nand.ms1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_02_nand.ms2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_02_nand.ms3",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_02_nand.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_02_nand.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_02_nand.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_02_nand.mt3",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab09/03_nor.sp",
+      "source_sha256": "551a12f923576afbc51e4aaecdc0eff6e16370ca0d9536be7adab21e3ab4e447",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 4,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab09_03_nor.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_03_nor.ms1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_03_nor.ms2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_03_nor.ms3",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_03_nor.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_03_nor.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_03_nor.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_03_nor.mt3",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab09/04_sizing_refinement.sp",
+      "source_sha256": "2108012b776cccf2f7b018d225fc213affde5b7f730c9ca44448a58e50a9d441",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 3,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab09_04_sizing_refinement.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_04_sizing_refinement.ms1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_04_sizing_refinement.ms2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_04_sizing_refinement.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_04_sizing_refinement.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab09_04_sizing_refinement.mt2",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab12/01_delay_elements.sp",
+      "source_sha256": "68abddf28121c3672ae01a467ec02a1057da44458d1086da04a07bd3b73709ca",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab12_01_delay_elements.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab12/02_taper_buffer.sp",
+      "source_sha256": "7d759c995516ddf6f7c792112138b89bd1068227ae77ef6bebda3f3354803c29",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 4,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab12_02_taper_buffer.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab12_02_taper_buffer.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab12_02_taper_buffer.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab12_02_taper_buffer.mt3",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab14/01_hysteresis.sp",
+      "source_sha256": "17760356b6eaaf1195d6688afea5eed0f2b81ab14bb7d2e37d01d4485f7723a3",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 6,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab14_01_hysteresis.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab14_01_hysteresis.ms1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab14_01_hysteresis.ms2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab14_01_hysteresis.ms3",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab14_01_hysteresis.ms4",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab14_01_hysteresis.ms5",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab14/02_noise_immunity.sp",
+      "source_sha256": "924983b9ce1a1507e2c523513e724c877c80eda196907439347eef9a76f2f77d",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab14_02_noise_immunity.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab14/03_delay_comparison.sp",
+      "source_sha256": "df1b64f5c27acb42322099b325880141b01505291e76b2cdeb3b72dedf432805",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab14_03_delay_comparison.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab14/04_slow_ramp_check.sp",
+      "source_sha256": "513b5ea23252dd4068b1161da5c7be0583d419ea6cff742f786953a05b566878",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 2,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab14_04_slow_ramp_check.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab14_04_slow_ramp_check.mt1",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab14/05_alternative_dc.sp",
+      "source_sha256": "a19730d5ab8983e2c99f1282e107d1de93cf416a854f3183e78528fe44814191",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 2,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab14_05_alternative_dc.ms0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab14_05_alternative_dc.ms1",
+          "same_reported_values": true
+        }
+      ]
+    }
+  ]
+}

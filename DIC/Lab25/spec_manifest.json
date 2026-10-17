@@ -1,0 +1,63 @@
+{
+  "lab": "DIC25",
+  "requirements": [
+    {
+      "lab": 25,
+      "deck": "01_charge_sharing.sp",
+      "title": "Charge redistribution in a dynamic NAND",
+      "pdf_pages": "99-100,105",
+      "specs": [
+        "Step1: input A rises during evaluation while B remains low"
+      ]
+    },
+    {
+      "lab": 25,
+      "deck": "02_coupling_sweep.sp",
+      "title": "Capacitive aggressor at dynamic node versus inverter output",
+      "pdf_pages": "100-101,105",
+      "specs": [
+        "Steps2-4: sweep coupling size, locate inverter error, move same capacitance to driven output"
+      ]
+    },
+    {
+      "lab": 25,
+      "deck": "03_parasitic_coupling.sp",
+      "title": "Gate-position dependence of parasitic coupling",
+      "pdf_pages": "101-102,105-106",
+      "specs": [
+        "Steps5-6: Fig25.3d/e upper-versus-lower transistor gate coupling"
+      ]
+    },
+    {
+      "lab": 25,
+      "deck": "04_leakage_and_restoration.sp",
+      "title": "Long evaluation with no keeper and three remedies",
+      "pdf_pages": "103-106",
+      "specs": [
+        "Step7: leakage during long evaluation",
+        "Step8: always-on and feedback keepers improve retention",
+        "Step9: internal precharge alone does not actively restore output"
+      ]
+    },
+    {
+      "lab": 25,
+      "deck": "05_sharing_remedies.sp",
+      "title": "Compare all three charge-sharing remedies",
+      "pdf_pages": "103-106",
+      "specs": [
+        "Steps8-9: sharing under always-on keeper, feedback keeper and internal precharge"
+      ]
+    },
+    {
+      "lab": 25,
+      "deck": "06_keeper_power.sp",
+      "title": "Keeper contention and power at 500 MHz",
+      "pdf_pages": "105-106",
+      "specs": [
+        "Step8: compare average power at handout500MHz and settled evaluate-state contention at50MHz"
+      ]
+    }
+  ],
+  "model_setup": "Local model configuration required; loading paths and model content are omitted from public decks.",
+  "layout_status": "Not a layout exercise."
+}

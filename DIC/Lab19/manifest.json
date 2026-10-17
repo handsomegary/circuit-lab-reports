@@ -1,0 +1,53 @@
+{
+  "lab": "DIC19",
+  "handout": "DIC Lab.pdf",
+  "supply_V": 1,
+  "temperature_C": 27,
+  "title": {
+    "zh": "電源 IR 壓降與去耦電容",
+    "en": "Supply IR Drop and Decoupling"
+  },
+  "decks": {
+    "01_ir_drop_decoupling": {
+      "title": "Supply resistance and decoupling",
+      "pages": "78-80",
+      "cases": [
+        "baseline",
+        "decoupling_10p",
+        "decoupling_100p",
+        "decoupling_1n"
+      ]
+    }
+  },
+  "spec_requirements": [
+    {
+      "zh": "圖19.1四級負載、兩個1歐姆電阻（78,80）",
+      "en": "Fig.19.1 four stages and two 1-ohm resistors (78,80)",
+      "deck_check": "D01/C0",
+      "status": "S"
+    },
+    {
+      "zh": "觀察內外電源、地與R1/R2電流（78,80）",
+      "en": "Observe external/internal rails and R1/R2 currents (78,80)",
+      "deck_check": "D01; printed traces",
+      "status": "S"
+    },
+    {
+      "zh": "10pF/100pF/1nF比較（79--80）",
+      "en": "10pF/100pF/1nF comparison (79--80)",
+      "deck_check": "D01/C1--3",
+      "status": "S"
+    },
+    {
+      "zh": "電流峰值、代價與使用時機（80）",
+      "en": "Peak current, costs and use cases (80)",
+      "deck_check": "Results/discussion",
+      "status": "S+D"
+    }
+  ],
+  "limits": [
+    "Circuit-level nominal model simulation only.",
+    "No model voltage-rating, layout extraction, DRC, LVS, PVT or silicon guarantee.",
+    "Failed numerical design criteria and transient excursions remain in the reported data."
+  ]
+}

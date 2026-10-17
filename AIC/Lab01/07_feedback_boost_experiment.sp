@@ -5,7 +5,7 @@
 * Device geometry is not blindly scaled to 90 nm.
 * Nominal reference is 50 uA; separate 10 uA and 1 uA alters show headroom.
 * Ideal current sources do NOT enforce supply compliance. Check every bias node.
-.include '../../models/process.lib'
+* MODEL_SETUP_REQUIRED
 .option post=2 runlvl=5 accurate measdgt=8 numdgt=8 ingold=2
 .temp 27
 .param VDDVAL=1.0 IREFVAL=50u WUNIT=3u LUNIT=1.4u
