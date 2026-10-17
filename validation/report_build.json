@@ -1,0 +1,56 @@
+[
+  {
+    "report": "reports/AIC01/en/main.pdf",
+    "pages": 7,
+    "sha256": "663586748e419444fcc6c2917d74399347cb21c330d39164566a3cb31196a094",
+    "compiler_success": true,
+    "identifier_scan": "No requested identifiers in extracted text or metadata",
+    "overfull_boxes": false,
+    "missing_characters": false
+  },
+  {
+    "report": "reports/AIC01/zh/main.pdf",
+    "pages": 6,
+    "sha256": "9e668b576333f07bbde4df342d0ad8016ccbf125ce76042d8540d424644848bc",
+    "compiler_success": true,
+    "identifier_scan": "No requested identifiers in extracted text or metadata",
+    "overfull_boxes": false,
+    "missing_characters": false
+  },
+  {
+    "report": "reports/DIC01/en/main.pdf",
+    "pages": 5,
+    "sha256": "51972d101cb64f0f3cb58dbaca03c4041c0cbcaafd2e2aebe25c6384351b08ec",
+    "compiler_success": true,
+    "identifier_scan": "No requested identifiers in extracted text or metadata",
+    "overfull_boxes": false,
+    "missing_characters": false
+  },
+  {
+    "report": "reports/DIC01/zh/main.pdf",
+    "pages": 5,
+    "sha256": "adc17742b46b4e45ce973695fc4f92958cb5ed6598b022d77fd5acec55011ba8",
+    "compiler_success": true,
+    "identifier_scan": "No requested identifiers in extracted text or metadata",
+    "overfull_boxes": false,
+    "missing_characters": false
+  },
+  {
+    "report": "reports/DIC02/en/main.pdf",
+    "pages": 4,
+    "sha256": "e6870005863a601be04dfe6856ccf90397d774ea80195a3fc002cb32ecf83686",
+    "compiler_success": true,
+    "identifier_scan": "No requested identifiers in extracted text or metadata",
+    "overfull_boxes": false,
+    "missing_characters": false
+  },
+  {
+    "report": "reports/DIC02/zh/main.pdf",
+    "pages": 4,
+    "sha256": "209ef5594d1bee882de98841dfe48013995a5b5553028fc35e53d142a7a1d965",
+    "compiler_success": true,
+    "identifier_scan": "No requested identifiers in extracted text or metadata",
+    "overfull_boxes": false,
+    "missing_characters": false
+  }
+]

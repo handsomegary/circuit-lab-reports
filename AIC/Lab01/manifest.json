@@ -1,0 +1,163 @@
+{
+  "scope": "AIC Lab1 preview only; AIC Labs2-5 explicitly deferred by user scope change.",
+  "handout": "AIC Lab.pdf",
+  "pdf_pages": "2-21",
+  "model": "models/process.lib",
+  "simulator": "PrimeSim HSPICE S-2021.09 win64",
+  "temperature_C": 27,
+  "supply_V": 1,
+  "specs": [
+    {
+      "id": "1.1-IV",
+      "pdf_pages": "2-3",
+      "requirement": "NMOS/PMOS I-V and saturation boundary",
+      "implementation": "01_device_iv.sp",
+      "conditions": "4 lengths x 11 gate voltages x 101 drain points",
+      "verification": "Simulated; curves and model operating-point data saved."
+    },
+    {
+      "id": "1.1-R",
+      "pdf_pages": "3-4",
+      "requirement": "Output resistance and channel-length effect",
+      "implementation": "01_device_iv.sp",
+      "conditions": "W=5um; L=0.35/0.7/1.4/2.8um; VGS/VSG=0.6V, VDS/VSD=0.8V",
+      "verification": "Measured intrinsic 1/gds; fixed gate bias does not hold current constant."
+    },
+    {
+      "id": "1.2",
+      "pdf_pages": "5-7",
+      "requirement": "50uA mirror; M=2/4/8/16; outputs1/0.6/0.3/0.1V",
+      "implementation": "02_simple_mirror.sp",
+      "conditions": "Original W=3um,L=1.4um; supplied-model rail1V",
+      "verification": "Measured; the16x branch is linear and does not produce800uA."
+    },
+    {
+      "id": "1.4-Q1/2",
+      "pdf_pages": "7",
+      "requirement": "Unit-device matching and physical layout",
+      "implementation": "report section6",
+      "conditions": "31 identical unit devices; symmetric placement and routing",
+      "verification": "Analytical answer; no layout/GDS or mismatch Monte Carlo claimed."
+    },
+    {
+      "id": "2.1",
+      "pdf_pages": "8-10",
+      "requirement": "Cascode current and output resistance",
+      "implementation": "03_cascode_mirror.sp",
+      "conditions": "Output sweep0..1V; common comparison at0.8V",
+      "verification": "Original50uA bias exceeds rail; explicit resized variant checked."
+    },
+    {
+      "id": "2.2",
+      "pdf_pages": "10-12",
+      "requirement": "High-swing cascode; extra bias source",
+      "implementation": "04_high_swing_cascode.sp",
+      "conditions": "M4 baseline L=7um; 1uA variants L=3.5/14um",
+      "verification": "Measured current/compliance/Rout; baseline50uA bias exceeds rail."
+    },
+    {
+      "id": "2.4-Q1/2",
+      "pdf_pages": "12",
+      "requirement": "Choose M4 size; explain current-ratio error",
+      "implementation": "04_high_swing_cascode.sp and section6",
+      "conditions": "Bias-size experiment; compare VDS mismatch and body effect",
+      "verification": "Answered; strong-inversion formula separated from subthreshold cases."
+    },
+    {
+      "id": "3.1-3.3",
+      "pdf_pages": "13-16",
+      "requirement": "Wilson and modified Wilson comparison",
+      "implementation": "05_wilson_comparison.sp",
+      "conditions": "Same Iref, geometry, Vout and small-signal test",
+      "verification": "Measured; modified variant improves DC ratio in resized50uA case."
+    },
+    {
+      "id": "3.4-Q1/2",
+      "pdf_pages": "17",
+      "requirement": "Swap diode-connected branches; compare output resistance",
+      "implementation": "05_wilson_comparison.sp and section6",
+      "conditions": "Third circuit implements the requested diode swap",
+      "verification": "Measured invalid0.8V bias/current case; explains comparable Rout order."
+    },
+    {
+      "id": "4.1",
+      "pdf_pages": "18-19",
+      "requirement": "Regulated cascode current mirror",
+      "implementation": "06_regulated_comparison.sp",
+      "conditions": "Extra ideal bias source; compare at0.8V",
+      "verification": "Measured, with bias-rail and device-region checks."
+    },
+    {
+      "id": "4.2",
+      "pdf_pages": "20",
+      "requirement": "Complete regulated cascode current mirror",
+      "implementation": "06_regulated_comparison.sp",
+      "conditions": "M4-M6 generate amplifier bias; final additional sizing case4",
+      "verification": "Measured; final case meets declared point checks, MC2 is subthreshold."
+    },
+    {
+      "id": "4.4-Q1",
+      "pdf_pages": "21",
+      "requirement": "Complete mirror comparison table",
+      "implementation": "results/comparison.csv and section5",
+      "conditions": "Current error, operational Vmin, Rout, regions, bias power and headroom",
+      "verification": "Measured table; tolerance is explicitly author-defined."
+    },
+    {
+      "id": "4.4-Q2",
+      "pdf_pages": "21",
+      "requirement": "Proposed gm^3/gd^5 output resistance and drawbacks",
+      "implementation": "07_feedback_boost_experiment.sp and section6",
+      "conditions": "Dimensional check; finite-bandwidth ideal gain1/10/100",
+      "verification": "Printed expression has units ohm^2; literal target unresolved. Conceptual experiment only."
+    }
+  ],
+  "case_definitions": {
+    "01_device_iv": [
+      "L=1.4um",
+      "L=0.35um",
+      "L=0.7um",
+      "L=2.8um"
+    ],
+    "02_03_05": [
+      "Iref50uA,Wunit3um",
+      "Iref10uA,Wunit3um",
+      "Iref1uA,Wunit3um",
+      "Iref50uA,Wunit30um"
+    ],
+    "04_high_swing": [
+      "Iref50uA,Wunit3um,Lbias7um",
+      "Iref10uA,Wunit3um,Lbias7um",
+      "Iref1uA,Wunit3um,Lbias7um",
+      "Iref50uA,Wunit30um,Lbias7um",
+      "Iref1uA,Wunit3um,Lbias3.5um",
+      "Iref1uA,Wunit3um,Lbias14um"
+    ],
+    "06_regulated": [
+      "Iref50uA,Wunit3um",
+      "Iref10uA,Wunit3um",
+      "Iref1uA,Wunit3um",
+      "Iref50uA,Wunit30um",
+      "Iref50uA,Wunit30um,MC2=120um,MC5/6=300um"
+    ],
+    "07_feedback": [
+      "A=1",
+      "A=10",
+      "A=100"
+    ]
+  },
+  "checks": {
+    "ratio_tolerance_pct": 5,
+    "ratio_tolerance_origin": "Declared comparison criterion, not a printed PDK/handout guarantee.",
+    "vmin_definition": "Lowest1mV grid voltage such that every subsequent point through1V meets abs(Iout/(2Iref)-1)<=5% and all listed bias nodes are within0..1V. Does not certify saturation at every sweep point.",
+    "point_definition": "At Vout0.8V, ratio+rail test plus abs(VDS)>=abs(VDSAT) for every listed MOS; subthreshold labels retained.",
+    "rout_definition": "1/abs(Iac) at1Hz for a1V single-port AC test. Other output sources AC-grounded. DC central difference0.799/0.801V is an independent numerical check.",
+    "power_definition": "Bias supply power only; the ideal external output port contributes an additional Vout*Iout. Neither includes a physically implemented Iref generator."
+  },
+  "limitations": [
+    "No reproduction of the lecture0.35um/3.3V numeric examples with the supplied supplied-model model.",
+    "Ideal reference-current-source headroom is not a physical reference design.",
+    "No PVT/corner/mismatch/layout qualification.",
+    "PDF p21 gm^3/gd^5 expression is dimensionally inconsistent; literal requirement not claimed achieved."
+  ]
+}

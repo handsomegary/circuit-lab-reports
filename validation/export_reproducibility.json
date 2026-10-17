@@ -1,0 +1,17 @@
+{
+  "input": "Final batch multi-job batch recorded in batch_execution.json",
+  "DIC": {
+    "exporter": "scripts/export_dic_results.py",
+    "csv_files_compared": 9,
+    "result": "byte-identical",
+    "report_metrics": "numerically identical"
+  },
+  "AIC": {
+    "exporter": "scripts/export_aic_results.py",
+    "cases": 30,
+    "comparison_rows": 36,
+    "files_compared": 34,
+    "result": "byte-identical",
+    "files": "30 per-case CSVs, comparison.csv, comparison.json, simulation_data.json, operating_points.csv"
+  }
+}

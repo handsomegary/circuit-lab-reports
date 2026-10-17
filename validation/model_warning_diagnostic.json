@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "report_date": "2026-10-17",
+  "simulator": "PrimeSim HSPICE S-2021.09 win64",
+  "scope": "One representative diagnostic deck; final decks and model were not modified.",
+  "model_filename": "process.lib",
+  "original_batch_batch": {
+    "deck_count": 17,
+    "suppression_notice_count": 17,
+    "observed_notice": "**warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+  },
+  "diagnostic": {
+    "representative_deck": "DIC/Lab01/05_equal_geometry.sp",
+    "isolated_copy_option_change": "WARNLIMIT=100 added to .option; electrical statements unchanged.",
+    "simulator_exit_code": 0,
+    "completed": true,
+    "visible_error_count": 0,
+    "failed_measurement_count": 0,
+    "observed_notice": "** warning** associated with encrypted blocks were suppressed",
+    "final_staged_deck_unchanged": true
+  },
+  "measurement_comparison": {
+    "exact_measurement_file_bytes_equal": true,
+    "reported_precision_values_equal": true,
+    "measurements": [
+      {
+        "name": "n_at_08",
+        "unit": "A",
+        "final": -0.00011177343,
+        "diagnostic": -0.00011177343
+      },
+      {
+        "name": "p_at_08",
+        "unit": "A",
+        "final": 2.0463701e-05,
+        "diagnostic": 2.0463701e-05
+      },
+      {
+        "name": "magnitude_ratio",
+        "unit": "dimensionless",
+        "final": 0.18308198,
+        "diagnostic": 0.18308198
+      }
+    ],
+    "temperature_C": 25.0
+  },
+  "conclusion": {
+    "confirmed": "Increasing WARNLIMIT revealed that warning messages in this representative run are associated with encrypted blocks, while their details remain suppressed.",
+    "batch_interpretation": "All 17 final listings contain the same generic suppression notice and use the same supplied model. Only the representative deck was rerun with the higher warning limit.",
+    "unresolved": "The underlying warnings, their severity and their effect on model validity cannot be determined from the visible diagnostic output.",
+    "harmlessness_established": false,
+    "measurement_agreement_limit": "Agreement at the printed measurement precision is evidence of unchanged measured values, not proof that the warnings are harmless or that the model is validated.",
+    "recommended_status": "Execution completed with no visible errors or failed measurements; encrypted-model warning details remain unresolved."
+  }
+}

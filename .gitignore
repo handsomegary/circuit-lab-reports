@@ -1,0 +1,23 @@
+# Local foundry models and original handouts are not redistributed.
+*.model
+*.lib
+*.lis
+*.st0
+*.ic0
+*.pa0
+*.sw[0-9]*
+*.tr[0-9]*
+*.ac[0-9]*
+*.mt[0-9]*
+*.ms[0-9]*
+*.ma[0-9]*
+*.log
+*.aux
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+__pycache__/
+work/
+report/LaTeX/

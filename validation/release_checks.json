@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-17",
+  "scope": "Descriptions and external model paths updated; previous actual simulation data retained.",
+  "decks": [
+    {
+      "deck": "AIC/Lab01/01_device_iv.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "dfe884a8d739a1fb09e68f688a7245f781111a6d73f3dc82d26461f1e0a6822f"
+    },
+    {
+      "deck": "AIC/Lab01/02_simple_mirror.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "6293f77f59e2066b489f599ba4ae0f74bc2eb75e4a932971750f45fb1243bb2f"
+    },
+    {
+      "deck": "AIC/Lab01/03_cascode_mirror.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "bcc40d85f88c29b0a5327e41b955375319116fdc5e5d1ce273fb608337f73457"
+    },
+    {
+      "deck": "AIC/Lab01/04_high_swing_cascode.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "83d81217a2161552c09dff17aafc97c306a3ca12c058272a8bf82d47925ea5f4"
+    },
+    {
+      "deck": "AIC/Lab01/05_wilson_comparison.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "3e6a4851015c1a4a975c2f744eace5aadfcc8b68c83db84e2e0e4c2a0475f5a2"
+    },
+    {
+      "deck": "AIC/Lab01/06_regulated_comparison.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "94d4256dc96d8069930ef5d62cf494269aa41e453c7ff4a25c79fa89a81e177d"
+    },
+    {
+      "deck": "AIC/Lab01/07_feedback_boost_experiment.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "4c5a4013924b063dbd9ec874d8161fe9c5d045dee1d1b33429da4523ef3a833c"
+    },
+    {
+      "deck": "DIC/Lab01/01_diode_n.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "45d8bf4d815f97638d46a0bcb54dffc048e713cccfbab8fb0b5b539a41c6c44b"
+    },
+    {
+      "deck": "DIC/Lab01/01_diode_p.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "1f117e948904d5e832bd978aed7898b1fe37f25881fc08cfe797fac6e5040c75"
+    },
+    {
+      "deck": "DIC/Lab01/02_output_n.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "d26f7dfda80d9174aeea4ca78355553b9de9565c32f1a244828251aab1dde7f4"
+    },
+    {
+      "deck": "DIC/Lab01/02_output_p.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "ffda3f868bc30f76f847806277b6921a41cd9ae619ab000c7175e099c5145b14"
+    },
+    {
+      "deck": "DIC/Lab01/03_length.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "d9fbb4ae094bb0a13e4d03a712c7ee40cefee9e51011d98b364dfeac56ac07b6"
+    },
+    {
+      "deck": "DIC/Lab01/04_subthreshold.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "f2892ba30f8721a3cc738b9992915c0949529be9b56562f12d862e2f6865d9fe"
+    },
+    {
+      "deck": "DIC/Lab01/05_equal_geometry.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "639043f398c2ec5851cbd0d27314cdd838c3a555d874c26e75983a4496f81f92"
+    },
+    {
+      "deck": "DIC/Lab02/01_chain.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "fc2beb06862065d975e06d2abb228d1ff5d4e105a7a32e4d9c76dde29ec9cd21"
+    },
+    {
+      "deck": "DIC/Lab02/02_fanout3.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "aa49d907982723c519bbd9c22f91f89316a6c0b739c250989a8d42ae66283931"
+    },
+    {
+      "deck": "DIC/Lab02/03_size3.sp",
+      "electrical_statements_equal_to_simulated_version": true,
+      "include_path": "../../models/process.lib",
+      "published_sha256": "520b063f08aeee404eb71b6be0d4f33d154897d11259d0f6972cf3883da2dbbc"
+    }
+  ],
+  "csv_files_preserved_byte_for_byte": 41,
+  "library_dependency": "External, not included or newly simulated in this release",
+  "examples": "Flat include and named-section templates; section name must exist in the local library.",
+  "portable_include_paths_resolve": 17,
+  "identifier_scan": {
+    "tracked_files_checked": 131,
+    "matches": 0,
+    "coverage": [
+      "file names",
+      "source text",
+      "JSON keys and values",
+      "PDF extracted text and metadata",
+      "PNG metadata"
+    ]
+  }
+}

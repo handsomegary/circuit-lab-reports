@@ -1,0 +1,27 @@
+{
+  "model": {
+    "external_dependency": true,
+    "include_path": "models/process.lib",
+    "expected_device_models": [
+      "nmos",
+      "pmos"
+    ]
+  },
+  "DIC_handout": {
+    "filename": "DIC Lab.pdf",
+    "bytes": 44759439
+  },
+  "AIC_handout": {
+    "filename": "AIC Lab.pdf",
+    "bytes": 19199955
+  },
+  "simulator": "PrimeSim HSPICE S-2021.09 win64",
+  "report_date": "2026-10-17",
+  "time_zone": "America/Chicago",
+  "scope": [
+    "DIC Lab 1",
+    "DIC Lab 2",
+    "AIC Lab 1"
+  ],
+  "model_included_in_repository": false
+}

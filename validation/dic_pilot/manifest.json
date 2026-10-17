@@ -1,0 +1,356 @@
+{
+  "scope": "Three-lab pilot: this agent delivers DIC1 and DIC2 only; other original labs deferred.",
+  "model_path": "models/process.lib",
+  "model_observation": "Encrypted model; nmos/pmos names verified by successful simulation. No rating/corner inferred.",
+  "decks": [
+    {
+      "lab": 1,
+      "path": "DIC\\Lab01\\01_diode_n.sp",
+      "specs": [
+        "1.step1",
+        "1.question1"
+      ],
+      "simulation": {
+        "engine": "PrimeSim HSPICE S-2021.09 win64",
+        "temperature_C": 25,
+        "error_count": 0,
+        "failed_marker_count": 0,
+        "normal_analysis_terminations": 3,
+        "status": "completed"
+      },
+      "model": "models/process.lib"
+    },
+    {
+      "lab": 1,
+      "path": "DIC\\Lab01\\02_output_n.sp",
+      "specs": [
+        "1.step2"
+      ],
+      "simulation": {
+        "engine": "PrimeSim HSPICE S-2021.09 win64",
+        "temperature_C": 25,
+        "error_count": 0,
+        "failed_marker_count": 0,
+        "normal_analysis_terminations": 1,
+        "status": "completed"
+      },
+      "model": "models/process.lib"
+    },
+    {
+      "lab": 1,
+      "path": "DIC\\Lab01\\01_diode_p.sp",
+      "specs": [
+        "1.step1",
+        "1.question1"
+      ],
+      "simulation": {
+        "engine": "PrimeSim HSPICE S-2021.09 win64",
+        "temperature_C": 25,
+        "error_count": 0,
+        "failed_marker_count": 0,
+        "normal_analysis_terminations": 3,
+        "status": "completed"
+      },
+      "model": "models/process.lib"
+    },
+    {
+      "lab": 1,
+      "path": "DIC\\Lab01\\02_output_p.sp",
+      "specs": [
+        "1.step2"
+      ],
+      "simulation": {
+        "engine": "PrimeSim HSPICE S-2021.09 win64",
+        "temperature_C": 25,
+        "error_count": 0,
+        "failed_marker_count": 0,
+        "normal_analysis_terminations": 1,
+        "status": "completed"
+      },
+      "model": "models/process.lib"
+    },
+    {
+      "lab": 1,
+      "path": "DIC\\Lab01\\03_length.sp",
+      "specs": [
+        "1.step3",
+        "1.question3"
+      ],
+      "simulation": {
+        "engine": "PrimeSim HSPICE S-2021.09 win64",
+        "temperature_C": 25,
+        "error_count": 0,
+        "failed_marker_count": 0,
+        "normal_analysis_terminations": 1,
+        "status": "completed"
+      },
+      "model": "models/process.lib"
+    },
+    {
+      "lab": 1,
+      "path": "DIC\\Lab01\\04_subthreshold.sp",
+      "specs": [
+        "1.step4",
+        "1.question4"
+      ],
+      "simulation": {
+        "engine": "PrimeSim HSPICE S-2021.09 win64",
+        "temperature_C": 25,
+        "error_count": 0,
+        "failed_marker_count": 0,
+        "normal_analysis_terminations": 3,
+        "status": "completed"
+      },
+      "model": "models/process.lib"
+    },
+    {
+      "lab": 1,
+      "path": "DIC\\Lab01\\05_equal_geometry.sp",
+      "specs": [
+        "1.question2"
+      ],
+      "simulation": {
+        "engine": "PrimeSim HSPICE S-2021.09 win64",
+        "temperature_C": 25,
+        "error_count": 0,
+        "failed_marker_count": 0,
+        "normal_analysis_terminations": 1,
+        "status": "completed"
+      },
+      "model": "models/process.lib"
+    },
+    {
+      "lab": 2,
+      "path": "DIC\\Lab02\\01_chain.sp",
+      "specs": [
+        "2.step1"
+      ],
+      "simulation": {
+        "engine": "PrimeSim HSPICE S-2021.09 win64",
+        "temperature_C": 25,
+        "error_count": 0,
+        "failed_marker_count": 0,
+        "normal_analysis_terminations": 3,
+        "status": "completed"
+      },
+      "model": "models/process.lib"
+    },
+    {
+      "lab": 2,
+      "path": "DIC\\Lab02\\02_fanout3.sp",
+      "specs": [
+        "2.step2"
+      ],
+      "simulation": {
+        "engine": "PrimeSim HSPICE S-2021.09 win64",
+        "temperature_C": 25,
+        "error_count": 0,
+        "failed_marker_count": 0,
+        "normal_analysis_terminations": 3,
+        "status": "completed"
+      },
+      "model": "models/process.lib"
+    },
+    {
+      "lab": 2,
+      "path": "DIC\\Lab02\\03_size3.sp",
+      "specs": [
+        "2.step3"
+      ],
+      "simulation": {
+        "engine": "PrimeSim HSPICE S-2021.09 win64",
+        "temperature_C": 25,
+        "error_count": 0,
+        "failed_marker_count": 0,
+        "normal_analysis_terminations": 3,
+        "status": "completed"
+      },
+      "model": "models/process.lib"
+    }
+  ],
+  "spec_coverage": [
+    {
+      "id": "1.step1",
+      "requirement": "Diode-connected NMOS/PMOS Id-Vgs curves",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        8
+      ],
+      "rewritten_decks": [
+        "DIC/Lab01/01_diode_n.sp",
+        "DIC/Lab01/01_diode_p.sp"
+      ],
+      "conditions": "G=D; Wn=.6um Wp=1.8um L=.25um; |VGS|=0..1V",
+      "measurements": "Full curves and current at 1V",
+      "validation_status": "simulated_supplied-model_adaptation",
+      "limitations": "Original process and 2.5V bias not reproduced."
+    },
+    {
+      "id": "1.step2",
+      "requirement": "Separate gate and drain; multiple gate biases",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        8
+      ],
+      "rewritten_decks": [
+        "DIC/Lab01/02_output_n.sp",
+        "DIC/Lab01/02_output_p.sp"
+      ],
+      "conditions": "|VGS|=0,.2,.4,.6,.8,1V; |VDS|=0..1V",
+      "measurements": "Twelve output curves; correct signed PMOS sweep",
+      "validation_status": "simulated_supplied-model_adaptation",
+      "limitations": "Original higher voltage and breakdown plots not reproduced."
+    },
+    {
+      "id": "1.step3",
+      "requirement": "Fixed width; channel-length sweep",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        8
+      ],
+      "rewritten_decks": [
+        "DIC/Lab01/03_length.sp"
+      ],
+      "conditions": "L=.25,.5,.75,1um; Wn=.6um Wp=1.8um; |VGS|=.6V",
+      "measurements": "Output curves and 0.8..1V secant conductance",
+      "validation_status": "simulated_supplied-model_adaptation",
+      "limitations": "Gate bias differs from original NMOS1.6V/PMOS0.9V; secant gds is not lambda."
+    },
+    {
+      "id": "1.step4",
+      "requirement": "Subthreshold transfer curves on a log axis",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        8
+      ],
+      "rewritten_decks": [
+        "DIC/Lab01/04_subthreshold.sp"
+      ],
+      "conditions": "|VGS|=0..0.5V; |VDS|=1,.6,.3V; fit .15.. .25V",
+      "measurements": "Semilog curves; local slope range; fitted S and R-squared",
+      "validation_status": "simulated_interval_qualified",
+      "limitations": "No model-internal Vth/region extraction; not all 0..0.5V points claimed subthreshold."
+    },
+    {
+      "id": "1.question1",
+      "requirement": "Effect of increasing W/L",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        9
+      ],
+      "rewritten_decks": [
+        "DIC/Lab01/01_diode_n.sp",
+        "DIC/Lab01/01_diode_p.sp"
+      ],
+      "conditions": "W multipliers1,2,4; fixed L",
+      "measurements": "Current table and approximate width proportionality",
+      "validation_status": "simulated_and_discussed",
+      "limitations": "Changing L can change more than W/L."
+    },
+    {
+      "id": "1.question2",
+      "requirement": "Is equal-W/L N/P current ratio the mobility ratio?",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        9
+      ],
+      "rewritten_decks": [
+        "DIC/Lab01/05_equal_geometry.sp"
+      ],
+      "conditions": "W/L=.6/.25um; |VGS|=|VDS|=.8V",
+      "measurements": "Current ratio0.18308198; explain threshold/overdrive and model effects",
+      "validation_status": "simulated_and_discussed",
+      "limitations": "Mobility ratio itself not independently known from encrypted model."
+    },
+    {
+      "id": "1.question3",
+      "requirement": "Output slope versus channel length",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        9
+      ],
+      "rewritten_decks": [
+        "DIC/Lab01/03_length.sp"
+      ],
+      "conditions": "Same as step3",
+      "measurements": "Secant slopes decrease for both polarities",
+      "validation_status": "simulated_and_discussed",
+      "limitations": "Limited to sampled range; not a fitted channel-length-modulation coefficient."
+    },
+    {
+      "id": "1.question4",
+      "requirement": "Subthreshold slope versus Vgs and polarity",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        9
+      ],
+      "rewritten_decks": [
+        "DIC/Lab01/04_subthreshold.sp"
+      ],
+      "conditions": "Fit .15.. .25V at three drain biases",
+      "measurements": "S and local ranges; PMOS fitted semilog slope slightly smaller here",
+      "validation_status": "simulated_and_discussed",
+      "limitations": "Bias dependent and overlapping local ranges; not universal polarity ranking."
+    },
+    {
+      "id": "2.step1",
+      "requirement": "Nine-stage characteristic waveform with three input slews",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        12
+      ],
+      "rewritten_decks": [
+        "DIC/Lab02/01_chain.sp"
+      ],
+      "conditions": "Nine stages; record Out1..8; 1ps near-step,0.2ns,2us",
+      "measurements": "All16 rise/fall times per input-edge case,10%-90%; native waveform and measurement outputs",
+      "validation_status": "simulated_supplied-model_adaptation",
+      "limitations": "VDD1V replaces original2.5V; 0ns explicitly approximated by1ps; no original-process numeric pass claimed; Out9 unloaded and excluded from characteristic comparison."
+    },
+    {
+      "id": "2.step2",
+      "requirement": "Repeat with total fanout three",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        12
+      ],
+      "rewritten_decks": [
+        "DIC/Lab02/02_fanout3.sp"
+      ],
+      "conditions": "FO3 = main-chain load plus2 branch inverter loads",
+      "measurements": "All16 rise/fall times per input-edge case,10%-90%; native waveform and measurement outputs",
+      "validation_status": "simulated_supplied-model_adaptation",
+      "limitations": "VDD1V replaces original2.5V; 0ns explicitly approximated by1ps; no original-process numeric pass claimed; Out9 unloaded and excluded from characteristic comparison."
+    },
+    {
+      "id": "2.step3",
+      "requirement": "Enlarge transistor widths and repeat",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        12
+      ],
+      "rewritten_decks": [
+        "DIC/Lab02/03_size3.sp"
+      ],
+      "conditions": "All nine-stage widths3x; L remains .25um",
+      "measurements": "All16 rise/fall times per input-edge case,10%-90%; native waveform and measurement outputs",
+      "validation_status": "simulated_supplied-model_adaptation",
+      "limitations": "VDD1V replaces original2.5V; 0ns explicitly approximated by1ps; no original-process numeric pass claimed; Out9 unloaded and excluded from characteristic comparison."
+    }
+  ],
+  "deferred_misfiled_sources": [
+    {
+      "source": "Lab5_1.sp",
+      "reason": "File stored inside Lab1 but belongs to another lab; deferred by three-lab pilot scope."
+    },
+    {
+      "source": "Lab5_2.sp",
+      "reason": "File stored inside Lab1 but belongs to another lab; deferred by three-lab pilot scope."
+    }
+  ],
+  "validation_notes": [
+    "Lab2 final RUNLVL6; earlier default RUNLVL3 values discarded.",
+    "Representative slow chain RUNLVL5/6 max slew difference1.0290166%; Out8 rise0.1174781%,fall0.0413099%.",
+    "Near-step1ps vs0.1ps representative Out8 rise0.0917045%,fall0.0124319%; early-stage waveform not asserted exact-zero equivalent."
+  ]
+}

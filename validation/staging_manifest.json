@@ -1,0 +1,87 @@
+[
+  {
+    "source": "DIC/Lab01/01_diode_n.sp",
+    "staged": "DIC_Lab01_01_diode_n.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "DIC/Lab01/01_diode_p.sp",
+    "staged": "DIC_Lab01_01_diode_p.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "DIC/Lab01/02_output_n.sp",
+    "staged": "DIC_Lab01_02_output_n.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "DIC/Lab01/02_output_p.sp",
+    "staged": "DIC_Lab01_02_output_p.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "DIC/Lab01/03_length.sp",
+    "staged": "DIC_Lab01_03_length.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "DIC/Lab01/04_subthreshold.sp",
+    "staged": "DIC_Lab01_04_subthreshold.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "DIC/Lab01/05_equal_geometry.sp",
+    "staged": "DIC_Lab01_05_equal_geometry.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "DIC/Lab02/01_chain.sp",
+    "staged": "DIC_Lab02_01_chain.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "DIC/Lab02/02_fanout3.sp",
+    "staged": "DIC_Lab02_02_fanout3.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "DIC/Lab02/03_size3.sp",
+    "staged": "DIC_Lab02_03_size3.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "AIC/Lab01/01_device_iv.sp",
+    "staged": "AIC_Lab01_01_device_iv.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "AIC/Lab01/02_simple_mirror.sp",
+    "staged": "AIC_Lab01_02_simple_mirror.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "AIC/Lab01/03_cascode_mirror.sp",
+    "staged": "AIC_Lab01_03_cascode_mirror.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "AIC/Lab01/04_high_swing_cascode.sp",
+    "staged": "AIC_Lab01_04_high_swing_cascode.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "AIC/Lab01/05_wilson_comparison.sp",
+    "staged": "AIC_Lab01_05_wilson_comparison.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "AIC/Lab01/06_regulated_comparison.sp",
+    "staged": "AIC_Lab01_06_regulated_comparison.sp",
+    "transformation": "resolve include paths only"
+  },
+  {
+    "source": "AIC/Lab01/07_feedback_boost_experiment.sp",
+    "staged": "AIC_Lab01_07_feedback_boost_experiment.sp",
+    "transformation": "resolve include paths only"
+  }
+]
