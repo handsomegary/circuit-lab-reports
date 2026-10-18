@@ -4,50 +4,59 @@
 
 ## DIC 學習路線：從平衡到強健
 
-把各 lab 串起來看，核心問題是：**為了改善速度或面積，付出了什麼代價，又要如何讓電路可靠運作？**
+這些 lab 串起來，就是工程師一邊追速度、一邊收拾副作用的過程：**加寬救了驅動力，卻帶來電容；簡化了電路，卻把難題交給雜訊與時序。** 每個實驗都在回答上一個設計留下的問題。
 
-| 設計問題 | 核心取捨 | 對應報告 |
+| 遇到什麼痛點 | 工程師出什麼招，又要盯住什麼代價 | 對應報告 |
 | --- | --- | --- |
-| ① 先讓反相器平衡 | 調整 PMOS／NMOS 寬度比，使切換點接近半供應電壓、平衡雜訊容限；2～3 倍只是常見起點，仍須看實際 VTC。 | [Lab 8](reports/DIC08/zh/main.pdf) |
-| ② 串成邏輯閘後，如何維持驅動力？ | NAND／NOR 的串聯路徑可藉加寬降低電阻，代價是更大的輸入與寄生電容；切換點、延遲仍受輸入模式影響。 | [Lab 9](reports/DIC09/zh/main.pdf) |
-| ③ 換一種邏輯，爭取面積與速度 | Pseudo-NMOS 簡化上拉網路，但付出靜態功耗與比例依賴；動態邏輯採預充／評估，則須處理電荷分享、耦合與漏電，並承擔時脈與預充功耗。 | [Lab 13](reports/DIC13/zh/main.pdf)、[25](reports/DIC25/zh/main.pdf) |
-| ④ 讓資料在正確時間被接收 | Latch／DFF 建立儲存與取樣邊界，須檢查 setup／hold、clock slew／skew；動態串接、NORA 到 TSPC 進一步探討級間競爭與單相時脈的限制。 | [Lab 17](reports/DIC17/zh/main.pdf)、[20](reports/DIC20/zh/main.pdf)、[21](reports/DIC21/zh/main.pdf)、[26](reports/DIC26/zh/main.pdf)、[27](reports/DIC27/zh/main.pdf)、[28](reports/DIC28/zh/main.pdf) |
-| ⑤ 導線與負載也會拖慢訊號 | 連線 RC 與串擾會改變延遲和波形；理解漸增尺寸 buffer 如何驅動大負載，再延伸思考長線分段、repeater 與屏蔽。 | [Lab 11](reports/DIC11/zh/main.pdf)、[12](reports/DIC12/zh/main.pdf) |
-| ⑥ 電源也不是理想電壓源 | 切換電流造成電源／地壓降；decap 就近供應電荷、減小瞬態波動，但不能消除平均直流 IR drop，且有面積成本。 | [Lab 19](reports/DIC19/zh/main.pdf) |
-| ⑦ 從典型條件走向可靠設計 | 用 TT／FF／SS、混合角落與電壓／溫度變化，檢查延遲、功耗與邏輯電位；有限角落測試仍不等於完整時序簽核或統計良率保證。 | [Lab 15](reports/DIC15/zh/main.pdf) |
+| ① 上拉、下拉力道不平衡 | 加寬 PMOS 補足上拉能力，把切換點往半供應電壓調，觀察兩側雜訊容限如何此消彼長。 | [Lab 8](reports/DIC08/zh/main.pdf) |
+| ② 串聯之後，訊號變慢了 | NAND／NOR 加寬串聯管來救驅動力；接著看新增的輸入與寄生電容，又把多少速度吃回去。 | [Lab 9](reports/DIC09/zh/main.pdf) |
+| ③ PMOS 網路太占空間、太重 | Pseudo-NMOS 用弱上拉換掉複雜網路，付出靜態功耗；動態邏輯改靠預充儲存電荷，開始面對電荷分享、耦合與漏電。 | [Lab 13](reports/DIC13/zh/main.pdf)、[25](reports/DIC25/zh/main.pdf) |
+| ④ 資料算對了，卻在錯的時間被接走 | 用 latch／DFF 控制儲存與取樣；追查 setup／hold、clock slew／skew，再看 NORA、TSPC 如何安排級間時序。 | [Lab 17](reports/DIC17/zh/main.pdf)、[20](reports/DIC20/zh/main.pdf)、[21](reports/DIC21/zh/main.pdf)、[26](reports/DIC26/zh/main.pdf)、[27](reports/DIC27/zh/main.pdf)、[28](reports/DIC28/zh/main.pdf) |
+| ⑤ 電晶體很快，訊號卻卡在線上 | 把連線 RC、串擾與大負載加進來；學會分級 buffer，再延伸到長線分段、repeater 與屏蔽。 | [Lab 11](reports/DIC11/zh/main.pdf)、[12](reports/DIC12/zh/main.pdf) |
+| ⑥ 大家一起切換，電源就往下掉 | 用 decap 當就近供電的小水庫，觀察瞬態壓降與電流峰值能改善多少，以及電容要付出的成本。 | [Lab 19](reports/DIC19/zh/main.pdf) |
+| ⑦ 典型條件跑得動，換個角落就出問題 | 把電路放進 TT／FF／SS、混合角落與不同電壓／溫度，找出速度、漏電和邏輯電位最脆弱的地方。 | [Lab 15](reports/DIC15/zh/main.pdf) |
 
 這條路線將各實驗的設計取捨串起；各 lab 實際做了哪些測試、得到什麼結果，請見連結報告。延伸閱讀：[邏輯家族與速度／功耗取捨](https://pages.hmc.edu/harris/cmosvlsi/4e/Westeweb.fm.pdf)、[長線與 repeater 延遲模型](https://pages.hmc.edu/harris/research/wiredelay.pdf)。
 
-## Planned lab：用 Unfooted Domino 挑戰速度極限
+## Planned labs：從榨乾速度，到把功耗壓回來
 
-**狀態：待實作與量測。** 延伸 [Lab 25](reports/DIC25/zh/main.pdf) 的動態非理想效應與 [Lab 26](reports/DIC26/zh/main.pdf) 的串接問題，研究能否以移除 footer 換取更快的評估速度。
+**時代背景：衝上 GHz 之後，熱怎麼辦？** 2000 年代的 Pentium 4／NetBurst 把高頻競賽推到眼前：加深管線，在關鍵區塊用 Domino 搶速度，桌上型號一路衝到 **3.8 GHz**。追逐高頻的帳單，是時脈與切換功耗、漏電和散熱壓力。**功耗牆讓工程師更在意：每多一分速度，究竟要花多少電？** [Pentium 4 電路設計](https://www.intel.com/content/dam/www/public/us/en/documents/research/2001-vol05-iss-1-intel-technology-journal.pdf#page=49)、[型號與頻率](https://www.intel.com/pressroom/kits/quickreffam.htm)
 
-- **為什麼值得試：** Unfooted（無底腳）移除下拉路徑中受時脈控制的 NMOS，減少串聯電阻與時脈負載；在相同驅動力下，有機會縮小輸入管、降低前級負擔。
-- **混合使用策略：** 接收外部靜態輸入的首級採 Footed，隔離預充時可能導通的下拉網路；後級在前級完成預充、反相器輸出回到 0，且本級進入評估前不會再被拉高的條件下，才考慮採 Unfooted。必要時延後後級預充，並保留足夠預充時間。[時序依據：§10.5.3](https://pages.hmc.edu/harris/cmosvlsi/4e/Westeweb.fm.pdf#page=24)
-- **必須守住的條件：** 無爭用預充要求每條下拉路徑至少有一顆 NMOS 截止；所有輸入為 0 是充分條件。預充 PMOS 與下拉網路同時導通會造成直通電流，嚴重時影響預充。需驗證預充傳播延遲與 clock skew，後級並非一律可以移除 footer。
-- **預計比較：** 全 Footed 與混合架構，在相同負載、輸入邊緣下，分別做等尺寸與等驅動力比較；量測評估延遲、預充完成時間、爭用電流及每週期能量（統一計入預充與時脈驅動），再檢查評估期輸入單調性、keeper、耦合、漏電與可用 PVT 角落。速度收益以實測為準。
+同時，行動處理器走出另一條路：2003 年的 Pentium M 把許多 Domino 電路換成靜態 CMOS，將 Low-Vt 集中在關鍵路徑，並用較長通道壓低部分快取的漏電。脈衝時脈也已出現在 Pentium 4，用來減輕時脈負載。這些設計給了我們三個值得親手拆開的題目：**拿掉拖慢速度的元件、把快元件用在刀口上、連鎖住資料的時間都要省。** [Pentium M 的功耗最佳化](https://www.intel.com/content/dam/www/public/us/en/documents/research/2003-vol07-iss-2-intel-technology-journal.pdf#page=44)
 
-## Planned labs：靜態 CMOS 與 Pulsed Latch 的能效取捨
+**以下三項均為規劃中，尚未實作與量測。**
 
-**時代背景｜2000 年代初的高頻與行動能效設計。** Pentium 4 以積極的 Domino 管線追求高頻，同時已使用脈衝時脈降低時脈功耗與負載。2003 年的 Pentium M 則記錄了將許多 Domino 電路改為靜態 CMOS、把 Low-Vt 留給關鍵路徑，以及加長部分快取電晶體通道以減少漏電。這些方法當時已並存；設計必須共同權衡速度、切換功耗、漏電與雜訊，不能把功耗牆單獨歸因於 Domino，或把 Pulsed Latch 當成後來才出現的替代品。[Intel 2001](https://www.intel.com/content/dam/www/public/us/en/documents/research/2001-vol05-iss-1-intel-technology-journal.pdf#page=49)、[Intel 2003](https://www.intel.com/content/dam/www/public/us/en/documents/research/2003-vol07-iss-2-intel-technology-journal.pdf#page=44)
+### 1. Unfooted Domino：拔掉 footer，把評估速度榨出來
 
-### 靜態 CMOS：把速度花在關鍵路徑上
+Footer 替預充階段隔離下拉網路，卻也在評估路徑多串了一顆 NMOS。這個 lab 就是要拆掉這個速度負擔，看看預充端會付出什麼代價。延伸 [Lab 25](reports/DIC25/zh/main.pdf)、[26](reports/DIC26/zh/main.pdf)。
 
-**狀態：待實作與量測；可先做人工閾值偏移近似，製程級 Multi-Vt 須另備適用模型。** 延伸 [Lab 7](reports/DIC07/zh/main.pdf)、[9](reports/DIC09/zh/main.pdf)、[15](reports/DIC15/zh/main.pdf)。
+- **作法：** 首級保留 Footed，承接外部輸入；後級改成 Unfooted，利用前級預充後反相器輸出回到 0，關閉下拉路徑。調整後級預充時機，讓資料先歸零、再開始充電，並與全 Footed 架構對照。[串接與預充時序](https://pages.hmc.edu/harris/cmosvlsi/4e/Westeweb.fm.pdf#page=24)
+- **觀察重點：省下的評估時間，有沒有被預充與功耗吃回去？** 盯住評估延遲、預充完成時間與直通電流尖峰，再看包含時脈驅動的整週期能量。刻意掃 clock skew 與預充延遲，找出「更快」到「開始爭用、甚至充不滿」的界線。
 
-- **設計策略：** 關鍵路徑評估加大驅動尺寸或使用 Low-Vt；有時序餘裕的路徑則評估 High-Vt 或較長通道。較強驅動可能增加電容，較低閾值通常增加漏電，須依路徑需求配置。
-- **概念實驗做法：** 保留原模型，在本機副本建立不同名稱的模型並調整 `VTH0`；或對已確認支援的 MOS 使用 instance `DELVTO`，讓同一電路逐顆選擇偏移。兩種方式擇一，避免偏移疊加；也避免改動共用模型使全部元件一起變。以本次查核的 HSPICE BSIM3 Level 49／53 慣例，降低閾值絕對值 50 mV 的示例為 NMOS `DELVTO=-0.05`、PMOS `DELVTO=+0.05`；提高則反向。先用 DC 曲線確認參數生效與符號，示例數值尚未量測。
-- **對照方式：** 比較全基準、全低閾值、全高閾值與「關鍵路徑低閾值、其餘高閾值」的人工偏移配置。先固定 W／L、邏輯功能、負載及輸入邊緣，再於模型有效範圍內另做 W／L 掃描，分開判讀閾值與尺寸的影響。
-- **觀察重點：** 以相同條件及方法萃取 ID–VG／閾值，記錄上升與下降延遲、slew、每次切換能量、不同輸入狀態的待機漏電，以及 VTC／雜訊容限；檢查混合配置能否在滿足時序時降低漏電，並確認高溫及可用角落下是否仍成立。
+### 2. 靜態 CMOS／Multi-Vt：把速度留給關鍵路徑，其餘省電
 
-人工偏移只代表閾值敏感度與 Multi-Vt 概念實驗；取得製程提供的 LVT／HVT 模型後才能進行對應的製程比較。製程角落與 body bias 不代替不同閾值模型，尺寸代理量也不視為實際 layout 面積。
+決定時脈的是最慢的路徑。把所有閘都換成低閾值、大尺寸，會讓有餘裕的地方也跟著多漏電、多背電容。這個 lab 要試的是：**保住關鍵路徑的速度，把其餘地方的耗電收回來。** 延伸 [Lab 7](reports/DIC07/zh/main.pdf)、[9](reports/DIC09/zh/main.pdf)、[15](reports/DIC15/zh/main.pdf)。
 
-### Pulsed Latch：縮短取樣開銷，守住保持時間
+- **作法：** 保留原模型，用模型副本的 `VTH0` 或逐顆 MOS 的 `DELVTO` 做人工閾值偏移。比較全基準、全低閾值、全高閾值，以及「關鍵路徑低閾值、其餘高閾值」四種配置；再分開掃描 W／L，觀察加寬與加長通道的效果。
+- **觀察重點：少漏多少電，換掉多少速度？** 先看關鍵路徑延遲與待機漏電，再看切換能量、VTC／雜訊容限。檢查混合配置能否維持目標時序，同時降低整體漏電；再用高溫與可用角落，把原本看似漂亮的餘裕逼出來。
 
-**狀態：待實作與量測。** 延伸 [Lab 17](reports/DIC17/zh/main.pdf)、[20](reports/DIC20/zh/main.pdf)、[21](reports/DIC21/zh/main.pdf)。
+### 3. Pulsed Latch：邏輯算得快，鎖資料也要快
 
-- **設計策略：** 用短時脈脈衝開啟具有靜態回授的 latch，利用短暫透明窗降低取樣開銷並容許有限時間借用；關閉後由回授保持資料。脈衝式觸發本身不保證儲存節點是靜態，也不保證一定優於 DFF。[時序概念](https://pages.hmc.edu/harris/research/JSSC.pdf)
-- **預計比較：** 建立實際脈衝產生器與靜態 latch，對照 master–slave DFF；掃描脈寬、資料到達時間、clock slew／skew 與短路徑延遲，量測有效取樣範圍、輸出延遲及包含脈衝產生器的能量。重點找出脈衝過窄的取樣失敗，以及過寬或短路徑造成的 hold／race 問題。
+一個週期不只花在邏輯運算，DFF 的 setup 與 clock-to-Q 也會吃掉時間。Pulsed latch 用一小段透明窗讓資料通過，再以靜態回授鎖住；這個 lab 要找到那個**夠接住資料、又不會讓資料一路穿透的開門時間**。延伸 [Lab 17](reports/DIC17/zh/main.pdf)、[20](reports/DIC20/zh/main.pdf)、[21](reports/DIC21/zh/main.pdf)。
+
+- **作法：** 建立實際脈衝產生器，驅動具有靜態回授的 latch，與 master–slave DFF 比較。掃描脈寬、資料到達時間、clock slew／skew 和短路徑延遲，畫出可正常取樣的範圍。[時間借用與時序開銷](https://pages.hmc.edu/harris/research/JSSC.pdf)
+- **觀察重點：脈衝太窄接不到，太寬就追撞。** 找出取樣失敗與 hold／race 的邊界，量測時間借用及輸出延遲；最後把脈衝產生器的能量一起算進去，看省下的時序開銷值不值得。
+
+<details>
+<summary>展開實驗設定與完整量測清單</summary>
+
+- **Unfooted：** 固定負載與輸入邊緣，分別做等尺寸、等驅動力對照。無爭用預充要求每條下拉路徑至少有一顆 MOS 截止，且維持到本級開始評估；掃描預充延遲、寬度及 clock skew。能量統一計入預充與時脈驅動，另檢查評估期輸入單調性、keeper、電荷分享、耦合、漏電與可用 PVT 角落。
+- **Multi-Vt：** `VTH0` 副本與 instance `DELVTO` 兩種方式擇一，避免偏移疊加或誤改共用模型。依已查核的 HSPICE BSIM3 Level 49／53 慣例，降低閾值絕對值 50 mV 的示例為 NMOS `DELVTO=-0.05`、PMOS `DELVTO=+0.05`；提高則反向，先用 DC 曲線確認方向。固定 W／L、功能、負載與輸入邊緣比較閾值，再於模型有效範圍內單獨掃尺寸。記錄 ID–VG／同一定義萃取的閾值、上升／下降延遲、slew、每次切換能量、各輸入狀態的待機漏電及 VTC／雜訊容限。
+- **Pulsed latch：** 使用實際脈衝產生器與靜態回授儲存節點。聯合掃描脈寬、資料到達時間、clock slew／skew 與短路徑延遲，記錄有效取樣窗口、時間借用、輸出延遲、hold／race 和包含脈衝產生器的能量。
+
+**量測註記：** 人工閾值偏移用於 Multi-Vt 概念與敏感度實驗；製程級比較使用對應的 LVT／HVT 模型。模型副本留在本機，面積以尺寸代理量記錄。各實驗的實際結果將另附完整條件與通過範圍。
+
+</details>
 
 ## 收錄內容
 
