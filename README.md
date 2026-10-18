@@ -27,6 +27,24 @@
 - **必須守住的條件：** 無爭用預充要求每條下拉路徑至少有一顆 NMOS 截止；所有輸入為 0 是充分條件。預充 PMOS 與下拉網路同時導通會造成直通電流，嚴重時影響預充。需驗證預充傳播延遲與 clock skew，後級並非一律可以移除 footer。
 - **預計比較：** 全 Footed 與混合架構，在相同負載、輸入邊緣下，分別做等尺寸與等驅動力比較；量測評估延遲、預充完成時間、爭用電流及每週期能量，再檢查 keeper、耦合、漏電與可用 PVT 角落。速度收益以實測為準。
 
+## Planned labs：靜態 CMOS 與 Pulsed Latch 的能效取捨
+
+**時代背景｜2000 年代初的高頻與行動能效設計。** Pentium 4 以積極的 Domino 管線追求高頻，同時已使用脈衝時脈降低時脈功耗與負載。2003 年的 Pentium M 則記錄了將許多 Domino 電路改為靜態 CMOS、把 Low-Vt 留給關鍵路徑，以及加長部分快取電晶體通道以減少漏電。這些方法當時已並存；設計必須共同權衡速度、切換功耗、漏電與雜訊，不能把功耗牆單獨歸因於 Domino，或把 Pulsed Latch 當成後來才出現的替代品。[Intel 2001](https://www.intel.com/content/dam/www/public/us/en/documents/research/2001-vol05-iss-1-intel-technology-journal.pdf#page=49)、[Intel 2003](https://www.intel.com/content/dam/www/public/us/en/documents/research/2003-vol07-iss-2-intel-technology-journal.pdf#page=44)
+
+### 靜態 CMOS：把速度花在關鍵路徑上
+
+**狀態：待實作與量測；Multi-Vt 須另備適用模型。** 延伸 [Lab 7](reports/DIC07/zh/main.pdf)、[9](reports/DIC09/zh/main.pdf)、[15](reports/DIC15/zh/main.pdf)。
+
+- **設計策略：** 關鍵路徑評估加大驅動尺寸或使用 Low-Vt；有時序餘裕的路徑則評估 High-Vt 或較長通道。較強驅動可能增加電容，較低閾值通常增加漏電，須依路徑需求配置。
+- **預計比較：** 固定邏輯功能、負載與輸入邊緣，在模型有效範圍內掃描 W／L，量測延遲、每次切換能量與不同輸入狀態的待機漏電；取得 LVT／HVT 模型後再加入 Multi-Vt 配置比較。現有製程角落與 body bias 不代替不同閾值模型；尺寸代理量也不視為實際 layout 面積。
+
+### Pulsed Latch：縮短取樣開銷，守住保持時間
+
+**狀態：待實作與量測。** 延伸 [Lab 17](reports/DIC17/zh/main.pdf)、[20](reports/DIC20/zh/main.pdf)、[21](reports/DIC21/zh/main.pdf)。
+
+- **設計策略：** 用短時脈脈衝開啟具有靜態回授的 latch，利用短暫透明窗降低取樣開銷並容許有限時間借用；關閉後由回授保持資料。脈衝式觸發本身不保證儲存節點是靜態，也不保證一定優於 DFF。[時序概念](https://pages.hmc.edu/harris/research/JSSC.pdf)
+- **預計比較：** 建立實際脈衝產生器與靜態 latch，對照 master–slave DFF；掃描脈寬、資料到達時間、clock slew／skew 與短路徑延遲，量測有效取樣範圍、輸出延遲及包含脈衝產生器的能量。重點找出脈衝過窄的取樣失敗，以及過寬或短路徑造成的 hold／race 問題。
+
 ## 收錄內容
 
 每份報告另附可編輯的 CircuitikZ MOS 電晶體電路圖，原始碼為語言資料夾內的 `schematic.tex`。圖說標明對應網表、節點及 bulk 接法；大型重複電路以實際 MOS 單元搭配階層連線圖呈現，代表性版本與省略範圍均有註明。
