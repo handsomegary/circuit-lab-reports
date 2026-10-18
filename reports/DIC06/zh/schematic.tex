@@ -1,0 +1,64 @@
+\clearpage\section{MOS 電晶體電路圖}
+來源：\texttt{01\_gate\_load.sp}。XDRV1 與 XDRV2 的 $W_n/W_p/L=0.6/1.8/0.25\,\mu$m。MOS 負載 MNLOAD／MPLOAD 的寬度加倍為 $1.2/3.6\,\mu$m，倍數 $M=N_L$，其中 $N_L=1,2,3,4$；汲極共接節點 z，與實際網表一致。
+
+圖中沿用所列網表的元件與節點名稱；相同節點標籤表示電氣相連。除另有註明外，NMOS 的 bulk 接地，PMOS 的 bulk 接 $V_{DD}$。三端符號省略 bulk 導線以保持圖面清楚。
+\begin{figure}[!htbp]\centering
+\resizebox{12cm}{!}{\begin{circuitikz}[american,font=\small]
+
+\begin{scope}[shift={(0,0)}]
+\node[pmos] (D1p) at (0,1) {};
+\node[nmos] (D1n) at (0,-1) {};
+\draw (D1p.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (D1n.S) -- (0,-2) node[ground] {};
+\draw (D1p.D) -- (0,0) -- (D1n.D);
+\draw (D1p.G) -- (-1.15,1) -- (-1.15,-1) -- (D1n.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {in};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {ymos};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {};
+\coordinate (D1in) at (-1.8,0);
+\coordinate (D1out) at (0.85,0);
+\end{scope}
+
+\begin{scope}[shift={(5,0)}]
+\node[pmos] (Lp) at (0,1) {};
+\node[nmos] (Ln) at (0,-1) {};
+\draw (Lp.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (Ln.S) -- (0,-2) node[ground] {};
+\draw (Lp.D) -- (0,0) -- (Ln.D);
+\draw (Lp.G) -- (-1.15,1) -- (-1.15,-1) -- (Ln.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {ymos};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {z};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {};
+\coordinate (Lin) at (-1.8,0);
+\coordinate (Lout) at (0.85,0);
+\end{scope}
+\draw (D1out) -- (Lin);
+\end{circuitikz}}
+\caption{MOS 負載支路：左側為 XDRV1，右側為倍數 $N_L$ 的 MNLOAD／MPLOAD；負載輸出 z 可隨輸入切換。}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\resizebox{6.7cm}{!}{\begin{circuitikz}[american,font=\small]
+
+\begin{scope}[shift={(0,0)}]
+\node[pmos] (D2p) at (0,1) {};
+\node[nmos] (D2n) at (0,-1) {};
+\draw (D2p.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (D2n.S) -- (0,-2) node[ground] {};
+\draw (D2p.D) -- (0,0) -- (D2n.D);
+\draw (D2p.G) -- (-1.15,1) -- (-1.15,-1) -- (D2n.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {in};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {ycap};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {};
+\coordinate (D2in) at (-1.8,0);
+\coordinate (D2out) at (0.85,0);
+\end{scope}
+\draw (D2out) -- (2,0) to[C,l=$N_L\cdot8\,\mathrm{fF}$] (2,-2) node[ground] {};
+\end{circuitikz}}
+\caption{電容比較支路 XDRV2。兩個驅動器接收相同輸入波形。}
+\end{figure}

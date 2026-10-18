@@ -1,0 +1,72 @@
+\clearpage\section{MOS transistor schematic}
+\begingroup\small
+Source netlist: \texttt{01\_charge\_discharge.sp}. Complete six-branch pass-device charge/discharge test.
+
+Identical node labels denote electrical connections. The drawings are editable CircuitikZ source; hierarchical boxes below refer to the MOS cells shown here.
+
+Unless explicitly labeled otherwise, every NMOS body connects to \texttt{vn}=0 and every PMOS body to \texttt{vp}=\(V_{DD}\); body wires are omitted for readability. Ordinary inverter and dynamic/clocked cells use \(W_n/L_n=0.6/0.25\,\mu\mathrm m\), \(W_p/L_p=1.8/0.25\,\mu\mathrm m\). Both TG devices use \(W/L=0.6/0.25\,\mu\mathrm m\). 
+
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.85, transform shape, font=\small]
+\node[nmos] (MNC) at (0,0) {};
+\draw (MNC.G) -- ++(-.65,0) node[left] {\texttt{vdd}};
+\node[right=3pt] at (MNC.right) {\texttt{MNC}};
+\draw (MNC.S) -- ++(0,-0.8) node[below] {\texttt{vdd}};
+\draw (MNC.D) -- ++(1.7,0) coordinate (o) node[above] {\texttt{nc}} to[C,l=$20\,\mathrm{fF}$] ++(0,-1.6) node[ground] {};
+\end{circuitikz}
+\par\small NMOS charging.
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.85, transform shape, font=\small]
+\node[nmos] (MND) at (0,0) {};
+\draw (MND.G) -- ++(-.65,0) node[left] {\texttt{vdd}};
+\node[right=3pt] at (MND.right) {\texttt{MND}};
+\draw (MND.S) -- ++(0,-0.8) node[below] {\texttt{0}};
+\draw (MND.D) -- ++(1.7,0) coordinate (o) node[above] {\texttt{nd}} to[C,l=$20\,\mathrm{fF}$] ++(0,-1.6) node[ground] {};
+\end{circuitikz}
+\par\small NMOS discharging.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.85, transform shape, font=\small]
+\node[pmos] (MPC) at (0,0) {};
+\draw (MPC.G) -- ++(-.65,0) node[left] {\texttt{0}};
+\node[right=3pt] at (MPC.right) {\texttt{MPC}};
+\draw (MPC.S) -- ++(0,0.8) node[above] {\texttt{vdd}};
+\draw (MPC.D) -- ++(1.7,0) coordinate (o) node[above] {\texttt{pc}} to[C,l=$20\,\mathrm{fF}$] ++(0,-1.6) node[ground] {};
+\end{circuitikz}
+\par\small PMOS charging.
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.85, transform shape, font=\small]
+\node[pmos] (MPD) at (0,0) {};
+\draw (MPD.G) -- ++(-.65,0) node[left] {\texttt{0}};
+\node[right=3pt] at (MPD.right) {\texttt{MPD}};
+\draw (MPD.S) -- ++(0,0.8) node[above] {\texttt{0}};
+\draw (MPD.D) -- ++(1.7,0) coordinate (o) node[above] {\texttt{pd}} to[C,l=$20\,\mathrm{fF}$] ++(0,-1.6) node[ground] {};
+\end{circuitikz}
+\par\small PMOS discharging.
+\end{minipage}\par\medskip
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.88, transform shape, font=\small]
+\node[nmos] (MN) at (0,0) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{en}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\node[pmos,yscale=-1] (MP) at (3.4,0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{eb}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+
+\draw (MN.D) -- ++(0,.8) coordinate (nt) -- (nt -| MP.D) -- (MP.D);
+\draw (MN.S) -- ++(0,-.8) coordinate (nb) -- (nb -| MP.S) -- (MP.S);
+\node[above] at ($(nt)!.5!(nt -| MP.D)$) {\texttt{b}};
+\node[below] at ($(nb)!.5!(nb -| MP.S)$) {\texttt{a}};
+
+\end{circuitikz}
+\par\small TG cell: parallel NMOS and PMOS.
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{center}\small\begin{tabular}{ll}\toprule
+Instance & (a,b,en,eb)\\\midrule
+\texttt{XTC} & \texttt{(vdd,tc,vdd,0)}\\
+\texttt{XTD} & \texttt{(0,td,vdd,0)}\\
+\bottomrule\end{tabular}\end{center}
+\(C_{tc}=C_{td}=20\,\mathrm{fF}\)\par\small Both capacitors connect from the output to 0.
+\end{minipage}\par\medskip
+Here \(V_{DD}=1\) V. Initial conditions are \(nc=pc=tc=0\) V and \(nd=pd=td=1\) V. All gates remain enabled during the 10 ns test. Source and drain labels above follow the SPICE instance order; the body rail remains fixed even when the pass-device terminal is connected to the opposite supply.
+\endgroup

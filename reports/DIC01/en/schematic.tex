@@ -1,0 +1,36 @@
+\clearpage\section{MOS transistor schematics}
+Source: \texttt{01\_diode\_n.sp}, \texttt{01\_diode\_p.sp}, and \texttt{02\_output\_n/p.sp}. These are the two test-fixture topologies used by the device-characterization experiments. The other decks reuse independently biased gates and drains while changing dimensions or bias sweeps. Baseline $W_n/W_p/L=0.6/1.8/0.25\,\mu$m; the equal-geometry comparison sets both widths to $0.6\,\mu$m.
+
+The drawings use the device and node names of the cited netlists. Equal net labels denote an electrical connection. Unless stated otherwise, NMOS bulk terminals connect to ground and PMOS bulk terminals connect to $V_{DD}$. The bulk wires are omitted from the three-terminal symbols for readability.
+\begin{figure}[!htbp]\centering
+\resizebox{13cm}{!}{\begin{circuitikz}[american,font=\small]
+\begin{scope}[shift={(0,0)}]\node[nmos] (m0) at (0,0) {M1};
+\draw (m0.S) -- ++(0,-.8) node[ground] {};
+\draw (m0.D) -- (0,1.3) node[circ] {} node[above right] {d} -- (-1.5,1.3) |- (m0.G);
+\draw (0,1.3) -- (2,1.3) to[V,l=$V_{SW}$] (2,-0.7) node[ground] {};
+\node at (0,2.6) {NMOS: $G=D$, $S=B=0$};\end{scope}
+\begin{scope}[shift={(7,0)}]\node[pmos] (m7) at (0,0) {M1};
+\draw (m7.S) -- ++(0,.8) node[ground] {};
+\draw (m7.D) -- (0,-1.3) node[circ] {} node[above right] {d} -- (-1.5,-1.3) |- (m7.G);
+\draw (0,-1.3) -- (2,-1.3) to[V,l=$V_{SW}$] (2,-3.3) node[ground] {};
+\node at (0,2.6) {PMOS: $G=D$, $S=B=0$};\end{scope}
+
+\end{circuitikz}}
+\caption{Diode-connected fixtures. The PMOS source and bulk are grounded; its sweep voltage is negative, exactly as in the netlist.}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\resizebox{13cm}{!}{\begin{circuitikz}[american,font=\small]
+\begin{scope}[shift={(0,0)}]\node[nmos] (q0) at (0,0) {M1};
+\draw (q0.S) -- ++(0,-.7) node[ground] {};
+\draw (q0.G) -- (-2,0) to[V,l_=$V_{GS}$] (-2,-2.2) node[ground] {};
+\draw (q0.D) -- (0,1.3) node[above right] {d} -- (2,1.3) to[V,l=$V_{DS}$] (2,-0.7) node[ground] {};
+\node at (0,2.4) {NMOS: $S=B=0$};\end{scope}
+\begin{scope}[shift={(7,0)}]\node[pmos] (q7) at (0,0) {M1};
+\draw (q7.S) -- ++(0,.7) node[ground] {};
+\draw (q7.G) -- (-2,0) to[V,l_=$V_{GS}$] (-2,-2.2) node[ground] {};
+\draw (q7.D) -- (0,-1.3) node[above right] {d} -- (2,-1.3) to[V,l=$V_{DS}$] (2,-3.3) node[ground] {};
+\node at (0,2.4) {PMOS: $S=B=0$};\end{scope}
+
+\end{circuitikz}}
+\caption{Independent gate/drain bias for output characteristics. PMOS gate and drain voltages are negative relative to the grounded source.}
+\end{figure}

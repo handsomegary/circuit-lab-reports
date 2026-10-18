@@ -1,0 +1,65 @@
+\clearpage\section{MOS transistor schematic}
+\begingroup\small
+Source netlist: \texttt{01\_inverter\_tt.sp; 04\_dc\_tt.sp}. Representative transient inverter and both DC test circuits; the other corner decks keep these connections.
+
+Identical node labels denote electrical connections. The drawings are editable CircuitikZ source; hierarchical boxes below refer to the MOS cells shown here.
+
+The transistor bodies connect to their corresponding supply rails. Dimensions are \(W/L\) in \(\mu\mathrm m\): CMOS PMOS 1.8/0.25, CMOS NMOS 0.6/0.25; the always-on PMOS in the ratioed inverter is 0.6/0.5. The nominal supply is 1.8 V.
+
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.85, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{in}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN) at (0,-1.45) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{in}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vdd}};
+\draw (MP.D) -- (MN.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[above] {\texttt{out}};
+\draw (MN.S) -- ++(0,-.55) coordinate (net2) node[below] {\texttt{0}};
+\draw (net1) -- ++(2.65,0) to[C,l={$C_L=10\,\mathrm{fF}$}] ++(0,-1.3) node[ground] {};
+
+\end{circuitikz}
+\par\small Transient CMOS inverter.
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP2) at (0,0.0) {};
+\draw (MP2.G) -- ++(-.65,0) node[left] {\texttt{0}};
+\node[right=3pt] at (MP2.right) {\texttt{MP2}};
+\node[nmos] (MN2) at (0,-1.45) {};
+\draw (MN2.G) -- ++(-.65,0) node[left] {\texttt{in}};
+\node[right=3pt] at (MN2.right) {\texttt{MN2}};
+\draw (MP2.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vr}};
+\draw (MP2.D) -- (MN2.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{outr}};
+\draw (MN2.S) -- ++(0,-.55) coordinate (net2) node[below] {\texttt{0}};
+
+\end{circuitikz}
+\par\small Ratioed inverter; PMOS gate tied to 0.
+\end{minipage}\par\medskip
+The DC CMOS instance uses \texttt{MP1/MN1}, output \texttt{outc}, and supply \texttt{vc}; its connections match the left inverter but there is no explicit load capacitor. The independent supply sources \texttt{VCMOS} and \texttt{VRATIO} measure the two branches separately. TT: 1.8 V, 25\(^\circ\)C; FF: 1.98 V, 0\(^\circ\)C; SS: 1.62 V, 115\(^\circ\)C. Extra FF/SS transient cases hold 1.8 V and 25\(^\circ\)C. Base DC TT/FF/SS/SF/FS cases use 1.8 V and 25\(^\circ\)C.
+\clearpage\subsection{Isolated junction-current test}
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=1, transform shape, font=\small]
+\node[nmos,bulk] (MNJ) at (0,0) {};
+\draw (MNJ.D) -- ++(0,0.8) node[above] {\texttt{jn}};
+\draw (MNJ.S) -- ++(0,-0.8) node[below] {\texttt{jn}};
+\draw (MNJ.G) -- ++(-.8,0) node[left] {\texttt{jn}};
+\draw (MNJ.bulk) -- ++(1.0,0) node[right] {\texttt{bn}};
+\node[above right] at (MNJ.right) {\texttt{MNJ}};
+\end{circuitikz}
+\par\small \texttt{D=G=S=jn; B=bn=0}
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=1, transform shape, font=\small]
+\node[pmos,bulk] (MPJ) at (0,0) {};
+\draw (MPJ.D) -- ++(0,-0.8) node[below] {\texttt{jp}};
+\draw (MPJ.S) -- ++(0,0.8) node[above] {\texttt{jp}};
+\draw (MPJ.G) -- ++(-.8,0) node[left] {\texttt{jp}};
+\draw (MPJ.bulk) -- ++(1.0,0) node[right] {\texttt{bp}};
+\node[above right] at (MPJ.right) {\texttt{MPJ}};
+\end{circuitikz}
+\par\small \texttt{D=G=S=jp; B=bp=VDD}
+\end{minipage}\par\medskip
+All three channel terminals are shorted by the repeated node labels; these are junction-leakage structures, not switching transistors. \texttt{EJN} sets \(V(\texttt{jn})=V(\texttt{in})\); \texttt{EJP} sets \(V(\texttt{jp})=V_{DD}-V(\texttt{in})\). The body-source current probes are \texttt{VBN}=0 V and \texttt{VBP}=\(V_{DD}\). Both structures use \(W/L=0.6/0.25\,\mu\mathrm m\), \(A_D=A_S=0.15\,\mu\mathrm m^2\), and \(P_D=P_S=1.7\,\mu\mathrm m\). The measured body current includes both drain/body and source/body junctions.
+\endgroup

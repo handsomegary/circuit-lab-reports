@@ -1,0 +1,34 @@
+\clearpage\section{MOS transistor schematic}
+These editable vector schematics connect equal node names within a circuit. Primitive-cell names are local pins; the hierarchy defines their connections. B denotes the body terminal; 0 is global ground. Each panel identifies its netlist and scope; measurement sources are connected as described.
+The complete four-transistor conventional cascode mirror from \texttt{03\_cascode\_mirror.sp}.
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[nmos,bulk] (M2) at (0,3.5) {};
+\node[anchor=west,font=\scriptsize] at ($(M2.center)+(.55,.40)$) {M2};
+\draw (M2.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\node[nmos,bulk] (M0) at (0,1.2) {};
+\node[anchor=west,font=\scriptsize] at ($(M0.center)+(.55,.40)$) {M0};
+\draw (M0.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\node[nmos,bulk] (M3) at (4.4,3.5) {};
+\node[anchor=west,font=\scriptsize] at ($(M3.center)+(.55,.40)$) {M3};
+\draw (M3.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\node[nmos,bulk] (M1) at (4.4,1.2) {};
+\node[anchor=west,font=\scriptsize] at ($(M1.center)+(.55,.40)$) {M1};
+\draw (M1.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\draw (M2.D) -- ++(0,0.5) node[above,font=\small] {\texttt{bias}};
+\draw (M2.S) -- (M0.D) node[midway,above right,font=\small] {\texttt{ref}};
+\draw (M0.S) -- ++(0,-0.5) node[below,font=\small] {\texttt{0}};
+\draw (M3.D) -- ++(0,0.5) node[above,font=\small] {\texttt{drain}};
+\draw (M3.S) -- (M1.D) node[midway,above right,font=\small] {\texttt{mid}};
+\draw (M1.S) -- ++(0,-0.5) node[below,font=\small] {\texttt{0}};
+\draw (M0.G) -- (-1,1.2) -- (-1,2.35) -- (M0.D |- 0,2.35) node[circ]{}; \draw (M1.G) -- (2.9,1.2) -- (2.9,2.35) -- (M0.D |- 0,2.35);
+\draw (M2.G) -- (-1,3.5) |- ($(M2.D)+(0,.35)$) node[circ]{}; \draw (M3.G) -- (2.9,3.5) |- ($(M2.D)+(0,.35)$);
+\draw (8.2,4.2) node[above] {\texttt{vdd}} to[I,l={$I_{REF}$}] ++(0,-1.7) node[below] {\texttt{bias}};
+\draw (8.2,1.3) node[above] {\texttt{out}} to[V,l={$V_{TEST}$}] ++(0,-1.7) node[below] {\texttt{0}};
+\end{circuitikz}
+\caption{Cascode mirror and its reference/output test sources.}
+\end{figure}
+\par
+M0 and M2 are diode-connected through the named gate/drain nets. All NMOS bodies are tied to 0; only M0 and M1 have sources at 0. M1 and M3 have multiplicity $m=2$, while M0 and M2 use $m=1$. Baseline $W=3\,\mu$m, $L=1.4\,\mu$m, $I_{REF}=50\,\mu$A and $vdd=1$ V. The zero-volt current probe VS connects out (positive) to drain (negative). Sweeps change the stated source/geometry parameters. Other mirror variants are separate netlists; this panel does not claim to show them.

@@ -1,0 +1,48 @@
+\clearpage\section{MOS transistor schematic}
+\begin{minipage}[t]{.48\linewidth}\subsection{Static CMOS}
+\begin{center}
+\begin{circuitikz}[font=\small, line width=.65pt]
+\node[pmos,bulk] (P) at (2,4) {};
+\node[nmos,bulk] (N) at (2,1) {};
+\draw (P.S) -- ++(0,.65) node[above] {$cdd$};
+\draw (N.S) -- ++(0,-.5) node[ground] {};
+\draw (P.D) -- (N.D);
+\draw (P.D |- 0,2.5) node[circ] {} -- (4.8,2.5) node[right] {$yc$};
+\draw (N.G) -- (.1,1) -- (.1,2.5) node[circ] {} -- (-.8,2.5) node[left] {$in$};
+\draw (P.G) -- (.1,4) -- (.1,2.5);
+\draw (P.bulk) -- ++(.8,0) node[right] {$cdd$};
+\draw (N.bulk) -- ++(.8,0) node[right] {$0$};
+\node[anchor=east] at (1.6,4.6) {\texttt{MPC}};
+\node[anchor=east] at (1.6,.4) {\texttt{MNC}};
+\draw (4,2.5) node[circ] {} to[C,l={$CLVAL$}] (4,0) node[ground] {};
+\end{circuitikz}
+\par\small Both gates connect to in; PMOS bulk connects to cdd, NMOS bulk to 0.
+\end{center}
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\subsection{Pseudo NMOS}
+\begin{center}
+\begin{circuitikz}[font=\small, line width=.65pt]
+\node[pmos,bulk] (P) at (2,4) {};
+\node[nmos,bulk] (N) at (2,1) {};
+\draw (P.S) -- ++(0,.65) node[above] {$pdd$};
+\draw (N.S) -- ++(0,-.5) node[ground] {};
+\draw (P.D) -- (N.D);
+\draw (P.D |- 0,2.5) node[circ] {} -- (4.8,2.5) node[right] {$yp$};
+\draw (N.G) -- (.1,1) -- (.1,2.5) node[circ] {} -- (-.8,2.5) node[left] {$in$};
+\draw (P.G) -- (.1,4) node[ground] {};
+\draw (P.bulk) -- ++(.8,0) node[right] {$pdd$};
+\draw (N.bulk) -- ++(.8,0) node[right] {$0$};
+\node[anchor=east] at (1.6,4.6) {\texttt{MPP}};
+\node[anchor=east] at (1.6,.4) {\texttt{MNP}};
+\draw (4,2.5) node[circ] {} to[C,l={$CLVAL$}] (4,0) node[ground] {};
+\end{circuitikz}
+\par\small Only the NMOS gate connects to in. The load PMOS gate is fixed at 0 V and its bulk at pdd, keeping it on with pdd=1 V.
+\end{center}
+\end{minipage}\par\subsection{Source, dimensions and measurement configuration}
+The complete circuits above correspond to \nolinkurl{01_ratio.sp}, \nolinkurl{02_frequency.sp} and \nolinkurl{04_frequency_refinement.sp}. VC and VP are independent 1 V supplies at cdd and pdd. The circuits share ground and input in; their outputs are separate. Separate supplies allow independent current measurements.
+
+Each NMOS has $W_n=0.6\,\mu\mathrm m\cdot SIZE$ and each PMOS $W_p=0.6\,\mu\mathrm m\cdot SIZE\cdot RATIO$; all have $L=0.25\,\mu$m. The ratio study uses RATIO=0.25,0.5,1,1.5,3,6 at SIZE=1 and CLVAL=7 fF. Frequency studies fix RATIO=1.5 and use the four combinations SIZE=1/2 and CLVAL=7/14 fF.
+
+VIN is a ground-referenced PULSE voltage source with levels 0--1 V, delay PERIOD/4, rise/fall times PERIOD/100, and pulse width $0.48\cdot PERIOD$.
+
+\nolinkurl{03_dc_power.sp} retains the same four MOS devices and two independent supplies, but omits both output capacitors. VIN sweeps from 0 to 1 V in 0.002 V steps. Its fixed dimensions are $W_n=0.6\,\mu$m, $W_p=0.9\,\mu$m and $L=0.25\,\mu$m. No additional buffers or loads are implied by the diagrams.
+

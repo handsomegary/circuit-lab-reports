@@ -1,0 +1,28 @@
+\clearpage\section{MOS 電晶體電路圖}
+下圖為可編輯的向量電路圖。同一電路的同名節點代表直接連接；獨立子電路單元的名稱為局部接腳，實際連接依階層圖。B 為基體端，0 為全域接地。各圖明列對應 netlist 與範圍，量測激勵源依文字說明接入。
+完整電流源負載共源級，對應 \texttt{03\_current\_source\_load.sp}.
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk] (MREF) at (0,3) {};
+\node[anchor=west,font=\scriptsize] at ($(MREF.center)+(.55,.40)$) {MREF};
+\draw (MREF.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\node[pmos,bulk] (MP) at (4.5,3) {};
+\node[anchor=west,font=\scriptsize] at ($(MP.center)+(.55,.40)$) {MP};
+\draw (MP.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\node[nmos,bulk] (MN) at (4.5,0.7) {};
+\node[anchor=west,font=\scriptsize] at ($(MN.center)+(.55,.40)$) {MN};
+\draw (MN.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\draw (MN.G) -- ++(-.45,0) node[left,font=\small] {\texttt{in}};
+\draw (MREF.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (MP.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (MP.D) -- (MN.D) node[midway,above right,font=\small] {\texttt{out}};
+\draw (MN.S) -- ++(0,-0.5) node[below,font=\small] {\texttt{0}};
+\draw (MREF.D) to[I,l=IREF] ++(0,-2.5) node[below]{0}; \draw (MREF.G) -- (-1,3) -- (-1,2.1) -- (MREF.D |- 0,2.1) node[circ,label=above right:\texttt{bp}]{}; \draw (MP.G) -- (3,3) -- (3,2.1) -- (MREF.D |- 0,2.1);
+\draw (8,2) node[above] {\texttt{out}} to[C,l={10 pF}] ++(0,-1.7) node[below] {\texttt{0}};
+\end{circuitikz}
+\caption{PMOS 電流鏡提供 NMOS 共源放大器的主動負載。}
+\end{figure}
+\par
+MREF 閘汲短接建立 bp，MP 共用該閘極偏壓。PMOS 源極與基體接 vdd=1 V，MN 源極與基體接 0。基準 MN 寬度 $10\,\mu$m，MREF／MP 寬度 $30\,\mu$m，長度皆 $1\,\mu$m。IREF 由 bp 流向 0，基準 100 $\mu$A；VIN 以 0 為參考驅動 in，直流偏壓使用 netlist 參數 vb，AC 振幅為 1。負載電容由 out 接 0。尺寸與電流掃描維持本拓撲；其他 netlist 的二極體負載與源極隨耦器為另外的電路，不由本圖代表。

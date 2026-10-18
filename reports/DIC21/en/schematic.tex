@@ -1,0 +1,68 @@
+\clearpage\section{MOS transistor schematic}
+\begingroup\small
+Source netlist: \texttt{02\_three\_stage\_skew.sp}. Three-stage dynamic-register chain and its two buffered clock branches.
+
+Identical node labels denote electrical connections. The drawings are editable CircuitikZ source; hierarchical boxes below refer to the MOS cells shown here.
+
+Unless explicitly labeled otherwise, every NMOS body connects to \texttt{vn}=0 and every PMOS body to \texttt{vp}=\(V_{DD}\); body wires are omitted for readability. Ordinary inverter and dynamic/clocked cells use \(W_n/L_n=0.6/0.25\,\mu\mathrm m\), \(W_p/L_p=1.8/0.25\,\mu\mathrm m\). Both TG devices use \(W/L=0.6/0.25\,\mu\mathrm m\). 
+
+\begin{center}
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[nmos] (TN) at (0,-0.65) {};
+\draw (TN.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt,yshift=-4mm] at (TN.right) {\texttt{XT1.MN}};
+\node[pmos,yscale=-1] (TP) at (3.4,-0.65) {};
+\draw (TP.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt,yshift=-4mm] at (TP.right) {\texttt{XT1.MP}};
+\node[pmos] (IP) at (7,.2) {};\node[nmos] (IN) at (7,-1.4) {};\node[right=3pt] at (IP.right) {\texttt{XI1.MP}};\node[right=3pt] at (IN.right) {\texttt{XI1.MN}};
+\draw (TN.D) -- ++(0,.7) coordinate (nt) -- (nt -| TP.D) -- (TP.D);
+\draw (TN.S) -- ++(0,-.7) coordinate (nb) -- (nb -| TP.S) -- (TP.S);
+\draw (nt -| TP.D) node[circ] {} -| (IP.G);
+\draw (IP.G) -- (IP.G |- IN.G) -- (IN.G);
+\draw (IP.S) -- ++(0,.55) node[above] {\texttt{vp}};
+\draw (IN.S) -- ++(0,-.55) node[below] {\texttt{vn}};
+\draw (IP.D) -- (IN.D) coordinate[midway] (o);
+\draw (o) node[circ] {} -- ++(.8,0) node[right] {\texttt{y}};\node[above] at ($(nt)!.5!(nt -| TP.D)$) {\texttt{x}};\node[below] at ($(nb)!.5!(nb -| TP.S)$) {\texttt{d}};
+\end{circuitikz}
+\end{center}
+\begin{center}
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[nmos] (TN) at (0,-0.65) {};
+\draw (TN.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt,yshift=-4mm] at (TN.right) {\texttt{XT3.MN}};
+\node[pmos,yscale=-1] (TP) at (3.4,-0.65) {};
+\draw (TP.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt,yshift=-4mm] at (TP.right) {\texttt{XT3.MP}};
+\node[pmos] (IP) at (7,.2) {};\node[nmos] (IN) at (7,-1.4) {};\node[right=3pt] at (IP.right) {\texttt{XI3.MP}};\node[right=3pt] at (IN.right) {\texttt{XI3.MN}};
+\draw (TN.D) -- ++(0,.7) coordinate (nt) -- (nt -| TP.D) -- (TP.D);
+\draw (TN.S) -- ++(0,-.7) coordinate (nb) -- (nb -| TP.S) -- (TP.S);
+\draw (nt -| TP.D) node[circ] {} -| (IP.G);
+\draw (IP.G) -- (IP.G |- IN.G) -- (IN.G);
+\draw (IP.S) -- ++(0,.55) node[above] {\texttt{vp}};
+\draw (IN.S) -- ++(0,-.55) node[below] {\texttt{vn}};
+\draw (IP.D) -- (IN.D) coordinate[midway] (o);
+\draw (o) node[circ] {} -- ++(.8,0) node[right] {\texttt{q}};\node[above] at ($(nt)!.5!(nt -| TP.D)$) {\texttt{z}};\node[below] at ($(nb)!.5!(nb -| TP.S)$) {\texttt{y}};
+\end{circuitikz}
+\end{center}
+Input \texttt{d} enters XT1; XI3 drives \texttt{q}. For the dynamic \texttt{dff}, this is the complete 8-transistor signal path. 
+\clearpage\subsection{Exact register and clock connectivity}
+\begin{center}
+\begin{circuitikz}[scale=0.94, transform shape, font=\small]
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b0) at (0.0,0) {X1: dff\\d $\to$ q1};
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b1) at (3.25,0) {X2: dff\\q1 $\to$ q2};
+\draw[-{Latex}] (b0.east) -- node[above,font=\scriptsize] {q1} (b1.west);
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b2) at (6.5,0) {X3: dff\\q2 $\to$ q3};
+\draw[-{Latex}] (b1.east) -- node[above,font=\scriptsize] {q2} (b2.west);
+
+\end{circuitikz}
+\end{center}
+\begin{center}\small\begin{tabular}{p{.24\linewidth}p{.68\linewidth}}\toprule
+Instance & Connections\\\midrule
+XB1 / XB2 & INV(\texttt{clk}\(\to\)\texttt{cb12}); INV(\texttt{cb12}\(\to\)\texttt{ck12}).\\
+XB3 / XB4 & INV(\texttt{sk}\(\to\)\texttt{cb3}); INV(\texttt{cb3}\(\to\)\texttt{ck3}).\\
+X1 & \texttt{d,ck12,cb12,q1,x1,y1,z1,vdd,0}\\
+X2 & \texttt{q1,ck12,cb12,q2,x2,y2,z2,vdd,0}\\
+X3 & \texttt{q2,ck3,cb3,q3,x3,y3,z3,vdd,0}\\
+\bottomrule\end{tabular}\end{center}
+The DFF pin order is \texttt{(d,ck,cb,q,x,y,z,vp,vn)}. Each output has 5 fF to 0. \texttt{clk} and \texttt{sk} are separate pulse sources; the skew parameter shifts the second branch before its two physical CMOS inverters. These clock buffers therefore contribute delay and slew. The nominal period is 10 ns and \(V_{DD}=1\) V.
+\endgroup

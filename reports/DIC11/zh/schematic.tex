@@ -1,0 +1,66 @@
+\clearpage\section{MOS 電晶體電路圖}
+\subsection{驅動器與接收器 MOS 核心}
+\begin{center}
+\begin{circuitikz}[font=\small, line width=.65pt]
+\node[pmos,bulk] (P) at (2,4) {};
+\node[nmos,bulk] (N) at (2,1) {};
+\draw (P.S) -- ++(0,.65) node[above] {$vdd$};
+\draw (N.S) -- ++(0,-.5) node[ground] {};
+\draw (P.D) -- (N.D);
+\draw (P.D |- 0,2.5) node[circ] {} -- (4.8,2.5) node[right] {$y$};
+\draw (N.G) -- (.1,1) -- (.1,2.5) node[circ] {} -- (-.8,2.5) node[left] {$a$};
+\draw (P.G) -- (.1,4) -- (.1,2.5);
+\draw (P.bulk) -- ++(.8,0) node[right] {$vdd$};
+\draw (N.bulk) -- ++(.8,0) node[right] {$0$};
+\node[anchor=east] at (1.6,4.6) {\texttt{MP}};
+\node[anchor=east] at (1.6,.4) {\texttt{MN}};
+
+\end{circuitikz}
+\par\small 所有三份公開 deck 共用 INV：PMOS 的 S/B 接 vp=vdd，NMOS 的 S/B 接 vn=0。方塊圖中的每一個 INV 都是這兩顆 MOS。
+\end{center}
+驅動器 $W_n=WNBASE\cdot SIZE$、$W_p=WPBASE\cdot SIZE$；接收器固定 SIZE=1；$L=LBASE$。A/B/C 的 $(WNBASE,WPBASE,LBASE)$ 分別為 $(0.9,2.7,0.35)$、$(0.6,1.8,0.25)$、$(0.5,1.5,0.18)\,\mu$m。這些是同一模型的尺寸與 RC 資料組，不是三份製程模型。
+
+\subsection{單條線的三段 $\pi$ 網路}
+\begin{center}
+\begin{circuitikz}[font=\scriptsize,line width=.6pt,scale=.9,transform shape]
+\node[draw,minimum width=1.5cm,minimum height=.8cm] (D) at (-1.2,2) {XD: INV};
+\draw (-2.8,2) node[left] {in} -- (D.west);
+\draw (D.east) -- (0,2) node[circ] {} node[above] {$t1$}
+ to[R,l={$R/3$}] (3,2) node[circ] {} node[above] {$n1$}
+ to[R,l={$R/3$}] (6,2) node[circ] {} node[above] {$n2$}
+ to[R,l={$R/3$}] (9,2) node[circ] {} node[above] {$t2$};
+\foreach \xx/\val in {0/6,3/3,6/3,9/6}{\draw (\xx,2) to[C,l_={$C/\val$}] (\xx,0) node[ground] {};}
+\node[draw,minimum width=1.3cm,minimum height=.8cm] (R) at (10.4,2) {XR: INV};
+\draw (9,2) -- (R.west);\draw (R.east) -- (12,2) node[above] {out} to[C,l={$10\,\mathrm{fF}$}] (12,0) node[ground] {};
+\end{circuitikz}
+\par\small \nolinkurl{01_driver_sizing.sp} 與 \nolinkurl{02_wire_length.sp} 的實際連接：$R=RUNIT\cdot LEN$、$C=CUNIT\cdot LEN\cdot1$ fF。
+\end{center}
+電源為 1 V。第一份 deck 固定 LEN=10000 $\mu$m、掃 SIZE=1--15；第二份固定 SIZE=5、掃 LEN=1000--10000 $\mu$m。接收器輸出另外接 10 fF，線路四個節點皆有對地電容。
+
+\clearpage
+
+\subsection{三條耦合線的全部節點}
+\begin{center}
+\begin{circuitikz}[font=\scriptsize,line width=.6pt,scale=.9,transform shape]
+\foreach \row/\yy/\input/\output/\cg in {l/6/il/outl/S,c/3/in/outc/G,r/0/ir/outr/S}{
+ \node[draw,minimum width=1.2cm,minimum height=.65cm] (D\row) at (-1.25,\yy) {$XD\row$};
+ \draw (D\row.west) -- ++(-.6,0) node[left] {$\input$};
+ \draw (D\row.east) -- (0,\yy);
+ \draw (0,\yy) to[R,l={$R/3$}] (3,\yy) to[R,l={$R/3$}] (6,\yy) to[R,l={$R/3$}] (9,\yy);
+ \node[draw,minimum width=1.2cm,minimum height=.65cm] (R\row) at (10.6,\yy) {$XR\row$};
+ \draw (9,\yy) -- (R\row.west);\draw (R\row.east) -- ++(.55,0) node[right] {$\output$};
+ \foreach \xx/\j/\den in {0/0/6,3/1/3,6/2/3,9/3/6}{
+  \draw (\xx,\yy) node[circ] {} node[above right,fill=white,inner sep=.4pt] {$\row\j$} -- ++(.65,0) to[C,l={$C_\cg/\den$}] ++(0,-1.1) node[ground] {};
+ }
+}
+\foreach \xx/\den in {0/6,3/3,6/3,9/6}{
+ \draw (\xx,6) to[C,l_={$C_X/\den$}] (\xx,3);
+ \draw (\xx,3) to[C,l_={$C_X/\den$}] (\xx,0);
+}
+\end{circuitikz}
+\par\small \nolinkurl{03_coupled_wires.sp}；l、c、r 為左線、中央受擾線、右線。每條線皆有三個電阻、四個對地電容；相鄰線在每個同索引節點連接耦合電容。
+\end{center}
+$R=RUNIT\cdot LEN$；$C_S=CSUNIT\cdot LEN$ fF、$C_G=CGUNIT\cdot LEN$ fF、$C_X=CCUNIT\cdot LEN$ fF。所有 XD 的 SIZE=5、所有 XR 的 SIZE=1；尺寸用前頁資料組。此 deck 的 outl、outc、outr 沒有另加 CL；不可將前頁的 10 fF 搬入本電路。
+
+輸入 in、il、ir 為三個對地受控電壓源：in=$(1-CEN)/2+CEN\cdot V(base)$；鄰線係數為 1 或 $-1$ 時分別同向或反向，係數 2 時輸入固定 0 V。base 在 20--20.1 ns 從 0 升至 1 V。左右線不直接互連；只有 l--c 與 r--c 電容。
+

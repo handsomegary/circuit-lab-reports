@@ -1,0 +1,46 @@
+\clearpage\section{MOS transistor schematics}
+Source: \texttt{01\_chain.sp}, \texttt{02\_fanout3.sp}, and \texttt{03\_size3.sp}. Each INV is the two-MOS cell below. The nine-stage chain repeats X1--X9. In the fanout-three case, each output out1--out8 drives the next stage plus two separate INV inputs; the extra inverter outputs are not shorted together.
+
+The drawings use the device and node names of the cited netlists. Equal net labels denote an electrical connection. Unless stated otherwise, NMOS bulk terminals connect to ground and PMOS bulk terminals connect to $V_{DD}$. The bulk wires are omitted from the three-terminal symbols for readability.
+\begin{figure}[!htbp]\centering
+\resizebox{5.6cm}{!}{\begin{circuitikz}[american,font=\small]
+
+\begin{scope}[shift={(0,0)}]
+\node[pmos] (ip) at (0,1) {};
+\node[nmos] (in) at (0,-1) {};
+\draw (ip.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (in.S) -- (0,-2) node[ground] {};
+\draw (ip.D) -- (0,0) -- (in.D);
+\draw (ip.G) -- (-1.15,1) -- (-1.15,-1) -- (in.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {a};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {y};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {};
+\coordinate (iin) at (-1.8,0);
+\coordinate (iout) at (0.85,0);
+\end{scope}
+
+\end{circuitikz}}
+\caption{INV cell: $W_n/W_p/L=0.6/1.8/0.25\,\mu$m; the size-three deck uses $1.8/5.4/0.25\,\mu$m.}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\resizebox{14cm}{!}{\begin{circuitikz}[american,font=\small]
+\node[draw,minimum width=1.45cm,minimum height=.8cm] (b0) at (1.3,0) {X1};
+\node[draw,minimum width=1.45cm,minimum height=.8cm] (b1) at (3.8,0) {X2};
+\draw[->] (b0.east) -- (b1.west);
+\node[draw,minimum width=1.45cm,minimum height=.8cm] (b2) at (6.3,0) {$\cdots$};
+\draw[->] (b1.east) -- (b2.west);
+\node[draw,minimum width=1.45cm,minimum height=.8cm] (b3) at (8.8,0) {X9};
+\draw[->] (b2.east) -- (b3.west);
+\draw[->] (-.2,0) node[left] {in} -- (b0.west);
+\draw[->] (b3.east) -- ++(1,0) node[right] {out9};
+\node[draw,minimum width=1.5cm] (f1) at (2.55,1.5) {XF1\_1};
+\node[draw,minimum width=1.5cm] (f2) at (2.55,-1.5) {XF1\_2};
+\draw (2.55,0) node[circ] {} -- (f1.south);
+\draw (2.55,0) -- (f2.north);
+\draw[->] (f1.east) -- ++(.7,0) node[right] {load1\_1};
+\draw[->] (f2.east) -- ++(.7,0) node[right] {load1\_2};
+\end{circuitikz}}
+\caption{Chain hierarchy with the extra loads shown at out1. Repeat these two load branches at out2--out8 only for the fanout-three deck. Each box expands into the MOS cell above.}
+\end{figure}

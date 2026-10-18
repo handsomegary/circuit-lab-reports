@@ -1,0 +1,60 @@
+\clearpage\section{MOS transistor schematics}
+Source: \texttt{01\_miller.sp}. All three INV cells use $W_n/W_p/L=0.6/1.8/0.25\,\mu$m. The explicit coupling capacitor connects the input and output of X2. It is separate from the intrinsic MOS capacitances.
+
+The drawings use the device and node names of the cited netlists. Equal net labels denote an electrical connection. Unless stated otherwise, NMOS bulk terminals connect to ground and PMOS bulk terminals connect to $V_{DD}$. The bulk wires are omitted from the three-terminal symbols for readability.
+\begin{figure}[!htbp]\centering
+\resizebox{15.2cm}{!}{\begin{circuitikz}[american,font=\small]
+
+\begin{scope}[shift={(0,0)}]
+\node[pmos] (X1p) at (0,1) {};
+\node[nmos] (X1n) at (0,-1) {};
+\draw (X1p.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (X1n.S) -- (0,-2) node[ground] {};
+\draw (X1p.D) -- (0,0) -- (X1n.D);
+\draw (X1p.G) -- (-1.15,1) -- (-1.15,-1) -- (X1n.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {in};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {a};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {X1};
+\coordinate (X1in) at (-1.8,0);
+\coordinate (X1out) at (0.85,0);
+\end{scope}
+
+\begin{scope}[shift={(4,0)}]
+\node[pmos] (X2p) at (0,1) {};
+\node[nmos] (X2n) at (0,-1) {};
+\draw (X2p.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (X2n.S) -- (0,-2) node[ground] {};
+\draw (X2p.D) -- (0,0) -- (X2n.D);
+\draw (X2p.G) -- (-1.15,1) -- (-1.15,-1) -- (X2n.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {a};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {y};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {X2};
+\coordinate (X2in) at (-1.8,0);
+\coordinate (X2out) at (0.85,0);
+\end{scope}
+
+\begin{scope}[shift={(8,0)}]
+\node[pmos] (X3p) at (0,1) {};
+\node[nmos] (X3n) at (0,-1) {};
+\draw (X3p.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (X3n.S) -- (0,-2) node[ground] {};
+\draw (X3p.D) -- (0,0) -- (X3n.D);
+\draw (X3p.G) -- (-1.15,1) -- (-1.15,-1) -- (X3n.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {y};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {z};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {X3};
+\coordinate (X3in) at (-1.8,0);
+\coordinate (X3out) at (0.85,0);
+\end{scope}
+\draw (X1out) -- (X2in);\draw (X2out) -- (X3in);
+\draw (1.5,0) node[circ] {} -- (1.5,3.3) to[C,l=$C_C$] (5.5,3.3) -- (5.5,0) node[circ] {};
+\draw (5.5,0) -- (5.5,-1) to[C,l_=$C_L$] (5.5,-2.5) node[ground] {};
+\end{circuitikz}}
+\caption{Complete six-MOS signal path. $C_C$ is CCVAL (0/2/5/10 fF); $C_L$ is CLVAL (0/10/40 fF in the selected cases). X3 remains a real gate load when $C_L=0$. Supply crossings without a dot are not connected.}
+\end{figure}

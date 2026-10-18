@@ -1,0 +1,45 @@
+\clearpage\section{MOS 電晶體電路圖}
+下圖為可編輯的向量電路圖。同一電路的同名節點代表直接連接；獨立子電路單元的名稱為局部接腳，實際連接依階層圖。B 為基體端，0 為全域接地。各圖明列對應 netlist 與範圍，量測激勵源依文字說明接入。
+完整六顆 MOS 的基準差動放大器，對應 \texttt{01\_basic\_differential.sp}.
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk] (M3) at (0,4.7) {};
+\node[anchor=west,font=\scriptsize] at ($(M3.center)+(.55,.40)$) {M3};
+\draw (M3.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\node[pmos,bulk] (M4) at (4.2,4.7) {};
+\node[anchor=west,font=\scriptsize] at ($(M4.center)+(.55,.40)$) {M4};
+\draw (M4.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\node[nmos,bulk] (M1) at (0,2.4) {};
+\node[anchor=west,font=\scriptsize] at ($(M1.center)+(.55,.40)$) {M1};
+\draw (M1.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vss};
+\draw (M1.G) -- ++(-.45,0) node[left,font=\small] {\texttt{ip}};
+\node[nmos,bulk] (M2) at (4.2,2.4) {};
+\node[anchor=west,font=\scriptsize] at ($(M2.center)+(.55,.40)$) {M2};
+\draw (M2.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vss};
+\draw (M2.G) -- ++(-.45,0) node[left,font=\small] {\texttt{im}};
+\draw (M3.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (M4.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (M3.D) -- (M1.D) node[midway,above right,font=\small] {\texttt{left}};
+\draw (M4.D) -- (M2.D) node[midway,above right,font=\small] {\texttt{out}};
+\draw (M3.G) -- (-1,4.7) -- (-1,3.55) -- (M3.D |- 0,3.55) node[circ]{}; \draw (M4.G) -- (2.9,4.7) -- (2.9,3.55) -- (M3.D |- 0,3.55);
+\node[nmos,bulk] (MTAIL) at (2.1,-0.3) {};
+\node[anchor=west,font=\scriptsize] at ($(MTAIL.center)+(.55,.40)$) {MTAIL};
+\draw (MTAIL.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vss};
+\draw (MTAIL.G) -- ++(-.45,0) node[left,font=\small] {\texttt{bn}};
+\node[nmos,bulk] (MREF) at (5.6,-0.3) {};
+\node[anchor=west,font=\scriptsize] at ($(MREF.center)+(.55,.40)$) {MREF};
+\draw (MREF.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vss};
+\draw (MREF.G) -- ++(-.45,0) node[left,font=\small] {\texttt{bn}};
+\draw (M1.S) -- (M1.S |- 0,1.2) -- (M2.S |- 0,1.2) -- (M2.S); \draw (MTAIL.D) -- (MTAIL.D |- 0,1.2) node[circ,label=above:\texttt{tail}]{};
+\draw (MTAIL.S) -- ++(0,-0.4) node[below,font=\small] {\texttt{vss}};
+\draw (MREF.D) -- ++(0,0.5) node[above,font=\small] {\texttt{bn}};
+\draw (MREF.S) -- ++(0,-0.4) node[below,font=\small] {\texttt{vss}};
+\draw (8.2,5.4) node[above] {\texttt{vdd}} to[I,l={IRE}] ++(0,-1.7) node[below] {\texttt{bn}};
+\draw (8.2,1.5) node[above] {\texttt{out}} to[C,l={CL}] ++(0,-1.7) node[below] {\texttt{0}};
+\end{circuitikz}
+\caption{NMOS 差動對、PMOS 鏡像負載與 NMOS 尾電流鏡。}
+\end{figure}
+\par
+所有 NMOS 基體接 vss，包括源極接 tail 的 M1／M2；PMOS 源極與基體皆接 vdd。scale=1 時寬度為 MREF=85、MTAIL=870、M1=M2=425、M3=M4=1350 $\mu$m，長度均為 0.3 $\mu$m。scale 僅同時縮放 M1--M4 的 W、L。IRE=50 $\mu$A，CL=10 pF。輸入源建立 $ip=cmnode+diff/2$、$im=cmnode-diff/2$。直流 vdd=1 V、vss=0 V；CL 接全域 0，在抑制比測試中不等同於施加交流擾動的 vss。疊接負載、全疊接與電流放大器為其他 netlist 的變體；本圖範圍為指定基準電路。

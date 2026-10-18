@@ -1,0 +1,30 @@
+\clearpage\section{MOS transistor schematics}
+Source: \texttt{02\_nand.sp} and \texttt{03\_nor.sp}. These are the complete four-MOS GATE cells, with their output load. Separate instances test both inputs switching or one fixed input. $L=0.25\,\mu$m throughout. NAND: $W_p=\mathrm{WPREF}$ and $W_n=0.6K_{stack}\,\mu$m. NOR: $W_p=\mathrm{WPREF}K_{stack}$ and $W_n=0.6\,\mu$m. The reference inverter uses the usual two-MOS complementary cell. The sizing-refinement deck retains the four-MOS NAND/NOR topologies shown here and independently changes their widths.
+
+The drawings use the device and node names of the cited netlists. Equal net labels denote an electrical connection. Unless stated otherwise, NMOS bulk terminals connect to ground and PMOS bulk terminals connect to $V_{DD}$. The bulk wires are omitted from the three-terminal symbols for readability.
+\begin{figure}[!htbp]\centering
+\resizebox{7.2cm}{!}{\begin{circuitikz}[american,font=\small]
+\node[pmos] (pa) at (0,3) {MPA};\node[pmos] (pb) at (3,3) {MPB};
+\draw (pa.S) -- (0,4) -- (3,4) -- (pb.S);\node[above] at (1.5,4) {$V_{DD}$};
+\draw (pa.D) -- (0,2) -- (3,2) -- (pb.D);\draw (1.5,2) node[circ] {} -- (4.4,2) node[right] {y};
+\node[nmos] (na) at (1.5,.8) {MNA};\node[nmos] (nb) at (1.5,-1.2) {MNB};
+\draw (1.5,2) -- (na.D);\draw (na.S) -- (nb.D) node[midway,right] {mid};\draw (nb.S) -- (1.5,-2.3) node[ground] {};
+\draw (pa.G) -- ++(-.6,0) node[left] {a};\draw (pb.G) -- ++(-.6,0) node[left] {b};
+\draw (na.G) -- ++(-.6,0) node[left] {a};\draw (nb.G) -- ++(-.6,0) node[left] {b};
+\draw (4.4,2) to[C,l=$20\,\mathrm{fF}$] (4.4,0) node[ground] {};
+\end{circuitikz}}
+\caption{NAND2: parallel PMOS pull-up and series NMOS pull-down. Equal a/b labels connect the corresponding gates.}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\resizebox{7.2cm}{!}{\begin{circuitikz}[american,font=\small]
+\node[pmos] (pa) at (1.5,3) {MPA};\node[pmos] (pb) at (1.5,1) {MPB};
+\draw (pa.S) -- (1.5,4) node[above] {$V_{DD}$};\draw (pa.D) -- (pb.S) node[midway,right] {mid};
+\draw (pb.D) -- (1.5,0) node[circ] {} -- (4.4,0) node[right] {y};
+\node[nmos] (na) at (0,-1.3) {MNA};\node[nmos] (nb) at (3,-1.3) {MNB};
+\draw (na.D) -- (0,0) -- (3,0) -- (nb.D);\draw (na.S) -- (0,-2.3) -- (3,-2.3) -- (nb.S);\node[ground] at (1.5,-2.3) {};
+\draw (pa.G) -- ++(-.6,0) node[left] {a};\draw (pb.G) -- ++(-.6,0) node[left] {b};
+\draw (na.G) -- ++(-.6,0) node[left] {a};\draw (nb.G) -- ++(-.6,0) node[left] {b};
+\draw (4.4,0) to[C,l=$20\,\mathrm{fF}$] (4.4,-2.3) node[ground] {};
+\end{circuitikz}}
+\caption{NOR2: series PMOS pull-up and parallel NMOS pull-down. The three test cases set $(a,b)=(in,in),(in,0),(0,in)$.}
+\end{figure}

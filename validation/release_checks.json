@@ -5,8 +5,9 @@
     "decks": 114,
     "cases": 922,
     "reports": 62,
-    "pages": 246,
-    "publication_files": 1515,
+    "reports_with_mos_schematics": 62,
+    "pages": 346,
+    "publication_files": 1577,
     "issues": 0
   },
   "decks": [
@@ -1506,7 +1507,7 @@
   "execution_method": "Installed HSPICE; background command-line execution for the later batches.",
   "specification_compliance": "Execution completion is separate from meeting design targets; results and limitations are documented in each report.",
   "publication_scan": {
-    "files": 1515,
+    "files": 1577,
     "matches": 0,
     "coverage": [
       "file names",

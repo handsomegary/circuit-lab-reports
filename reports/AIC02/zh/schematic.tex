@@ -1,0 +1,91 @@
+\clearpage\section{MOS 電晶體電路圖}
+下圖為可編輯的向量電路圖。同一電路的同名節點代表直接連接；獨立子電路單元的名稱為局部接腳，實際連接依階層圖。B 為基體端，0 為全域接地。各圖明列對應 netlist 與範圍，量測激勵源依文字說明接入。
+以下三圖完整呈現 \texttt{05\_complete\_reference.sp} 的十顆 MOS，以同名節點連接。所有通道長度為 $0.3\,\mu$m，下列寬度單位均為 $\mu$m。
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk] (M1) at (0,3) {};
+\node[anchor=west,font=\scriptsize] at ($(M1.center)+(.55,.40)$) {M1};
+\draw (M1.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\draw (M1.G) -- ++(-.45,0) node[left,font=\small] {\texttt{bp}};
+\node[nmos,bulk] (M3) at (0,0.7) {};
+\node[anchor=west,font=\scriptsize] at ($(M3.center)+(.55,.40)$) {M3};
+\draw (M3.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\draw (M3.G) -- ++(-.45,0) node[left,font=\small] {\texttt{nx}};
+\node[pmos,bulk] (M2) at (4.5,3) {};
+\node[anchor=west,font=\scriptsize] at ($(M2.center)+(.55,.40)$) {M2};
+\draw (M2.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\draw (M2.G) -- ++(-.45,0) node[left,font=\small] {\texttt{bp}};
+\node[nmos,bulk] (M4) at (4.5,0.7) {};
+\node[anchor=west,font=\scriptsize] at ($(M4.center)+(.55,.40)$) {M4};
+\draw (M4.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\draw (M4.G) -- ++(-.45,0) node[left,font=\small] {\texttt{nx}};
+\draw (M1.S) -- ++(0,0.5) node[above,font=\small] {\texttt{rs}};
+\draw (M1.D) -- (M3.D) node[midway,above right,font=\small] {\texttt{nx}};
+\draw (M3.S) -- ++(0,-0.4) node[below,font=\small] {\texttt{0}};
+\draw (M2.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (M2.D) -- (M4.D) node[midway,above right,font=\small] {\texttt{bp}};
+\draw (M4.S) -- ++(0,-0.4) node[below,font=\small] {\texttt{0}};
+\draw (8.2,4) node[above] {\texttt{vdd}} to[R,l={RB}] ++(0,-1.7) node[below] {\texttt{rs}};
+\draw (8.2,1) node[above] {\texttt{nx}} to[C,l={CNX}] ++(0,-1.7) node[below] {\texttt{0}};
+\draw (11.0,1) node[above] {\texttt{bp}} to[C,l={CBP}] ++(0,-1.7) node[below] {\texttt{0}};
+\end{circuitikz}
+\caption{自偏壓核心：M1=115、M2=22、M3=M4=4.85；RB=rbias，CNX=CBP=20 fF。}
+\end{figure}
+\par
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk] (MS1) at (0,3) {};
+\node[anchor=west,font=\scriptsize] at ($(MS1.center)+(.55,.40)$) {MS1};
+\draw (MS1.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\draw (MS1.G) -- ++(-.45,0) node[left,font=\small] {\texttt{bp}};
+\node[nmos,bulk] (MS2) at (0,0.7) {};
+\node[anchor=west,font=\scriptsize] at ($(MS2.center)+(.55,.40)$) {MS2};
+\draw (MS2.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\draw (MS2.G) -- ++(-.45,0) node[left,font=\small] {\texttt{bp}};
+\node[pmos,bulk] (MS3) at (4.5,3) {};
+\node[anchor=west,font=\scriptsize] at ($(MS3.center)+(.55,.40)$) {MS3};
+\draw (MS3.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\draw (MS3.G) -- ++(-.45,0) node[left,font=\small] {\texttt{st}};
+\draw (MS1.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (MS1.D) -- (MS2.D) node[midway,above right,font=\small] {\texttt{st}};
+\draw (MS2.S) -- ++(0,-0.4) node[below,font=\small] {\texttt{0}};
+\draw (MS3.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (MS3.D) -- ++(0,-0.4) node[below,font=\small] {\texttt{inj}};
+\draw (8.2,3.8) node[above] {\texttt{inj}} to[R,l={RSTART}] ++(0,-1.7) node[below] {\texttt{nx}};
+\draw (8.2,0.8) node[above] {\texttt{st}} to[C,l={CST}] ++(0,-1.7) node[below] {\texttt{0}};
+\end{circuitikz}
+\caption{啟動網路：MS1=2、MS2=0.2、MS3=10；CST=20 fF、RSTART=rstart。}
+\end{figure}
+\par
+\clearpage
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk] (M5) at (0,5) {};
+\node[anchor=west,font=\scriptsize] at ($(M5.center)+(.55,.40)$) {M5};
+\draw (M5.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\draw (M5.G) -- ++(-.45,0) node[left,font=\small] {\texttt{bp}};
+\node[pmos,bulk] (MP) at (0,2.8) {};
+\node[anchor=west,font=\scriptsize] at ($(MP.center)+(.55,.40)$) {MP};
+\draw (MP.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\draw (MP.G) -- ++(-.45,0) node[left,font=\small] {\texttt{vref}};
+\node[nmos,bulk] (MN) at (0,0.6) {};
+\node[anchor=west,font=\scriptsize] at ($(MN.center)+(.55,.40)$) {MN};
+\draw (MN.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\draw (MN.G) -- ++(-.45,0) node[left,font=\small] {\texttt{div}};
+\draw (M5.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (M5.D) -- (MP.S) node[midway,above right,font=\small] {\texttt{top}};
+\draw (MP.D) -- (MN.D) node[midway,above right,font=\small] {\texttt{vref}};
+\draw (MN.S) -- ++(0,-0.4) node[below,font=\small] {\texttt{0}};
+\draw (4,5.6) node[above]{\texttt{top}} to[R,l=R3] (4,3.2) node[circ,label=right:\texttt{div}]{} to[R,l=R4] (4,.4) node[below]{0};
+\draw (8,3.5) node[above] {\texttt{vref}} to[C,l={CL}] ++(0,-1.7) node[below] {\texttt{0}};
+\end{circuitikz}
+\caption{參考輸出：M5=MP=22、MN=4.85；R3=rupper、R4=1 k$\Omega$、CL=1 pF。}
+\end{figure}
+\par
+M1 的源極為 rs，MP 的源極為 top，但兩者基體仍接 vdd，並未與各自源極短接。基準 rbias=1 k$\Omega$、rstart=1 m$\Omega$、rupper=5 k$\Omega$、vdd=1 V。MOS 分壓器與獨立啟動實驗另有對應 netlist；本頁三圖為整合後參考電路。

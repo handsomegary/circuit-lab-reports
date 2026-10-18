@@ -1,0 +1,80 @@
+\clearpage\section{MOS transistor schematic}
+\begingroup\small
+Source netlist: \texttt{01\_charge\_sharing.sp; 05\_sharing\_remedies.sp}. Dynamic NAND stack and the three charge-sharing remedies.
+
+Identical node labels denote electrical connections. The drawings are editable CircuitikZ source; hierarchical boxes below refer to the MOS cells shown here.
+
+Unless explicitly labeled otherwise, every NMOS body connects to \texttt{vn}=0 and every PMOS body to \texttt{vp}=\(V_{DD}\); body wires are omitted for readability. Ordinary inverter and dynamic/clocked cells use \(W_n/L_n=0.6/0.25\,\mu\mathrm m\), \(W_p/L_p=1.8/0.25\,\mu\mathrm m\). Both TG devices use \(W/L=0.6/0.25\,\mu\mathrm m\). 
+
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.86, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN1) at (0,-1.45) {};
+\draw (MN1.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN1.right) {\texttt{MN1}};
+\node[nmos] (MN2) at (0,-2.9) {};
+\draw (MN2.G) -- ++(-.65,0) node[left] {\texttt{b}};
+\node[right=3pt] at (MN2.right) {\texttt{MN2}};
+\node[nmos] (MN3) at (0,-4.35) {};
+\draw (MN3.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MN3.right) {\texttt{MN3}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP.D) -- (MN1.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[above] {\texttt{y}};
+\draw (MN1.S) -- (MN2.D) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[above] {\texttt{x}};
+\draw (MN2.S) -- (MN3.D) coordinate[midway] (net3);
+\draw (net3) node[circ] {} -- ++(1.0,0) node[right] {\texttt{f}};
+\draw (MN3.S) -- ++(0,-.55) coordinate (net4) node[below] {\texttt{vn}};
+\draw (net1) -- ++(2.1,0) to[C,l={$C_Y=5\,\mathrm{fF}$}] ++(1.65,0) node[ground,rotate=90] {};
+\draw (net2) -- ++(2.1,0) to[C,l={$C_X=5\,\mathrm{fF}$}] ++(1.65,0) node[ground,rotate=90] {};
+
+\end{circuitikz}
+\par\small \texttt{dyn(a,b,ck,y,x,vp,vn)}
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MPK) at (0,0) {};
+\draw (MPK.G) -- ++(-.65,0) node[left] {\texttt{kg}};
+\node[right=3pt] at (MPK.right) {\texttt{MPK}};
+\draw (MPK.S) -- ++(0,.7) node[above] {\texttt{vp}};\draw (MPK.D) -- ++(0,-.7) node[below] {\texttt{y}};
+\end{circuitikz}
+\par\small \texttt{MPK}: \(W/L=0.3/2\,\mu\mathrm m\).
+\end{minipage}\par\medskip
+The base charge-sharing run has \texttt{b}=0 and \(V_{DD}=1\) V; its initial \texttt{x}=0 V can receive charge from precharged \texttt{y} when \texttt{a} rises. The capacitor values are explicit netlist elements. The keeper on the right belongs to the remedy variants; it is not present in the base run.
+\clearpage\subsection{Keeper and internal-node precharge variants}
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN) at (0,-1.45) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP.D) -- (MN.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN.S) -- ++(0,-.55) coordinate (net2) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{XI}: INV(y,out)
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MPX) at (0,0) {};
+\draw (MPX.G) -- ++(-.65,0) node[left] {\texttt{clk}};
+\node[right=3pt] at (MPX.right) {\texttt{MPX}};
+\draw (MPX.S) -- ++(0,.7) node[above] {\texttt{vd3}};\draw (MPX.D) -- ++(0,-.7) node[below] {\texttt{x3}};
+\end{circuitikz}
+\par\small \texttt{MPX}: \(W/L=0.6/0.25\,\mu\mathrm m\).
+\end{minipage}\par\medskip
+The inverter above uses input \texttt{a=y} and output \texttt{y=out} in the generic cell. Each \texttt{keep} instance contains one \texttt{dyn}, this inverter, and \texttt{MPK}. A behavioral voltage source \texttt{EG} selects the keeper gate voltage; it adds no MOS device.
+\begin{center}\small\begin{tabular}{p{.24\linewidth}p{.68\linewidth}}\toprule
+Instance & Actual connections in the remedy deck\\\midrule
+X0, MODE=0 & \(kg=vp\): keeper off. Nodes y0,x0,o0; supply vd0.\\
+X1, MODE=1 & \(kg=0\): always-on weak PMOS. Nodes y1,x1,o1; supply vd1.\\
+X2, MODE=2 & \(kg=out=o2\): feedback keeper. Nodes y2,x2,o2; supply vd2.\\
+X3, MODE=0 & Keeper off; additional MPX precharges x3. MPX: D=x3, G=clk, S=B=vd3.\\
+\bottomrule\end{tabular}\end{center}
+All four copies share \texttt{a}, \texttt{b}=0, and \texttt{ck=clk}; each has its own 1 V source. The feedback keeper senses the dynamic output through a real two-MOS inverter.
+\endgroup

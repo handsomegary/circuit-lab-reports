@@ -1,0 +1,80 @@
+\clearpage\section{MOS 電晶體電路圖}
+\begingroup\small
+來源 netlist：\texttt{01\_charge\_sharing.sp; 05\_sharing\_remedies.sp}. 動態 NAND 堆疊與三種電荷分享改善方式。
+
+相同節點標籤代表電氣相連。下圖為可編輯的 CircuitikZ 原始碼；階層方塊均對應本附錄所畫出的 MOS 單元。
+
+除另有標示外，所有 NMOS 體端接 \texttt{vn}=0，所有 PMOS 體端接 \texttt{vp}=\(V_{DD}\)；為保持可讀性，省略體端導線。一般反相器及動態／時脈單元為 \(W_n/L_n=0.6/0.25\,\mu\mathrm m\)、\(W_p/L_p=1.8/0.25\,\mu\mathrm m\)；TG 兩顆管皆為 \(W/L=0.6/0.25\,\mu\mathrm m\)。
+
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.86, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN1) at (0,-1.45) {};
+\draw (MN1.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN1.right) {\texttt{MN1}};
+\node[nmos] (MN2) at (0,-2.9) {};
+\draw (MN2.G) -- ++(-.65,0) node[left] {\texttt{b}};
+\node[right=3pt] at (MN2.right) {\texttt{MN2}};
+\node[nmos] (MN3) at (0,-4.35) {};
+\draw (MN3.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MN3.right) {\texttt{MN3}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP.D) -- (MN1.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[above] {\texttt{y}};
+\draw (MN1.S) -- (MN2.D) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[above] {\texttt{x}};
+\draw (MN2.S) -- (MN3.D) coordinate[midway] (net3);
+\draw (net3) node[circ] {} -- ++(1.0,0) node[right] {\texttt{f}};
+\draw (MN3.S) -- ++(0,-.55) coordinate (net4) node[below] {\texttt{vn}};
+\draw (net1) -- ++(2.1,0) to[C,l={$C_Y=5\,\mathrm{fF}$}] ++(1.65,0) node[ground,rotate=90] {};
+\draw (net2) -- ++(2.1,0) to[C,l={$C_X=5\,\mathrm{fF}$}] ++(1.65,0) node[ground,rotate=90] {};
+
+\end{circuitikz}
+\par\small \texttt{dyn(a,b,ck,y,x,vp,vn)}
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MPK) at (0,0) {};
+\draw (MPK.G) -- ++(-.65,0) node[left] {\texttt{kg}};
+\node[right=3pt] at (MPK.right) {\texttt{MPK}};
+\draw (MPK.S) -- ++(0,.7) node[above] {\texttt{vp}};\draw (MPK.D) -- ++(0,-.7) node[below] {\texttt{y}};
+\end{circuitikz}
+\par\small \texttt{MPK}: \(W/L=0.3/2\,\mu\mathrm m\).
+\end{minipage}\par\medskip
+基礎電荷分享案例設定 \texttt{b}=0、\(V_{DD}=1\) V；初始為 0 V 的 \texttt{x} 會在 \texttt{a} 上升時接收預充節點 \texttt{y} 的電荷。圖示電容皆為 netlist 中的顯式元件。右側維持管屬於改善版本，基礎案例未接此管。
+\clearpage\subsection{維持管與內部節點預充版本}
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN) at (0,-1.45) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP.D) -- (MN.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN.S) -- ++(0,-.55) coordinate (net2) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{XI}: INV(y,out)
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MPX) at (0,0) {};
+\draw (MPX.G) -- ++(-.65,0) node[left] {\texttt{clk}};
+\node[right=3pt] at (MPX.right) {\texttt{MPX}};
+\draw (MPX.S) -- ++(0,.7) node[above] {\texttt{vd3}};\draw (MPX.D) -- ++(0,-.7) node[below] {\texttt{x3}};
+\end{circuitikz}
+\par\small \texttt{MPX}: \(W/L=0.6/0.25\,\mu\mathrm m\).
+\end{minipage}\par\medskip
+上圖通用反相器的輸入 \texttt{a} 對應 \texttt{y}，輸出 \texttt{y} 對應 \texttt{out}。每個 \texttt{keep} 實例包含一個 \texttt{dyn}、此反相器與 \texttt{MPK}。行為電壓源 \texttt{EG} 選擇維持管閘極電壓，本身不增加 MOS。
+\begin{center}\small\begin{tabular}{p{.24\linewidth}p{.68\linewidth}}\toprule
+實例 & 改善測試的實際接線\\\midrule
+X0, MODE=0 & \(kg=vp\)：維持管關閉。節點 y0,x0,o0；電源 vd0。\\
+X1, MODE=1 & \(kg=0\)：常開弱 PMOS。節點 y1,x1,o1；電源 vd1。\\
+X2, MODE=2 & \(kg=out=o2\)：回授維持管。節點 y2,x2,o2；電源 vd2。\\
+X3, MODE=0 & 維持管關閉，另以 MPX 預充 x3。MPX：D=x3、G=clk、S=B=vd3。\\
+\bottomrule\end{tabular}\end{center}
+四份電路共用 \texttt{a}、\texttt{b}=0 與 \texttt{ck=clk}，各有獨立 1 V 電源；回授維持管由實際雙 MOS 反相器偵測動態輸出。
+\endgroup
