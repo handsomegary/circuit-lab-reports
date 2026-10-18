@@ -2,6 +2,24 @@
 
 依兩份講義完成本次納入的電路模擬，每個 lab 提供中文與英文 LaTeX／PDF、完整 SPICE netlist、實際量測資料與圖表。
 
+## DIC 學習路線：從平衡到強健
+
+把各 lab 串起來看，核心問題是：**為了改善速度或面積，付出了什麼代價，又要如何讓電路可靠運作？**
+
+| 設計問題 | 核心取捨 | 對應報告 |
+| --- | --- | --- |
+| ① 先讓反相器平衡 | 調整 PMOS／NMOS 寬度比，使切換點接近半供應電壓、平衡雜訊容限；2～3 倍只是常見起點，仍須看實際 VTC。 | [Lab 8](reports/DIC08/zh/main.pdf) |
+| ② 串成邏輯閘後，如何維持驅動力？ | NAND／NOR 的串聯路徑可藉加寬降低電阻，代價是更大的輸入與寄生電容；切換點、延遲仍受輸入模式影響。 | [Lab 9](reports/DIC09/zh/main.pdf) |
+| ③ 換一種邏輯，爭取面積與速度 | Pseudo-NMOS 簡化上拉網路，但付出靜態功耗與比例依賴；動態邏輯採預充／評估，則須處理電荷分享、耦合與漏電，並承擔時脈與預充功耗。 | [Lab 13](reports/DIC13/zh/main.pdf)、[25](reports/DIC25/zh/main.pdf) |
+| ④ 讓資料在正確時間被接收 | Latch／DFF 建立儲存與取樣邊界，須檢查 setup／hold、clock slew／skew；動態串接、NORA 到 TSPC 進一步探討級間競爭與單相時脈的限制。 | [Lab 17](reports/DIC17/zh/main.pdf)、[20](reports/DIC20/zh/main.pdf)、[21](reports/DIC21/zh/main.pdf)、[26](reports/DIC26/zh/main.pdf)、[27](reports/DIC27/zh/main.pdf)、[28](reports/DIC28/zh/main.pdf) |
+| ⑤ 導線與負載也會拖慢訊號 | 連線 RC 與串擾會改變延遲和波形；理解漸增尺寸 buffer 如何驅動大負載，再延伸思考長線分段、repeater 與屏蔽。 | [Lab 11](reports/DIC11/zh/main.pdf)、[12](reports/DIC12/zh/main.pdf) |
+| ⑥ 電源也不是理想電壓源 | 切換電流造成電源／地壓降；decap 就近供應電荷、減小瞬態波動，但不能消除平均直流 IR drop，且有面積成本。 | [Lab 19](reports/DIC19/zh/main.pdf) |
+| ⑦ 從典型條件走向可靠設計 | 用 TT／FF／SS、混合角落與電壓／溫度變化，檢查延遲、功耗與邏輯電位；有限角落測試仍不等於完整時序簽核或統計良率保證。 | [Lab 15](reports/DIC15/zh/main.pdf) |
+
+這條路線將各實驗的設計取捨串起；各 lab 實際做了哪些測試、得到什麼結果，請見連結報告。延伸閱讀：[邏輯家族與速度／功耗取捨](https://pages.hmc.edu/harris/cmosvlsi/4e/Westeweb.fm.pdf)、[長線與 repeater 延遲模型](https://pages.hmc.edu/harris/research/wiredelay.pdf)。
+
+## 收錄內容
+
 每份報告另附可編輯的 CircuitikZ MOS 電晶體電路圖，原始碼為語言資料夾內的 `schematic.tex`。圖說標明對應網表、節點及 bulk 接法；大型重複電路以實際 MOS 單元搭配階層連線圖呈現，代表性版本與省略範圍均有註明。
 
 依使用者指定，排除需要 PDK 設計規則的 DIC Lab 3，以及需要 layout／實體驗證的 DIC Lab 29、30。DIC 講義沒有 Lab 18。電路執行成功與符合每一項規格分別記錄；移植差異、未達指標及模型限制保留於各報告。
