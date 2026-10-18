@@ -18,6 +18,15 @@
 
 這條路線將各實驗的設計取捨串起；各 lab 實際做了哪些測試、得到什麼結果，請見連結報告。延伸閱讀：[邏輯家族與速度／功耗取捨](https://pages.hmc.edu/harris/cmosvlsi/4e/Westeweb.fm.pdf)、[長線與 repeater 延遲模型](https://pages.hmc.edu/harris/research/wiredelay.pdf)。
 
+## Planned lab：用 Unfooted Domino 挑戰速度極限
+
+**狀態：待實作與量測。** 延伸 [Lab 25](reports/DIC25/zh/main.pdf) 的動態非理想效應與 [Lab 26](reports/DIC26/zh/main.pdf) 的串接問題，研究能否以移除 footer 換取更快的評估速度。
+
+- **為什麼值得試：** Unfooted（無底腳）移除下拉路徑中受時脈控制的 NMOS，減少串聯電阻與時脈負載；在相同驅動力下，有機會縮小輸入管、降低前級負擔。
+- **混合使用策略：** 接收外部靜態輸入的首級採 Footed，隔離預充時可能導通的下拉網路；後級在前級完成預充、反相器輸出回到 0，且本級進入評估前不會再被拉高的條件下，才考慮採 Unfooted。必要時延後後級預充，並保留足夠預充時間。[時序依據：§10.5.3](https://pages.hmc.edu/harris/cmosvlsi/4e/Westeweb.fm.pdf#page=24)
+- **必須守住的條件：** 無爭用預充要求每條下拉路徑至少有一顆 NMOS 截止；所有輸入為 0 是充分條件。預充 PMOS 與下拉網路同時導通會造成直通電流，嚴重時影響預充。需驗證預充傳播延遲與 clock skew，後級並非一律可以移除 footer。
+- **預計比較：** 全 Footed 與混合架構，在相同負載、輸入邊緣下，分別做等尺寸與等驅動力比較；量測評估延遲、預充完成時間、爭用電流及每週期能量，再檢查 keeper、耦合、漏電與可用 PVT 角落。速度收益以實測為準。
+
 ## 收錄內容
 
 每份報告另附可編輯的 CircuitikZ MOS 電晶體電路圖，原始碼為語言資料夾內的 `schematic.tex`。圖說標明對應網表、節點及 bulk 接法；大型重複電路以實際 MOS 單元搭配階層連線圖呈現，代表性版本與省略範圍均有註明。
