@@ -1,0 +1,65 @@
+{
+  "01_gate_load": {
+    "completed": 4,
+    "errors": 0,
+    "failed": 0,
+    "measurements": {
+      "mt0": [
+        {
+          "tr_ymos": 2.165811798e-10,
+          "tf_ymos": 1.164300145e-10,
+          "tphl_ymos": 7.680490353e-11,
+          "tplh_ymos": 1.399517336e-10,
+          "tr_ycap": 1.070269925e-10,
+          "tf_ycap": 5.199067148e-11,
+          "tphl_ycap": 6.382019817e-11,
+          "tplh_ycap": 8.875793704e-11,
+          "temper": 25.0,
+          "alter#": 1.0
+        }
+      ],
+      "mt1": [
+        {
+          "tr_ymos": 3.902614197e-10,
+          "tf_ymos": 2.166549903e-10,
+          "tphl_ymos": 1.12885057e-10,
+          "tplh_ymos": 2.414197177e-10,
+          "tr_ycap": 1.824216936e-10,
+          "tf_ycap": 8.974264054e-11,
+          "tphl_ycap": 8.587522935e-11,
+          "tplh_ycap": 1.270544801e-10,
+          "temper": 25.0,
+          "alter#": 2.0
+        }
+      ],
+      "mt2": [
+        {
+          "tr_ymos": 5.639426074e-10,
+          "tf_ymos": 3.150185016e-10,
+          "tphl_ymos": 1.48638828e-10,
+          "tplh_ymos": 3.398336479e-10,
+          "tr_ycap": 2.578247507e-10,
+          "tf_ycap": 1.290268972e-10,
+          "tphl_ycap": 1.073428003e-10,
+          "tplh_ycap": 1.644769958e-10,
+          "temper": 25.0,
+          "alter#": 3.0
+        }
+      ],
+      "mt3": [
+        {
+          "tr_ymos": 7.373429821e-10,
+          "tf_ymos": 4.130518942e-10,
+          "tphl_ymos": 1.840956864e-10,
+          "tplh_ymos": 4.39902908e-10,
+          "tr_ycap": 3.33378391e-10,
+          "tf_ycap": 1.679693972e-10,
+          "tphl_ycap": 1.283824949e-10,
+          "tplh_ycap": 2.016432127e-10,
+          "temper": 25.0,
+          "alter#": 4.0
+        }
+      ]
+    }
+  }
+}

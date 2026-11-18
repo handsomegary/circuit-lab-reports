@@ -1,0 +1,116 @@
+\clearpage\section{MOS 電晶體電路圖}
+\begingroup\small
+來源 netlist：\texttt{01\_four\_topologies.sp}. MOS 單元與四種時脈鏈版本。
+
+相同節點標籤代表電氣相連。下圖為可編輯的 CircuitikZ 原始碼；階層方塊均對應本附錄所畫出的 MOS 單元。
+
+除另有標示外，所有 NMOS 體端接 \texttt{vn}=0，所有 PMOS 體端接 \texttt{vp}=\(V_{DD}\)；為保持可讀性，省略體端導線。一般反相器及動態／時脈單元為 \(W_n/L_n=0.6/0.25\,\mu\mathrm m\)、\(W_p/L_p=1.8/0.25\,\mu\mathrm m\)；TG 兩顆管皆為 \(W/L=0.6/0.25\,\mu\mathrm m\)。
+
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP1) at (0,0.0) {};
+\draw (MP1.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP1.right) {\texttt{MP1}};
+\node[pmos] (MP2) at (0,-1.45) {};
+\draw (MP2.G) -- ++(-.65,0) node[left] {\texttt{cp}};
+\node[right=3pt] at (MP2.right) {\texttt{MP2}};
+\node[nmos] (MN1) at (0,-2.9) {};
+\draw (MN1.G) -- ++(-.65,0) node[left] {\texttt{cn}};
+\node[right=3pt] at (MN1.right) {\texttt{MN1}};
+\node[nmos] (MN2) at (0,-4.35) {};
+\draw (MN2.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN2.right) {\texttt{MN2}};
+\draw (MP1.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP1.D) -- (MP2.S) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{p}};
+\draw (MP2.D) -- (MN1.D) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN1.S) -- (MN2.D) coordinate[midway] (net3);
+\draw (net3) node[circ] {} -- ++(1.0,0) node[right] {\texttt{n}};
+\draw (MN2.S) -- ++(0,-.55) coordinate (net4) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{c2(a,y,cp,cn,vp,vn)}: 4T
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN1) at (0,-1.45) {};
+\draw (MN1.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN1.right) {\texttt{MN1}};
+\node[nmos] (MN2) at (0,-2.9) {};
+\draw (MN2.G) -- ++(-.65,0) node[left] {\texttt{vp}};
+\node[right=3pt] at (MN2.right) {\texttt{MN2}};
+\node[nmos] (MN3) at (0,-4.35) {};
+\draw (MN3.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MN3.right) {\texttt{MN3}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP.D) -- (MN1.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN1.S) -- (MN2.D) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[right] {\texttt{x}};
+\draw (MN2.S) -- (MN3.D) coordinate[midway] (net3);
+\draw (net3) node[circ] {} -- ++(1.0,0) node[right] {\texttt{f}};
+\draw (MN3.S) -- ++(0,-.55) coordinate (net4) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{ndyn(a,y,ck,vp,vn)}: 4T
+\end{minipage}\par\medskip
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP1) at (0,0.0) {};
+\draw (MP1.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt] at (MP1.right) {\texttt{MP1}};
+\node[pmos] (MP2) at (0,-1.45) {};
+\draw (MP2.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP2.right) {\texttt{MP2}};
+\node[nmos] (MN) at (0,-2.9) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\draw (MP1.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP1.D) -- (MP2.S) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{p}};
+\draw (MP2.D) -- (MN.D) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN.S) -- ++(0,-.55) coordinate (net3) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{pdyn(a,y,cb,vp,vn)}: 3T
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN) at (0,-1.45) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP.D) -- (MN.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN.S) -- ++(0,-.55) coordinate (net2) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{inv(a,y,vp,vn)}: 2T
+\end{minipage}\par\medskip
+\clearpage\subsection{四版本的完整接線}
+\begin{center}
+\begin{circuitikz}[scale=0.94, transform shape, font=\small]
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b0) at (0.0,0) {XL$i$: c2\\d $\to$ l$i$};
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b1) at (3.25,0) {XI$i$: inv\\l$i$ $\to$ a$i$};
+\draw[-{Latex}] (b0.east) -- node[above,font=\scriptsize] {l$i$} (b1.west);
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b2) at (6.5,0) {XN$i$: ndyn\\a$i$ $\to$ n$i$};
+\draw[-{Latex}] (b1.east) -- node[above,font=\scriptsize] {a$i$} (b2.west);
+
+\end{circuitikz}
+\end{center}
+各版本分別有一份前端，\(i=1,2,3,4\)。XL\(i\) 的 \texttt{cp=clk, cn=cbraw}；XN\(i\) 的 \texttt{ck=clk}。下列後半段接在各自的 \texttt{n}\(i\)：
+\begin{center}\small\begin{tabular}{p{.24\linewidth}p{.68\linewidth}}\toprule
+版本 & 由對應 n 節點接出的後半段\\\midrule
+(a) & INV(n1,ai); c2(ai,out1,cbraw,clk).\\
+(b) & pdyn(n2,bp,cbraw); c2(bp,out2,cbraw,clk).\\
+(c) & c2(n3,ci,cbraw,clk); c2(ci,out3,cbraw,clk).\\
+(d) & c2(n4,di,cbraw,clk); INV(di,out4).\\
+\bottomrule\end{tabular}\end{center}
+上表 c2 參數為 \texttt{(a,y,cp,cn)}，pdyn 參數為 \texttt{(a,y,cb)}；只有表格省略共同電源腳。各輸出接 5 fF 至 0，\(V_{DD}=1\) V。\texttt{cbraw} 為偏移測試用的獨立反相時脈源；即使邊緣重疊，\texttt{cp/cn} 接線順序仍依上表保持。
+\endgroup

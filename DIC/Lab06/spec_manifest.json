@@ -1,0 +1,22 @@
+{
+  "lab": 6,
+  "source": "DIC Lab.pdf",
+  "supply_V": 1,
+  "temperature_C": 25,
+  "specifications": [
+    {
+      "pages": "24-25",
+      "requirement": "Four parallel doubled MOS loads versus 8/16/24/32 fF",
+      "implementation": "01_gate_load cases0-3",
+      "status": "simulated; original approximate equality not reproduced"
+    }
+  ],
+  "limitations": [
+    "Encrypted model oxide thickness is not independently available.",
+    "Source cascade error corrected to parallel loads."
+  ],
+  "decks": [
+    "01_gate_load.sp"
+  ],
+  "results_status": "Actual local simulator results; final batch validation recorded separately."
+}

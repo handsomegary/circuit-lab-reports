@@ -1,0 +1,30 @@
+\clearpage\section{MOS 電晶體電路圖}
+來源：\texttt{02\_nand.sp} 與 \texttt{03\_nor.sp}。下圖為完整四顆 MOS 的 GATE 單元及輸出負載。不同實例分別測試雙輸入同時切換或固定其中一個輸入。全電路 $L=0.25\,\mu$m。NAND：$W_p=\mathrm{WPREF}$，$W_n=0.6K_{stack}\,\mu$m；NOR：$W_p=\mathrm{WPREF}K_{stack}$，$W_n=0.6\,\mu$m。參考反相器使用一般兩顆 MOS 互補單元；尺寸細掃網表則保留圖中的四顆 MOS NAND／NOR 拓樸，分別調整其寬度。
+
+圖中沿用所列網表的元件與節點名稱；相同節點標籤表示電氣相連。除另有註明外，NMOS 的 bulk 接地，PMOS 的 bulk 接 $V_{DD}$。三端符號省略 bulk 導線以保持圖面清楚。
+\begin{figure}[!htbp]\centering
+\resizebox{7.2cm}{!}{\begin{circuitikz}[american,font=\small]
+\node[pmos] (pa) at (0,3) {MPA};\node[pmos] (pb) at (3,3) {MPB};
+\draw (pa.S) -- (0,4) -- (3,4) -- (pb.S);\node[above] at (1.5,4) {$V_{DD}$};
+\draw (pa.D) -- (0,2) -- (3,2) -- (pb.D);\draw (1.5,2) node[circ] {} -- (4.4,2) node[right] {y};
+\node[nmos] (na) at (1.5,.8) {MNA};\node[nmos] (nb) at (1.5,-1.2) {MNB};
+\draw (1.5,2) -- (na.D);\draw (na.S) -- (nb.D) node[midway,right] {mid};\draw (nb.S) -- (1.5,-2.3) node[ground] {};
+\draw (pa.G) -- ++(-.6,0) node[left] {a};\draw (pb.G) -- ++(-.6,0) node[left] {b};
+\draw (na.G) -- ++(-.6,0) node[left] {a};\draw (nb.G) -- ++(-.6,0) node[left] {b};
+\draw (4.4,2) to[C,l=$20\,\mathrm{fF}$] (4.4,0) node[ground] {};
+\end{circuitikz}}
+\caption{NAND2：PMOS 並聯上拉、NMOS 串聯下拉；同名 a／b 標籤連到對應閘極。}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\resizebox{7.2cm}{!}{\begin{circuitikz}[american,font=\small]
+\node[pmos] (pa) at (1.5,3) {MPA};\node[pmos] (pb) at (1.5,1) {MPB};
+\draw (pa.S) -- (1.5,4) node[above] {$V_{DD}$};\draw (pa.D) -- (pb.S) node[midway,right] {mid};
+\draw (pb.D) -- (1.5,0) node[circ] {} -- (4.4,0) node[right] {y};
+\node[nmos] (na) at (0,-1.3) {MNA};\node[nmos] (nb) at (3,-1.3) {MNB};
+\draw (na.D) -- (0,0) -- (3,0) -- (nb.D);\draw (na.S) -- (0,-2.3) -- (3,-2.3) -- (nb.S);\node[ground] at (1.5,-2.3) {};
+\draw (pa.G) -- ++(-.6,0) node[left] {a};\draw (pb.G) -- ++(-.6,0) node[left] {b};
+\draw (na.G) -- ++(-.6,0) node[left] {a};\draw (nb.G) -- ++(-.6,0) node[left] {b};
+\draw (4.4,0) to[C,l=$20\,\mathrm{fF}$] (4.4,-2.3) node[ground] {};
+\end{circuitikz}}
+\caption{NOR2：PMOS 串聯上拉、NMOS 並聯下拉。三種測試分別設 $(a,b)=(in,in),(in,0),(0,in)$。}
+\end{figure}

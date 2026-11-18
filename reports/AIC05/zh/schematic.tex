@@ -1,0 +1,64 @@
+\clearpage\section{MOS 電晶體電路圖}
+下圖為可編輯的向量電路圖。同一電路的同名節點代表直接連接；獨立子電路單元的名稱為局部接腳，實際連接依階層圖。B 為基體端，0 為全域接地。各圖明列對應 netlist 與範圍，量測激勵源依文字說明接入。
+以下為兩級放大器的全部八顆 MOS，對應 \texttt{01\_open\_loop\_compensation.sp}.
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk] (M3) at (0,4.7) {};
+\node[anchor=west,font=\scriptsize] at ($(M3.center)+(.55,.40)$) {M3};
+\draw (M3.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\node[pmos,bulk] (M4) at (4.2,4.7) {};
+\node[anchor=west,font=\scriptsize] at ($(M4.center)+(.55,.40)$) {M4};
+\draw (M4.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\node[nmos,bulk] (M1) at (0,2.4) {};
+\node[anchor=west,font=\scriptsize] at ($(M1.center)+(.55,.40)$) {M1};
+\draw (M1.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vss};
+\draw (M1.G) -- ++(-.45,0) node[left,font=\small] {\texttt{im}};
+\node[nmos,bulk] (M2) at (4.2,2.4) {};
+\node[anchor=west,font=\scriptsize] at ($(M2.center)+(.55,.40)$) {M2};
+\draw (M2.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vss};
+\draw (M2.G) -- ++(-.45,0) node[left,font=\small] {\texttt{ip}};
+\draw (M3.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (M4.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (M3.D) -- (M1.D) node[midway,above right,font=\small] {\texttt{left}};
+\draw (M4.D) -- (M2.D) node[midway,above right,font=\small] {\texttt{stage1}};
+\draw (M3.G) -- (-1,4.7) -- (-1,3.55) -- (M3.D |- 0,3.55) node[circ]{}; \draw (M4.G) -- (2.9,4.7) -- (2.9,3.55) -- (M3.D |- 0,3.55);
+\node[nmos,bulk] (M6) at (2.1,-0.3) {};
+\node[anchor=west,font=\scriptsize] at ($(M6.center)+(.55,.40)$) {M6};
+\draw (M6.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vss};
+\draw (M6.G) -- ++(-.45,0) node[left,font=\small] {\texttt{bn}};
+\node[nmos,bulk] (M5) at (5.6,-0.3) {};
+\node[anchor=west,font=\scriptsize] at ($(M5.center)+(.55,.40)$) {M5};
+\draw (M5.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vss};
+\draw (M5.G) -- ++(-.45,0) node[left,font=\small] {\texttt{bn}};
+\draw (M1.S) -- (M1.S |- 0,1.2) -- (M2.S |- 0,1.2) -- (M2.S); \draw (M6.D) -- (M6.D |- 0,1.2) node[circ,label=above:\texttt{tail}]{};
+\draw (M6.S) -- ++(0,-0.4) node[below,font=\small] {\texttt{vss}};
+\draw (M5.D) -- ++(0,0.5) node[above,font=\small] {\texttt{bn}};
+\draw (M5.S) -- ++(0,-0.4) node[below,font=\small] {\texttt{vss}};
+\node[pmos,bulk] (M7) at (8.4,4.7) {};
+\node[anchor=west,font=\scriptsize] at ($(M7.center)+(.55,.40)$) {M7};
+\draw (M7.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\node[nmos,bulk] (M8) at (8.4,2.4) {};
+\node[anchor=west,font=\scriptsize] at ($(M8.center)+(.55,.40)$) {M8};
+\draw (M8.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vss};
+\draw (M8.G) -- ++(-.45,0) node[left,font=\small] {\texttt{bn}};
+\draw (M7.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (M7.D) -- (M8.D) node[midway,above right,font=\small] {\texttt{out}};
+\draw (M8.S) -- ++(0,-0.5) node[below,font=\small] {\texttt{vss}};
+\draw (M7.G) -- (6.8,4.7) -- (6.8,3.55) -- (M4.D |- 0,3.55) node[circ]{};
+\draw (8.4,0.0) node[above] {\texttt{vdd}} to[I,l={IREF}] ++(0,-1.7) node[below] {\texttt{bn}};
+\end{circuitikz}
+\caption{第一級差動放大器與第二級共源放大器。}
+\end{figure}
+\par
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\draw (0,0) node[left]{\texttt{stage1}} to[R,l=RC] (3,0) node[circ,label=below:\texttt{cn}]{} to[C,l=CC] (6,0) node[right]{\texttt{out}};\draw (8.5,0.8) node[above] {\texttt{out}} to[C,l={CL}] ++(0,-1.7) node[below] {\texttt{0}};
+\end{circuitikz}
+\caption{透過同名節點連接的補償支路與輸出負載。}
+\end{figure}
+\par
+所有 $L=0.3\,\mu$m；W（$\mu$m）為 M1=M2=35、M3=M4=54、M5=2.2、M6=30、M7=269、M8=73。IREF=10 $\mu$A。NMOS 基體接 vss，PMOS 基體接 vdd。M1 由 im 驅動，M2 由 ip 驅動；激勵網路的共模為 0.6 V，差動輸入與偏移依 netlist 設定。RC=rcomp、CC=ccomp、CL=cload；基準分別為 1 m$\Omega$、$10^{-21}$ F、10 pF，再依案例修改。CL 接全域 0，而非可施加交流擾動的 vss。閉迴路 netlist 沿用此放大器並改變外部回授。

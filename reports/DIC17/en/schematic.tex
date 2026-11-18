@@ -1,0 +1,55 @@
+\clearpage\section{MOS transistor schematic}
+\begingroup\small
+Source netlist: \texttt{01\_hazards.sp}. Dynamic, static, and weak-keeper D flip-flops in the hazard comparison.
+
+Identical node labels denote electrical connections. The drawings are editable CircuitikZ source; hierarchical boxes below refer to the MOS cells shown here.
+
+Unless explicitly labeled otherwise, every NMOS body connects to \texttt{vn}=0 and every PMOS body to \texttt{vp}=\(V_{DD}\); body wires are omitted for readability. Ordinary inverter and dynamic/clocked cells use \(W_n/L_n=0.6/0.25\,\mu\mathrm m\), \(W_p/L_p=1.8/0.25\,\mu\mathrm m\). Both TG devices use \(W/L=0.6/0.25\,\mu\mathrm m\). 
+
+\begin{center}
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[nmos] (TN) at (0,-0.65) {};
+\draw (TN.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt,yshift=-4mm] at (TN.right) {\texttt{XT1.MN}};
+\node[pmos,yscale=-1] (TP) at (3.4,-0.65) {};
+\draw (TP.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt,yshift=-4mm] at (TP.right) {\texttt{XT1.MP}};
+\node[pmos] (IP) at (7,.2) {};\node[nmos] (IN) at (7,-1.4) {};\node[right=3pt] at (IP.right) {\texttt{XI1.MP}};\node[right=3pt] at (IN.right) {\texttt{XI1.MN}};
+\draw (TN.D) -- ++(0,.7) coordinate (nt) -- (nt -| TP.D) -- (TP.D);
+\draw (TN.S) -- ++(0,-.7) coordinate (nb) -- (nb -| TP.S) -- (TP.S);
+\draw (nt -| TP.D) node[circ] {} -| (IP.G);
+\draw (IP.G) -- (IP.G |- IN.G) -- (IN.G);
+\draw (IP.S) -- ++(0,.55) node[above] {\texttt{vp}};
+\draw (IN.S) -- ++(0,-.55) node[below] {\texttt{vn}};
+\draw (IP.D) -- (IN.D) coordinate[midway] (o);
+\draw (o) node[circ] {} -- ++(.8,0) node[right] {\texttt{y}};\node[above] at ($(nt)!.5!(nt -| TP.D)$) {\texttt{x}};\node[below] at ($(nb)!.5!(nb -| TP.S)$) {\texttt{d}};
+\end{circuitikz}
+\end{center}
+\begin{center}
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[nmos] (TN) at (0,-0.65) {};
+\draw (TN.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt,yshift=-4mm] at (TN.right) {\texttt{XT3.MN}};
+\node[pmos,yscale=-1] (TP) at (3.4,-0.65) {};
+\draw (TP.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt,yshift=-4mm] at (TP.right) {\texttt{XT3.MP}};
+\node[pmos] (IP) at (7,.2) {};\node[nmos] (IN) at (7,-1.4) {};\node[right=3pt] at (IP.right) {\texttt{XI3.MP}};\node[right=3pt] at (IN.right) {\texttt{XI3.MN}};
+\draw (TN.D) -- ++(0,.7) coordinate (nt) -- (nt -| TP.D) -- (TP.D);
+\draw (TN.S) -- ++(0,-.7) coordinate (nb) -- (nb -| TP.S) -- (TP.S);
+\draw (nt -| TP.D) node[circ] {} -| (IP.G);
+\draw (IP.G) -- (IP.G |- IN.G) -- (IN.G);
+\draw (IP.S) -- ++(0,.55) node[above] {\texttt{vp}};
+\draw (IN.S) -- ++(0,-.55) node[below] {\texttt{vn}};
+\draw (IP.D) -- (IN.D) coordinate[midway] (o);
+\draw (o) node[circ] {} -- ++(.8,0) node[right] {\texttt{q}};\node[above] at ($(nt)!.5!(nt -| TP.D)$) {\texttt{z}};\node[below] at ($(nb)!.5!(nb -| TP.S)$) {\texttt{y}};
+\end{circuitikz}
+\end{center}
+Input \texttt{d} enters XT1; XI3 drives \texttt{q}. For the dynamic \texttt{dff}, this is the complete 8-transistor signal path. 
+\begin{center}\small\begin{tabular}{p{.24\linewidth}p{.68\linewidth}}\toprule
+Variant & Added feedback connections\\\midrule
+\texttt{sdff} (16T) & XI2: INV(\texttt{y}\(\to\)\texttt{fb1}); XT2: TG(\texttt{fb1}\(\leftrightarrow\)\texttt{x}, en=ck, eb=cb). XI4: INV(\texttt{q}\(\to\)\texttt{fb2}); XT4: TG(\texttt{fb2}\(\leftrightarrow\)\texttt{z}, en=cb, eb=ck).\\
+\texttt{kdff} (12T) & XK1: weak INV(\texttt{y}\(\to\)\texttt{x}); XK2: weak INV(\texttt{q}\(\to\)\texttt{z}).\\
+\bottomrule\end{tabular}\end{center}
+The weak cell has the same two-MOS inverter topology, with PMOS \(W/L=0.3/1\,\mu\mathrm m\) and NMOS \(W/L=0.3/3\,\mu\mathrm m\).
+Top instances \texttt{Xd}, \texttt{Xs}, and \texttt{Xk} drive \texttt{qd}, \texttt{qs}, and \texttt{qk}, respectively. Each output has 5 fF to 0. All share input \texttt{d}, clock \texttt{clk}, and \texttt{cb}=\(V_{DD}-V(\texttt{clk})\), with \(V_{DD}=1\) V. The TG labels give both actual control pins, so the feedback phases remain explicit.
+\endgroup

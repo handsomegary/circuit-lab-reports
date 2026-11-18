@@ -1,0 +1,23 @@
+\clearpage\section{MOS 電晶體電路圖}
+\begin{center}
+\begin{circuitikz}[font=\small, line width=.65pt]
+\node[pmos,bulk] (P) at (2,4) {};
+\node[nmos,bulk] (N) at (2,1) {};
+\draw (P.S) -- ++(0,.65) node[above] {$vdd$};
+\draw (N.S) -- ++(0,-.5) node[ground] {};
+\draw (P.D) -- (N.D);
+\draw (P.D |- 0,2.5) node[circ] {} -- (4.8,2.5) node[right] {$out$};
+\draw (N.G) -- (.1,1) -- (.1,2.5) node[circ] {} -- (-.8,2.5) node[left] {$in$};
+\draw (P.G) -- (.1,4) -- (.1,2.5);
+\draw (P.bulk) -- ++(.8,0) node[right] {$vdd$};
+\draw (N.bulk) -- ++(.8,0) node[right] {$0$};
+\node[anchor=east] at (1.6,4.6) {\texttt{MP}};
+\node[anchor=east] at (1.6,.4) {\texttt{MN}};
+\draw (4,2.5) node[circ] {} to[C,l={$C_L$}] (4,0) node[ground] {};
+\end{circuitikz}
+\par\small \nolinkurl{01_size_load.sp} 與 \nolinkurl{02_slew_load.sp} 的完整 X1／INV 電路。PMOS 的 S、B 接 vdd；NMOS 的 S、B 接 0；兩個閘極接 in，兩個汲極接 out。
+\end{center}
+電源 $vdd=VS=1$ V；$W_n=0.6\,\mu\mathrm m\cdot SIZE$、$W_p=1.8\,\mu\mathrm m\cdot SIZE$、$L=0.25\,\mu$m。輸出電容 $C_L=\max(LOAD,10^{-21}\mathrm F)$；微小下限保留於 netlist，不能解讀為實體負載。
+
+輸入由對地 VIN 驅動：PULSE$(0,1,2\mathrm{ns},SLEW,SLEW,10\mathrm{ns},25\mathrm{ns})$。第一份 deck 掃描 SIZE=1、2、3、4 及 LOAD=0、0.1、0.2、0.3 pF，SLEW=0.2 ns；第二份固定 SIZE=1，掃描同組負載及 SLEW=0.2、0.4、0.6、0.8 ns。所有案例的接線相同。
+

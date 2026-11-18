@@ -1,0 +1,172 @@
+[
+  {
+    "deck": "AIC_Lab01_01_device_iv.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "AIC_Lab01_02_simple_mirror.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "AIC_Lab01_03_cascode_mirror.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "AIC_Lab01_04_high_swing_cascode.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "AIC_Lab01_05_wilson_comparison.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "AIC_Lab01_06_regulated_comparison.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "AIC_Lab01_07_feedback_boost_experiment.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "DIC_Lab01_01_diode_n.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "DIC_Lab01_01_diode_p.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "DIC_Lab01_02_output_n.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "DIC_Lab01_02_output_p.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "DIC_Lab01_03_length.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "DIC_Lab01_04_subthreshold.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "DIC_Lab01_05_equal_geometry.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "DIC_Lab02_01_chain.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "DIC_Lab02_02_fanout3.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  },
+  {
+    "deck": "DIC_Lab02_03_size3.sp",
+    "execution_status": "completed",
+    "errors": [],
+    "warnings": [
+      "  **warning** More warning messages are suppressed. Set option WARNLIMIT to increase the limit."
+    ],
+    "failed_measurements": [],
+    "specification_status": "See per-lab spec matrix; execution success alone is insufficient."
+  }
+]

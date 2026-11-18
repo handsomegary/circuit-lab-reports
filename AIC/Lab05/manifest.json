@@ -1,0 +1,108 @@
+{
+  "lab": "AIC05",
+  "handout": "AIC Lab.pdf",
+  "supply_V": 1.0,
+  "model": "User-supplied external process library",
+  "case_indexing": "zero-based; baseline=0",
+  "decks": {
+    "01_open_loop_compensation": {
+      "title": "Two-stage gain, poles, unity crossing and phase margin",
+      "pages": "48-54",
+      "cases": [
+        "baseline",
+        "miller_2p",
+        "series_rc_2p",
+        "adapted_rc_10p",
+        "small_load_rc"
+      ]
+    },
+    "02_rejection_families": {
+      "title": "Common-mode and positive/negative supply rejection",
+      "pages": "56-57",
+      "cases": [
+        "baseline",
+        "common_mode",
+        "positive_supply",
+        "negative_supply"
+      ]
+    },
+    "03_unity_buffer_dc": {
+      "title": "Closed-loop common-mode range and loading",
+      "pages": "54-55",
+      "cases": [
+        "baseline",
+        "loaded_100k",
+        "loaded_10k"
+      ]
+    },
+    "04_inverting_output_swing": {
+      "title": "Inverting gain -10 and output swing",
+      "pages": "55",
+      "cases": [
+        "baseline",
+        "loaded_100k",
+        "loaded_10k"
+      ]
+    },
+    "05_unity_buffer_steps": {
+      "title": "Uncompensated and compensated step, slew and settling",
+      "pages": "50-53,58",
+      "cases": [
+        "baseline",
+        "miller_2p",
+        "series_rc_2p",
+        "adapted_rc_10p"
+      ]
+    }
+  },
+  "spec_requirements": [
+    {
+      "zh": "兩級開迴路增益與相位（48--50）",
+      "en": "Two-stage open-loop gain and phase (48--50)",
+      "deck_check": "D01",
+      "status": "S+D"
+    },
+    {
+      "zh": "未補償 buffer 振盪與 PM 意義（50--51）",
+      "en": "Uncompensated buffer and PM interpretation (50--51)",
+      "deck_check": "D01/C0,D05/C0",
+      "status": "S+D"
+    },
+    {
+      "zh": "Cc=2pF、串聯 Rc 的補償（52--54）",
+      "en": "2 pF and series-R compensation (52--54)",
+      "deck_check": "D01,D05/C1--2",
+      "status": "S+D; PM<45"
+    },
+    {
+      "zh": "低頻增益、-3dB、unity、PM（54）",
+      "en": "Low-frequency gain, -3dB, unity and PM (54)",
+      "deck_check": "D01; 10pF adaptation",
+      "status": "S+D"
+    },
+    {
+      "zh": "ICMR、反相十倍 output swing（54--55）",
+      "en": "ICMR and inverting -10 output swing (54--55)",
+      "deck_check": "D03--04",
+      "status": "S+D"
+    },
+    {
+      "zh": "CMRR、PSRR+、PSRR-（56--57）",
+      "en": "CMRR, PSRR+ and PSRR- (56--57)",
+      "deck_check": "D02",
+      "status": "S+D"
+    },
+    {
+      "zh": "雙向 slew、settling（58）",
+      "en": "Both slew directions and settling (58)",
+      "deck_check": "D05",
+      "status": "S+D"
+    }
+  ],
+  "validation": "Actual installed HSPICE simulations completed; results apply only to the stated adapted conditions.",
+  "limits": [
+    "Original-process numerical targets are not reproduced by a process-name substitution.",
+    "No foundry voltage-rating, process-corner, mismatch, layout or silicon guarantee is asserted.",
+    "Every printed failed-region or unstable result is retained."
+  ]
+}

@@ -1,0 +1,342 @@
+{
+  "included_lab_count": 31,
+  "labs": [
+    {
+      "lab": "DIC01",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        3,
+        9
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC02",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        10,
+        12
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC03",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        13,
+        16
+      ],
+      "status": "excluded"
+    },
+    {
+      "lab": "DIC04",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        17,
+        20
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC05",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        21,
+        23
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC06",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        24,
+        25
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC07",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        26,
+        30
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC08",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        31,
+        34
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC09",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        35,
+        38
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC10",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        39,
+        43
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC11",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        44,
+        51
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC12",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        52,
+        54
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC13",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        55,
+        57
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC14",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        58,
+        61
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC15",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        62,
+        64
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC16",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        65,
+        73
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC17",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        74,
+        77
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC19",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        78,
+        80
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC20",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        81,
+        84
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC21",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        85,
+        87
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC22",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        88,
+        90
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC23",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        91,
+        93
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC24",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        94,
+        98
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC25",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        99,
+        106
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC26",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        107,
+        110
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC27",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        111,
+        114
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC28",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        115,
+        118
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "DIC29",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        119,
+        122
+      ],
+      "status": "excluded"
+    },
+    {
+      "lab": "DIC30",
+      "handout": "DIC Lab.pdf",
+      "pdf_pages": [
+        123,
+        126
+      ],
+      "status": "excluded"
+    },
+    {
+      "lab": "AIC01",
+      "handout": "AIC Lab.pdf",
+      "pdf_pages": [
+        2,
+        21
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "AIC02",
+      "handout": "AIC Lab.pdf",
+      "pdf_pages": [
+        22,
+        30
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "AIC03",
+      "handout": "AIC Lab.pdf",
+      "pdf_pages": [
+        31,
+        40
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "AIC04",
+      "handout": "AIC Lab.pdf",
+      "pdf_pages": [
+        41,
+        47
+      ],
+      "status": "included"
+    },
+    {
+      "lab": "AIC05",
+      "handout": "AIC Lab.pdf",
+      "pdf_pages": [
+        48,
+        58
+      ],
+      "status": "included"
+    }
+  ],
+  "excluded_lab_reasons": [
+    {
+      "number": 3,
+      "pages": [
+        13,
+        16
+      ],
+      "reason": "Step 1 explicitly requires layout design rules to derive and modify HDIF; the necessary PDK rules were not supplied."
+    },
+    {
+      "number": 29,
+      "pages": [
+        119,
+        122
+      ],
+      "reason": "Layout and design-rule exercises excluded by user."
+    },
+    {
+      "number": 30,
+      "pages": [
+        123,
+        126
+      ],
+      "reason": "Layout and extracted-layout comparison excluded by user."
+    }
+  ],
+  "absent_lab": {
+    "number": 18,
+    "evidence": "Lab 17 ends at PDF page 77; Lab 19 starts on PDF page 78."
+  },
+  "scope_note": "Circuit-only scope requested by the user; no layout, physical verification or PDK design-rule work."
+}

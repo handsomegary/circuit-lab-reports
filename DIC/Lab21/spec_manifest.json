@@ -1,0 +1,35 @@
+{
+  "lab": "DIC21",
+  "requirements": [
+    {
+      "lab": 21,
+      "deck": "01_clock_slope.sp",
+      "title": "Direct and two-inverter clock slew versus period",
+      "pdf_pages": "85-87",
+      "specs": [
+        "Steps1-2: increasing direct/buffered slew and highest tested correct clock rate"
+      ]
+    },
+    {
+      "lab": 21,
+      "deck": "02_three_stage_skew.sp",
+      "title": "Three buffered-clock DFFs with signed clock skew",
+      "pdf_pages": "87",
+      "specs": [
+        "Step3: first two DFFs share clock, third clock leads/lags; raw source edges fixed .2ns"
+      ]
+    },
+    {
+      "lab": 21,
+      "deck": "03_low_frequency_retention.sp",
+      "title": "Dynamic DFF at microsecond clock periods",
+      "pdf_pages": "87",
+      "specs": [
+        "Q1: floating storage nodes at very low clock rate",
+        "Q2-3: edge restoration versus clock skew and race-safe topology discussion"
+      ]
+    }
+  ],
+  "model_setup": "Local model configuration required; loading paths and model content are omitted from public decks.",
+  "layout_status": "Not a layout exercise."
+}

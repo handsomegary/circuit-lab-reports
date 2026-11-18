@@ -1,0 +1,4 @@
+metric,voltage_V
+q_reset_high_phase,0.00019758688
+q_reset_low_phase,3.3946131e-06
+q_recapture,0.99997853

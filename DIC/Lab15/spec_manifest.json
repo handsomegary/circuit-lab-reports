@@ -1,0 +1,92 @@
+{
+  "lab": "DIC15",
+  "requirements": [
+    {
+      "lab": 15,
+      "deck": "01_inverter_tt.sp",
+      "corner": "TT",
+      "cases": 1,
+      "pdf_pages": "62-64",
+      "specs": [
+        "Step 1: corner delay and supply power; combined PVT and isolated process comparisons"
+      ]
+    },
+    {
+      "lab": 15,
+      "deck": "02_inverter_ff.sp",
+      "corner": "FF",
+      "cases": 2,
+      "pdf_pages": "62-64",
+      "specs": [
+        "Step 1: corner delay and supply power; combined PVT and isolated process comparisons"
+      ]
+    },
+    {
+      "lab": 15,
+      "deck": "03_inverter_ss.sp",
+      "corner": "SS",
+      "cases": 2,
+      "pdf_pages": "62-64",
+      "specs": [
+        "Step 1: corner delay and supply power; combined PVT and isolated process comparisons"
+      ]
+    },
+    {
+      "lab": 15,
+      "deck": "04_dc_tt.sp",
+      "corner": "TT",
+      "cases": 4,
+      "pdf_pages": "62-64",
+      "specs": [
+        "Q1: ratioed CMOS mixed-corner response",
+        "Q2: reverse-biased junction current separated from total off-state supply current"
+      ]
+    },
+    {
+      "lab": 15,
+      "deck": "05_dc_ff.sp",
+      "corner": "FF",
+      "cases": 3,
+      "pdf_pages": "62-64",
+      "specs": [
+        "Q1: ratioed CMOS mixed-corner response",
+        "Q2: reverse-biased junction current separated from total off-state supply current"
+      ]
+    },
+    {
+      "lab": 15,
+      "deck": "06_dc_ss.sp",
+      "corner": "SS",
+      "cases": 3,
+      "pdf_pages": "62-64",
+      "specs": [
+        "Q1: ratioed CMOS mixed-corner response",
+        "Q2: reverse-biased junction current separated from total off-state supply current"
+      ]
+    },
+    {
+      "lab": 15,
+      "deck": "07_dc_sf.sp",
+      "corner": "SF",
+      "cases": 1,
+      "pdf_pages": "62-64",
+      "specs": [
+        "Q1: ratioed CMOS mixed-corner response",
+        "Q2: reverse-biased junction current separated from total off-state supply current"
+      ]
+    },
+    {
+      "lab": 15,
+      "deck": "08_dc_fs.sp",
+      "corner": "FS",
+      "cases": 1,
+      "pdf_pages": "62-64",
+      "specs": [
+        "Q1: ratioed CMOS mixed-corner response",
+        "Q2: reverse-biased junction current separated from total off-state supply current"
+      ]
+    }
+  ],
+  "model_setup": "Local model configuration required; loading paths and model content are omitted from public decks.",
+  "layout_status": "Not a layout exercise."
+}

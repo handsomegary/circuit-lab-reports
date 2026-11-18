@@ -1,0 +1,23 @@
+{
+  "lab": 8,
+  "source": "DIC Lab.pdf",
+  "supply_V": 1,
+  "temperature_C": 25,
+  "specifications": [
+    {
+      "pages": "31-34",
+      "requirement": "VTC, unity-gain margins, ratios 0.75/3/12, noise and downstream regeneration",
+      "implementation": "01_dc_transfer and 02_noise_cascade",
+      "status": "simulated"
+    }
+  ],
+  "limitations": [
+    "Boundary-output and ideal-rail margin definitions are both saved.",
+    "Finite transient immunity is not DC noise margin."
+  ],
+  "decks": [
+    "01_dc_transfer.sp",
+    "02_noise_cascade.sp"
+  ],
+  "results_status": "Actual local simulator results; final batch validation recorded separately."
+}

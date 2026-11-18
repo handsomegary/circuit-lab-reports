@@ -1,0 +1,66 @@
+\clearpage\section{MOS transistor schematic}
+\subsection{Driver and receiver transistor cell}
+\begin{center}
+\begin{circuitikz}[font=\small, line width=.65pt]
+\node[pmos,bulk] (P) at (2,4) {};
+\node[nmos,bulk] (N) at (2,1) {};
+\draw (P.S) -- ++(0,.65) node[above] {$vdd$};
+\draw (N.S) -- ++(0,-.5) node[ground] {};
+\draw (P.D) -- (N.D);
+\draw (P.D |- 0,2.5) node[circ] {} -- (4.8,2.5) node[right] {$y$};
+\draw (N.G) -- (.1,1) -- (.1,2.5) node[circ] {} -- (-.8,2.5) node[left] {$a$};
+\draw (P.G) -- (.1,4) -- (.1,2.5);
+\draw (P.bulk) -- ++(.8,0) node[right] {$vdd$};
+\draw (N.bulk) -- ++(.8,0) node[right] {$0$};
+\node[anchor=east] at (1.6,4.6) {\texttt{MP}};
+\node[anchor=east] at (1.6,.4) {\texttt{MN}};
+
+\end{circuitikz}
+\par\small All three public decks use INV: PMOS S/B connect to vp=vdd, NMOS S/B to vn=0. Every INV block below expands to these two MOS devices.
+\end{center}
+Drivers use $W_n=WNBASE\cdot SIZE$ and $W_p=WPBASE\cdot SIZE$; receivers use SIZE=1; $L=LBASE$. Sets A/B/C use $(WNBASE,WPBASE,LBASE)$ equal to $(0.9,2.7,0.35)$, $(0.6,1.8,0.25)$ and $(0.5,1.5,0.18)\,\mu$m. These are size/RC data sets using one supplied model, not three process models.
+
+\subsection{Three-section pi network for one wire}
+\begin{center}
+\begin{circuitikz}[font=\scriptsize,line width=.6pt,scale=.9,transform shape]
+\node[draw,minimum width=1.5cm,minimum height=.8cm] (D) at (-1.2,2) {XD: INV};
+\draw (-2.8,2) node[left] {in} -- (D.west);
+\draw (D.east) -- (0,2) node[circ] {} node[above] {$t1$}
+ to[R,l={$R/3$}] (3,2) node[circ] {} node[above] {$n1$}
+ to[R,l={$R/3$}] (6,2) node[circ] {} node[above] {$n2$}
+ to[R,l={$R/3$}] (9,2) node[circ] {} node[above] {$t2$};
+\foreach \xx/\val in {0/6,3/3,6/3,9/6}{\draw (\xx,2) to[C,l_={$C/\val$}] (\xx,0) node[ground] {};}
+\node[draw,minimum width=1.3cm,minimum height=.8cm] (R) at (10.4,2) {XR: INV};
+\draw (9,2) -- (R.west);\draw (R.east) -- (12,2) node[above] {out} to[C,l={$10\,\mathrm{fF}$}] (12,0) node[ground] {};
+\end{circuitikz}
+\par\small Actual connectivity in \nolinkurl{01_driver_sizing.sp} and \nolinkurl{02_wire_length.sp}: $R=RUNIT\cdot LEN$, $C=CUNIT\cdot LEN\cdot1$ fF.
+\end{center}
+The supply is 1 V. The first deck fixes LEN=10000 $\mu$m and sweeps SIZE=1--15; the second fixes SIZE=5 and sweeps LEN=1000--10000 $\mu$m. The receiver output has an additional 10 fF; all four wire nodes have shunt capacitance.
+
+\clearpage
+
+\subsection{All nodes of the three coupled wires}
+\begin{center}
+\begin{circuitikz}[font=\scriptsize,line width=.6pt,scale=.9,transform shape]
+\foreach \row/\yy/\input/\output/\cg in {l/6/il/outl/S,c/3/in/outc/G,r/0/ir/outr/S}{
+ \node[draw,minimum width=1.2cm,minimum height=.65cm] (D\row) at (-1.25,\yy) {$XD\row$};
+ \draw (D\row.west) -- ++(-.6,0) node[left] {$\input$};
+ \draw (D\row.east) -- (0,\yy);
+ \draw (0,\yy) to[R,l={$R/3$}] (3,\yy) to[R,l={$R/3$}] (6,\yy) to[R,l={$R/3$}] (9,\yy);
+ \node[draw,minimum width=1.2cm,minimum height=.65cm] (R\row) at (10.6,\yy) {$XR\row$};
+ \draw (9,\yy) -- (R\row.west);\draw (R\row.east) -- ++(.55,0) node[right] {$\output$};
+ \foreach \xx/\j/\den in {0/0/6,3/1/3,6/2/3,9/3/6}{
+  \draw (\xx,\yy) node[circ] {} node[above right,fill=white,inner sep=.4pt] {$\row\j$} -- ++(.65,0) to[C,l={$C_\cg/\den$}] ++(0,-1.1) node[ground] {};
+ }
+}
+\foreach \xx/\den in {0/6,3/3,6/3,9/6}{
+ \draw (\xx,6) to[C,l_={$C_X/\den$}] (\xx,3);
+ \draw (\xx,3) to[C,l_={$C_X/\den$}] (\xx,0);
+}
+\end{circuitikz}
+\par\small \nolinkurl{03_coupled_wires.sp}: l/c/r denote left/victim/right wires. Each wire has three resistors and four ground capacitors. Adjacent wires have a coupling capacitor at every matching node index.
+\end{center}
+$R=RUNIT\cdot LEN$; $C_S=CSUNIT\cdot LEN$ fF, $C_G=CGUNIT\cdot LEN$ fF, $C_X=CCUNIT\cdot LEN$ fF. All XD drivers use SIZE=5 and all XR receivers SIZE=1, with the size sets above. This deck adds no CL at outl/outc/outr; the previous circuit\textquotesingle s 10 fF is not part of this topology.
+
+Inputs in, il and ir are three ground-referenced behavioral voltage sources. The victim uses $(1-CEN)/2+CEN\cdot V(base)$; neighbor coefficients 1 and $-1$ select rising/falling transitions, while coefficient 2 holds the input at 0 V. The base signal rises from 0 to 1 V during 20--20.1 ns. Only l--c and r--c coupling capacitors exist; there is no direct l--r connection.
+

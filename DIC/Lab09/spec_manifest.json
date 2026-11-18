@@ -1,0 +1,49 @@
+{
+  "lab": 9,
+  "source": "DIC Lab.pdf",
+  "supply_V": 1,
+  "temperature_C": 25,
+  "specifications": [
+    {
+      "pages": "35-38",
+      "requirement": "Balanced inverter sizing",
+      "status": "simulated"
+    },
+    {
+      "pages": "35-38",
+      "requirement": "NAND and NOR three input VTC/noise margins",
+      "status": "simulated"
+    },
+    {
+      "pages": "35-38",
+      "requirement": "Late-input position and parasitic effects",
+      "status": "simulated"
+    },
+    {
+      "pages": "35-38",
+      "requirement": "Stack factors 1.5/2/2.5/3",
+      "status": "simulated"
+    },
+    {
+      "pages": "35-38",
+      "requirement": "Speed, supply power and width-area proxy",
+      "status": "simulated"
+    },
+    {
+      "pages": "35-38",
+      "requirement": "Input-specific size refinement",
+      "status": "simulated"
+    }
+  ],
+  "limitations": [
+    "10 percent matching is an added engineering target, not a handout tolerance.",
+    "Power excludes ideal input-source energy; width is not layout area."
+  ],
+  "decks": [
+    "01_inverter_sizing.sp",
+    "02_nand.sp",
+    "03_nor.sp",
+    "04_sizing_refinement.sp"
+  ],
+  "results_status": "Actual local simulator results; final batch validation recorded separately."
+}

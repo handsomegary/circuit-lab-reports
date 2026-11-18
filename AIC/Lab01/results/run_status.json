@@ -1,0 +1,51 @@
+[
+  {
+    "deck": "01_device_iv.sp",
+    "returncode": 0,
+    "elapsed_seconds": 7.64,
+    "errors": [],
+    "concluded": true
+  },
+  {
+    "deck": "02_simple_mirror.sp",
+    "returncode": 0,
+    "elapsed_seconds": 7.72,
+    "errors": [],
+    "concluded": true
+  },
+  {
+    "deck": "03_cascode_mirror.sp",
+    "returncode": 0,
+    "elapsed_seconds": 7.59,
+    "errors": [],
+    "concluded": true
+  },
+  {
+    "deck": "04_high_swing_cascode.sp",
+    "returncode": 0,
+    "elapsed_seconds": 7.72,
+    "errors": [],
+    "concluded": true
+  },
+  {
+    "deck": "05_wilson_comparison.sp",
+    "returncode": 0,
+    "elapsed_seconds": 7.8,
+    "errors": [],
+    "concluded": true
+  },
+  {
+    "deck": "06_regulated_comparison.sp",
+    "returncode": 0,
+    "elapsed_seconds": 7.78,
+    "errors": [],
+    "concluded": true
+  },
+  {
+    "deck": "07_feedback_boost_experiment.sp",
+    "returncode": 0,
+    "elapsed_seconds": 7.72,
+    "errors": [],
+    "concluded": true
+  }
+]

@@ -1,0 +1,151 @@
+{
+  "simulator": "HSPICE S-2021.09 win64",
+  "model": "locally supplied nmos/pmos library (not redistributed)",
+  "runs": [
+    {
+      "deck": "01_and_gate_glitch/and_glitch_4versions.sp",
+      "source_sha256": "18f9cb86b08393928dd1bcbe8c59fd32cc56bec9b0f7aa9910546c6aa14a6f78",
+      "exit_code": 0,
+      "concluded": true,
+      "errors": 0
+    },
+    {
+      "deck": "02_fo4_delay/fo4_tpd_L0p1.sp",
+      "source_sha256": "cdeb0293eb12b682a2a269b0a9fbe9fea6b1bec904081f76bf96bf9dab2087cf",
+      "exit_code": 0,
+      "concluded": true,
+      "errors": 0
+    },
+    {
+      "deck": "02_fo4_delay/fo4_wp_sweep_L0p25.sp",
+      "source_sha256": "5ca45464da4e5d39c59d98d597b6535a8b96ae5fb4330fe1fb2f994df3886a91",
+      "exit_code": 0,
+      "concluded": true,
+      "errors": 0
+    },
+    {
+      "deck": "03_rc_wire_buffer/rc_buffer_L0p1.sp",
+      "source_sha256": "52605c0aa17f8034227728154220914729b0b6b4e020f28512490a842869c12a",
+      "exit_code": 0,
+      "concluded": true,
+      "errors": 0
+    },
+    {
+      "deck": "03_rc_wire_buffer/rc_buffer_L0p25.sp",
+      "source_sha256": "81f936443b03b0a24ce6114c29804be2c21b307b228c95328c62b568141bd8c2",
+      "exit_code": 0,
+      "concluded": true,
+      "errors": 0
+    },
+    {
+      "deck": "04_pfd/pfd_v0_tg_dff.sp",
+      "source_sha256": "790bb9a5c39acfc61958743a3f98fb4cbe53f28dab4583790f93ad07f1a82bd1",
+      "exit_code": 0,
+      "concluded": true,
+      "errors": 0
+    },
+    {
+      "deck": "04_pfd/pfd_v1_or_reset_dff.sp",
+      "source_sha256": "23c625580c7a4c51a4236610beccf116c5f29000e1510cb49a6705fd867ff238",
+      "exit_code": 0,
+      "concluded": true,
+      "errors": 0
+    },
+    {
+      "deck": "04_pfd/pfd_v2_tg_latch_dff.sp",
+      "source_sha256": "9eda6d61ecf99606a733c63a1feb03ec0581f00179167e5bcacec842f9fee725",
+      "exit_code": 0,
+      "concluded": true,
+      "errors": 0
+    },
+    {
+      "deck": "04_pfd/pfd_v3_6nand_dff.sp",
+      "source_sha256": "648a2674296d89783d05bb79654a3d1b19934c14a023793573e41ae1a0bd8d3b",
+      "exit_code": 0,
+      "concluded": true,
+      "errors": 0
+    },
+    {
+      "deck": "05_nmos_analog/cs_amp.sp",
+      "source_sha256": "227430913c1fbfbe2bf4f93b10b6c37a5aad5e9b89beeef926754bb2c3a9cc4a",
+      "exit_code": 0,
+      "concluded": true,
+      "errors": 0
+    },
+    {
+      "deck": "05_nmos_analog/rc_phase_shift_osc.sp",
+      "source_sha256": "404469121895b1b6f80ab2b65e4193e8e4d05513d4264001b056ff8bb08d2032",
+      "exit_code": 0,
+      "concluded": true,
+      "errors": 0
+    }
+  ],
+  "outputs": [
+    {
+      "file": "and_glitch_4versions.tr0",
+      "bytes": 129833,
+      "sha256": "dbe3d612c8d8f2266e6e6d2d0491acd51a09677a3a6ccf52b5c119d09fd01a2c"
+    },
+    {
+      "file": "cs_amp.tr0",
+      "bytes": 19486,
+      "sha256": "1f17a1e12e2b79edfefaeede9bc1f619c8c1bda768cc8135e7d0f413a5189ede"
+    },
+    {
+      "file": "fo4_tpd_L0p1.mt0",
+      "bytes": 304,
+      "sha256": "0aeffc70ebdc6b6aea849df605d55c1b9a283cacdbc9ad50068a62c79d73d732"
+    },
+    {
+      "file": "fo4_tpd_L0p1.tr0",
+      "bytes": 20963,
+      "sha256": "56a426a6662e349176b69e62c7dfcbf377f54f78e4699441220107e33a6003eb"
+    },
+    {
+      "file": "fo4_wp_sweep_L0p25.mt0",
+      "bytes": 20952,
+      "sha256": "ca557683a8782d2bd1dc222a5e8b0198b92a377d2c8243c0ab2185f3c43d4f01"
+    },
+    {
+      "file": "fo4_wp_sweep_L0p25.tr0",
+      "bytes": 316560427,
+      "sha256": "13827191a150b61421a459435f19b38246ceecaa725c1c0a10e53bfb32d63e13"
+    },
+    {
+      "file": "pfd_v0_tg_dff.tr0",
+      "bytes": 121662,
+      "sha256": "26bd238d75dec4d686ae66ee0df3e607588bf1445216a3881f3f35005fc94a39"
+    },
+    {
+      "file": "pfd_v1_or_reset_dff.tr0",
+      "bytes": 2346635,
+      "sha256": "0cf0898240f2592bfdddeec5273864a90a9d920dbd937822862a201a8a7e8bc9"
+    },
+    {
+      "file": "pfd_v2_tg_latch_dff.tr0",
+      "bytes": 792991,
+      "sha256": "1316ecb5801a3fd4a83b7193a171e4cb79fbb0b0442dc8578b2097f9b4ad7f99"
+    },
+    {
+      "file": "pfd_v3_6nand_dff.tr0",
+      "bytes": 170118,
+      "sha256": "9d4dad392e183c0244ca8e5ebacb45e1a6c245e543eb6fe12de71f949097b73e"
+    },
+    {
+      "file": "rc_buffer_L0p1.tr0",
+      "bytes": 16697,
+      "sha256": "7b0f4768308dcdc7a43b6acfcbbf9df6d3d58cba648d6600cf2f1e724a7c99e9"
+    },
+    {
+      "file": "rc_buffer_L0p25.tr0",
+      "bytes": 18237,
+      "sha256": "a32929737170197f4bb41f6663ad4584e698657af1d631bcb2bf5b2087086f54"
+    },
+    {
+      "file": "rc_phase_shift_osc.tr0",
+      "bytes": 5676,
+      "sha256": "73f4200a387a1cca53b7cd4693a395c87ec58f5b042bd58e718c655b0514c251"
+    }
+  ],
+  "note": "Raw waveform files were deleted after analysis; only these receipts, summary.json and figures are kept."
+}

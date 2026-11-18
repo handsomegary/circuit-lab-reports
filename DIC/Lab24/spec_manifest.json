@@ -1,0 +1,31 @@
+{
+  "lab": "DIC24",
+  "requirements": [
+    {
+      "lab": 24,
+      "deck": "01_counters.sp",
+      "pdf_pages": "94-98",
+      "specs": [
+        "Step1: Fig24.1 eight-output synchronous divider and Fig24.2 four-bit ripple counter; operating frequency sweep",
+        "Step2: power and transistor/clock-load comparison"
+      ]
+    },
+    {
+      "lab": 24,
+      "deck": "02_clock_loading.sp",
+      "pdf_pages": "94-98",
+      "specs": [
+        "Step2: separate integrated clock-source current for each architecture"
+      ]
+    },
+    {
+      "lab": 24,
+      "deck": "03_period_refinement.sp",
+      "pdf_pages": "94-98",
+      "specs": [
+        "Step1: refine operating-frequency boundaries at166.667MHz and400MHz"
+      ]
+    }
+  ],
+  "model_setup": "Local configuration required; model and loading paths omitted."
+}

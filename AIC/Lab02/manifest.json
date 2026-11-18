@@ -1,0 +1,117 @@
+{
+  "lab": "AIC02",
+  "handout": "AIC Lab.pdf",
+  "supply_V": 1.0,
+  "model": "User-supplied external process library",
+  "case_indexing": "zero-based; baseline=0",
+  "decks": {
+    "01_two_device_divider": {
+      "title": "Two diode-connected MOS reference",
+      "pages": "22-23",
+      "cases": [
+        "baseline",
+        "wider_p",
+        "wider_n"
+      ]
+    },
+    "02_three_device_divider": {
+      "title": "Three MOS and isolated middle well",
+      "pages": "24",
+      "cases": [
+        "baseline",
+        "wider_p",
+        "wider_n"
+      ]
+    },
+    "03_threshold_self_bias": {
+      "title": "Threshold reference and zero-current equilibrium",
+      "pages": "25",
+      "cases": [
+        "baseline",
+        "rset_double"
+      ]
+    },
+    "04_startup_cell": {
+      "title": "Startup injection with power-up ramps",
+      "pages": "26-28",
+      "cases": [
+        "baseline",
+        "slow_ramp",
+        "startup_disconnected",
+        "slow_without_startup"
+      ]
+    },
+    "05_complete_reference": {
+      "title": "Complete reference, line response and temperature",
+      "pages": "27-30",
+      "cases": [
+        "baseline",
+        "cold",
+        "hot",
+        "reference_ratio",
+        "bias_resistor"
+      ]
+    },
+    "06_complete_startup": {
+      "title": "Complete reference startup and settling",
+      "pages": "26-30",
+      "cases": [
+        "baseline",
+        "slow_ramp",
+        "cold",
+        "hot",
+        "startup_disconnected"
+      ]
+    }
+  },
+  "spec_requirements": [
+    {
+      "zh": "二 MOS 分壓與手算比較（22--23）",
+      "en": "Two-MOS divider and analytical comparison (22--23)",
+      "deck_check": "D01; DC, line AC",
+      "status": "S+D"
+    },
+    {
+      "zh": "三 MOS 雙電壓、改尺寸、獨立 well（24）",
+      "en": "Three-MOS dual references, sizing, isolated well (24)",
+      "deck_check": "D02; three sizes",
+      "status": "S+D"
+    },
+    {
+      "zh": "Threshold self-bias、兩支路條件、零電流解（25）",
+      "en": "Threshold self-bias, branch conditions, zero-current solution (25)",
+      "deck_check": "D03; two R values",
+      "status": "S+D"
+    },
+    {
+      "zh": "Startup 功能與啟動注入（26--27）",
+      "en": "Startup function and injection (26--27)",
+      "deck_check": "D04; ramp and disconnect",
+      "status": "S+D"
+    },
+    {
+      "zh": "電流設定、自偏壓、完整 Vbias（27--29）",
+      "en": "Current setting, self-bias and complete Vbias (27--29)",
+      "deck_check": "D05--06; DC/AC/transient",
+      "status": "S+D"
+    },
+    {
+      "zh": "製程補償與溫度設計（30）",
+      "en": "Process compensation and temperature design (30)",
+      "deck_check": "D05--06; -20/27/85 C",
+      "status": "S+D/L"
+    },
+    {
+      "zh": "舊 0.8/2.1 V 與約 1.62 V 範例（24,29）",
+      "en": "Old 0.8/2.1 V and about 1.62 V examples (24,29)",
+      "deck_check": "1 V adaptation",
+      "status": "L"
+    }
+  ],
+  "validation": "Actual installed HSPICE simulations completed; results apply only to the stated adapted conditions.",
+  "limits": [
+    "Original-process numerical targets are not reproduced by a process-name substitution.",
+    "No foundry voltage-rating, process-corner, mismatch, layout or silicon guarantee is asserted.",
+    "Every printed failed-region or unstable result is retained."
+  ]
+}

@@ -1,0 +1,118 @@
+\clearpage\section{MOS 電晶體電路圖}
+\begingroup\small
+來源 netlist：\texttt{02\_noise\_immunity.sp}. N-domino 與交替 N／P 動態鏈；速度及不安全串接測試也使用相同單元。
+
+相同節點標籤代表電氣相連。下圖為可編輯的 CircuitikZ 原始碼；階層方塊均對應本附錄所畫出的 MOS 單元。
+
+除另有標示外，所有 NMOS 體端接 \texttt{vn}=0，所有 PMOS 體端接 \texttt{vp}=\(V_{DD}\)；為保持可讀性，省略體端導線。一般反相器及動態／時脈單元為 \(W_n/L_n=0.6/0.25\,\mu\mathrm m\)、\(W_p/L_p=1.8/0.25\,\mu\mathrm m\)；TG 兩顆管皆為 \(W/L=0.6/0.25\,\mu\mathrm m\)。
+
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN1) at (0,-1.45) {};
+\draw (MN1.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN1.right) {\texttt{MN1}};
+\node[nmos] (MN2) at (0,-2.9) {};
+\draw (MN2.G) -- ++(-.65,0) node[left] {\texttt{b}};
+\node[right=3pt] at (MN2.right) {\texttt{MN2}};
+\node[nmos] (MN3) at (0,-4.35) {};
+\draw (MN3.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MN3.right) {\texttt{MN3}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP.D) -- (MN1.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN1.S) -- (MN2.D) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[right] {\texttt{n1}};
+\draw (MN2.S) -- (MN3.D) coordinate[midway] (net3);
+\draw (net3) node[circ] {} -- ++(1.0,0) node[right] {\texttt{n2}};
+\draw (MN3.S) -- ++(0,-.55) coordinate (net4) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{dyn\_n(a,b,y,ck,vp,vn)}: 4T
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP1) at (0,0.0) {};
+\draw (MP1.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt] at (MP1.right) {\texttt{MP1}};
+\node[pmos] (MP2) at (0,-1.45) {};
+\draw (MP2.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP2.right) {\texttt{MP2}};
+\node[pmos] (MP3) at (0,-2.9) {};
+\draw (MP3.G) -- ++(-.65,0) node[left] {\texttt{b}};
+\node[right=3pt] at (MP3.right) {\texttt{MP3}};
+\node[nmos] (MN) at (0,-4.35) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\draw (MP1.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP1.D) -- (MP2.S) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{n1}};
+\draw (MP2.D) -- (MP3.S) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[right] {\texttt{n2}};
+\draw (MP3.D) -- (MN.D) coordinate[midway] (net3);
+\draw (net3) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN.S) -- ++(0,-.55) coordinate (net4) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{dyn\_p(a,b,y,cb,vp,vn)}: 4T
+\end{minipage}\par\medskip
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN) at (0,-1.45) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP.D) -- (MN.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN.S) -- ++(0,-.55) coordinate (net2) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{inv(a,y,vp,vn)}: 2T
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+N 單元第二資料端 \texttt{b} 接 \texttt{vdd}，P 單元的 \texttt{b} 接 0。N 單元的 PMOS 預充管與 P 單元的 NMOS 預放管，尺寸依前述設定。\par\medskip \(V_{DD}=1\) V；\(cb=V_{DD}-V(clk)\)。\par\small 時脈與資料端固定接法。
+\end{minipage}\par\medskip
+\clearpage\subsection{串接與電容耦合擾動}
+\begin{center}
+\begin{circuitikz}[scale=0.94, transform shape, font=\small]
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b0) at (0.0,0) {XN1: dyn\_n\\a,vdd $\to$ nx};
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b1) at (3.25,0) {XNI1: inv\\nx $\to$ ny};
+\draw[-{Latex}] (b0.east) -- node[above,font=\scriptsize] {nx} (b1.west);
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b2) at (6.5,0) {XN2: dyn\_n\\ny,vdd $\to$ nz};
+\draw[-{Latex}] (b1.east) -- node[above,font=\scriptsize] {ny} (b2.west);
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b3) at (9.75,0) {XNI2: inv\\nz $\to$ nout};
+\draw[-{Latex}] (b2.east) -- node[above,font=\scriptsize] {nz} (b3.west);
+
+\end{circuitikz}
+\end{center}
+\begin{center}
+\begin{circuitikz}[scale=0.94, transform shape, font=\small]
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b0) at (0.0,0) {XP1: dyn\_n\\a,vdd $\to$ px};
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b1) at (3.25,0) {XP2: dyn\_p\\px,0 $\to$ py};
+\draw[-{Latex}] (b0.east) -- node[above,font=\scriptsize] {px} (b1.west);
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b2) at (6.5,0) {XP3: dyn\_n\\py,vdd $\to$ pz};
+\draw[-{Latex}] (b1.east) -- node[above,font=\scriptsize] {py} (b2.west);
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b3) at (9.75,0) {XP4: dyn\_p\\pz,0 $\to$ pout};
+\draw[-{Latex}] (b2.east) -- node[above,font=\scriptsize] {pz} (b3.west);
+
+\end{circuitikz}
+\end{center}
+\begin{center}
+\begin{circuitikz}[scale=1, transform shape, font=\small]
+\draw (0,0) node[left]{\texttt{q}} to[C,l={$C_N=C_{COUP}$}] (3,0) node[right]{\texttt{nx}};\draw (6,0) node[left]{\texttt{q}} to[C,l={$C_P=C_{COUP}$}] (9,0) node[right]{\texttt{px}};
+\end{circuitikz}
+\end{center}
+所有 N 單元用 \texttt{clk}，P 單元用 \texttt{cb}；輸出 \texttt{nout}/\texttt{pout} 各接 5 fF 至 0。兩顆耦合電容將相同的擾動節點 \texttt{q} 接到各鏈第一個動態節點。基準值 10 fF，掃描為 0.001、2、5、15、20、30 fF。雜訊測試中 \texttt{a}=0，\texttt{q} 在 4 ns 由 1 V 降至 0 V。
+\begin{center}
+\begin{circuitikz}[scale=0.94, transform shape, font=\small]
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b0) at (0.0,0) {01 unsafe: dyn\_n\\a,vdd $\to$ x};
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b1) at (3.25,0) {dyn\_n\\x,vdd $\to$ y};
+\draw[-{Latex}] (b0.east) -- node[above,font=\scriptsize] {x} (b1.west);
+
+\end{circuitikz}
+\end{center}
+\texttt{01\_unsafe\_cascade.sp} 兩級共用 \texttt{clk}，\(C_x=C_y=5\) fF 至 0；第一級下降的動態輸出未經反相器，直接驅動下一級評估網路，但後者在評估期間需要上升的輸入。此接法正是測試中的不安全拓樸。
+\endgroup

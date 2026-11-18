@@ -1,0 +1,45 @@
+{
+  "lab": 14,
+  "source": "DIC Lab.pdf",
+  "supply_V": 1,
+  "temperature_C": 25,
+  "specifications": [
+    {
+      "pages": "58-61",
+      "requirement": "Three feedback sizes in both DC directions",
+      "status": "simulated"
+    },
+    {
+      "pages": "58-61",
+      "requirement": "Noise comparison",
+      "status": "simulated"
+    },
+    {
+      "pages": "58-61",
+      "requirement": "Equal-load delay comparison",
+      "status": "simulated"
+    },
+    {
+      "pages": "58-61",
+      "requirement": "Alternative architecture DC/noise/delay",
+      "status": "simulated"
+    },
+    {
+      "pages": "58-61",
+      "requirement": "Slow-ramp branch verification",
+      "status": "simulated"
+    }
+  ],
+  "limitations": [
+    "State-dependent hysteresis is not a single-valued inverter noise margin.",
+    "Finite-ramp thresholds remain slightly different from DC."
+  ],
+  "decks": [
+    "01_hysteresis.sp",
+    "02_noise_immunity.sp",
+    "03_delay_comparison.sp",
+    "04_slow_ramp_check.sp",
+    "05_alternative_dc.sp"
+  ],
+  "results_status": "Actual local simulator results; final batch validation recorded separately."
+}

@@ -1,0 +1,75 @@
+\clearpage\section{MOS 電晶體電路圖}
+來源：\texttt{01\_hysteresis.sp} 的 SCH 與 ALT；\texttt{05\_alternative\_dc.sp} 另測 ALT。兩種回授接法不同，因此分別列圖。vp 代表 $V_{DD}$，vn 代表接地。
+
+圖中沿用所列網表的元件與節點名稱；相同節點標籤表示電氣相連。除另有註明外，NMOS 的 bulk 接地，PMOS 的 bulk 接 $V_{DD}$。三端符號省略 bulk 導線以保持圖面清楚。
+\begin{figure}[!htbp]\centering
+\resizebox{7.3cm}{!}{\begin{circuitikz}[american,font=\small]
+\node[pmos] (p1) at (0,4) {MP1};\node[pmos] (p2) at (0,2) {MP2};
+\node[nmos] (n2) at (0,-1) {MN2};\node[nmos] (n1) at (0,-3) {MN1};
+\draw (p1.S) -- (0,5) node[above] {vp};\draw (p1.D) -- (p2.S) node[midway,left] {p};
+\draw (p2.D) -- (0,.5) node[circ] {} -- (n2.D);\draw (0,.5) -- (2,.5) node[right] {y};
+\draw (n2.S) -- (n1.D) node[midway,left] {n};\draw (n1.S) -- (0,-4) node[below] {vn};
+\foreach \t in {p1,p2,n2,n1}{\draw (\t.G) -- ++(-.8,0) node[left] {a};}
+\node[pmos] (p3) at (4,2) {MP3};\node[nmos] (n3) at (4,-1) {MN3};
+\draw (p3.S) -- (4,3.2) -- (0,3.2) node[circ] {};
+\draw (n3.S) -- (4,-2.2) -- (0,-2.2) node[circ] {};
+\draw (p3.D) -- ++(1.1,0) node[right] {vn};\draw (n3.D) -- ++(1.1,0) node[right] {vp};
+\draw (p3.G) -- ++(-.7,0) node[left] {y};\draw (n3.G) -- ++(-.7,0) node[left] {y};
+\end{circuitikz}}
+\caption{完整六顆 MOS SCH。MP1／MP2：$W=3.6\,\mu$m；MN1／MN2：$W=1.2\,\mu$m；MP3：$W=1.8f\,\mu$m；MN3：$W=0.6f\,\mu$m；皆 $L=0.25\,\mu$m。回授 MOS 端點保留網表順序：MP3 的 $(D,G,S,B)=(vn,y,p,vp)$，MN3 為 $(vp,y,n,vn)$。}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\resizebox{14.5cm}{!}{\begin{circuitikz}[american,font=\small]
+
+\begin{scope}[shift={(0,0)}]
+\node[pmos] (XINp) at (0,1) {};
+\node[nmos] (XINn) at (0,-1) {};
+\draw (XINp.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (XINn.S) -- (0,-2) node[ground] {};
+\draw (XINp.D) -- (0,0) -- (XINn.D);
+\draw (XINp.G) -- (-1.15,1) -- (-1.15,-1) -- (XINn.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {a};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {y};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {XIN};
+\coordinate (XINin) at (-1.8,0);
+\coordinate (XINout) at (0.85,0);
+\end{scope}
+
+\begin{scope}[shift={(5,0)}]
+\node[pmos] (XSENSEp) at (0,1) {};
+\node[nmos] (XSENSEn) at (0,-1) {};
+\draw (XSENSEp.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (XSENSEn.S) -- (0,-2) node[ground] {};
+\draw (XSENSEp.D) -- (0,0) -- (XSENSEn.D);
+\draw (XSENSEp.G) -- (-1.15,1) -- (-1.15,-1) -- (XSENSEn.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {y};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {q};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {XSENSE};
+\coordinate (XSENSEin) at (-1.8,0);
+\coordinate (XSENSEout) at (0.85,0);
+\end{scope}
+
+\begin{scope}[shift={(10,0)}]
+\node[pmos] (XFBp) at (0,1) {};
+\node[nmos] (XFBn) at (0,-1) {};
+\draw (XFBp.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (XFBn.S) -- (0,-2) node[ground] {};
+\draw (XFBp.D) -- (0,0) -- (XFBn.D);
+\draw (XFBp.G) -- (-1.15,1) -- (-1.15,-1) -- (XFBn.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {q};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {y};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {XFB};
+\coordinate (XFBin) at (-1.8,0);
+\coordinate (XFBout) at (0.85,0);
+\end{scope}
+\draw (XINout) -- (XSENSEin);\draw (XSENSEout) -- (XFBin);
+\draw (XFBout) -- (11.5,0) -- (11.5,-3) -- (1.8,-3) -- (1.8,0) node[circ] {};
+\end{circuitikz}}
+\caption{ALT：較強的 XIN（$W_n/W_p=1.2/3.6\,\mu$m）驅動兩個較弱的交互耦合反相器 XSENSE／XFB（$0.6/1.8\,\mu$m）。XFB 的輸出回接 y；所有通道長度為 $0.25\,\mu$m。}
+\end{figure}

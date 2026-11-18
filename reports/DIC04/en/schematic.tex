@@ -1,0 +1,74 @@
+\clearpage\section{MOS transistor schematic}
+Identically named terminals denote the same net; voltages are referenced to ground 0. All drawings are editable CircuitikZ source.
+
+\subsection{Three-input NAND core}
+\begin{center}
+\begin{circuitikz}[font=\small,line width=.65pt,scale=.9,transform shape]
+\foreach \x/\name/\gate in {1/P_a/a,4/P_b/b,7/P_c/c}{
+ \node[pmos,nobulk] (\name) at (\x,7.5) {};
+ \draw (\name.S) -- (\name.S |- 0,8.6);
+ \draw (\name.D) -- (\name.D |- 0,6.2);
+ \draw (\name.G) -- ++(-.6,0) node[left] {$\gate$};
+ \node[anchor=east] at (\x+.1,8.15) {$M_{\name}$};
+}
+\draw (P_a.S |- 0,8.6) -- (P_c.S |- 0,8.6) node[right] {$vp=1\,\mathrm V$};
+\draw (P_a.D |- 0,6.2) -- (9,6.2) node[right] {$y$};
+\node[nmos,nobulk] (Na) at (4,4.8) {};
+\node[nmos,nobulk] (Nb) at (4,3) {};
+\node[nmos,nobulk] (Nc) at (4,1.2) {};
+\draw (Na.D) -- (Na.D |- 0,6.2) node[circ] {};
+\draw (Na.S) -- (Nb.D) node[midway,right] {$n1$};
+\draw (Nb.S) -- (Nc.D) node[midway,right] {$n2$};
+\draw (Nc.S) -- ++(0,-.55) node[ground] {};
+\foreach \name/\gate/\yy in {Na/a/4.8,Nb/b/3,Nc/c/1.2}{
+ \draw (\name.G) -- ++(-.7,0) node[left] {$\gate$};
+ \node[anchor=west] at (4.55,\yy) {$M_{\name}$};
+}
+\draw (8.3,6.2) node[circ] {} to[C,l={$10\,\mathrm{fF}$}] (8.3,3.7) -- (8.3,0) node[ground] {};
+\end{circuitikz}
+\par\small Core of DEFAULT, UNSHARED and SHARED in \nolinkurl{01_geometry.sp}, and all four branches in \nolinkurl{03_constant_capacitance.sp}. The three PMOS devices are parallel; the NMOS stack is ordered a, b, c. Every PMOS bulk is tied to vp and every NMOS bulk to 0, including the upper stack devices.
+\end{center}
+All MOS devices have $W/L=1.8/0.25\,\mu$m. Input $a=\mathrm{in}$ is a PULSE source and $b=c=1$ V. Outputs y0, y2 and y3 each have an independent 10 fF load. Geometry variants change AD, AS, PD, PS and series-resistance parameters, not the connectivity; exact per-device values are in the public netlist.
+
+\clearpage
+
+\subsection{Fixed junction capacitances and measurement fixtures}
+\begin{center}
+\begin{circuitikz}[font=\small,line width=.65pt]
+\node[draw,minimum width=2.4cm,minimum height=2.8cm,align=center] (X) at (0,2) {NAND3\\six MOS\\as above};
+\draw (-1.2,2.8) -- (-2,2.8) node[left] {$a$};
+\draw (-1.2,2) -- (-2,2) node[left] {$b$};
+\draw (-1.2,1.2) -- (-2,1.2) node[left] {$c$};
+\draw (1.2,3) -- (6.5,3) node[right] {$y$};
+\draw (1.2,2) -- (3.4,2) node[right] {$n1$};
+\draw (1.2,1) -- (1.9,1) node[right] {$n2$};
+\draw (5.8,3) node[circ] {} to[C,l={$C_{Jy}$}] (5.8,-.8) node[ground] {};
+\draw (4.4,3) node[circ] {} to[C,l_={$10\,\mathrm{fF}$}] (4.4,-.8) node[ground] {};
+\draw (2.9,2) node[circ] {} to[C,l={$C_{Jn1}$}] (2.9,-.8) node[ground] {};
+\draw (1.55,1) node[circ] {} to[C,l_={$C_{Jn2}$}] (1.55,-.8) node[ground] {};
+\end{circuitikz}
+\par\small The fixed-capacitance branches retain the six MOS devices on the previous page. Internal n1/n2 taps here expose their shunt capacitors; they are not extra subcircuit ports.
+\end{center}
+FIXED2 uses $(C_{Jy},C_{Jn1},C_{Jn2})=(8.63045288,4.135226449,4.135226449)$ fF; FIXED3 uses $(3.3840705509,0.5275863797,0.5275863797)$ fF. Both set AD=AS=PD=PS=0 to avoid counting the explicit junction capacitance twice.
+
+\begin{center}
+\begin{circuitikz}[font=\small,line width=.65pt,scale=.95,transform shape]
+\foreach \xx/\yy/\name/\kind/\dg/\sg/\gg/\bb in {
+0/4/Mn_k/nmos/{BV}/{0}/{0}/{0},
+6/4/Mp_k/pmos/{1-BV}/{1}/{1}/{1},
+0/0/Mns_k/nmos/{0}/{BV}/{0}/{0},
+6/0/Mps_k/pmos/{1}/{1-BV}/{1}/{1}}{
+ \begin{scope}[shift={(\xx,\yy)}]
+ \node[\kind,bulk] (Q) at (1.6,1.4) {};
+ \draw (Q.G) -- ++(-.8,0) node[left] {$G=\gg$};
+ \draw (Q.bulk) -- ++(.7,0) node[right] {$B=\bb$};
+ \draw (Q.D) -- ++(.8,0) node[right] {$D=\dg$};
+ \draw (Q.S) -- ++(-.8,0) node[left] {$S=\sg$};
+ \node at (1.8,-.5) {$\mathrm{\name}$};
+ \end{scope}
+}
+\end{circuitikz}
+\par\small Four single-MOS fixtures in \nolinkurl{02_junction_capacitance.sp}. Terminal labels give DC volts; B denotes the bulk.
+\end{center}
+Each fixture is repeated for geometry index $k=0,1,2,3$; $k=0$ is the zero-junction-geometry reference. The terminal labeled BV or $1-BV$ is driven by an ideal source to ground with AC=1 V at 1 MHz; all other terminals have AC=0. The first row tests D, the second S, with $BV=0,0.25,0.5,0.75,1$ V. Every device has $W/L=1.8/0.25\,\mu$m.
+

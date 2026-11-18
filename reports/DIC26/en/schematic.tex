@@ -1,0 +1,118 @@
+\clearpage\section{MOS transistor schematic}
+\begingroup\small
+Source netlist: \texttt{02\_noise\_immunity.sp}. N-domino and alternating N/P dynamic chains; the same cells also implement the speed and unsafe-cascade tests.
+
+Identical node labels denote electrical connections. The drawings are editable CircuitikZ source; hierarchical boxes below refer to the MOS cells shown here.
+
+Unless explicitly labeled otherwise, every NMOS body connects to \texttt{vn}=0 and every PMOS body to \texttt{vp}=\(V_{DD}\); body wires are omitted for readability. Ordinary inverter and dynamic/clocked cells use \(W_n/L_n=0.6/0.25\,\mu\mathrm m\), \(W_p/L_p=1.8/0.25\,\mu\mathrm m\). Both TG devices use \(W/L=0.6/0.25\,\mu\mathrm m\). 
+
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN1) at (0,-1.45) {};
+\draw (MN1.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN1.right) {\texttt{MN1}};
+\node[nmos] (MN2) at (0,-2.9) {};
+\draw (MN2.G) -- ++(-.65,0) node[left] {\texttt{b}};
+\node[right=3pt] at (MN2.right) {\texttt{MN2}};
+\node[nmos] (MN3) at (0,-4.35) {};
+\draw (MN3.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MN3.right) {\texttt{MN3}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP.D) -- (MN1.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN1.S) -- (MN2.D) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[right] {\texttt{n1}};
+\draw (MN2.S) -- (MN3.D) coordinate[midway] (net3);
+\draw (net3) node[circ] {} -- ++(1.0,0) node[right] {\texttt{n2}};
+\draw (MN3.S) -- ++(0,-.55) coordinate (net4) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{dyn\_n(a,b,y,ck,vp,vn)}: 4T
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP1) at (0,0.0) {};
+\draw (MP1.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt] at (MP1.right) {\texttt{MP1}};
+\node[pmos] (MP2) at (0,-1.45) {};
+\draw (MP2.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP2.right) {\texttt{MP2}};
+\node[pmos] (MP3) at (0,-2.9) {};
+\draw (MP3.G) -- ++(-.65,0) node[left] {\texttt{b}};
+\node[right=3pt] at (MP3.right) {\texttt{MP3}};
+\node[nmos] (MN) at (0,-4.35) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\draw (MP1.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP1.D) -- (MP2.S) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{n1}};
+\draw (MP2.D) -- (MP3.S) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[right] {\texttt{n2}};
+\draw (MP3.D) -- (MN.D) coordinate[midway] (net3);
+\draw (net3) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN.S) -- ++(0,-.55) coordinate (net4) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{dyn\_p(a,b,y,cb,vp,vn)}: 4T
+\end{minipage}\par\medskip
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN) at (0,-1.45) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP.D) -- (MN.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN.S) -- ++(0,-.55) coordinate (net2) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{inv(a,y,vp,vn)}: 2T
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+For N cells, the second data input \texttt{b} is tied to \texttt{vdd}; for P cells it is tied to 0. The PMOS precharge device in the N cell and the NMOS predischarge device in the P cell use the same dimensions stated above.\par\medskip \(V_{DD}=1\) V; \(cb=V_{DD}-V(clk)\).\par\small Clock and data ties.
+\end{minipage}\par\medskip
+\clearpage\subsection{Cascades and capacitive disturbance}
+\begin{center}
+\begin{circuitikz}[scale=0.94, transform shape, font=\small]
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b0) at (0.0,0) {XN1: dyn\_n\\a,vdd $\to$ nx};
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b1) at (3.25,0) {XNI1: inv\\nx $\to$ ny};
+\draw[-{Latex}] (b0.east) -- node[above,font=\scriptsize] {nx} (b1.west);
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b2) at (6.5,0) {XN2: dyn\_n\\ny,vdd $\to$ nz};
+\draw[-{Latex}] (b1.east) -- node[above,font=\scriptsize] {ny} (b2.west);
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b3) at (9.75,0) {XNI2: inv\\nz $\to$ nout};
+\draw[-{Latex}] (b2.east) -- node[above,font=\scriptsize] {nz} (b3.west);
+
+\end{circuitikz}
+\end{center}
+\begin{center}
+\begin{circuitikz}[scale=0.94, transform shape, font=\small]
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b0) at (0.0,0) {XP1: dyn\_n\\a,vdd $\to$ px};
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b1) at (3.25,0) {XP2: dyn\_p\\px,0 $\to$ py};
+\draw[-{Latex}] (b0.east) -- node[above,font=\scriptsize] {px} (b1.west);
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b2) at (6.5,0) {XP3: dyn\_n\\py,vdd $\to$ pz};
+\draw[-{Latex}] (b1.east) -- node[above,font=\scriptsize] {py} (b2.west);
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b3) at (9.75,0) {XP4: dyn\_p\\pz,0 $\to$ pout};
+\draw[-{Latex}] (b2.east) -- node[above,font=\scriptsize] {pz} (b3.west);
+
+\end{circuitikz}
+\end{center}
+\begin{center}
+\begin{circuitikz}[scale=1, transform shape, font=\small]
+\draw (0,0) node[left]{\texttt{q}} to[C,l={$C_N=C_{COUP}$}] (3,0) node[right]{\texttt{nx}};\draw (6,0) node[left]{\texttt{q}} to[C,l={$C_P=C_{COUP}$}] (9,0) node[right]{\texttt{px}};
+\end{circuitikz}
+\end{center}
+All N cells use \texttt{clk}; all P cells use \texttt{cb}. Each output \texttt{nout}/\texttt{pout} has 5 fF to 0. The two coupling capacitors connect the same aggressor \texttt{q} to the first dynamic node of each chain. The base value is 10 fF and the sweeps are 0.001, 2, 5, 15, 20, and 30 fF. For this noise test, \texttt{a}=0; \texttt{q} falls from 1 V to 0 V at 4 ns.
+\begin{center}
+\begin{circuitikz}[scale=0.94, transform shape, font=\small]
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b0) at (0.0,0) {01 unsafe: dyn\_n\\a,vdd $\to$ x};
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b1) at (3.25,0) {dyn\_n\\x,vdd $\to$ y};
+\draw[-{Latex}] (b0.east) -- node[above,font=\scriptsize] {x} (b1.west);
+
+\end{circuitikz}
+\end{center}
+In \texttt{01\_unsafe\_cascade.sp}, both stages share \texttt{clk}; \(C_x=C_y=5\) fF to 0. There is no intervening inverter; a falling first-stage dynamic output directly drives the next evaluation network, whose input should rise during evaluation. The connection shown here is intentionally the unsafe test topology.
+\endgroup

@@ -1,0 +1,72 @@
+\clearpage\section{MOS 電晶體電路圖}
+\begingroup\small
+來源 netlist：\texttt{01\_charge\_discharge.sp}. 完整的六支路通道元件充放電測試。
+
+相同節點標籤代表電氣相連。下圖為可編輯的 CircuitikZ 原始碼；階層方塊均對應本附錄所畫出的 MOS 單元。
+
+除另有標示外，所有 NMOS 體端接 \texttt{vn}=0，所有 PMOS 體端接 \texttt{vp}=\(V_{DD}\)；為保持可讀性，省略體端導線。一般反相器及動態／時脈單元為 \(W_n/L_n=0.6/0.25\,\mu\mathrm m\)、\(W_p/L_p=1.8/0.25\,\mu\mathrm m\)；TG 兩顆管皆為 \(W/L=0.6/0.25\,\mu\mathrm m\)。
+
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.85, transform shape, font=\small]
+\node[nmos] (MNC) at (0,0) {};
+\draw (MNC.G) -- ++(-.65,0) node[left] {\texttt{vdd}};
+\node[right=3pt] at (MNC.right) {\texttt{MNC}};
+\draw (MNC.S) -- ++(0,-0.8) node[below] {\texttt{vdd}};
+\draw (MNC.D) -- ++(1.7,0) coordinate (o) node[above] {\texttt{nc}} to[C,l=$20\,\mathrm{fF}$] ++(0,-1.6) node[ground] {};
+\end{circuitikz}
+\par\small NMOS 充電。
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.85, transform shape, font=\small]
+\node[nmos] (MND) at (0,0) {};
+\draw (MND.G) -- ++(-.65,0) node[left] {\texttt{vdd}};
+\node[right=3pt] at (MND.right) {\texttt{MND}};
+\draw (MND.S) -- ++(0,-0.8) node[below] {\texttt{0}};
+\draw (MND.D) -- ++(1.7,0) coordinate (o) node[above] {\texttt{nd}} to[C,l=$20\,\mathrm{fF}$] ++(0,-1.6) node[ground] {};
+\end{circuitikz}
+\par\small NMOS 放電。
+\end{minipage}\par\medskip
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.85, transform shape, font=\small]
+\node[pmos] (MPC) at (0,0) {};
+\draw (MPC.G) -- ++(-.65,0) node[left] {\texttt{0}};
+\node[right=3pt] at (MPC.right) {\texttt{MPC}};
+\draw (MPC.S) -- ++(0,0.8) node[above] {\texttt{vdd}};
+\draw (MPC.D) -- ++(1.7,0) coordinate (o) node[above] {\texttt{pc}} to[C,l=$20\,\mathrm{fF}$] ++(0,-1.6) node[ground] {};
+\end{circuitikz}
+\par\small PMOS 充電。
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.85, transform shape, font=\small]
+\node[pmos] (MPD) at (0,0) {};
+\draw (MPD.G) -- ++(-.65,0) node[left] {\texttt{0}};
+\node[right=3pt] at (MPD.right) {\texttt{MPD}};
+\draw (MPD.S) -- ++(0,0.8) node[above] {\texttt{0}};
+\draw (MPD.D) -- ++(1.7,0) coordinate (o) node[above] {\texttt{pd}} to[C,l=$20\,\mathrm{fF}$] ++(0,-1.6) node[ground] {};
+\end{circuitikz}
+\par\small PMOS 放電。
+\end{minipage}\par\medskip
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.88, transform shape, font=\small]
+\node[nmos] (MN) at (0,0) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{en}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\node[pmos,yscale=-1] (MP) at (3.4,0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{eb}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+
+\draw (MN.D) -- ++(0,.8) coordinate (nt) -- (nt -| MP.D) -- (MP.D);
+\draw (MN.S) -- ++(0,-.8) coordinate (nb) -- (nb -| MP.S) -- (MP.S);
+\node[above] at ($(nt)!.5!(nt -| MP.D)$) {\texttt{b}};
+\node[below] at ($(nb)!.5!(nb -| MP.S)$) {\texttt{a}};
+
+\end{circuitikz}
+\par\small TG 單元：NMOS 與 PMOS 並聯。
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{center}\small\begin{tabular}{ll}\toprule
+Instance & (a,b,en,eb)\\\midrule
+\texttt{XTC} & \texttt{(vdd,tc,vdd,0)}\\
+\texttt{XTD} & \texttt{(0,td,vdd,0)}\\
+\bottomrule\end{tabular}\end{center}
+\(C_{tc}=C_{td}=20\,\mathrm{fF}\)\par\small 兩個電容均由輸出接至 0。
+\end{minipage}\par\medskip
+此處 \(V_{DD}=1\) V，初始條件為 \(nc=pc=tc=0\) V、\(nd=pd=td=1\) V；10 ns 測試期間各元件均保持導通控制。源／汲極對應 SPICE 實例順序，體端保持原電源軌，即使通道端接至另一電源亦不改變。
+\endgroup

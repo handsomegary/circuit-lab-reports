@@ -1,0 +1,128 @@
+\clearpage\section{MOS 電晶體電路圖}
+下圖為可編輯的向量電路圖。同一電路的同名節點代表直接連接；獨立子電路單元的名稱為局部接腳，實際連接依階層圖。B 為基體端，0 為全域接地。各圖明列對應 netlist 與範圍，量測激勵源依文字說明接入。
+以下為解碼器的實際基元與階層，對應 \texttt{01\_two\_to\_four\_load.sp}, \texttt{02\_three\_to\_eight\_truth.sp}, \texttt{03\_eight\_to\_256\_truth.sp} 及 \texttt{04\_eight\_to\_256\_timing.sp}.
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk] (MP0) at (0.0,3) {};
+\node[anchor=west,font=\scriptsize] at ($(MP0.center)+(.55,.40)$) {MP0};
+\draw (MP0.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vp};
+\draw (MP0.G) -- ++(-.45,0) node[left,font=\small] {\texttt{a0}};
+\draw (MP0.S) -- (MP0.S |- 0,4.2); \draw (MP0.D) -- (MP0.D |- 0,1.7);
+\node[nmos,bulk] (MN0) at (1.9,0.0) {};
+\node[anchor=west,font=\scriptsize] at ($(MN0.center)+(.55,.40)$) {MN0};
+\draw (MN0.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vn};
+\draw (MN0.G) -- ++(-.45,0) node[left,font=\small] {\texttt{a0}};
+\node[pmos,bulk] (MP1) at (3.8,3) {};
+\node[anchor=west,font=\scriptsize] at ($(MP1.center)+(.55,.40)$) {MP1};
+\draw (MP1.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vp};
+\draw (MP1.G) -- ++(-.45,0) node[left,font=\small] {\texttt{a1}};
+\draw (MP1.S) -- (MP1.S |- 0,4.2); \draw (MP1.D) -- (MP1.D |- 0,1.7);
+\node[nmos,bulk] (MN1) at (1.9,-2.2) {};
+\node[anchor=west,font=\scriptsize] at ($(MN1.center)+(.55,.40)$) {MN1};
+\draw (MN1.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vn};
+\draw (MN1.G) -- ++(-.45,0) node[left,font=\small] {\texttt{a1}};
+\draw (MN0.S) -- (MN1.D) node[midway,above right,font=\small] {\texttt{n1}};
+\draw (MP0.S |- 0,4.2) -- (MP1.S |- 0,4.2) node[midway,above]{vp}; \draw (MP0.D |- 0,1.7) -- (MP1.D |- 0,1.7); \draw (MN0.D) -- (MN0.D |- 0,1.7) node[circ,label=above right:z]{};
+\draw (MN1.S) -- ++(0,-0.4) node[below,font=\small] {\texttt{vn}};
+\end{circuitikz}
+\caption{實際 NAND2。AND2 將 NAND2.z 接 inv.a，輸出為 inv.z。}
+\end{figure}
+\par
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk] (MP) at (0,2.5) {};
+\node[anchor=west,font=\scriptsize] at ($(MP.center)+(.55,.40)$) {MP};
+\draw (MP.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vp};
+\node[nmos,bulk] (MN) at (0,0.2) {};
+\node[anchor=west,font=\scriptsize] at ($(MN.center)+(.55,.40)$) {MN};
+\draw (MN.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vn};
+\draw (MP.G) -- (-1,2.5) -- (-1,.2) -- (MN.G); \draw (-1,1.35) node[circ]{} -- (-1.6,1.35) node[left]{a}; \draw (MP.D |- 0,1.35) node[circ]{} -- (2,1.35) node[right]{z};
+\draw (MP.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vp}};
+\draw (MP.D) -- (MN.D) ;
+\draw (MN.S) -- ++(0,-0.5) node[below,font=\small] {\texttt{vn}};
+\end{circuitikz}
+\caption{輸入反相與 NAND 輸出還原所用的實際 inv。}
+\end{figure}
+\par
+所有 $L=0.25\,\mu$m。inv 的 $W_P/W_N=3.6k/1.8k\,\mu$m，nand2 為 $3.6k/3.6k\,\mu$m。PMOS 源極／基體接 vp，NMOS 基體接 vn。n1 為 NMOS 串疊內部節點，不是電源。
+\clearpage
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk] (MP1) at (0,3) {};
+\node[anchor=west,font=\scriptsize] at ($(MP1.center)+(.55,.40)$) {MP1};
+\draw (MP1.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vp};
+\draw (MP1.G) -- ++(-.45,0) node[left,font=\small] {\texttt{a1}};
+\node[pmos,bulk] (MP0) at (0,0.6) {};
+\node[anchor=west,font=\scriptsize] at ($(MP0.center)+(.55,.40)$) {MP0};
+\draw (MP0.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vp};
+\draw (MP0.G) -- ++(-.45,0) node[left,font=\small] {\texttt{a0}};
+\draw (MP1.S) -- ++(0,0.4) node[above,font=\small] {\texttt{vp}};
+\draw (MP1.D) -- (MP0.S) node[midway,above right,font=\small] {\texttt{p1}};
+\draw (MP0.D) -- ++(0,-0.4) node[below,font=\small] {\texttt{z}};
+\node[nmos,bulk] (MN0) at (4.5,1.8) {};
+\node[anchor=west,font=\scriptsize] at ($(MN0.center)+(.55,.40)$) {MN0};
+\draw (MN0.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vn};
+\draw (MN0.G) -- ++(-.45,0) node[left,font=\small] {\texttt{a0}};
+\draw (MN0.D) -- ++(0,0.4) node[above,font=\small] {\texttt{z}};
+\draw (MN0.S) -- ++(0,-0.4) node[below,font=\small] {\texttt{vn}};
+\node[nmos,bulk] (MN1) at (8.0,1.8) {};
+\node[anchor=west,font=\scriptsize] at ($(MN1.center)+(.55,.40)$) {MN1};
+\draw (MN1.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vn};
+\draw (MN1.G) -- ++(-.45,0) node[left,font=\small] {\texttt{a1}};
+\draw (MN1.D) -- ++(0,0.4) node[above,font=\small] {\texttt{z}};
+\draw (MN1.S) -- ++(0,-0.4) node[below,font=\small] {\texttt{vn}};
+\end{circuitikz}
+\caption{實際 NOR2 替代方案：PMOS 串疊中 MP1 位於 MP0 上方。}
+\end{figure}
+\par
+NOR2 的 $W_P=7.2k\,\mu$m、$W_N=1.8k\,\mu$m。MP0 源極為 p1，基體仍接 vp。2-to-4 NAND 版本每一正相最小項皆為 NAND2 後接 inv。以 $(a1,a0)$ 為位元順序，輸出 0--3 的 NAND 輸入依序為 $(nb1,nb0)$、$(nb1,a0)$、$(a1,nb0)$、$(a1,a0)$；NOR 版本則依序為 $(a1,a0)$、$(a1,rb0)$、$(rb1,a0)$、$(rb1,rb0)$。nb／rb 由各架構自己的兩個輸入反相器產生；子電路 vp 對應電源 vn 或 vr，而子電路 vn 對應全域 0。每個輸出皆接 cl 至 0。
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[draw,rounded corners=2pt,align=center,minimum width=2.4cm,minimum height=.9cm] (I) at (0,0) {$a[2:0]$ + inv\\3 complements};
+\node[draw,rounded corners=2pt,align=center,minimum width=2.5cm,minimum height=.9cm] (N) at (4,0) {8 NAND3\\minterms};
+\node[draw,rounded corners=2pt,align=center,minimum width=2.5cm,minimum height=.9cm] (O) at (8,0) {8 inv\\one-hot outputs};
+\draw[-{Latex}] (I.east) -- (N.west);
+\draw[-{Latex}] (N.east) -- (O.west);
+\end{circuitikz}
+\caption{3-to-8 解碼器：八個最小項皆展開為 NAND3 + inv。}
+\end{figure}
+\par
+nand3 以圖示 NAND2 模式擴充為三顆 PMOS 並聯與三顆 NMOS 串聯，$W_P/W_N=3.6k/5.4k\,\mu$m。全部 k=1；三個輸入反相器與八個 AND3 共 70 顆 MOS，每個輸出負載 10 fF。下頁繪出完整 8-to-256 階層，不重複展開 256 個相同輸出單元。
+\clearpage
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[draw,rounded corners=2pt,align=center,minimum width=3cm,minimum height=.9cm] (A) at (0,0) {$a[7:0]$\\8 inv: tb0--tb7};
+\node[draw,rounded corners=2pt,align=center,minimum width=3.4cm,minimum height=.9cm] (B) at (4.6,0) {2 groups of 16 AND4\\tp0 / tp1\\$k=2$};
+\node[draw,rounded corners=2pt,align=center,minimum width=2.8cm,minimum height=.9cm] (C) at (9.2,0) {256 AND2\\t0--t255\\$k=1$};
+\draw[-{Latex}] (A.east) -- (B.west);
+\draw[-{Latex}] (B.east) -- (C.west);
+\end{circuitikz}
+\caption{輸入反相之後的兩個邏輯階層；每個 AND 皆為 NAND + inv。}
+\end{figure}
+\par
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[draw,rounded corners=2pt,align=center,minimum width=3cm,minimum height=.9cm] (A) at (0,0) {$a[7:0]$\\8 inv: hb0--hb7};
+\node[draw,rounded corners=2pt,align=center,minimum width=3.4cm,minimum height=.9cm] (B) at (4.6,0) {4 groups of 4 AND2\\hg0--hg3\\$k=1$};
+\draw[-{Latex}] (A.east) -- (B.west);
+\node[draw,rounded corners=2pt,align=center,minimum width=3.4cm,minimum height=.9cm] (C) at (4.6,-2.5) {2 groups of 16 AND2\\hp0 / hp1\\$k=2$};
+\node[draw,rounded corners=2pt,align=center,minimum width=2.8cm,minimum height=.9cm] (D) at (9.2,-2.5) {256 AND2\\h0--h255\\$k=1$};
+\draw[-{Latex}] (B.south) -- (C.north);
+\draw[-{Latex}] (C.east) -- (D.west);
+\end{circuitikz}
+\caption{三個邏輯階層及實際分組、尺寸倍率。}
+\end{figure}
+\par
+對輸出索引 j，兩級架構結合 tp0[$j\bmod16$]（位元 3:0）與 tp1[$\lfloor j/16\rfloor$]（位元 7:4）。三級架構先解碼位元對 (1:0)、(3:2)、(5:4)、(7:6)，再將相鄰兩組合為 hp0／hp1，最後使用相同的低／高四位索引。每個 AND2／AND4 均為實際 NAND 加反相器。nand4 使用四顆並聯 PMOS（$3.6k\,\mu$m）及四顆串聯 NMOS（$7.2k\,\mu$m），長度皆 $0.25\,\mu$m；k 同時縮放後接反相器。兩級架構的 PMOS 基體電源為 vt，三級為 vh；所有 NMOS 基體接 0。基準每個輸出 cl=10 fF。含八個輸入反相器的 MOS 數分別為 1872、1840。2／3 個邏輯階層在輸入文字之後包含 4／6 個電氣邏輯閘；經反相輸入的路徑再多一級，為 5／7。階層方塊省略的電源／輸入源及重複電容仍完整保留於指定 netlist。

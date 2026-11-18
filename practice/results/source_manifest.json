@@ -1,0 +1,102 @@
+[
+  {
+    "deck": "01_and_gate_glitch/and_glitch_4versions.sp",
+    "original_name": "20260902.sp",
+    "original_sha256": "a96d81fd39dce8421adc8cba026f950acd0c8c5ddc7b3e871c92af6b792b1bf4",
+    "changes": [
+      "model include line -> MODEL_SETUP_REQUIRED marker",
+      ".option post=3 -> post=2 (ASCII waveform for analysis)"
+    ]
+  },
+  {
+    "deck": "02_fo4_delay/fo4_wp_sweep_L0p25.sp",
+    "original_name": "20260903.sp",
+    "original_sha256": "b00b51951047d82e6095fbf96b7a160099c556acc57a04c2159766d9641bfd7d",
+    "changes": [
+      "model include line -> MODEL_SETUP_REQUIRED marker",
+      ".option post=3 -> post=2 (ASCII waveform for analysis)"
+    ]
+  },
+  {
+    "deck": "02_fo4_delay/fo4_tpd_L0p1.sp",
+    "original_name": "2026091702.sp",
+    "original_sha256": "06977c44b442c038880dd738e0b515dba0c022828be2a46e1a7e06e6429d8daa",
+    "changes": [
+      "model include line -> MODEL_SETUP_REQUIRED marker",
+      ".option post=3 -> post=2 (ASCII waveform for analysis)"
+    ]
+  },
+  {
+    "deck": "03_rc_wire_buffer/rc_buffer_L0p1.sp",
+    "original_name": "20260917.sp",
+    "original_sha256": "e012f7086e051b18ae704e3da86fbb7935ad6cba744fb21ddf34f96bf9d5c0f5",
+    "changes": [
+      "model include line -> MODEL_SETUP_REQUIRED marker",
+      ".option post=3 -> post=2 (ASCII waveform for analysis)"
+    ]
+  },
+  {
+    "deck": "03_rc_wire_buffer/rc_buffer_L0p25.sp",
+    "original_name": "2026091703.sp",
+    "original_sha256": "f56436e4054435085c2a25c177e7a39a5c0de0815daba3aade64bc25ca0cbd83",
+    "changes": [
+      "model include line -> MODEL_SETUP_REQUIRED marker",
+      ".option post=3 -> post=2 (ASCII waveform for analysis)",
+      "title line prepended (original line 1 was .inc and HSPICE consumed it as the title)"
+    ]
+  },
+  {
+    "deck": "04_pfd/pfd_v0_tg_dff.sp",
+    "original_name": "20260908_pfd.sp",
+    "original_sha256": "4d0ba383d8274ec4524786ef7d553055eb2cf8b4d793b374eda6cf451c133d45",
+    "changes": [
+      "model include line -> MODEL_SETUP_REQUIRED marker",
+      ".option post=3 -> post=2 (ASCII waveform for analysis)"
+    ]
+  },
+  {
+    "deck": "04_pfd/pfd_v1_or_reset_dff.sp",
+    "original_name": "20260908_pfd_01.sp",
+    "original_sha256": "b5f74e47055229ca027b1d5895ae8a675ee160dfb42bcb1907ed6a5e866c8fbb",
+    "changes": [
+      "model include line -> MODEL_SETUP_REQUIRED marker",
+      ".option post=3 -> post=2 (ASCII waveform for analysis)"
+    ]
+  },
+  {
+    "deck": "04_pfd/pfd_v2_tg_latch_dff.sp",
+    "original_name": "20260908_pfd_02.sp",
+    "original_sha256": "ffeea8fe45dd46eae638e6b87234fe88295cdba9ee081c21a4c40e18d4c33c29",
+    "changes": [
+      "model include line -> MODEL_SETUP_REQUIRED marker",
+      ".option post=3 -> post=2 (ASCII waveform for analysis)"
+    ]
+  },
+  {
+    "deck": "04_pfd/pfd_v3_6nand_dff.sp",
+    "original_name": "20260908_pfd_03.sp",
+    "original_sha256": "5eab7c926cee59f3be9c7fc2416998599cf1cdc4f5265ec0ebfc25b2b819305c",
+    "changes": [
+      "model include line -> MODEL_SETUP_REQUIRED marker",
+      ".option post=3 -> post=2 (ASCII waveform for analysis)"
+    ]
+  },
+  {
+    "deck": "05_nmos_analog/rc_phase_shift_osc.sp",
+    "original_name": "20261020.sp",
+    "original_sha256": "bca0bb01ea0fc74866fa8e5169d5acc63463eb14f37ccc9287f0a8de9a109c12",
+    "changes": [
+      "model include line -> MODEL_SETUP_REQUIRED marker",
+      ".option post=3 -> post=2 (ASCII waveform for analysis)"
+    ]
+  },
+  {
+    "deck": "05_nmos_analog/cs_amp.sp",
+    "original_name": "202610201.sp",
+    "original_sha256": "c709d2322d9ede596398efe55ebdf625e393a84727082c0abb7147d2f98599ce",
+    "changes": [
+      "model include line -> MODEL_SETUP_REQUIRED marker",
+      ".option post=3 -> post=2 (ASCII waveform for analysis)"
+    ]
+  }
+]

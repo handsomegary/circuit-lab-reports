@@ -1,0 +1,36 @@
+\clearpage\section{MOS 電晶體電路圖}
+來源：\texttt{01\_diode\_n.sp}、\texttt{01\_diode\_p.sp} 與 \texttt{02\_output\_n/p.sp}。以下為元件特性量測使用的兩種測試接法；其餘網表沿用獨立閘極與汲極偏壓，改變尺寸或掃描條件。基準 $W_n/W_p/L=0.6/1.8/0.25\,\mu$m；等尺寸比較則將兩種 MOS 寬度皆設為 $0.6\,\mu$m。
+
+圖中沿用所列網表的元件與節點名稱；相同節點標籤表示電氣相連。除另有註明外，NMOS 的 bulk 接地，PMOS 的 bulk 接 $V_{DD}$。三端符號省略 bulk 導線以保持圖面清楚。
+\begin{figure}[!htbp]\centering
+\resizebox{13cm}{!}{\begin{circuitikz}[american,font=\small]
+\begin{scope}[shift={(0,0)}]\node[nmos] (m0) at (0,0) {M1};
+\draw (m0.S) -- ++(0,-.8) node[ground] {};
+\draw (m0.D) -- (0,1.3) node[circ] {} node[above right] {d} -- (-1.5,1.3) |- (m0.G);
+\draw (0,1.3) -- (2,1.3) to[V,l=$V_{SW}$] (2,-0.7) node[ground] {};
+\node at (0,2.6) {NMOS: $G=D$, $S=B=0$};\end{scope}
+\begin{scope}[shift={(7,0)}]\node[pmos] (m7) at (0,0) {M1};
+\draw (m7.S) -- ++(0,.8) node[ground] {};
+\draw (m7.D) -- (0,-1.3) node[circ] {} node[above right] {d} -- (-1.5,-1.3) |- (m7.G);
+\draw (0,-1.3) -- (2,-1.3) to[V,l=$V_{SW}$] (2,-3.3) node[ground] {};
+\node at (0,2.6) {PMOS: $G=D$, $S=B=0$};\end{scope}
+
+\end{circuitikz}}
+\caption{二極體接法。PMOS 的 source 與 bulk 接地，掃描電壓為負值，與網表一致。}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\resizebox{13cm}{!}{\begin{circuitikz}[american,font=\small]
+\begin{scope}[shift={(0,0)}]\node[nmos] (q0) at (0,0) {M1};
+\draw (q0.S) -- ++(0,-.7) node[ground] {};
+\draw (q0.G) -- (-2,0) to[V,l_=$V_{GS}$] (-2,-2.2) node[ground] {};
+\draw (q0.D) -- (0,1.3) node[above right] {d} -- (2,1.3) to[V,l=$V_{DS}$] (2,-0.7) node[ground] {};
+\node at (0,2.4) {NMOS: $S=B=0$};\end{scope}
+\begin{scope}[shift={(7,0)}]\node[pmos] (q7) at (0,0) {M1};
+\draw (q7.S) -- ++(0,.7) node[ground] {};
+\draw (q7.G) -- (-2,0) to[V,l_=$V_{GS}$] (-2,-2.2) node[ground] {};
+\draw (q7.D) -- (0,-1.3) node[above right] {d} -- (2,-1.3) to[V,l=$V_{DS}$] (2,-3.3) node[ground] {};
+\node at (0,2.4) {PMOS: $S=B=0$};\end{scope}
+
+\end{circuitikz}}
+\caption{輸出特性量測的獨立 gate／drain 偏壓。PMOS 的 gate 與 drain 相對接地 source 為負電壓。}
+\end{figure}

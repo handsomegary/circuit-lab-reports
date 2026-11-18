@@ -1,0 +1,84 @@
+\clearpage\section{MOS 電晶體電路圖}
+\subsection{獨立基體端的 CMOS 反相器}
+\begin{center}
+\begin{circuitikz}[font=\small, line width=.65pt]
+\node[pmos,bulk] (P) at (2,4) {};
+\node[nmos,bulk] (N) at (2,1) {};
+\draw (P.S) -- ++(0,.65) node[above] {$vdd$};
+\draw (N.S) -- ++(0,-.5) node[ground] {};
+\draw (P.D) -- (N.D);
+\draw (P.D |- 0,2.5) node[circ] {} -- (4.8,2.5) node[right] {$y$};
+\draw (N.G) -- (.1,1) -- (.1,2.5) node[circ] {} -- (-.8,2.5) node[left] {$a$};
+\draw (P.G) -- (.1,4) -- (.1,2.5);
+\draw (P.bulk) -- ++(.8,0) node[right] {$bp$};
+\draw (N.bulk) -- ++(.8,0) node[right] {$bn$};
+\node[anchor=east] at (1.6,4.6) {\texttt{MP}};
+\node[anchor=east] at (1.6,.4) {\texttt{MN}};
+
+\end{circuitikz}
+\par\small \nolinkurl{01_ring_oscillators.sp} 的 INV\_BODY；圖中 bp、bn 與電源端分離。
+\end{center}
+$W_p/W_n/L=1.8/0.6/0.25\,\mu$m。$vdd=VS=1$ V，$bp=VS+PB$，$bn=-NB$；$(PB,NB)=(0,0),(0.2,0),(0,0.2),(0.2,0.2)$ V。每級均用相同尺寸及相同基體偏壓；未另加輸出負載電容。
+
+\subsection{三階環形振盪器完整 MOS 接線}
+\begin{center}
+\begin{circuitikz}[font=\small,line width=.65pt,scale=.9,transform shape]
+\foreach \xx/\i in {0/0,4/1,8/2}{
+ \begin{scope}[shift={(\xx,0)}]
+ \node[pmos,nobulk] (P\i) at (1.6,4) {};
+ \node[nmos,nobulk] (N\i) at (1.6,1) {};
+ \draw (P\i.S) -- ++(0,.55) node[above] {$vdd$};
+ \draw (N\i.S) -- ++(0,-.4) node[ground] {};
+ \draw (P\i.D) -- (N\i.D);
+ \draw (P\i.G) -- (0,4) -- (0,1) -- (N\i.G);
+ \coordinate (g\i) at (0,2.5);
+ \draw (P\i.D |- 0,2.5) node[circ] {} -- (2.8,2.5) coordinate (o\i);
+ \node[above] at (2.8,2.5) {$r3\_\i$};
+ \node at (.3,-.65) {$Xr3\_\i$};
+ \end{scope}
+}
+\draw (o0) -- (g1) node[circ] {};
+\draw (o1) -- (g2) node[circ] {};
+\draw (o2) -- (11.8,2.5) -- (11.8,-1.3) -- (-.7,-1.3) -- (-.7,2.5) -- (g0) node[circ] {};
+\end{circuitikz}
+\par\small 每個上方 MOS 的 B=bp、下方 MOS 的 B=bn；三個輸出依 r3\_0、r3\_1、r3\_2 串接，r3\_2 回授第一級。
+\end{center}
+\clearpage
+
+\subsection{五階、七階連接及臨界電壓治具}
+\begin{center}
+\begin{circuitikz}[font=\scriptsize,line width=.6pt,scale=.9,transform shape]
+\foreach \N/\yy in {5/3,7/0}{
+ \pgfmathtruncatemacro{\last}{\N-1}
+ \foreach \i in {0,...,\last}{
+  \node[draw,minimum width=1.25cm,minimum height=.7cm] (q\N\i) at (1.8*\i,\yy) {$Xr\N\_\i$};
+  \node[above] at (1.8*\i+.75,\yy+.35) {$r\N\_\i$};
+  \ifnum\i>0\pgfmathtruncatemacro{\prev}{\i-1}\draw[->] (q\N\prev.east) -- (q\N\i.west);\fi
+ }
+ \draw[->] (q\N\last.east) -- ++(.35,0) -- ++(0,-1) -| ([xshift=-.35cm]q\N0.west) -- (q\N0.west);
+}
+\end{circuitikz}
+\par\small 每個方塊就是前頁的二顆 MOS INV\_BODY，方向由左至右，最末級回授第 0 級。
+\end{center}
+三個環同時存在但沒有訊號互連；僅共用 vdd、0、bp、bn。各環 $rN\_0$ 設初始電壓 0.05 V，使用 UIC 啟動；不是額外實體電壓源。
+
+\begin{center}
+\begin{circuitikz}[font=\small,line width=.65pt]
+\node[nmos,bulk] (N) at (2,2) {};
+\draw (N.D) -- ++(0,.7) node[above] {$vdd=1\,\mathrm V$};
+\draw (N.G) -- ++(-.8,0) node[left] {$vdd$};
+\draw (N.bulk) -- ++(.6,0) node[right] {$0$};
+\draw (N.S) -- ++(0,-.4) coordinate (sx) node[right] {$sx$};
+\draw (sx) to[V,l_={\texttt{VSRC}}] ++(0,-2) node[ground] {};
+\node[pmos,bulk] (P) at (8,2) {};
+\draw (P.D) -- ++(0,-.5) node[ground] {};
+\draw (P.G) -- ++(-.8,0) node[left] {$0$};
+\draw (P.bulk) -- ++(.6,0) node[right] {$vdd$};
+\draw (P.S) -- ++(0,.65) node[above] {$sp=1-V(sx)$};
+\node at (1.1,2.75) {\texttt{MN}};
+\node at (7.1,2.75) {\texttt{MP}};
+\end{circuitikz}
+\par\small \nolinkurl{02_body_threshold.sp} 的 MN、MP。MP 的源極由受控電壓源 EPN 設定為 $1-V(sx)$；兩顆 MOS 的基體固定在 0 與 vdd。
+\end{center}
+VSRC 自 0 掃至 1 V、間距 0.01 V；MN 的 D=G=vdd、S=sx、B=0，MP 的 D=G=0、S=sp、B=vdd。尺寸同前頁；讀取各 MOS 的 VTH。
+

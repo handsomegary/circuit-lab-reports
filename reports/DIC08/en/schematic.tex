@@ -1,0 +1,42 @@
+\clearpage\section{MOS transistor schematics}
+Source: \texttt{01\_dc\_transfer.sp} and \texttt{02\_noise\_cascade.sp}. Three parallel branches use $k=0,1,2$, with $W_p=0.45,1.8,7.2\,\mu$m respectively; all have $W_n=0.6\,\mu$m and $L=0.25\,\mu$m. The DC deck contains only Xk. The transient noise deck adds XBUFk of the same dimensions to each branch.
+
+The drawings use the device and node names of the cited netlists. Equal net labels denote an electrical connection. Unless stated otherwise, NMOS bulk terminals connect to ground and PMOS bulk terminals connect to $V_{DD}$. The bulk wires are omitted from the three-terminal symbols for readability.
+\begin{figure}[!htbp]\centering
+\resizebox{12cm}{!}{\begin{circuitikz}[american,font=\small]
+
+\begin{scope}[shift={(0,0)}]
+\node[pmos] (Xkp) at (0,1) {};
+\node[nmos] (Xkn) at (0,-1) {};
+\draw (Xkp.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (Xkn.S) -- (0,-2) node[ground] {};
+\draw (Xkp.D) -- (0,0) -- (Xkn.D);
+\draw (Xkp.G) -- (-1.15,1) -- (-1.15,-1) -- (Xkn.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {in};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {$y_k$};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {};
+\coordinate (Xkin) at (-1.8,0);
+\coordinate (Xkout) at (0.85,0);
+\end{scope}
+
+\begin{scope}[shift={(5,0)}]
+\node[pmos] (XBUFkp) at (0,1) {};
+\node[nmos] (XBUFkn) at (0,-1) {};
+\draw (XBUFkp.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (XBUFkn.S) -- (0,-2) node[ground] {};
+\draw (XBUFkp.D) -- (0,0) -- (XBUFkn.D);
+\draw (XBUFkp.G) -- (-1.15,1) -- (-1.15,-1) -- (XBUFkn.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {$y_k$};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {$z_k$};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {};
+\coordinate (XBUFkin) at (-1.8,0);
+\coordinate (XBUFkout) at (0.85,0);
+\end{scope}
+\draw (Xkout) -- (XBUFkin);
+\end{circuitikz}}
+\caption{One complete four-MOS noise-cascade branch; repeat independently for the three width ratios. The common input does not connect the three branch outputs.}
+\end{figure}

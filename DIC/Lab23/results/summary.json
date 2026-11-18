@@ -1,0 +1,92 @@
+{
+  "metrics": [
+    {
+      "deck": "01_two_to_four_load",
+      "case": 0,
+      "rise_n": 1.1244548e-10,
+      "fall_n": 1.5608394e-10,
+      "power_n": 5.4837565e-05,
+      "rise_r": 1.5499534e-10,
+      "fall_r": 6.2553766e-11,
+      "power_r": 5.5568133e-05,
+      "temper": 27.0,
+      "alter#": 1.0,
+      "truth_failures": 0
+    },
+    {
+      "deck": "01_two_to_four_load",
+      "case": 1,
+      "rise_n": 2.1389894e-10,
+      "fall_n": 2.0194125e-10,
+      "power_n": 7.6248346e-05,
+      "rise_r": 2.5402486e-10,
+      "fall_r": 1.0758941e-10,
+      "power_r": 7.7843755e-05,
+      "temper": 27.0,
+      "alter#": 2.0,
+      "truth_failures": 0
+    },
+    {
+      "deck": "01_two_to_four_load",
+      "case": 2,
+      "rise_n": 3.3166529e-10,
+      "fall_n": 2.4807553e-10,
+      "power_n": 0.00010190256,
+      "rise_r": 3.7137151e-10,
+      "fall_r": 1.5670078e-10,
+      "power_r": 0.00010361175,
+      "temper": 27.0,
+      "alter#": 3.0,
+      "truth_failures": 0
+    },
+    {
+      "deck": "01_two_to_four_load",
+      "case": 3,
+      "rise_n": 1.2597549e-09,
+      "fall_n": 3.9668455e-10,
+      "power_n": 0.00023746524,
+      "rise_r": 1.2896047e-09,
+      "fall_r": 2.3658428e-10,
+      "power_r": 0.00023374827,
+      "temper": 27.0,
+      "alter#": 4.0,
+      "truth_failures": 16
+    },
+    {
+      "deck": "02_three_to_eight_truth",
+      "case": 0,
+      "truth_rows": 8,
+      "truth_failures": 0
+    },
+    {
+      "deck": "03_eight_to_256_truth",
+      "case": 0,
+      "truth_rows": 512,
+      "truth_failures": 0
+    },
+    {
+      "deck": "04_eight_to_256_timing",
+      "case": 0,
+      "rise_t": 7.4472084e-10,
+      "fall_t": 5.9030272e-10,
+      "power_t": 0.00052269025,
+      "rise_h": 1.3602156e-09,
+      "fall_h": 9.2494005e-10,
+      "power_h": 0.00023878384,
+      "temper": 27.0,
+      "alter#": 1.0
+    },
+    {
+      "deck": "04_eight_to_256_timing",
+      "case": 1,
+      "rise_t": 9.6489644e-10,
+      "fall_t": 6.9365117e-10,
+      "power_t": 0.00055268983,
+      "rise_h": 1.57978e-09,
+      "fall_h": 1.0283102e-09,
+      "power_h": 0.00025713249,
+      "temper": 27.0,
+      "alter#": 2.0
+    }
+  ]
+}

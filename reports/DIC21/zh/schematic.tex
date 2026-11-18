@@ -1,0 +1,68 @@
+\clearpage\section{MOS 電晶體電路圖}
+\begingroup\small
+來源 netlist：\texttt{02\_three\_stage\_skew.sp}. 三級動態暫存器鏈與兩條緩衝時脈支路。
+
+相同節點標籤代表電氣相連。下圖為可編輯的 CircuitikZ 原始碼；階層方塊均對應本附錄所畫出的 MOS 單元。
+
+除另有標示外，所有 NMOS 體端接 \texttt{vn}=0，所有 PMOS 體端接 \texttt{vp}=\(V_{DD}\)；為保持可讀性，省略體端導線。一般反相器及動態／時脈單元為 \(W_n/L_n=0.6/0.25\,\mu\mathrm m\)、\(W_p/L_p=1.8/0.25\,\mu\mathrm m\)；TG 兩顆管皆為 \(W/L=0.6/0.25\,\mu\mathrm m\)。
+
+\begin{center}
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[nmos] (TN) at (0,-0.65) {};
+\draw (TN.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt,yshift=-4mm] at (TN.right) {\texttt{XT1.MN}};
+\node[pmos,yscale=-1] (TP) at (3.4,-0.65) {};
+\draw (TP.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt,yshift=-4mm] at (TP.right) {\texttt{XT1.MP}};
+\node[pmos] (IP) at (7,.2) {};\node[nmos] (IN) at (7,-1.4) {};\node[right=3pt] at (IP.right) {\texttt{XI1.MP}};\node[right=3pt] at (IN.right) {\texttt{XI1.MN}};
+\draw (TN.D) -- ++(0,.7) coordinate (nt) -- (nt -| TP.D) -- (TP.D);
+\draw (TN.S) -- ++(0,-.7) coordinate (nb) -- (nb -| TP.S) -- (TP.S);
+\draw (nt -| TP.D) node[circ] {} -| (IP.G);
+\draw (IP.G) -- (IP.G |- IN.G) -- (IN.G);
+\draw (IP.S) -- ++(0,.55) node[above] {\texttt{vp}};
+\draw (IN.S) -- ++(0,-.55) node[below] {\texttt{vn}};
+\draw (IP.D) -- (IN.D) coordinate[midway] (o);
+\draw (o) node[circ] {} -- ++(.8,0) node[right] {\texttt{y}};\node[above] at ($(nt)!.5!(nt -| TP.D)$) {\texttt{x}};\node[below] at ($(nb)!.5!(nb -| TP.S)$) {\texttt{d}};
+\end{circuitikz}
+\end{center}
+\begin{center}
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[nmos] (TN) at (0,-0.65) {};
+\draw (TN.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt,yshift=-4mm] at (TN.right) {\texttt{XT3.MN}};
+\node[pmos,yscale=-1] (TP) at (3.4,-0.65) {};
+\draw (TP.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt,yshift=-4mm] at (TP.right) {\texttt{XT3.MP}};
+\node[pmos] (IP) at (7,.2) {};\node[nmos] (IN) at (7,-1.4) {};\node[right=3pt] at (IP.right) {\texttt{XI3.MP}};\node[right=3pt] at (IN.right) {\texttt{XI3.MN}};
+\draw (TN.D) -- ++(0,.7) coordinate (nt) -- (nt -| TP.D) -- (TP.D);
+\draw (TN.S) -- ++(0,-.7) coordinate (nb) -- (nb -| TP.S) -- (TP.S);
+\draw (nt -| TP.D) node[circ] {} -| (IP.G);
+\draw (IP.G) -- (IP.G |- IN.G) -- (IN.G);
+\draw (IP.S) -- ++(0,.55) node[above] {\texttt{vp}};
+\draw (IN.S) -- ++(0,-.55) node[below] {\texttt{vn}};
+\draw (IP.D) -- (IN.D) coordinate[midway] (o);
+\draw (o) node[circ] {} -- ++(.8,0) node[right] {\texttt{q}};\node[above] at ($(nt)!.5!(nt -| TP.D)$) {\texttt{z}};\node[below] at ($(nb)!.5!(nb -| TP.S)$) {\texttt{y}};
+\end{circuitikz}
+\end{center}
+輸入 \texttt{d} 接 XT1，XI3 輸出為 \texttt{q}。動態 \texttt{dff} 的完整訊號路徑共 8 顆電晶體。
+\clearpage\subsection{完整暫存器與時脈接線}
+\begin{center}
+\begin{circuitikz}[scale=0.94, transform shape, font=\small]
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b0) at (0.0,0) {X1: dff\\d $\to$ q1};
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b1) at (3.25,0) {X2: dff\\q1 $\to$ q2};
+\draw[-{Latex}] (b0.east) -- node[above,font=\scriptsize] {q1} (b1.west);
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b2) at (6.5,0) {X3: dff\\q2 $\to$ q3};
+\draw[-{Latex}] (b1.east) -- node[above,font=\scriptsize] {q2} (b2.west);
+
+\end{circuitikz}
+\end{center}
+\begin{center}\small\begin{tabular}{p{.24\linewidth}p{.68\linewidth}}\toprule
+實例 & 接線\\\midrule
+XB1 / XB2 & INV(\texttt{clk}\(\to\)\texttt{cb12}); INV(\texttt{cb12}\(\to\)\texttt{ck12}).\\
+XB3 / XB4 & INV(\texttt{sk}\(\to\)\texttt{cb3}); INV(\texttt{cb3}\(\to\)\texttt{ck3}).\\
+X1 & \texttt{d,ck12,cb12,q1,x1,y1,z1,vdd,0}\\
+X2 & \texttt{q1,ck12,cb12,q2,x2,y2,z2,vdd,0}\\
+X3 & \texttt{q2,ck3,cb3,q3,x3,y3,z3,vdd,0}\\
+\bottomrule\end{tabular}\end{center}
+DFF 腳位順序為 \texttt{(d,ck,cb,q,x,y,z,vp,vn)}。每個輸出皆接 5 fF 至 0。\texttt{clk} 與 \texttt{sk} 是獨立脈波源；偏移參數施加於第二支路的兩級 CMOS 反相器之前，因此圖中的時脈緩衝器本身會產生延遲與轉換時間。標稱週期 10 ns，\(V_{DD}=1\) V。
+\endgroup

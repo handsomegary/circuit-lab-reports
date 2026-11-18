@@ -1,0 +1,55 @@
+\clearpage\section{MOS 電晶體電路圖}
+\begingroup\small
+來源 netlist：\texttt{01\_hazards.sp}. 時序風險比較中的動態、靜態與弱回授 D 正反器。
+
+相同節點標籤代表電氣相連。下圖為可編輯的 CircuitikZ 原始碼；階層方塊均對應本附錄所畫出的 MOS 單元。
+
+除另有標示外，所有 NMOS 體端接 \texttt{vn}=0，所有 PMOS 體端接 \texttt{vp}=\(V_{DD}\)；為保持可讀性，省略體端導線。一般反相器及動態／時脈單元為 \(W_n/L_n=0.6/0.25\,\mu\mathrm m\)、\(W_p/L_p=1.8/0.25\,\mu\mathrm m\)；TG 兩顆管皆為 \(W/L=0.6/0.25\,\mu\mathrm m\)。
+
+\begin{center}
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[nmos] (TN) at (0,-0.65) {};
+\draw (TN.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt,yshift=-4mm] at (TN.right) {\texttt{XT1.MN}};
+\node[pmos,yscale=-1] (TP) at (3.4,-0.65) {};
+\draw (TP.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt,yshift=-4mm] at (TP.right) {\texttt{XT1.MP}};
+\node[pmos] (IP) at (7,.2) {};\node[nmos] (IN) at (7,-1.4) {};\node[right=3pt] at (IP.right) {\texttt{XI1.MP}};\node[right=3pt] at (IN.right) {\texttt{XI1.MN}};
+\draw (TN.D) -- ++(0,.7) coordinate (nt) -- (nt -| TP.D) -- (TP.D);
+\draw (TN.S) -- ++(0,-.7) coordinate (nb) -- (nb -| TP.S) -- (TP.S);
+\draw (nt -| TP.D) node[circ] {} -| (IP.G);
+\draw (IP.G) -- (IP.G |- IN.G) -- (IN.G);
+\draw (IP.S) -- ++(0,.55) node[above] {\texttt{vp}};
+\draw (IN.S) -- ++(0,-.55) node[below] {\texttt{vn}};
+\draw (IP.D) -- (IN.D) coordinate[midway] (o);
+\draw (o) node[circ] {} -- ++(.8,0) node[right] {\texttt{y}};\node[above] at ($(nt)!.5!(nt -| TP.D)$) {\texttt{x}};\node[below] at ($(nb)!.5!(nb -| TP.S)$) {\texttt{d}};
+\end{circuitikz}
+\end{center}
+\begin{center}
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[nmos] (TN) at (0,-0.65) {};
+\draw (TN.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt,yshift=-4mm] at (TN.right) {\texttt{XT3.MN}};
+\node[pmos,yscale=-1] (TP) at (3.4,-0.65) {};
+\draw (TP.G) -- ++(-.65,0) node[left] {\texttt{cb}};
+\node[right=3pt,yshift=-4mm] at (TP.right) {\texttt{XT3.MP}};
+\node[pmos] (IP) at (7,.2) {};\node[nmos] (IN) at (7,-1.4) {};\node[right=3pt] at (IP.right) {\texttt{XI3.MP}};\node[right=3pt] at (IN.right) {\texttt{XI3.MN}};
+\draw (TN.D) -- ++(0,.7) coordinate (nt) -- (nt -| TP.D) -- (TP.D);
+\draw (TN.S) -- ++(0,-.7) coordinate (nb) -- (nb -| TP.S) -- (TP.S);
+\draw (nt -| TP.D) node[circ] {} -| (IP.G);
+\draw (IP.G) -- (IP.G |- IN.G) -- (IN.G);
+\draw (IP.S) -- ++(0,.55) node[above] {\texttt{vp}};
+\draw (IN.S) -- ++(0,-.55) node[below] {\texttt{vn}};
+\draw (IP.D) -- (IN.D) coordinate[midway] (o);
+\draw (o) node[circ] {} -- ++(.8,0) node[right] {\texttt{q}};\node[above] at ($(nt)!.5!(nt -| TP.D)$) {\texttt{z}};\node[below] at ($(nb)!.5!(nb -| TP.S)$) {\texttt{y}};
+\end{circuitikz}
+\end{center}
+輸入 \texttt{d} 接 XT1，XI3 輸出為 \texttt{q}。動態 \texttt{dff} 的完整訊號路徑共 8 顆電晶體。
+\begin{center}\small\begin{tabular}{p{.24\linewidth}p{.68\linewidth}}\toprule
+版本 & 新增回授接線\\\midrule
+\texttt{sdff} (16T) & XI2: INV(\texttt{y}\(\to\)\texttt{fb1}); XT2: TG(\texttt{fb1}\(\leftrightarrow\)\texttt{x}, en=ck, eb=cb). XI4: INV(\texttt{q}\(\to\)\texttt{fb2}); XT4: TG(\texttt{fb2}\(\leftrightarrow\)\texttt{z}, en=cb, eb=ck).\\
+\texttt{kdff} (12T) & XK1: weak INV(\texttt{y}\(\to\)\texttt{x}); XK2: weak INV(\texttt{q}\(\to\)\texttt{z}).\\
+\bottomrule\end{tabular}\end{center}
+弱回授單元與雙 MOS 反相器同拓樸，PMOS 為 \(W/L=0.3/1\,\mu\mathrm m\)，NMOS 為 \(W/L=0.3/3\,\mu\mathrm m\)。
+頂層實例 \texttt{Xd}、\texttt{Xs}、\texttt{Xk} 分別輸出 \texttt{qd}、\texttt{qs}、\texttt{qk}；各接 5 fF 至 0。三者共用 \texttt{d}、\texttt{clk} 與 \texttt{cb}=\(V_{DD}-V(\texttt{clk})\)，\(V_{DD}=1\) V。TG 同時標出兩控制端，因此各回授相位可直接核對。
+\endgroup

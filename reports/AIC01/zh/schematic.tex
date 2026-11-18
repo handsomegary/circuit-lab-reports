@@ -1,0 +1,34 @@
+\clearpage\section{MOS 電晶體電路圖}
+下圖為可編輯的向量電路圖。同一電路的同名節點代表直接連接；獨立子電路單元的名稱為局部接腳，實際連接依階層圖。B 為基體端，0 為全域接地。各圖明列對應 netlist 與範圍，量測激勵源依文字說明接入。
+完整四電晶體傳統疊接電流鏡，對應 \texttt{03\_cascode\_mirror.sp}.
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[nmos,bulk] (M2) at (0,3.5) {};
+\node[anchor=west,font=\scriptsize] at ($(M2.center)+(.55,.40)$) {M2};
+\draw (M2.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\node[nmos,bulk] (M0) at (0,1.2) {};
+\node[anchor=west,font=\scriptsize] at ($(M0.center)+(.55,.40)$) {M0};
+\draw (M0.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\node[nmos,bulk] (M3) at (4.4,3.5) {};
+\node[anchor=west,font=\scriptsize] at ($(M3.center)+(.55,.40)$) {M3};
+\draw (M3.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\node[nmos,bulk] (M1) at (4.4,1.2) {};
+\node[anchor=west,font=\scriptsize] at ($(M1.center)+(.55,.40)$) {M1};
+\draw (M1.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\draw (M2.D) -- ++(0,0.5) node[above,font=\small] {\texttt{bias}};
+\draw (M2.S) -- (M0.D) node[midway,above right,font=\small] {\texttt{ref}};
+\draw (M0.S) -- ++(0,-0.5) node[below,font=\small] {\texttt{0}};
+\draw (M3.D) -- ++(0,0.5) node[above,font=\small] {\texttt{drain}};
+\draw (M3.S) -- (M1.D) node[midway,above right,font=\small] {\texttt{mid}};
+\draw (M1.S) -- ++(0,-0.5) node[below,font=\small] {\texttt{0}};
+\draw (M0.G) -- (-1,1.2) -- (-1,2.35) -- (M0.D |- 0,2.35) node[circ]{}; \draw (M1.G) -- (2.9,1.2) -- (2.9,2.35) -- (M0.D |- 0,2.35);
+\draw (M2.G) -- (-1,3.5) |- ($(M2.D)+(0,.35)$) node[circ]{}; \draw (M3.G) -- (2.9,3.5) |- ($(M2.D)+(0,.35)$);
+\draw (8.2,4.2) node[above] {\texttt{vdd}} to[I,l={$I_{REF}$}] ++(0,-1.7) node[below] {\texttt{bias}};
+\draw (8.2,1.3) node[above] {\texttt{out}} to[V,l={$V_{TEST}$}] ++(0,-1.7) node[below] {\texttt{0}};
+\end{circuitikz}
+\caption{疊接電流鏡與參考／輸出測試源。}
+\end{figure}
+\par
+M0、M2 的閘極與汲極透過同名節點短接。所有 NMOS 基體接 0，只有 M0、M1 的源極接 0。M1、M3 使用 $m=2$，M0、M2 使用 $m=1$。基準 $W=3\,\mu$m、$L=1.4\,\mu$m、$I_{REF}=50\,\mu$A，vdd 為 1 V。零伏電流探棒 VS 的正端接 out、負端接 drain。掃描依各案例改變源或幾何參數；其他電流鏡變體分列於其他 netlist，本圖未將其混畫成同一電路。

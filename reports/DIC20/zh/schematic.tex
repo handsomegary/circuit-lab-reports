@@ -1,0 +1,67 @@
+\clearpage\section{MOS 電晶體電路圖}
+下圖為可編輯的向量電路圖。同一電路的同名節點代表直接連接；獨立子電路單元的名稱為局部接腳，實際連接依階層圖。B 為基體端，0 為全域接地。各圖明列對應 netlist 與範圍，量測激勵源依文字說明接入。
+MOS 基元與完整 dff 層級對應 \texttt{02\_setup\_sweep.sp} 及 \texttt{03\_hold\_sweep.sp}.
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk] (MP) at (0,2.5) {};
+\node[anchor=west,font=\scriptsize] at ($(MP.center)+(.55,.40)$) {MP};
+\draw (MP.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vp};
+\node[nmos,bulk] (MN) at (0,0.2) {};
+\node[anchor=west,font=\scriptsize] at ($(MN.center)+(.55,.40)$) {MN};
+\draw (MN.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vn};
+\draw (MP.G) -- (-1,2.5) -- (-1,.2) -- (MN.G); \draw (-1,1.35) node[circ]{} -- (-1.6,1.35) node[left]{a}; \draw (MP.D |- 0,1.35) node[circ]{} -- (2,1.35) node[right]{z};
+\draw (MP.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vp}};
+\draw (MP.D) -- (MN.D) ;
+\draw (MN.S) -- ++(0,-0.5) node[below,font=\small] {\texttt{vn}};
+\end{circuitikz}
+\caption{正反器使用的實際 inv 單元，k=1。}
+\end{figure}
+\par
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk,rotate=-90] (TP) at (0,1) {};
+\node[nmos,bulk,rotate=90] (TN) at (0,-1) {};
+\draw (TP.D) -- (TP.D -| -2,0) -- (TN.D -| -2,0) -- (TN.D);
+\draw (TP.S) -- (TP.S -| 2,0) -- (TN.S -| 2,0) -- (TN.S);
+\draw (-2,0) node[circ]{} -- (-2.6,0) node[left]{a (D)};
+\draw (2,0) node[circ]{} -- (2.6,0) node[right]{z (S)};
+\draw (TP.G) -- ++(0,.5) node[above]{eb};
+\draw (TN.G) -- ++(0,-.5) node[below]{en};
+\draw (TP.bulk) -- ++(0,-.35) -- ++(.8,0) node[right,font=\scriptsize]{B=vp};
+\draw (TN.bulk) -- ++(0,.35) -- ++(.8,0) node[right,font=\scriptsize]{B=vn};
+\node[font=\scriptsize] at (-.8,1.4){TP};
+\node[font=\scriptsize] at (-.8,-1.4){TN};
+\end{circuitikz}
+\caption{具明確四端連接的雙 MOS 傳輸閘。}
+\end{figure}
+\par
+inv 單元的 $W_P=3.6k\,\mu$m、$W_N=1.8k\,\mu$m、$L=0.25\,\mu$m；tg 使用相同尺寸。tg 的兩顆汲極均為 a、源極均為 z，但傳輸路徑為雙向。圖中 TP／TN 對應 tg 子電路內的 MP／MN。PMOS 基體固定接 vp，NMOS 基體固定接 vn，並非接訊號端。NMOS 閘極為 en，PMOS 閘極為 eb；同名節點將兩傳輸電晶體並聯。
+\clearpage
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[draw,rounded corners=2pt,align=center,minimum width=1.7cm,minimum height=.9cm] (X1) at (0,0) {X1: TG\\en=cb};
+\node[draw,rounded corners=2pt,align=center,minimum width=1.7cm,minimum height=.9cm] (X2) at (2.6,0) {X2: inv};
+\node[draw,rounded corners=2pt,align=center,minimum width=1.7cm,minimum height=.9cm] (X3) at (2.6,-2) {X3: inv};
+\node[draw,rounded corners=2pt,align=center,minimum width=1.7cm,minimum height=.9cm] (X4) at (0,-2) {X4: TG\\en=clk};
+\node[draw,rounded corners=2pt,align=center,minimum width=1.7cm,minimum height=.9cm] (X5) at (6.0,0) {X5: TG\\en=clk};
+\node[draw,rounded corners=2pt,align=center,minimum width=1.7cm,minimum height=.9cm] (X6) at (8.6,0) {X6: inv};
+\node[draw,rounded corners=2pt,align=center,minimum width=1.7cm,minimum height=.9cm] (X7) at (8.6,-2) {X7: inv};
+\node[draw,rounded corners=2pt,align=center,minimum width=1.7cm,minimum height=.9cm] (X8) at (6,-2) {X8: TG\\en=cb};
+\draw (-1.7,0) node[left]{d} -- (X1.west);
+\draw[-{Latex}] (X1.east) -- (X2.west) node[midway,above]{m};
+\draw[-{Latex}] (X2.east) -- (X5.west) node[midway,above]{mx};
+\draw[-{Latex}] (X5.east) -- (X6.west) node[midway,above]{s};
+\draw (X6.east) -- (10.4,0) node[right]{q};
+\draw[-{Latex}] (3.8,0) node[circ]{} |- (4,-1) -| (X3.east); \draw[-{Latex}] (X3.west) -- (X4.east) node[midway,above]{mf}; \draw[-{Latex}] (X4.west) -- (-1.3,-2) -- (-1.3,-1) -- (1.3,-1) -- (1.3,0) node[circ]{};
+\draw[-{Latex}] (9.8,0) node[circ]{} |- (10,-1) -| (X7.east); \draw[-{Latex}] (X7.west) -- (X8.east) node[midway,above]{sf}; \draw[-{Latex}] (X8.west) -- (4.7,-2) -- (4.7,-1) -- (7.3,-1) -- (7.3,0) node[circ]{};
+\end{circuitikz}
+\caption{實際主從鎖存回授連線；下方回授反相器的訊號由右向左。}
+\end{figure}
+\par
+所有方塊皆使用 vp／vn，CQ=10 fF 接 q 至 vn。cb 為 clk 的理想反相。每個 TG 的 eb 為圖中 en 的反相：X1／X8 的 (en,eb)=(cb,clk)，X4／X5 為 (clk,cb)。X1／X4 為主鎖存輸入／回授開關，X5／X8 為從鎖存開關。主回授為 mx $\to$ X3 $\to$ mf $\to$ X4 $\to$ m；從回授為 q $\to$ X7 $\to$ sf $\to$ X8 $\to$ s。四個 inv 與四個 tg 共 16 顆 MOS。獨立反相器串鏈實驗使用四級 k=1 的 inv 與 10 fF 負載，邊緣激勵另依該 netlist。

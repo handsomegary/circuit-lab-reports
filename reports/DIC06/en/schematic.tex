@@ -1,0 +1,64 @@
+\clearpage\section{MOS transistor schematics}
+Source: \texttt{01\_gate\_load.sp}. XDRV1 and XDRV2 use $W_n/W_p/L=0.6/1.8/0.25\,\mu$m. The transistor load uses MNLOAD/MPLOAD with doubled widths $1.2/3.6\,\mu$m and multiplicity $M=N_L$, where $N_L=1,2,3,4$. Their drains share node z, exactly as implemented.
+
+The drawings use the device and node names of the cited netlists. Equal net labels denote an electrical connection. Unless stated otherwise, NMOS bulk terminals connect to ground and PMOS bulk terminals connect to $V_{DD}$. The bulk wires are omitted from the three-terminal symbols for readability.
+\begin{figure}[!htbp]\centering
+\resizebox{12cm}{!}{\begin{circuitikz}[american,font=\small]
+
+\begin{scope}[shift={(0,0)}]
+\node[pmos] (D1p) at (0,1) {};
+\node[nmos] (D1n) at (0,-1) {};
+\draw (D1p.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (D1n.S) -- (0,-2) node[ground] {};
+\draw (D1p.D) -- (0,0) -- (D1n.D);
+\draw (D1p.G) -- (-1.15,1) -- (-1.15,-1) -- (D1n.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {in};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {ymos};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {};
+\coordinate (D1in) at (-1.8,0);
+\coordinate (D1out) at (0.85,0);
+\end{scope}
+
+\begin{scope}[shift={(5,0)}]
+\node[pmos] (Lp) at (0,1) {};
+\node[nmos] (Ln) at (0,-1) {};
+\draw (Lp.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (Ln.S) -- (0,-2) node[ground] {};
+\draw (Lp.D) -- (0,0) -- (Ln.D);
+\draw (Lp.G) -- (-1.15,1) -- (-1.15,-1) -- (Ln.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {ymos};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {z};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {};
+\coordinate (Lin) at (-1.8,0);
+\coordinate (Lout) at (0.85,0);
+\end{scope}
+\draw (D1out) -- (Lin);
+\end{circuitikz}}
+\caption{MOS-load branch: left cell XDRV1; right cell MNLOAD/MPLOAD with multiplicity $N_L$. The load output z is free to switch.}
+\end{figure}
+\begin{figure}[!htbp]\centering
+\resizebox{6.7cm}{!}{\begin{circuitikz}[american,font=\small]
+
+\begin{scope}[shift={(0,0)}]
+\node[pmos] (D2p) at (0,1) {};
+\node[nmos] (D2n) at (0,-1) {};
+\draw (D2p.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (D2n.S) -- (0,-2) node[ground] {};
+\draw (D2p.D) -- (0,0) -- (D2n.D);
+\draw (D2p.G) -- (-1.15,1) -- (-1.15,-1) -- (D2n.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {in};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {ycap};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {};
+\coordinate (D2in) at (-1.8,0);
+\coordinate (D2out) at (0.85,0);
+\end{scope}
+\draw (D2out) -- (2,0) to[C,l=$N_L\cdot8\,\mathrm{fF}$] (2,-2) node[ground] {};
+\end{circuitikz}}
+\caption{Capacitor comparison branch XDRV2. Both drivers receive the same input waveform.}
+\end{figure}

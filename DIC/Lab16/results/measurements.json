@@ -1,0 +1,122 @@
+[
+  {
+    "deck": "01_charge_discharge.sp",
+    "case_index": 0,
+    "case_directives": [
+      ".param VDDVAL=1",
+      ".temp 25"
+    ],
+    "measurements": {
+      "final_nc": 0.64298571,
+      "final_nd": 3.6594531e-06,
+      "final_pc": 1.0000015,
+      "final_pd": 0.34787283,
+      "final_tc": 1.000003,
+      "final_td": 3.692915e-06,
+      "temper": 25.0,
+      "alter#": 1.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "02_six_delay_chains.sp",
+    "case_index": 0,
+    "case_directives": [
+      ".param VDDVAL=1",
+      ".temp 25"
+    ],
+    "measurements": {
+      "highslot1": 0.97211521,
+      "lowslot1": 3.8966057e-06,
+      "highslot2": 6.0712526e-06,
+      "lowslot2": 0.9916486,
+      "highslot3": 0.99999818,
+      "lowslot3": 0.0052325664,
+      "highslot4": 0.002534918,
+      "lowslot4": 0.99999556,
+      "highslot5": 0.99999818,
+      "lowslot5": 3.946573e-06,
+      "highslot6": 3.9329693e-06,
+      "lowslot6": 0.99999816,
+      "temper": 25.0,
+      "alter#": 1.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "03_dc_current_paths.sp",
+    "case_index": 0,
+    "case_directives": [
+      ".param VDDVAL=1",
+      ".temp 25"
+    ],
+    "measurements": {},
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "04_hold_leakage.sp",
+    "case_index": 0,
+    "case_directives": [
+      ".param VDDVAL=1",
+      ".temp 25"
+    ],
+    "measurements": {
+      "initial_hold": 1.0371704,
+      "hold_5us": 0.8926005,
+      "hold_20us": 0.649607,
+      "temper": 25.0,
+      "alter#": 1.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "04_hold_leakage.sp",
+    "case_index": 1,
+    "case_directives": [
+      ".temp 115"
+    ],
+    "measurements": {
+      "initial_hold": 1.038518,
+      "hold_5us": 0.5251528,
+      "hold_20us": 5.7290637e-05,
+      "temper": 115.0,
+      "alter#": 2.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  },
+  {
+    "deck": "05_tg_full_adder.sp",
+    "case_index": 0,
+    "case_directives": [
+      ".param VDDVAL=1",
+      ".temp 25"
+    ],
+    "measurements": {
+      "sum0": 3.9335503e-06,
+      "carry0": 3.9335832e-06,
+      "sum1": 0.99999877,
+      "carry1": 3.8778422e-06,
+      "sum2": 0.99999819,
+      "carry2": 3.9237306e-06,
+      "sum3": 4.0566519e-06,
+      "carry3": 0.99999811,
+      "sum4": 0.99999822,
+      "carry4": 3.9155708e-06,
+      "sum5": 3.8664388e-06,
+      "carry5": 0.99999789,
+      "sum6": 3.8797431e-06,
+      "carry6": 0.99999815,
+      "sum7": 0.99999837,
+      "carry7": 0.99999786,
+      "temper": 25.0,
+      "alter#": 1.0
+    },
+    "execution": "completed",
+    "warning_status": "Encrypted-block warning details remain suppressed; harmlessness is not established."
+  }
+]

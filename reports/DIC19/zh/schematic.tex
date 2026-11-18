@@ -1,0 +1,46 @@
+\clearpage\section{MOS 電晶體電路圖}
+下圖為可編輯的向量電路圖。同一電路的同名節點代表直接連接；獨立子電路單元的名稱為局部接腳，實際連接依階層圖。B 為基體端，0 為全域接地。各圖明列對應 netlist 與範圍，量測激勵源依文字說明接入。
+實際反相器單元及完整電源／串鏈連接，對應 \texttt{01\_ir\_drop\_decoupling.sp}.
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk] (MP) at (0,2.5) {};
+\node[anchor=west,font=\scriptsize] at ($(MP.center)+(.55,.40)$) {MP};
+\draw (MP.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vp};
+\node[nmos,bulk] (MN) at (0,0.2) {};
+\node[anchor=west,font=\scriptsize] at ($(MN.center)+(.55,.40)$) {MN};
+\draw (MN.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vn};
+\draw (MP.G) -- (-1,2.5) -- (-1,.2) -- (MN.G); \draw (-1,1.35) node[circ]{} -- (-1.6,1.35) node[left]{a}; \draw (MP.D |- 0,1.35) node[circ]{} -- (2,1.35) node[right]{z};
+\draw (MP.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vp}};
+\draw (MP.D) -- (MN.D) ;
+\draw (MN.S) -- ++(0,-0.5) node[below,font=\small] {\texttt{vn}};
+\end{circuitikz}
+\caption{X0--X3 使用的實際 inv 單元。}
+\end{figure}
+\par
+單元使用 $W_P=3.6k\,\mu$m、$W_N=1.8k\,\mu$m、$L=0.25\,\mu$m；源極及基體皆使用局部 vp／vn 電源。
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[draw,rounded corners=2pt,align=center,minimum width=1.7cm,minimum height=.9cm] (X0) at (0.0,0) {X0: inv\\$k=30$};
+\node[draw,rounded corners=2pt,align=center,minimum width=1.7cm,minimum height=.9cm] (X1) at (2.5,0) {X1: inv\\$k=60$};
+\node[draw,rounded corners=2pt,align=center,minimum width=1.7cm,minimum height=.9cm] (X2) at (5.0,0) {X2: inv\\$k=180$};
+\node[draw,rounded corners=2pt,align=center,minimum width=1.7cm,minimum height=.9cm] (X3) at (7.5,0) {X3: inv\\$k=540$};
+\draw[-{Latex}] (X0.east) -- (X1.west) node[midway,above]{n1};
+\draw[-{Latex}] (X1.east) -- (X2.west) node[midway,above]{n2};
+\draw[-{Latex}] (X2.east) -- (X3.west) node[midway,above]{n3};
+\draw (-1.7,0) node[left]{in} -- (X0.west); \draw (X3.east) -- (9.3,0) node[right]{n4};
+\draw (-1,2.1) node[left]{ext (1 V)} to[R,l={RP: 1 $\Omega$}] (2.5,2.1) -- (9,2.1) node[right]{vp};
+\draw (-1,-2.1) node[left]{0} to[R,l={RN: 1 $\Omega$}] (2.5,-2.1) -- (9,-2.1) node[right]{vn};
+\draw (X0.north) -- (0,1.2) -- (3,1.2) -- (3,2.1); \draw (X0.south) -- (0,-1.2) -- (3,-1.2) -- (3,-2.1);
+\draw (2.5,2.1) -- (X1.north); \draw (X1.south) -- (2.5,-2.1);
+\draw (5.0,2.1) -- (X2.north); \draw (X2.south) -- (5.0,-2.1);
+\draw (7.5,2.1) -- (X3.north); \draw (X3.south) -- (7.5,-2.1);
+\draw (10.8,2.1) node[above]{vp} to[C,l=CD] (10.8,-2.1) node[below]{vn};
+\end{circuitikz}
+\caption{四級反相器串鏈、電源電阻與去耦支路。}
+\end{figure}
+\par
+CD=cd 接於 vp 與 vn 之間，案例約為 0、10 pF、100 pF、1 nF。輸出 CL=10 fF 接 n4 至 vn，VIN 以全域 0 為參考驅動 in。各方塊皆展開為上方兩顆 MOS，k 同時縮放 PMOS 與 NMOS 寬度。

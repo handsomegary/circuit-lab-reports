@@ -1,0 +1,54 @@
+{
+  "lab": "DIC16",
+  "requirements": [
+    {
+      "lab": 16,
+      "deck": "01_charge_discharge.sp",
+      "title": "Six pass-device charge and discharge cases",
+      "pdf_pages": "65-73",
+      "specs": [
+        "Step1: six cases in Tables16.1-16.2, final voltage"
+      ]
+    },
+    {
+      "lab": 16,
+      "deck": "02_six_delay_chains.sp",
+      "title": "Six four-switch chains with optional midpoint inverter",
+      "pdf_pages": "67-72",
+      "specs": [
+        "Step2: all six chains, every node and both propagation directions",
+        "Table16.3: case6 first two PMOS lengths follow printed .6um entries"
+      ]
+    },
+    {
+      "lab": 16,
+      "deck": "03_dc_current_paths.sp",
+      "title": "Charging and discharging current trajectories",
+      "pdf_pages": "72",
+      "specs": [
+        "Q1: DC current trajectories while output voltage changes"
+      ]
+    },
+    {
+      "lab": 16,
+      "deck": "04_hold_leakage.sp",
+      "title": "Transmission-gate floating-node retention",
+      "pdf_pages": "72",
+      "specs": [
+        "Q2: microsecond off-state retention and minimum refresh limit"
+      ]
+    },
+    {
+      "lab": 16,
+      "deck": "05_tg_full_adder.sp",
+      "title": "Transmission-gate full adder truth table and delay",
+      "pdf_pages": "72-73",
+      "specs": [
+        "Q3: all eight full-adder truth states and Sum/Carry delays",
+        "Mux-equivalent TG implementation with explicit output buffering"
+      ]
+    }
+  ],
+  "model_setup": "Local model configuration required; loading paths and model content are omitted from public decks.",
+  "layout_status": "Not a layout exercise."
+}

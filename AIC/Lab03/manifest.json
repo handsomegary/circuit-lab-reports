@@ -1,0 +1,112 @@
+{
+  "lab": "AIC03",
+  "handout": "AIC Lab.pdf",
+  "supply_V": 1.0,
+  "model": "User-supplied external process library",
+  "case_indexing": "zero-based; baseline=0",
+  "decks": {
+    "01_p_diode_load": {
+      "title": "CS amplifier with PMOS diode load",
+      "pages": "31-32",
+      "cases": [
+        "baseline",
+        "width_200u",
+        "width_300u"
+      ]
+    },
+    "02_n_diode_load": {
+      "title": "CS amplifier with NMOS diode load",
+      "pages": "33-34",
+      "cases": [
+        "baseline",
+        "width_200u",
+        "width_300u"
+      ]
+    },
+    "03_current_source_load": {
+      "title": "CS current-source load width, current and length comparisons",
+      "pages": "35-37,39-40",
+      "cases": [
+        "baseline",
+        "comparison_1",
+        "comparison_2",
+        "comparison_3",
+        "comparison_4",
+        "comparison_5",
+        "comparison_6",
+        "comparison_7",
+        "comparison_8",
+        "comparison_9"
+      ]
+    },
+    "04_source_followers": {
+      "title": "NMOS and PMOS source followers",
+      "pages": "38-39",
+      "cases": [
+        "baseline",
+        "low_current",
+        "current166",
+        "current333"
+      ]
+    },
+    "05_small_signal_transient": {
+      "title": "CS and follower transient verification",
+      "pages": "35-40",
+      "cases": [
+        "baseline",
+        "amplitude_1m",
+        "amplitude_3m"
+      ]
+    }
+  },
+  "spec_requirements": [
+    {
+      "zh": "PMOS diode-load CS，W=100/200/300（31--32）",
+      "en": "PMOS diode-load CS, W=100/200/300 (31--32)",
+      "deck_check": "D01; DC/AC/Rout",
+      "status": "S+D"
+    },
+    {
+      "zh": "NMOS diode-load CS，W=150/200/300（33--34）",
+      "en": "NMOS diode-load CS, W=150/200/300 (33--34)",
+      "deck_check": "D02; DC/AC/Rout",
+      "status": "S+D"
+    },
+    {
+      "zh": "兩種 diode load 的增益、GB 與優缺點（34）",
+      "en": "Diode-load gain, gain-bandwidth and tradeoffs (34)",
+      "deck_check": "D01--02; derivatives",
+      "status": "S+D"
+    },
+    {
+      "zh": "Current-load CS、等 W/L 尺度、鏡像準確度（35--37）",
+      "en": "Current-load CS, equal-W/L scaling and mirror accuracy (35--37)",
+      "deck_check": "D03/C0,C5,C6",
+      "status": "S+D"
+    },
+    {
+      "zh": "NMOS/PMOS source follower 比較（38--39）",
+      "en": "NMOS/PMOS source followers (38--39)",
+      "deck_check": "D04; gain/BW",
+      "status": "S+D"
+    },
+    {
+      "zh": "CS W=10/18/26 與 Iref=100/166/333（39--40）",
+      "en": "CS W=10/18/26 and Iref=100/166/333 (39--40)",
+      "deck_check": "D03/C0--C4",
+      "status": "S+D"
+    },
+    {
+      "zh": "低電流適配與時域檢查",
+      "en": "Low-current adaptation and time-domain check",
+      "deck_check": "D03/C7--C9, D05",
+      "status": "S; adapted"
+    }
+  ],
+  "validation": "Actual installed HSPICE simulations completed; results apply only to the stated adapted conditions.",
+  "limits": [
+    "Original-process numerical targets are not reproduced by a process-name substitution.",
+    "No foundry voltage-rating, process-corner, mismatch, layout or silicon guarantee is asserted.",
+    "Every printed failed-region or unstable result is retained."
+  ]
+}

@@ -1,0 +1,740 @@
+{
+  "source": "DIC Lab.pdf",
+  "pdf_pages": [
+    55,
+    57
+  ],
+  "decks": [
+    {
+      "netlist": "01_ratio.sp",
+      "cases": [
+        {
+          "RATIO": 0.25,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "2n"
+        },
+        {
+          "RATIO": 0.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "2n"
+        },
+        {
+          "RATIO": 1,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "2n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "2n"
+        },
+        {
+          "RATIO": 3,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "2n"
+        },
+        {
+          "RATIO": 6,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "2n"
+        }
+      ],
+      "requirements": [
+        "Step 1: 500 MHz waveform and PMOS/NMOS width-ratio sweep"
+      ],
+      "notes": []
+    },
+    {
+      "netlist": "02_frequency.sp",
+      "cases": [
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "10n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "5n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "2n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "1n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.5n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.333333333333n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.25n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.2n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.133333333333n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.1n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "10n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "5n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "2n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "1n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.5n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.333333333333n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.25n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.2n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.133333333333n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.1n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "10n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "5n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "2n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "1n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.5n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.333333333333n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.25n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.2n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.133333333333n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.1n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "10n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "5n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "2n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "1n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.5n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.333333333333n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.25n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.2n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.133333333333n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.1n"
+        }
+      ],
+      "requirements": [
+        "Step 2: frequency, size and load matrix; threshold-qualified maximum frequency and corresponding power"
+      ],
+      "notes": [
+        "Pass criterion sampled VOL<=0.3 V and VOH>=0.7 V after settling; finite scan gives a bracket, not an exact continuous fmax."
+      ]
+    },
+    {
+      "netlist": "03_dc_power.sp",
+      "cases": [
+        {}
+      ],
+      "requirements": [
+        "Questions: DC loss, output swing and dynamic/static power decomposition"
+      ],
+      "notes": []
+    },
+    {
+      "netlist": "04_frequency_refinement.sp",
+      "cases": [
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.322580645161n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.3125n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.30303030303n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.294117647059n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.285714285714n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.277777777778n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.27027027027n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.263157894737n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "7f",
+          "PERIOD": "0.25641025641n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.243902439024n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.238095238095n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.232558139535n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.227272727273n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.222222222222n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.217391304348n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.212765957447n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.208333333333n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.204081632653n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.196078431373n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.192307692308n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.188679245283n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.185185185185n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.181818181818n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.178571428571n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.175438596491n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.172413793103n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.169491525424n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.166666666667n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.16393442623n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.161290322581n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.15873015873n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.15625n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.153846153846n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.151515151515n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.149253731343n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.147058823529n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.144927536232n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.142857142857n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.140845070423n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.138888888889n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.13698630137n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "7f",
+          "PERIOD": "0.135135135135n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.909090909091n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.833333333333n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.769230769231n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.714285714286n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.666666666667n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.625n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.588235294118n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.555555555556n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.526315789474n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.47619047619n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.454545454545n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.434782608696n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.416666666667n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.4n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.384615384615n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.37037037037n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.357142857143n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 1,
+          "CLVAL": "14f",
+          "PERIOD": "0.344827586207n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.322580645161n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.3125n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.30303030303n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.294117647059n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.285714285714n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.277777777778n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.27027027027n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.263157894737n"
+        },
+        {
+          "RATIO": 1.5,
+          "SIZE": 2,
+          "CLVAL": "14f",
+          "PERIOD": "0.25641025641n"
+        }
+      ],
+      "requirements": [
+        "Step 2: refine maximum-frequency pass/fail brackets to 0.1 GHz"
+      ],
+      "notes": [
+        "Same 0.3/0.7 V sample criterion and settled twelve-period transient as coarse scan."
+      ]
+    }
+  ]
+}

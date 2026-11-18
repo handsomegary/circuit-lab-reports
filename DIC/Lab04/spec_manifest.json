@@ -1,0 +1,60 @@
+{
+  "source": "DIC Lab.pdf",
+  "pdf_pages": [
+    17,
+    20
+  ],
+  "decks": [
+    {
+      "netlist": "01_geometry.sp",
+      "cases": [
+        {}
+      ],
+      "requirements": [
+        "Steps 1-2: NAND3 unshared/shared geometry comparison"
+      ],
+      "notes": [
+        "Literal ACM model selection and foundry-rule HDIF are unavailable."
+      ]
+    },
+    {
+      "netlist": "02_junction_capacitance.sp",
+      "cases": [
+        {
+          "BV": "0"
+        },
+        {
+          "BV": "0.25"
+        },
+        {
+          "BV": "0.5"
+        },
+        {
+          "BV": "0.75"
+        },
+        {
+          "BV": "1"
+        }
+      ],
+      "requirements": [
+        "Step 2: bias-dependent junction capacitance; Step 3: source data for mean-C comparison"
+      ],
+      "notes": [
+        "Capacitance is measured by zero-geometry subtraction; not extracted layout data."
+      ]
+    },
+    {
+      "netlist": "03_constant_capacitance.sp",
+      "cases": [
+        {}
+      ],
+      "requirements": [
+        "Step 3: constant mean junction-C approximation versus geometry-dependent capacitance"
+      ],
+      "notes": [
+        "Geometry equations use assumed teaching HDIF=0.27 um, not unavailable foundry design rules.",
+        "Each constant is (Cmax+Cmin)/2 across 0-1 V reverse bias, extracted by AC zero-geometry subtraction."
+      ]
+    }
+  ]
+}

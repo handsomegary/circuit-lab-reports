@@ -1,0 +1,147 @@
+\clearpage\section{MOS transistor schematic}
+\begingroup\small
+Source netlist: \texttt{01\_latch\_equivalence.sp; 03\_two\_stage\_dff.sp}. Single-clock latch cells and the full/reduced flip-flop connections.
+
+Identical node labels denote electrical connections. The drawings are editable CircuitikZ source; hierarchical boxes below refer to the MOS cells shown here.
+
+Unless explicitly labeled otherwise, every NMOS body connects to \texttt{vn}=0 and every PMOS body to \texttt{vp}=\(V_{DD}\); body wires are omitted for readability. Ordinary inverter and dynamic/clocked cells use \(W_n/L_n=0.6/0.25\,\mu\mathrm m\), \(W_p/L_p=1.8/0.25\,\mu\mathrm m\). Both TG devices use \(W/L=0.6/0.25\,\mu\mathrm m\). 
+
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN1) at (0,-1.45) {};
+\draw (MN1.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN1.right) {\texttt{MN1}};
+\node[nmos] (MN2) at (0,-2.9) {};
+\draw (MN2.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MN2.right) {\texttt{MN2}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP.D) -- (MN1.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{x}};
+\draw (MN1.S) -- (MN2.D) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[right] {\texttt{n}};
+\draw (MN2.S) -- ++(0,-.55) coordinate (net3) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small N dynamic front end (3T).
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP1) at (0,0.0) {};
+\draw (MP1.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MP1.right) {\texttt{MP1}};
+\node[pmos] (MP2) at (0,-1.45) {};
+\draw (MP2.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP2.right) {\texttt{MP2}};
+\node[nmos] (MN) at (0,-2.9) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\draw (MP1.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP1.D) -- (MP2.S) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{p}};
+\draw (MP2.D) -- (MN.D) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[right] {\texttt{x}};
+\draw (MN.S) -- ++(0,-.55) coordinate (net3) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small P dynamic front end (3T).
+\end{minipage}\par\medskip
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN1) at (0,-1.45) {};
+\draw (MN1.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MN1.right) {\texttt{MN1}};
+\node[nmos] (MN2) at (0,-2.9) {};
+\draw (MN2.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN2.right) {\texttt{MN2}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP.D) -- (MN1.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN1.S) -- (MN2.D) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[right] {\texttt{n}};
+\draw (MN2.S) -- ++(0,-.55) coordinate (net3) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{nclock(a,y,ck,vp,vn)}: 3T
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP1) at (0,0.0) {};
+\draw (MP1.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP1.right) {\texttt{MP1}};
+\node[pmos] (MP2) at (0,-1.45) {};
+\draw (MP2.G) -- ++(-.65,0) node[left] {\texttt{ck}};
+\node[right=3pt] at (MP2.right) {\texttt{MP2}};
+\node[nmos] (MN) at (0,-2.9) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\draw (MP1.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP1.D) -- (MP2.S) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{p}};
+\draw (MP2.D) -- (MN.D) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN.S) -- ++(0,-.55) coordinate (net3) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{pclock(a,y,ck,vp,vn)}: 3T
+\end{minipage}\par\medskip
+\clearpage\subsection{Full clocked inverter and latch hierarchy}
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP1) at (0,0.0) {};
+\draw (MP1.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MP1.right) {\texttt{MP1}};
+\node[pmos] (MP2) at (0,-1.45) {};
+\draw (MP2.G) -- ++(-.65,0) node[left] {\texttt{cp}};
+\node[right=3pt] at (MP2.right) {\texttt{MP2}};
+\node[nmos] (MN1) at (0,-2.9) {};
+\draw (MN1.G) -- ++(-.65,0) node[left] {\texttt{cn}};
+\node[right=3pt] at (MN1.right) {\texttt{MN1}};
+\node[nmos] (MN2) at (0,-4.35) {};
+\draw (MN2.G) -- ++(-.65,0) node[left] {\texttt{a}};
+\node[right=3pt] at (MN2.right) {\texttt{MN2}};
+\draw (MP1.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vp}};
+\draw (MP1.D) -- (MP2.S) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{p}};
+\draw (MP2.D) -- (MN1.D) coordinate[midway] (net2);
+\draw (net2) node[circ] {} -- ++(1.0,0) node[right] {\texttt{y}};
+\draw (MN1.S) -- (MN2.D) coordinate[midway] (net3);
+\draw (net3) node[circ] {} -- ++(1.0,0) node[right] {\texttt{n}};
+\draw (MN2.S) -- ++(0,-.55) coordinate (net4) node[below] {\texttt{vn}};
+
+\end{circuitikz}
+\par\small \texttt{c2(a,y,cp,cn,vp,vn)}: 4T
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\textbf{Reduced N latch (nlatch, 6T)}\par N dynamic front end: input a, dynamic output x, clock ck.\par XO: nclock(x,y,ck).\par\medskip\textbf{Reduced P latch (platch, 6T)}\par P dynamic front end: input a, dynamic output x, clock ck.\par XO: pclock(x,y,ck).\par\small Both stages share the same clock.
+\end{minipage}\par\medskip
+\begin{center}\small\begin{tabular}{p{.24\linewidth}p{.68\linewidth}}\toprule
+Latch test & Exact connection in the first source deck\\\midrule
+(a), out1 & N front end: MPA gate=clk, MNA1 gate=d, MNA2 gate=clk, dynamic node=a, lower node=na. XOA: c2(a,out1,cb,clk).\\
+(b), out2 & P front end: MPB1 gate=clk, MPB2 gate=d, MNB gate=clk, dynamic node=b, upper node=pb. XOB: c2(b,out2,clk,cb).\\
+(c), out3 & XNC: nlatch(d,out3,clk,c,vdd,0).\\
+(d), out4 & XPD: platch(d,out4,clk,e,vdd,0).\\
+\bottomrule\end{tabular}\end{center}
+The generic front-end labels on the preceding page map to the instance/node names above. Versions (a)/(b) contain 7T; (c)/(d) contain 6T. Every output has 5 fF to 0, \(V_{DD}=1\) V, and \(cb=V_{DD}-V(clk)\).
+\clearpage\subsection{Two-stage DFF paths}
+\begin{center}
+\begin{circuitikz}[scale=0.94, transform shape, font=\small]
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b0) at (0.0,0) {XM: platch\\a $\to$ m; node x};
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b1) at (3.25,0) {XS: nlatch\\m $\to$ q; node z};
+\draw[-{Latex}] (b0.east) -- node[above,font=\scriptsize] {m} (b1.west);
+
+\end{circuitikz}
+\end{center}
+\texttt{tfull(a,q,ck,m,x,z,vp,vn)} contains 12T: a P latch followed by an N latch. Both receive \texttt{ck}.
+\begin{center}
+\begin{circuitikz}[scale=0.94, transform shape, font=\small]
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b0) at (0.0,0) {XM: pclock\\a $\to$ m};
+\node[draw,rounded corners=1pt,minimum width=2.6cm,minimum height=1cm,align=center] (b1) at (3.25,0) {XS: nlatch\\m $\to$ q; node z};
+\draw[-{Latex}] (b0.east) -- node[above,font=\scriptsize] {m} (b1.west);
+
+\end{circuitikz}
+\end{center}
+\texttt{tshort(a,q,ck,m,z,vp,vn)} contains 9T: the three-transistor P clocked inverter replaces the full first latch. In \texttt{03\_two\_stage\_dff.sp}, two copies of each DFF are cascaded by connecting the first \texttt{q} to the next \texttt{a}; the clock is shared. These are the actual reduced/full circuit families used in the results, not ideal DFF symbols.
+\endgroup

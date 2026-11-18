@@ -1,0 +1,67 @@
+{
+  "lab": "DIC22",
+  "handout": "DIC Lab.pdf",
+  "supply_V": 1,
+  "temperature_C": 27,
+  "title": {
+    "zh": "四選一多工器與負載比較",
+    "en": "Four-to-One Multiplexer Comparison"
+  },
+  "decks": {
+    "01_mux_truth_table": {
+      "title": "Four-to-one TG and static MUX truth table",
+      "pages": "88-90",
+      "cases": [
+        "baseline"
+      ]
+    },
+    "02_mux_delay_load": {
+      "title": "MUX data path delay versus output load",
+      "pages": "89-90",
+      "cases": [
+        "baseline",
+        "load_1f",
+        "load_50f",
+        "load_100f",
+        "load_500f"
+      ]
+    }
+  },
+  "spec_requirements": [
+    {
+      "zh": "圖22.3 TG與static CMOS、10fF（88--89）",
+      "en": "Fig.22.3 TG/static CMOS, 10fF (88--89)",
+      "deck_check": "D01; D02/C0",
+      "status": "S"
+    },
+    {
+      "zh": "Delay、power、元件數比較（89）",
+      "en": "Delay, power and device counts (89)",
+      "deck_check": "D02; source probes",
+      "status": "S+D"
+    },
+    {
+      "zh": "設計更快TG MUX（89）",
+      "en": "Design a faster TG MUX (89)",
+      "deck_check": "Wide unbuffered tree",
+      "status": "S; data path"
+    },
+    {
+      "zh": "三種MUX對load關係（90）",
+      "en": "Load dependence of all three MUXes (90)",
+      "deck_check": "D02; 1--500fF",
+      "status": "S"
+    },
+    {
+      "zh": "完整4-to-1真值表",
+      "en": "Complete 4-to-1 truth table",
+      "deck_check": "D01; 64 codes",
+      "status": "S"
+    }
+  ],
+  "limits": [
+    "Circuit-level nominal model simulation only.",
+    "No model voltage-rating, layout extraction, DRC, LVS, PVT or silicon guarantee.",
+    "Failed numerical design criteria and transient excursions remain in the reported data."
+  ]
+}

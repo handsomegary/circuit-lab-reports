@@ -1,0 +1,84 @@
+{
+  "frequency_brackets": [
+    {
+      "size": 1,
+      "load_fF": 7.0,
+      "logic": "CMOS",
+      "pass_GHz": 3.0000000000029994,
+      "fail_GHz": 3.10000000000279,
+      "power_at_pass_uW": 25.30223714,
+      "VOL_V": 2.585357587e-05,
+      "VOH_V": 0.7121846133
+    },
+    {
+      "size": 1,
+      "load_fF": 7.0,
+      "logic": "Pseudo NMOS",
+      "pass_GHz": 3.79999999999772,
+      "fail_GHz": 3.9000000000038995,
+      "power_at_pass_uW": 50.58300557,
+      "VOL_V": 0.07642470965,
+      "VOH_V": 0.703847221
+    },
+    {
+      "size": 2,
+      "load_fF": 7.0,
+      "logic": "CMOS",
+      "pass_GHz": 4.5000000000044995,
+      "fail_GHz": 4.59999999999632,
+      "power_at_pass_uW": 50.933654250000004,
+      "VOL_V": 1.358028284e-05,
+      "VOH_V": 0.712734243
+    },
+    {
+      "size": 2,
+      "load_fF": 7.0,
+      "logic": "Pseudo NMOS",
+      "pass_GHz": 5.999999999988,
+      "fail_GHz": 6.099999999981699,
+      "power_at_pass_uW": 101.682647,
+      "VOL_V": 0.07630030274,
+      "VOH_V": 0.7032128281
+    },
+    {
+      "size": 1,
+      "load_fF": 14.0,
+      "logic": "CMOS",
+      "pass_GHz": 1.7999999999985599,
+      "fail_GHz": 1.89999999999886,
+      "power_at_pass_uW": 24.94162804,
+      "VOL_V": 2.639926117e-05,
+      "VOH_V": 0.716330203
+    },
+    {
+      "size": 1,
+      "load_fF": 14.0,
+      "logic": "Pseudo NMOS",
+      "pass_GHz": 2.2000000000022,
+      "fail_GHz": 2.29999999999816,
+      "power_at_pass_uW": 50.65767579,
+      "VOL_V": 0.07650037832,
+      "VOH_V": 0.7040656807
+    },
+    {
+      "size": 2,
+      "load_fF": 14.0,
+      "logic": "CMOS",
+      "pass_GHz": 3.0000000000029994,
+      "fail_GHz": 3.10000000000279,
+      "power_at_pass_uW": 50.74086349,
+      "VOL_V": 2.140767309e-05,
+      "VOH_V": 0.7143085438
+    },
+    {
+      "size": 2,
+      "load_fF": 14.0,
+      "logic": "Pseudo NMOS",
+      "pass_GHz": 3.79999999999772,
+      "fail_GHz": 3.9000000000038995,
+      "power_at_pass_uW": 101.7839379,
+      "VOL_V": 0.07629557795,
+      "VOH_V": 0.7060441055
+    }
+  ]
+}

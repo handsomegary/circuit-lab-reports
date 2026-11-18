@@ -1,0 +1,81 @@
+{
+  "lab": "DIC23",
+  "handout": "DIC Lab.pdf",
+  "supply_V": 1,
+  "temperature_C": 27,
+  "title": {
+    "zh": "解碼器與階層架構比較",
+    "en": "Decoder and Hierarchy Comparison"
+  },
+  "decks": {
+    "01_two_to_four_load": {
+      "title": "NAND and NOR two-to-four decoder",
+      "pages": "91-93",
+      "cases": [
+        "baseline",
+        "load_50f",
+        "load_100f",
+        "load_500f"
+      ]
+    },
+    "02_three_to_eight_truth": {
+      "title": "Three-to-eight exhaustive decoder",
+      "pages": "93",
+      "cases": [
+        "baseline"
+      ]
+    },
+    "03_eight_to_256_truth": {
+      "title": "Two- and three-stage eight-to-256 exhaustive truth",
+      "pages": "93",
+      "cases": [
+        "baseline"
+      ]
+    },
+    "04_eight_to_256_timing": {
+      "title": "Hierarchical decoder transition comparison",
+      "pages": "93",
+      "cases": [
+        "baseline",
+        "load_100f"
+      ]
+    }
+  },
+  "spec_requirements": [
+    {
+      "zh": "NAND/NOR 2-to-4，10fF（91--93）",
+      "en": "NAND/NOR 2-to-4, 10fF (91--93)",
+      "deck_check": "D01/C0",
+      "status": "S"
+    },
+    {
+      "zh": "增加負載與級數問題（93）",
+      "en": "Increasing load and stage-count question (93)",
+      "deck_check": "D01/C1--3",
+      "status": "S+D"
+    },
+    {
+      "zh": "設計3-to-8（93）",
+      "en": "Design 3-to-8 (93)",
+      "deck_check": "D02; 8 codes",
+      "status": "S"
+    },
+    {
+      "zh": "兩級與三級8-to-256（93）",
+      "en": "Two/three-stage 8-to-256 (93)",
+      "deck_check": "D03; 256 codes each",
+      "status": "S"
+    },
+    {
+      "zh": "階層架構delay/power比較（93）",
+      "en": "Hierarchical delay/power comparison (93)",
+      "deck_check": "D04; 10/100fF",
+      "status": "S+D"
+    }
+  ],
+  "limits": [
+    "Circuit-level nominal model simulation only.",
+    "No model voltage-rating, layout extraction, DRC, LVS, PVT or silicon guarantee.",
+    "Failed numerical design criteria and transient excursions remain in the reported data."
+  ]
+}

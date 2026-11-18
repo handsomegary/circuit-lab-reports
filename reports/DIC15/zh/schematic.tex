@@ -1,0 +1,65 @@
+\clearpage\section{MOS 電晶體電路圖}
+\begingroup\small
+來源 netlist：\texttt{01\_inverter\_tt.sp; 04\_dc\_tt.sp}. 代表性的暫態反相器及兩種直流測試電路；其他角落檔維持相同接線。
+
+相同節點標籤代表電氣相連。下圖為可編輯的 CircuitikZ 原始碼；階層方塊均對應本附錄所畫出的 MOS 單元。
+
+體端接各自電源軌。尺寸 \(W/L\)（\(\mu\mathrm m\)）：CMOS PMOS 為 1.8/0.25、NMOS 為 0.6/0.25；比例式反相器常開 PMOS 為 0.6/0.5。標稱電壓為 1.8 V。
+
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.85, transform shape, font=\small]
+\node[pmos] (MP) at (0,0.0) {};
+\draw (MP.G) -- ++(-.65,0) node[left] {\texttt{in}};
+\node[right=3pt] at (MP.right) {\texttt{MP}};
+\node[nmos] (MN) at (0,-1.45) {};
+\draw (MN.G) -- ++(-.65,0) node[left] {\texttt{in}};
+\node[right=3pt] at (MN.right) {\texttt{MN}};
+\draw (MP.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vdd}};
+\draw (MP.D) -- (MN.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[above] {\texttt{out}};
+\draw (MN.S) -- ++(0,-.55) coordinate (net2) node[below] {\texttt{0}};
+\draw (net1) -- ++(2.65,0) to[C,l={$C_L=10\,\mathrm{fF}$}] ++(0,-1.3) node[ground] {};
+
+\end{circuitikz}
+\par\small 暫態 CMOS 反相器。
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=0.92, transform shape, font=\small]
+\node[pmos] (MP2) at (0,0.0) {};
+\draw (MP2.G) -- ++(-.65,0) node[left] {\texttt{0}};
+\node[right=3pt] at (MP2.right) {\texttt{MP2}};
+\node[nmos] (MN2) at (0,-1.45) {};
+\draw (MN2.G) -- ++(-.65,0) node[left] {\texttt{in}};
+\node[right=3pt] at (MN2.right) {\texttt{MN2}};
+\draw (MP2.S) -- ++(0,.55) coordinate (net0) node[above] {\texttt{vr}};
+\draw (MP2.D) -- (MN2.D) coordinate[midway] (net1);
+\draw (net1) node[circ] {} -- ++(1.0,0) node[right] {\texttt{outr}};
+\draw (MN2.S) -- ++(0,-.55) coordinate (net2) node[below] {\texttt{0}};
+
+\end{circuitikz}
+\par\small 比例式反相器，PMOS 閘極接 0。
+\end{minipage}\par\medskip
+直流 CMOS 實例名稱為 \texttt{MP1/MN1}，輸出 \texttt{outc}、電源 \texttt{vc}，接線同左圖但無顯式負載電容。獨立的 \texttt{VCMOS} 與 \texttt{VRATIO} 電源分別量測兩支路。TT：1.8 V、25\(^\circ\)C；FF：1.98 V、0\(^\circ\)C；SS：1.62 V、115\(^\circ\)C。另有 FF／SS 暫態案例固定 1.8 V、25\(^\circ\)C；直流 TT／FF／SS／SF／FS 基準案例皆為 1.8 V、25\(^\circ\)C。
+\clearpage\subsection{隔離接面電流測試}
+\noindent\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=1, transform shape, font=\small]
+\node[nmos,bulk] (MNJ) at (0,0) {};
+\draw (MNJ.D) -- ++(0,0.8) node[above] {\texttt{jn}};
+\draw (MNJ.S) -- ++(0,-0.8) node[below] {\texttt{jn}};
+\draw (MNJ.G) -- ++(-.8,0) node[left] {\texttt{jn}};
+\draw (MNJ.bulk) -- ++(1.0,0) node[right] {\texttt{bn}};
+\node[above right] at (MNJ.right) {\texttt{MNJ}};
+\end{circuitikz}
+\par\small \texttt{D=G=S=jn; B=bn=0}
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\centering
+\begin{circuitikz}[scale=1, transform shape, font=\small]
+\node[pmos,bulk] (MPJ) at (0,0) {};
+\draw (MPJ.D) -- ++(0,-0.8) node[below] {\texttt{jp}};
+\draw (MPJ.S) -- ++(0,0.8) node[above] {\texttt{jp}};
+\draw (MPJ.G) -- ++(-.8,0) node[left] {\texttt{jp}};
+\draw (MPJ.bulk) -- ++(1.0,0) node[right] {\texttt{bp}};
+\node[above right] at (MPJ.right) {\texttt{MPJ}};
+\end{circuitikz}
+\par\small \texttt{D=G=S=jp; B=bp=VDD}
+\end{minipage}\par\medskip
+重複標籤表示三個通道端點短接；這是接面漏電結構。\texttt{EJN} 設定 \(V(\texttt{jn})=V(\texttt{in})\)，\texttt{EJP} 設定 \(V(\texttt{jp})=V_{DD}-V(\texttt{in})\)。體端電流探針為 \texttt{VBN}=0 V 與 \texttt{VBP}=\(V_{DD}\)。兩種結構皆為 \(W/L=0.6/0.25\,\mu\mathrm m\)、\(A_D=A_S=0.15\,\mu\mathrm m^2\)、\(P_D=P_S=1.7\,\mu\mathrm m\)。量測的體電流同時包含汲極／體端與源極／體端接面。
+\endgroup

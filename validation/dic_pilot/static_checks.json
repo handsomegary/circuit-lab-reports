@@ -1,0 +1,42 @@
+[
+  {
+    "file": "DIC\\Lab01\\01_diode_n.sp",
+    "status": "passed"
+  },
+  {
+    "file": "DIC\\Lab01\\02_output_n.sp",
+    "status": "passed"
+  },
+  {
+    "file": "DIC\\Lab01\\01_diode_p.sp",
+    "status": "passed"
+  },
+  {
+    "file": "DIC\\Lab01\\02_output_p.sp",
+    "status": "passed"
+  },
+  {
+    "file": "DIC\\Lab01\\03_length.sp",
+    "status": "passed"
+  },
+  {
+    "file": "DIC\\Lab01\\04_subthreshold.sp",
+    "status": "passed"
+  },
+  {
+    "file": "DIC\\Lab01\\05_equal_geometry.sp",
+    "status": "passed"
+  },
+  {
+    "file": "DIC\\Lab02\\01_chain.sp",
+    "status": "passed"
+  },
+  {
+    "file": "DIC\\Lab02\\02_fanout3.sp",
+    "status": "passed"
+  },
+  {
+    "file": "DIC\\Lab02\\03_size3.sp",
+    "status": "passed"
+  }
+]

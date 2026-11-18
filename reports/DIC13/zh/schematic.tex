@@ -1,0 +1,48 @@
+\clearpage\section{MOS 電晶體電路圖}
+\begin{minipage}[t]{.48\linewidth}\subsection{靜態 CMOS}
+\begin{center}
+\begin{circuitikz}[font=\small, line width=.65pt]
+\node[pmos,bulk] (P) at (2,4) {};
+\node[nmos,bulk] (N) at (2,1) {};
+\draw (P.S) -- ++(0,.65) node[above] {$cdd$};
+\draw (N.S) -- ++(0,-.5) node[ground] {};
+\draw (P.D) -- (N.D);
+\draw (P.D |- 0,2.5) node[circ] {} -- (4.8,2.5) node[right] {$yc$};
+\draw (N.G) -- (.1,1) -- (.1,2.5) node[circ] {} -- (-.8,2.5) node[left] {$in$};
+\draw (P.G) -- (.1,4) -- (.1,2.5);
+\draw (P.bulk) -- ++(.8,0) node[right] {$cdd$};
+\draw (N.bulk) -- ++(.8,0) node[right] {$0$};
+\node[anchor=east] at (1.6,4.6) {\texttt{MPC}};
+\node[anchor=east] at (1.6,.4) {\texttt{MNC}};
+\draw (4,2.5) node[circ] {} to[C,l={$CLVAL$}] (4,0) node[ground] {};
+\end{circuitikz}
+\par\small PMOS 與 NMOS 閘極都接 in；PMOS 基體接 cdd，NMOS 基體接 0。
+\end{center}
+\end{minipage}\hfill\begin{minipage}[t]{.48\linewidth}\subsection{偽 NMOS}
+\begin{center}
+\begin{circuitikz}[font=\small, line width=.65pt]
+\node[pmos,bulk] (P) at (2,4) {};
+\node[nmos,bulk] (N) at (2,1) {};
+\draw (P.S) -- ++(0,.65) node[above] {$pdd$};
+\draw (N.S) -- ++(0,-.5) node[ground] {};
+\draw (P.D) -- (N.D);
+\draw (P.D |- 0,2.5) node[circ] {} -- (4.8,2.5) node[right] {$yp$};
+\draw (N.G) -- (.1,1) -- (.1,2.5) node[circ] {} -- (-.8,2.5) node[left] {$in$};
+\draw (P.G) -- (.1,4) node[ground] {};
+\draw (P.bulk) -- ++(.8,0) node[right] {$pdd$};
+\draw (N.bulk) -- ++(.8,0) node[right] {$0$};
+\node[anchor=east] at (1.6,4.6) {\texttt{MPP}};
+\node[anchor=east] at (1.6,.4) {\texttt{MNP}};
+\draw (4,2.5) node[circ] {} to[C,l={$CLVAL$}] (4,0) node[ground] {};
+\end{circuitikz}
+\par\small 只有 NMOS 閘極接 in；負載 PMOS 的閘極固定 0 V，基體接 pdd，因此在 pdd=1 V 時保持導通。
+\end{center}
+\end{minipage}\par\subsection{來源、尺寸與量測配置}
+上述完整電路對應 \nolinkurl{01_ratio.sp}、\nolinkurl{02_frequency.sp}、\nolinkurl{04_frequency_refinement.sp}。VC 與 VP 是分別接 cdd、pdd 的獨立 1 V 電源；二者只共用地端與輸入 in，不將兩個輸出短接。兩電源分開是為量測各自供應電流。
+
+每個 NMOS：$W_n=0.6\,\mu\mathrm m\cdot SIZE$；每個 PMOS：$W_p=0.6\,\mu\mathrm m\cdot SIZE\cdot RATIO$；所有 $L=0.25\,\mu$m。比例實驗的 RATIO=0.25、0.5、1、1.5、3、6，SIZE=1，CLVAL=7 fF；頻率實驗固定 RATIO=1.5，使用 SIZE=1/2 與 CLVAL=7/14 fF 的四組組合。
+
+VIN 是對地 PULSE 電壓源；振幅 0--1 V、延遲 PERIOD/4、上升與下降時間各 PERIOD/100、脈寬 $0.48\cdot PERIOD$。
+
+\nolinkurl{03_dc_power.sp} 保留上述四顆 MOS 與兩個獨立供應源，但省略兩個輸出電容；VIN 由 0 掃至 1 V，步距 0.002 V。該 deck 的固定尺寸為 $W_n=0.6\,\mu$m、$W_p=0.9\,\mu$m、$L=0.25\,\mu$m。以上示意圖未加入實際 netlist 沒有的緩衝器或負載。
+

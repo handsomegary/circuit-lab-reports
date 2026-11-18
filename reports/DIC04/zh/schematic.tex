@@ -1,0 +1,74 @@
+\clearpage\section{MOS 電晶體電路圖}
+圖中相同名稱的端點代表同一網路；電壓以地端 0 為參考。以下圖形皆由可編輯的 CircuitikZ 原始碼繪製。
+
+\subsection{三輸入 NAND 核心}
+\begin{center}
+\begin{circuitikz}[font=\small,line width=.65pt,scale=.9,transform shape]
+\foreach \x/\name/\gate in {1/P_a/a,4/P_b/b,7/P_c/c}{
+ \node[pmos,nobulk] (\name) at (\x,7.5) {};
+ \draw (\name.S) -- (\name.S |- 0,8.6);
+ \draw (\name.D) -- (\name.D |- 0,6.2);
+ \draw (\name.G) -- ++(-.6,0) node[left] {$\gate$};
+ \node[anchor=east] at (\x+.1,8.15) {$M_{\name}$};
+}
+\draw (P_a.S |- 0,8.6) -- (P_c.S |- 0,8.6) node[right] {$vp=1\,\mathrm V$};
+\draw (P_a.D |- 0,6.2) -- (9,6.2) node[right] {$y$};
+\node[nmos,nobulk] (Na) at (4,4.8) {};
+\node[nmos,nobulk] (Nb) at (4,3) {};
+\node[nmos,nobulk] (Nc) at (4,1.2) {};
+\draw (Na.D) -- (Na.D |- 0,6.2) node[circ] {};
+\draw (Na.S) -- (Nb.D) node[midway,right] {$n1$};
+\draw (Nb.S) -- (Nc.D) node[midway,right] {$n2$};
+\draw (Nc.S) -- ++(0,-.55) node[ground] {};
+\foreach \name/\gate/\yy in {Na/a/4.8,Nb/b/3,Nc/c/1.2}{
+ \draw (\name.G) -- ++(-.7,0) node[left] {$\gate$};
+ \node[anchor=west] at (4.55,\yy) {$M_{\name}$};
+}
+\draw (8.3,6.2) node[circ] {} to[C,l={$10\,\mathrm{fF}$}] (8.3,3.7) -- (8.3,0) node[ground] {};
+\end{circuitikz}
+\par\small 對應 \nolinkurl{01_geometry.sp} 的 DEFAULT、UNSHARED、SHARED，以及 \nolinkurl{03_constant_capacitance.sp} 的四個分支。三個 PMOS 並聯，三個 NMOS 依 a、b、c 串聯。所有 PMOS 基體接 vp，所有 NMOS 基體接 0（不接 n1 或 n2）。
+\end{center}
+全部 MOS 的 $W/L=1.8/0.25\,\mu$m；$a=\mathrm{in}$ 為 PULSE，$b=c=1$ V。輸出分別為 y0、y2、y3，且每個分支獨立接 10 fF。幾何變體只改 AD、AS、PD、PS 與串聯電阻參數，不改上圖接線；數值逐顆列於公開 netlist。
+
+\clearpage
+
+\subsection{固定接面電容與量測治具}
+\begin{center}
+\begin{circuitikz}[font=\small,line width=.65pt]
+\node[draw,minimum width=2.4cm,minimum height=2.8cm,align=center] (X) at (0,2) {NAND3\\six MOS\\as above};
+\draw (-1.2,2.8) -- (-2,2.8) node[left] {$a$};
+\draw (-1.2,2) -- (-2,2) node[left] {$b$};
+\draw (-1.2,1.2) -- (-2,1.2) node[left] {$c$};
+\draw (1.2,3) -- (6.5,3) node[right] {$y$};
+\draw (1.2,2) -- (3.4,2) node[right] {$n1$};
+\draw (1.2,1) -- (1.9,1) node[right] {$n2$};
+\draw (5.8,3) node[circ] {} to[C,l={$C_{Jy}$}] (5.8,-.8) node[ground] {};
+\draw (4.4,3) node[circ] {} to[C,l_={$10\,\mathrm{fF}$}] (4.4,-.8) node[ground] {};
+\draw (2.9,2) node[circ] {} to[C,l={$C_{Jn1}$}] (2.9,-.8) node[ground] {};
+\draw (1.55,1) node[circ] {} to[C,l_={$C_{Jn2}$}] (1.55,-.8) node[ground] {};
+\end{circuitikz}
+\par\small 固定電容分支仍使用前頁六顆 MOS；內部 n1、n2 引出只為表示外加電容，並非新增子電路接腳。
+\end{center}
+FIXED2 的 $(C_{Jy},C_{Jn1},C_{Jn2})=(8.63045288,4.135226449,4.135226449)$ fF；FIXED3 為 $(3.3840705509,0.5275863797,0.5275863797)$ fF。兩者 AD=AS=PD=PS=0，避免重複計入接面電容。
+
+\begin{center}
+\begin{circuitikz}[font=\small,line width=.65pt,scale=.95,transform shape]
+\foreach \xx/\yy/\name/\kind/\dg/\sg/\gg/\bb in {
+0/4/Mn_k/nmos/{BV}/{0}/{0}/{0},
+6/4/Mp_k/pmos/{1-BV}/{1}/{1}/{1},
+0/0/Mns_k/nmos/{0}/{BV}/{0}/{0},
+6/0/Mps_k/pmos/{1}/{1-BV}/{1}/{1}}{
+ \begin{scope}[shift={(\xx,\yy)}]
+ \node[\kind,bulk] (Q) at (1.6,1.4) {};
+ \draw (Q.G) -- ++(-.8,0) node[left] {$G=\gg$};
+ \draw (Q.bulk) -- ++(.7,0) node[right] {$B=\bb$};
+ \draw (Q.D) -- ++(.8,0) node[right] {$D=\dg$};
+ \draw (Q.S) -- ++(-.8,0) node[left] {$S=\sg$};
+ \node at (1.8,-.5) {$\mathrm{\name}$};
+ \end{scope}
+}
+\end{circuitikz}
+\par\small 對應 \nolinkurl{02_junction_capacitance.sp} 的四種單顆 MOS 治具。端點標籤是直流電壓（V）；所有 B 接線均明示。
+\end{center}
+每一治具的 $k=0,1,2,3$ 是四種幾何分支；$k=0$ 為零接面幾何參考。標示 BV 或 $1-BV$ 的測試端由對地理想電壓源驅動，AC=1 V、1 MHz；其餘端點 AC=0。汲極治具測 D，源極治具測 S；$BV=0,0.25,0.5,0.75,1$ V。四種治具皆為 $W/L=1.8/0.25\,\mu$m。
+

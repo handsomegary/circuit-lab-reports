@@ -1,0 +1,8 @@
+{
+  "format": "per-deck-json-v1",
+  "files": {
+    "01_chain_pulse_filter": "01_chain_pulse_filter_data.json",
+    "02_setup_sweep": "02_setup_sweep_data.json",
+    "03_hold_sweep": "03_hold_sweep_data.json"
+  }
+}

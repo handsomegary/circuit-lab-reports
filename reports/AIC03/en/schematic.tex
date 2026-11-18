@@ -1,0 +1,28 @@
+\clearpage\section{MOS transistor schematic}
+These editable vector schematics connect equal node names within a circuit. Primitive-cell names are local pins; the hierarchy defines their connections. B denotes the body terminal; 0 is global ground. Each panel identifies its netlist and scope; measurement sources are connected as described.
+Complete current-source-loaded common-source stage from \texttt{03\_current\_source\_load.sp}.
+\par
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}[font=\small]
+\node[pmos,bulk] (MREF) at (0,3) {};
+\node[anchor=west,font=\scriptsize] at ($(MREF.center)+(.55,.40)$) {MREF};
+\draw (MREF.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\node[pmos,bulk] (MP) at (4.5,3) {};
+\node[anchor=west,font=\scriptsize] at ($(MP.center)+(.55,.40)$) {MP};
+\draw (MP.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=vdd};
+\node[nmos,bulk] (MN) at (4.5,0.7) {};
+\node[anchor=west,font=\scriptsize] at ($(MN.center)+(.55,.40)$) {MN};
+\draw (MN.bulk) -- ++(.30,0) node[right,font=\scriptsize] {B=0};
+\draw (MN.G) -- ++(-.45,0) node[left,font=\small] {\texttt{in}};
+\draw (MREF.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (MP.S) -- ++(0,0.5) node[above,font=\small] {\texttt{vdd}};
+\draw (MP.D) -- (MN.D) node[midway,above right,font=\small] {\texttt{out}};
+\draw (MN.S) -- ++(0,-0.5) node[below,font=\small] {\texttt{0}};
+\draw (MREF.D) to[I,l=IREF] ++(0,-2.5) node[below]{0}; \draw (MREF.G) -- (-1,3) -- (-1,2.1) -- (MREF.D |- 0,2.1) node[circ,label=above right:\texttt{bp}]{}; \draw (MP.G) -- (3,3) -- (3,2.1) -- (MREF.D |- 0,2.1);
+\draw (8,2) node[above] {\texttt{out}} to[C,l={10 pF}] ++(0,-1.7) node[below] {\texttt{0}};
+\end{circuitikz}
+\caption{PMOS current mirror biases the NMOS common-source amplifier.}
+\end{figure}
+\par
+The diode-connected MREF sets bp; MP shares that gate voltage. PMOS sources and bodies connect to vdd=1 V; MN source and body connect to 0. Baseline MN $W=10\,\mu$m, MREF/MP $W=30\,\mu$m, all $L=1\,\mu$m. IREF flows from bp to 0 with baseline 100 $\mu$A. VIN drives in relative to 0 at the deck's bias parameter vb with unit AC amplitude. The load capacitor is connected from out to 0. Geometry/current sweeps preserve this topology. Diode-load and source-follower comparisons are separate topologies in the other source decks; they are not represented by this figure.

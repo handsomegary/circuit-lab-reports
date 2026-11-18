@@ -1,0 +1,9 @@
+architecture,clock_index,node,delay_from_source_edge_ps
+ripple,9,a0,532.3536784755921
+ripple,9,a1,1181.672940543444
+ripple,9,a2,1816.1821526504443
+ripple,9,a3,2263.3289127694775
+synchronous,33,b0,1142.3203281728245
+synchronous,33,b2,1011.861381206233
+synchronous,33,b3,1012.0551546257293
+synchronous,33,b4,1012.3777481595065

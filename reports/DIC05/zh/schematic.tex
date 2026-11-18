@@ -1,0 +1,60 @@
+\clearpage\section{MOS 電晶體電路圖}
+來源：\texttt{01\_miller.sp}。三個 INV 的 $W_n/W_p/L=0.6/1.8/0.25\,\mu$m。外加耦合電容跨接 X2 的輸入與輸出，與模型內部 MOS 寄生電容分開。
+
+圖中沿用所列網表的元件與節點名稱；相同節點標籤表示電氣相連。除另有註明外，NMOS 的 bulk 接地，PMOS 的 bulk 接 $V_{DD}$。三端符號省略 bulk 導線以保持圖面清楚。
+\begin{figure}[!htbp]\centering
+\resizebox{15.2cm}{!}{\begin{circuitikz}[american,font=\small]
+
+\begin{scope}[shift={(0,0)}]
+\node[pmos] (X1p) at (0,1) {};
+\node[nmos] (X1n) at (0,-1) {};
+\draw (X1p.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (X1n.S) -- (0,-2) node[ground] {};
+\draw (X1p.D) -- (0,0) -- (X1n.D);
+\draw (X1p.G) -- (-1.15,1) -- (-1.15,-1) -- (X1n.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {in};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {a};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {X1};
+\coordinate (X1in) at (-1.8,0);
+\coordinate (X1out) at (0.85,0);
+\end{scope}
+
+\begin{scope}[shift={(4,0)}]
+\node[pmos] (X2p) at (0,1) {};
+\node[nmos] (X2n) at (0,-1) {};
+\draw (X2p.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (X2n.S) -- (0,-2) node[ground] {};
+\draw (X2p.D) -- (0,0) -- (X2n.D);
+\draw (X2p.G) -- (-1.15,1) -- (-1.15,-1) -- (X2n.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {a};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {y};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {X2};
+\coordinate (X2in) at (-1.8,0);
+\coordinate (X2out) at (0.85,0);
+\end{scope}
+
+\begin{scope}[shift={(8,0)}]
+\node[pmos] (X3p) at (0,1) {};
+\node[nmos] (X3n) at (0,-1) {};
+\draw (X3p.S) -- (0,2) node[above] {$V_{DD}$};
+\draw (X3n.S) -- (0,-2) node[ground] {};
+\draw (X3p.D) -- (0,0) -- (X3n.D);
+\draw (X3p.G) -- (-1.15,1) -- (-1.15,-1) -- (X3n.G);
+\draw (-1.15,0) node[circ] {} -- (-1.8,0) node[above] {y};
+\draw (0,0) node[circ] {} -- (0.85,0) node[above] {z};
+\node[right] at (0.25,1) {MP};
+\node[right] at (0.25,-1) {MN};
+\node at (0,2.6) {X3};
+\coordinate (X3in) at (-1.8,0);
+\coordinate (X3out) at (0.85,0);
+\end{scope}
+\draw (X1out) -- (X2in);\draw (X2out) -- (X3in);
+\draw (1.5,0) node[circ] {} -- (1.5,3.3) to[C,l=$C_C$] (5.5,3.3) -- (5.5,0) node[circ] {};
+\draw (5.5,0) -- (5.5,-1) to[C,l_=$C_L$] (5.5,-2.5) node[ground] {};
+\end{circuitikz}}
+\caption{完整六顆 MOS 訊號路徑。$C_C$ 為 CCVAL（0/2/5/10 fF）；$C_L$ 為指定案例的 CLVAL（0/10/40 fF）。即使 $C_L=0$，X3 仍提供實際閘極負載。無接點的交叉線不相連。}
+\end{figure}

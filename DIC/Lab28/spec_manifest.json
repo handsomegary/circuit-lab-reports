@@ -1,0 +1,44 @@
+{
+  "lab": "DIC28",
+  "requirements": [
+    {
+      "lab": 28,
+      "deck": "01_latch_equivalence.sp",
+      "title": "Full and simplified N/P latches",
+      "pdf_pages": "115-117",
+      "specs": [
+        "Step1: Fig28.1a versus c and b versus d, compare behavior and differences"
+      ]
+    },
+    {
+      "lab": 28,
+      "deck": "02_doubled_clocked_inverters.sp",
+      "title": "Double N/P clocked inverters during hold",
+      "pdf_pages": "116-117",
+      "specs": [
+        "Step2: changing input during hold does not change intended output state"
+      ]
+    },
+    {
+      "lab": 28,
+      "deck": "03_two_stage_dff.sp",
+      "title": "Two cascaded full and reduced-stage DFFs",
+      "pdf_pages": "118",
+      "specs": [
+        "Q1: combine P then N latch into positive-edge DFF, cascade two",
+        "Q2: remove first stage, cascade two and examine internal-node limitations"
+      ]
+    },
+    {
+      "lab": 28,
+      "deck": "04_hold_phase_input_changes.sp",
+      "title": "Input changes during the reduced first-stage hold phase",
+      "pdf_pages": "118",
+      "specs": [
+        "Q2: distinguish reduced internal-node erasure from output-state retention"
+      ]
+    }
+  ],
+  "model_setup": "Local model configuration required; loading paths and model content are omitted from public decks.",
+  "layout_status": "Not a layout exercise."
+}

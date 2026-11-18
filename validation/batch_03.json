@@ -1,0 +1,540 @@
+{
+  "summary": {
+    "decks": 23,
+    "completed": 23,
+    "cases": 70,
+    "errors": 0,
+    "failed": 0,
+    "different_measurement_files": 0
+  },
+  "decks": [
+    {
+      "source": "DIC/Lab16/01_charge_discharge.sp",
+      "source_sha256": "7e505fecbf7e39aff2b57fc1d7121c3f37e9a974d9d3ecbe2ebacde363d898d4",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab16_01_charge_discharge.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab16/02_six_delay_chains.sp",
+      "source_sha256": "e3745ed09eaa2d6cc11503d160fbe14a388efd61494e2cfa163a3cbbb174ee5b",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab16_02_six_delay_chains.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab16/03_dc_current_paths.sp",
+      "source_sha256": "8432e61a7eabddf54ae06130ac44a6da4eb935224ecf10fcd60f2602abdd9763",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": []
+    },
+    {
+      "source": "DIC/Lab16/04_hold_leakage.sp",
+      "source_sha256": "0de74998e6df92aeb20a6969d89ce835e888b7cdcee0d4e2a3e6e5c7b9b5a65c",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 2,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab16_04_hold_leakage.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab16_04_hold_leakage.mt1",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab16/05_tg_full_adder.sp",
+      "source_sha256": "189ea94f441e394afa30b031e2a698d002621c1aa402ca9f9251b2375fc80b8b",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab16_05_tg_full_adder.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab17/01_hazards.sp",
+      "source_sha256": "48c56fd3787c13160abba8e0f1f01a64aa923ebf86fd7886707327035d572047",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab17_01_hazards.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab17/02_noise.sp",
+      "source_sha256": "80ac8790fcf804a54aa1f0bd7015d6ea0890698dbc18615672e94f47136c5481",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 3,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab17_02_noise.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_02_noise.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_02_noise.mt2",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab17/03_frequency_sweep.sp",
+      "source_sha256": "8edf0ff7794f4f922f69941c5f5fb6bca39d97bfe48a60994a5a76d19f79703b",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 12,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab17_03_frequency_sweep.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_03_frequency_sweep.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_03_frequency_sweep.mt10",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_03_frequency_sweep.mt11",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_03_frequency_sweep.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_03_frequency_sweep.mt3",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_03_frequency_sweep.mt4",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_03_frequency_sweep.mt5",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_03_frequency_sweep.mt6",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_03_frequency_sweep.mt7",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_03_frequency_sweep.mt8",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab17_03_frequency_sweep.mt9",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab17/04_async_reset.sp",
+      "source_sha256": "376be986b41f0029cabb412380523097a0f08d1e82c707c7e05210129ac84af5",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab17_04_async_reset.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab21/01_clock_slope.sp",
+      "source_sha256": "22077bdb06cb59f2a134544cb7846970cea1f088f0d3e14642528d58239a820b",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 9,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab21_01_clock_slope.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_01_clock_slope.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_01_clock_slope.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_01_clock_slope.mt3",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_01_clock_slope.mt4",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_01_clock_slope.mt5",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_01_clock_slope.mt6",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_01_clock_slope.mt7",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_01_clock_slope.mt8",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab21/02_three_stage_skew.sp",
+      "source_sha256": "d4ef51978f78d97beae2e6640ccb8c335e50b2d97321f1457088618054e75e1c",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 9,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab21_02_three_stage_skew.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_02_three_stage_skew.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_02_three_stage_skew.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_02_three_stage_skew.mt3",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_02_three_stage_skew.mt4",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_02_three_stage_skew.mt5",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_02_three_stage_skew.mt6",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_02_three_stage_skew.mt7",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_02_three_stage_skew.mt8",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab21/03_low_frequency_retention.sp",
+      "source_sha256": "ca96f8ce9984229cbd4893fc0aae54d18aebe16f350c973bc430d835252bafdd",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 2,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab21_03_low_frequency_retention.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab21_03_low_frequency_retention.mt1",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab25/01_charge_sharing.sp",
+      "source_sha256": "74a1e94ceefea1a9a4b2fc2cc4de748c8c8637c6ea90ec8ef3047cbb89a35a72",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab25_01_charge_sharing.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab25/02_coupling_sweep.sp",
+      "source_sha256": "a53377b962a13b1a5592604cb4b2e723b4614bba981d6d767b0d7b0ad0d2a0e2",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 6,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab25_02_coupling_sweep.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab25_02_coupling_sweep.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab25_02_coupling_sweep.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab25_02_coupling_sweep.mt3",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab25_02_coupling_sweep.mt4",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab25_02_coupling_sweep.mt5",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab25/03_parasitic_coupling.sp",
+      "source_sha256": "a635f62a7ed399132c30e6ec33bf49a481582b60eca20ae2df4fcdff4e9870a8",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab25_03_parasitic_coupling.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab25/04_leakage_and_restoration.sp",
+      "source_sha256": "6122077e16ef481b97729379be56bf7b226dca605784bd0680cecbd6ebf4c36d",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 2,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab25_04_leakage_and_restoration.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab25_04_leakage_and_restoration.mt1",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab25/05_sharing_remedies.sp",
+      "source_sha256": "89b775108e5188bbe24d4aebbd285a437569e3f6afc182bed376d63bcd23932e",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab25_05_sharing_remedies.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab25/06_keeper_power.sp",
+      "source_sha256": "25694d4ffd23c1b4d6a4273393425b8627cd655a398234cd15a6779b8fe45e2f",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 2,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab25_06_keeper_power.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab25_06_keeper_power.mt1",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab27/01_four_topologies.sp",
+      "source_sha256": "f229cbadd508301f2cb27ba1bf39225bec154e5e441d99a2d7dc2c0837d852a9",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 9,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab27_01_four_topologies.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab27_01_four_topologies.mt1",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab27_01_four_topologies.mt2",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab27_01_four_topologies.mt3",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab27_01_four_topologies.mt4",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab27_01_four_topologies.mt5",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab27_01_four_topologies.mt6",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab27_01_four_topologies.mt7",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab27_01_four_topologies.mt8",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab28/01_latch_equivalence.sp",
+      "source_sha256": "c07f5fccc317d692cd822090ff449926c4c3d0b566754df9718d5bb157156e08",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab28_01_latch_equivalence.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab28/02_doubled_clocked_inverters.sp",
+      "source_sha256": "3a9d65e182d60db3fe0da658aa339d5a23803b27dd69a65c24f255cdfb811828",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab28_02_doubled_clocked_inverters.mt0",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab28/03_two_stage_dff.sp",
+      "source_sha256": "df2f247bca701da444af869650c740d7fe848a44274eb7d647170f5049659873",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 2,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab28_03_two_stage_dff.mt0",
+          "same_reported_values": true
+        },
+        {
+          "file": "DIC_Lab28_03_two_stage_dff.mt1",
+          "same_reported_values": true
+        }
+      ]
+    },
+    {
+      "source": "DIC/Lab28/04_hold_phase_input_changes.sp",
+      "source_sha256": "3768f97b539dbcc9959e7d83a3a7997b939ea1a72e9ec59a676481f59885ae1e",
+      "current_source_matches": true,
+      "execution": "completed",
+      "concluded_cases": 1,
+      "visible_error_count": 0,
+      "failed_measurement_count": 0,
+      "measurement_comparison": [
+        {
+          "file": "DIC_Lab28_04_hold_phase_input_changes.mt0",
+          "same_reported_values": true
+        }
+      ]
+    }
+  ]
+}

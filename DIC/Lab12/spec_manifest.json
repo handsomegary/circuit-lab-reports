@@ -1,0 +1,22 @@
+{
+  "lab": 12,
+  "source": "DIC Lab.pdf",
+  "supply_V": 1,
+  "temperature_C": 25,
+  "specifications": [
+    {
+      "pages": "52-54",
+      "requirement": "Four table dimensions and five-stage taper n=2/3/4/5 with 2 pF",
+      "status": "simulated"
+    }
+  ],
+  "limitations": [
+    "Case2 follows tabulated Wp=1.2 um, despite conflicting half-width prose.",
+    "Best factor is only over tested candidates."
+  ],
+  "decks": [
+    "01_delay_elements.sp",
+    "02_taper_buffer.sp"
+  ],
+  "results_status": "Actual local simulator results; final batch validation recorded separately."
+}

@@ -1,0 +1,165 @@
+{
+  "01_and_gate_glitch": {
+    "base": {
+      "glitch_peak_V_near_20ns": 1.0368,
+      "glitch_peak_V_near_60ns": 1.0368,
+      "glitch_width_ps_at_50pct": 108.1,
+      "rise_delay_ps_b_to_out": 38.7,
+      "fall_delay_ps_b_to_out": 44.9
+    },
+    "sol1": {
+      "glitch_peak_V_near_20ns": 1.0175,
+      "glitch_peak_V_near_60ns": 1.0175,
+      "glitch_width_ps_at_50pct": 97.8,
+      "rise_delay_ps_b_to_out": 43.9,
+      "fall_delay_ps_b_to_out": 37.6
+    },
+    "sol2": {
+      "glitch_peak_V_near_20ns": 1.0328,
+      "glitch_peak_V_near_60ns": 1.0328,
+      "glitch_width_ps_at_50pct": 108.7,
+      "rise_delay_ps_b_to_out": 43.8,
+      "fall_delay_ps_b_to_out": 49.8
+    },
+    "sol3": {
+      "glitch_peak_V_near_20ns": 0.0209,
+      "glitch_peak_V_near_60ns": 0.0209,
+      "glitch_width_ps_at_50pct": 0.0,
+      "rise_delay_ps_b_to_out": 22.7,
+      "fall_delay_ps_b_to_out": 26.9
+    }
+  },
+  "02_fo4_wp_sweep_L0p25": {
+    "sweep_points": 171,
+    "wn_um": 0.6,
+    "L_um": 0.25,
+    "best_wp_um": 1.3,
+    "best_wp_over_wn": 2.167,
+    "min_t_fo4_ps": 181.9,
+    "tpHL_ps_at_best": 120.1,
+    "tpLH_ps_at_best": 243.8,
+    "t_fo4_ps_at_wp_0p6": 199.8,
+    "t_fo4_ps_at_wp_4p0": 216.5
+  },
+  "04_pfd": {
+    "pfd_v0_tg_dff": {
+      "UP_at_15ns": 0.493,
+      "DN_at_15ns": 0.0,
+      "UP_at_35ns": 0.0,
+      "DN_at_35ns": 0.493,
+      "UP_at_46ns": 0.463,
+      "UP_at_55ns": 0.493,
+      "DN_at_55ns": 0.493,
+      "UP_rising_edges": 6,
+      "DN_rising_edges": 10,
+      "RST_pulses": 7,
+      "RST_pulse_width_ps": [
+        31.4,
+        35.9,
+        40.2,
+        43.2,
+        47.9,
+        51.8
+      ],
+      "UP_first_rise_ns": 5.092
+    },
+    "pfd_v1_or_reset_dff": {
+      "UP_at_15ns": 0.477,
+      "DN_at_15ns": 0.0,
+      "UP_at_35ns": 0.866,
+      "DN_at_35ns": 0.017,
+      "UP_at_46ns": 0.003,
+      "UP_at_55ns": 0.606,
+      "DN_at_55ns": 0.093,
+      "UP_rising_edges": 225,
+      "DN_rising_edges": 135,
+      "RST_pulses": 65,
+      "RST_pulse_width_ps": [
+        35.6,
+        48.0,
+        47.9,
+        47.2,
+        47.4,
+        47.0
+      ],
+      "UP_first_rise_ns": 5.129
+    },
+    "pfd_v2_tg_latch_dff": {
+      "UP_at_15ns": 1.0,
+      "DN_at_15ns": 0.0,
+      "UP_at_35ns": 0.0,
+      "DN_at_35ns": 1.0,
+      "UP_at_46ns": 1.0,
+      "UP_at_55ns": 0.731,
+      "DN_at_55ns": 0.733,
+      "UP_rising_edges": 80,
+      "DN_rising_edges": 80,
+      "RST_pulses": 80,
+      "RST_pulse_width_ps": [
+        66.2,
+        65.5,
+        66.4,
+        65.5,
+        64.4,
+        64.7
+      ],
+      "UP_first_rise_ns": 5.127
+    },
+    "pfd_v3_6nand_dff": {
+      "UP_at_15ns": 1.0,
+      "DN_at_15ns": 0.0,
+      "UP_at_35ns": 0.0,
+      "DN_at_35ns": 1.0,
+      "UP_at_46ns": 1.0,
+      "UP_at_55ns": 0.0,
+      "DN_at_55ns": 0.0,
+      "UP_rising_edges": 2,
+      "DN_rising_edges": 2,
+      "RST_pulses": 1,
+      "RST_pulse_width_ps": [
+        178.6
+      ],
+      "UP_first_rise_ns": 5.12
+    }
+  },
+  "03_rc_wire_buffer": {
+    "rc_buffer_L0p1": {
+      "L_um": 0.1,
+      "rc_tau_ns": 10.0,
+      "in_degraded_min_V_ss": 0.4043,
+      "in_degraded_max_V_ss": 0.7175,
+      "out_min_V_ss": -0.0022,
+      "out_max_V_ss": 1.2006,
+      "out_rise_delay_ns_in_to_out_50pct": 2.3168
+    },
+    "rc_buffer_L0p25": {
+      "L_um": 0.25,
+      "rc_tau_ns": 10.0,
+      "in_degraded_min_V_ss": 0.4041,
+      "in_degraded_max_V_ss": 0.7145,
+      "out_min_V_ss": -0.0032,
+      "out_max_V_ss": 1.2014,
+      "out_rise_delay_ns_in_to_out_50pct": 2.3935
+    }
+  },
+  "02_fo4_tpd_L0p1": {
+    "L_um": 0.1,
+    "wp_um": 1.2,
+    "wn_um": 0.6,
+    "t_pHL_ps": 23.34,
+    "t_pLH_ps": 31.31,
+    "tpd_ps": 27.32
+  },
+  "05_rc_phase_shift_osc": {
+    "out_pp_mV_0_to_0p5ms": 1.382,
+    "out_pp_mV_2p5_to_3ms": 0.0002,
+    "out_mean_V_end": 0.0429,
+    "oscillates": false
+  },
+  "05_cs_amp": {
+    "vin_pp_mV": 20.0,
+    "vout_pp_mV": 0.3551,
+    "gain_VV": 0.01775,
+    "vout_mean_V": 0.01857
+  }
+}
