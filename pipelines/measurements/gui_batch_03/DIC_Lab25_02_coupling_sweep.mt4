@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'case_4'
+ dynamic_after    inv_after        output_coupled_min
+ output_coupled_final temper           alter#          
+  4.0274290e-01    9.7601984e-01   -6.5623667e-01    3.3367259e-06  
+  2.5000000e+01   5               

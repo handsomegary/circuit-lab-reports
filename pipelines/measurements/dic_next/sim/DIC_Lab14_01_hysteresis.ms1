@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'feedback_2_start_0'
+ vm_yi            vm_ys1           temper           alter#          
+  4.825376489e-01  6.332410332e-01  2.500000000e+01 2               

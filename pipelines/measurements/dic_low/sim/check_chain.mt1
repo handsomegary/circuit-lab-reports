@@ -1,0 +1,14 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'edge_near_step_1ps'
+ tr1              tf1              tr2              tf2             
+ tr3              tf3              tr4              tf4             
+ tr5              tf5              tr6              tf6             
+ tr7              tf7              tr8              tf8             
+ rise_change_78   fall_change_78   pavg             temper          
+ alter#          
+  1.2456594e-10    5.1008359e-11    1.2962365e-10    6.8094663e-11  
+  1.3096420e-10    6.8387234e-11    1.3098277e-10    6.8649263e-11  
+  1.3099228e-10    6.8645288e-11    1.3102483e-10    6.8687894e-11  
+  1.3094978e-10    6.9036811e-11    1.3480722e-10    7.7402023e-11  
+  2.8614459e-02      0.10807485     1.1537643e-05     25.00000000   
+2               

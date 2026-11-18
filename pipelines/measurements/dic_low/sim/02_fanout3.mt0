@@ -1,0 +1,14 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 2 step 2: 02_fanout3'
+ tr1              tf1              tr2              tf2             
+ tr3              tf3              tr4              tf4             
+ tr5              tf5              tr6              tf6             
+ tr7              tf7              tr8              tf8             
+ rise_change_78   fall_change_78   pavg             temper          
+ alter#          
+  2.9908245e-10    1.6407933e-10    3.1808577e-10    2.0516690e-10  
+  3.2047895e-10    2.0628684e-10    3.2055958e-10    2.0642382e-10  
+  3.2051020e-10    2.0648342e-10    3.2065943e-10    2.0652133e-10  
+  3.2046544e-10    2.0646699e-10    3.2392456e-10    2.1705351e-10  
+  1.0678780e-02    4.8773810e-02    3.2032064e-05     25.00000000   
+1               

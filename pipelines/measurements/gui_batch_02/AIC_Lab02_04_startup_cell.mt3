@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'slow_without_startup'
+ nx_final         inject_peak      inject_final     core_final      
+ temper           alter#          
+  5.0326145e-01    2.2672692e-11    3.5540163e-15    1.0309000e-04  
+  2.7000000e+01   4               

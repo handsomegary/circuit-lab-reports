@@ -1,0 +1,12 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'load_1f'
+ rise_g           fall_g           rise_c           fall_c          
+ rise_f           fall_f           power_g          data_power_g    
+ combined_power_g power_c          data_power_c     combined_power_c
+ power_f          data_power_f     combined_power_f temper          
+ alter#          
+  3.3289257e-10    5.0713554e-10    2.0309670e-10    3.4868874e-10  
+  5.0187123e-11    9.0619451e-11    1.3650055e-05    5.2805916e-07  
+  1.4178114e-05    1.3550312e-05    7.1553266e-07    1.4265844e-05  
+  1.8150822e-07    3.7721044e-05    3.7902552e-05    2.7000000e+01  
+2               

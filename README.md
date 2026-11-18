@@ -106,6 +106,10 @@ Footer 替預充階段隔離下拉網路，卻也在評估路徑多串了一顆 
 
 [`practice/`](practice) 收錄 lab 之外的 11 份自主練習網表（AND glitch、FO4、RC 導線 buffer、PFD 四版、NMOS 振盪器與共源放大器），依類型分類並附重新模擬的量測與判讀。
 
+## Archived analysis pipelines
+
+[`pipelines/`](pipelines) 保存 AIC02–05 與 DIC04–28 的量測抽取、分析與繪圖腳本、小型輸入、HSPICE 原生量測檔，以及刪除 RAW 波形前的 SHA-256 收據。這些是原工作區的產生紀錄，不是可以直接執行的公開流程。
+
 ## Local model setup
 
 上傳的 netlist 不含模型載入路徑。`MODEL_SETUP_REQUIRED` 是本機模擬前必須補入模型設定的註記；具名角落的註記另附 section 名稱。模型庫、原始講義與原始模擬 listing 不隨 repo 上傳。

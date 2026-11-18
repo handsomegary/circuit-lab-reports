@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 26: 02_noise_immunity'
+ n_peak           p_peak           n_final          p_final         
+ temper           alter#          
+  2.4949035e-04    9.9990103e-01   -1.1431633e-05    9.9990103e-01  
+  2.5000000e+01   1               

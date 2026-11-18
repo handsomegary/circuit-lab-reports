@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 5: two-stage gain, poles, unity crossing and phase margin'
+ gain1            gain_db          temper           alter#          
+  9.0880619e+03    7.9169426e+01    2.7000000e+01   1               

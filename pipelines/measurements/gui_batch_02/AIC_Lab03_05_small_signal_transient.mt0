@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 3: cs and follower transient verification'
+ cs_pp            follower_pp      temper           alter#          
+  4.5208971e-02    1.6674693e-02    2.7000000e+01   1               

@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* dic lab 20: four-inverter timing and narrow pulses'
+ output_peak      output_low       temper           alter#          
+  1.1171234e+00   -9.3816756e-02    2.7000000e+01   1               

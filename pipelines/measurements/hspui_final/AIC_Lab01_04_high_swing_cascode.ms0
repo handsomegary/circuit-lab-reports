@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 01 - high-swing cascode and bias-device sizing'
+ iout             vref             vbias            vmid            
+ isupply          temper           alter#          
+  9.9958391e-05    3.4529525e-01    1.0920526e+00    3.4718029e-01  
+ -1.0000000e-04    2.7000000e+01   1               

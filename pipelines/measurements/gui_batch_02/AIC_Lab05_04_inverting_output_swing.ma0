@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 5: inverting gain -10 and output swing'
+ closed_gain      temper           alter#          
+  9.9846504e+00    2.7000000e+01   1               

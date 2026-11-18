@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'lower_current_1u'
+ gout             rout             phase_vs         temper          
+ alter#          
+  8.3166479e-09    1.2024075e+08    2.0379347e-04    2.7000000e+01  
+3               

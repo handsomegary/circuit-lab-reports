@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'case_1'
+ ileak_low        ileak_high       temper           alter#          
+ -5.2657811e-10   -1.1898527e-10      0.            2               

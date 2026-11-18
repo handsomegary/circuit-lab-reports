@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 9: 04_sizing_refinement'
+ vm_yr            vm_yna           vm_ynb           vm_yoa          
+ vm_yob           temper           alter#          
+  5.141713028e-01  4.923244984e-01  4.902748217e-01  5.289774213e-01
+  5.536064870e-01  2.500000000e+01 1               

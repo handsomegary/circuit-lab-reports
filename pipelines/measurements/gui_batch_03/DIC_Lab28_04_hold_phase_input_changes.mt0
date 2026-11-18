@@ -1,0 +1,12 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 28: input changes during the reduced first-stage hold phase'
+ full_internal_before full_internal_after reduced_internal_before
+ reduced_internal_after f1_0             f1_1            
+ f1_2             f2_0             f2_1             f2_2            
+ s1_0             s1_1             s1_2             s2_0            
+ s2_1             s2_2             temper           alter#          
+ -8.7237031e-02   -8.1927459e-02    9.5344930e-01   -6.3529840e-02  
+ -1.3019495e-05   -1.3474881e-05   -1.3362205e-05    8.0987095e-06  
+  5.0414171e-06    5.0223021e-06    9.9993336e-01    1.2087884e-05  
+  9.9993238e-01    9.9997411e-01    1.1483629e-05    9.9997636e-01  
+  2.5000000e+01   1               

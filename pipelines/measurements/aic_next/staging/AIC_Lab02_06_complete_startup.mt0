@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 2: complete reference startup and settling'
+ ref_final        ref_last_avg     supply_avg       temper          
+ alter#          
+  4.4408012e-01    4.4408012e-01    3.1194391e-04    2.7000000e+01  
+1               

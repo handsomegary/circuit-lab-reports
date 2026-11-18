@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 5: 01_miller'
+ ymax             ymin             overshoot        undershoot      
+ tr_y             tf_y             temper           alter#          
+  1.123091033e+00 -8.346837931e-02  1.230910333e-01  8.346837931e-02
+  1.336997593e-10  7.670416230e-11  2.500000000e+01 1               

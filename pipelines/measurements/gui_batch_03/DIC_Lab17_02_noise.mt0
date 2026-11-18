@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 17: equal capacitive noise at master and slave storage nodes'
+ qs_noise         qd_noise         qk_noise         temper          
+ alter#          
+  2.6338072e-03    1.2081661e-02    1.6410010e-02    2.5000000e+01  
+1               

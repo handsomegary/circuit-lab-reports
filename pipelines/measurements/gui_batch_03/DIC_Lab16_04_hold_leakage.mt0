@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 16: transmission-gate floating-node retention'
+ initial_hold     hold_5us         hold_20us        temper          
+ alter#          
+  1.0371704e+00    8.9260050e-01    6.4960700e-01    2.5000000e+01  
+1               

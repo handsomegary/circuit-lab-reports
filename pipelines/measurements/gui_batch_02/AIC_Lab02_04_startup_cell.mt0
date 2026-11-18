@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 2: startup injection with power-up ramps'
+ nx_final         inject_peak      inject_final     core_final      
+ temper           alter#          
+  5.0327111e-01    2.2273942e-07    3.8605005e-09    1.0310220e-04  
+  2.7000000e+01   1               

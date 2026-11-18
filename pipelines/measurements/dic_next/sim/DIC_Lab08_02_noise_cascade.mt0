@@ -1,0 +1,28 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 8: 02_noise_cascade'
+ y0_noise0        z0_noise0        y0_noise1        z0_noise1       
+ y0_noise2        z0_noise2        y0_noise3        z0_noise3       
+ y0_noise4        z0_noise4        y0_noise5        z0_noise5       
+ y0_noise6        z0_noise6        y0_noise7        z0_noise7       
+ y1_noise0        z1_noise0        y1_noise1        z1_noise1       
+ y1_noise2        z1_noise2        y1_noise3        z1_noise3       
+ y1_noise4        z1_noise4        y1_noise5        z1_noise5       
+ y1_noise6        z1_noise6        y1_noise7        z1_noise7       
+ y2_noise0        z2_noise0        y2_noise1        z2_noise1       
+ y2_noise2        z2_noise2        y2_noise3        z2_noise3       
+ y2_noise4        z2_noise4        y2_noise5        z2_noise5       
+ y2_noise6        z2_noise6        y2_noise7        z2_noise7       
+ temper           alter#          
+  1.000016896e+00 -1.769140003e-05  9.118894149e-01 -2.599299035e-04
+  2.886767184e-01  5.537459259e-01  8.164576046e-03  9.594040901e-01
+  2.039159443e-05  9.999930157e-01  2.013517023e-03  9.999978773e-01
+  9.046887821e-03  1.000019280e+00  2.815514165e-01  9.747950974e-01
+  9.999200279e-01 -4.246096271e-06  9.794528064e-01 -6.720178455e-05
+  8.498149214e-01 -5.928377506e-04  1.151026138e-01  8.342084369e-01
+  7.422555950e-05  1.000002166e+00  8.219133089e-03  1.000050636e+00
+  4.077680129e-02  1.000356521e+00  6.560003354e-01  4.143318037e-01
+  9.999882359e-01 -2.928198844e-06  9.952208669e-01 -6.315125141e-05
+  9.747666079e-01 -1.952234266e-04  6.007530877e-01  2.979924439e-01
+  6.547216350e-05  1.000046971e+00  3.055067723e-02  1.000549024e+00
+  1.924163658e-01  1.006410002e+00  7.753769025e-01  3.905522422e-01
+  2.500000000e+01 1               

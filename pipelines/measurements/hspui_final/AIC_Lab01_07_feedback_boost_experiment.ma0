@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 01 - finite-bandwidth feedback boost, conceptual experiment'
+ gout             rout             phase_vs         temper          
+ alter#          
+  4.1410743e-07    2.4148323e+06    2.2698638e-05    2.7000000e+01  
+1               

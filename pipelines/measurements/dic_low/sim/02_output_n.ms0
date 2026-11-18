@@ -1,0 +1,10 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=1
+.TITLE 'dic lab 1 step 2: nmos output characteristics'
+ vgs              source_current_at_limit temper          
+                  alter#          
+    0.            -6.5222959e-10     25.00000000    1               
+    0.20000000    -4.7504485e-08     25.00000000    1               
+    0.40000000    -3.5734145e-06     25.00000000    1               
+    0.60000000    -4.0490393e-05     25.00000000    1               
+    0.80000000    -1.1294820e-04     25.00000000    1               
+    1.00000000    -1.9848724e-04     25.00000000    1               

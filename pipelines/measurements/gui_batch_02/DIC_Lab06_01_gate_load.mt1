@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'two_loads'
+ tr_ymos          tf_ymos          tphl_ymos        tplh_ymos       
+ tr_ycap          tf_ycap          tphl_ycap        tplh_ycap       
+ temper           alter#          
+  3.902614197e-10  2.166549903e-10  1.128850570e-10  2.414197177e-10
+  1.824216936e-10  8.974264054e-11  8.587522935e-11  1.270544801e-10
+  2.500000000e+01 2               

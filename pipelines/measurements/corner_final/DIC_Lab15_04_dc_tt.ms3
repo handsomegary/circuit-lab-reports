@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'numerical_conductance_check'
+ cmos_low         ratio_low        ratio_static_current
+ cmos_off_low     cmos_off_high    n_junction       p_junction      
+ temper           alter#          
+  2.1863724e-09    6.3494659e-02   -4.8449421e-05   -1.3111734e-12  
+ -1.7947865e-12    4.0289400e-15   -3.8598840e-15    2.5000000e+01  
+4               

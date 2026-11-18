@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 28: double n/p clocked inverters during hold'
+ hold_n_min       hold_n_max       hold_p_min       hold_p_max      
+ temper           alter#          
+ -5.2238195e-02   -3.8261606e-02    1.1856799e+00    1.2145282e+00  
+  2.5000000e+01   1               

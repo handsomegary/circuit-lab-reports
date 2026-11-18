@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 1 step 4: subthreshold transfer, both polarities'
+ n_at_015         n_at_025         p_at_015         p_at_025        
+ temper           alter#          
+ -1.3626318e-08   -1.5691040e-07    1.3849259e-08    1.5498617e-07  
+   25.00000000    1               

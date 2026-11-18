@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* dic lab 19: supply resistance and decoupling'
+ rail_min         rail_max         supply_min       ground_max      
+ rp_peak          rn_peak          power            temper          
+ alter#          
+  9.3452821e-01    9.9787859e-01    9.6726585e-01    3.2737637e-02  
+  3.2734154e-02    3.2737637e-02    9.9230440e-03    2.7000000e+01  
+1               

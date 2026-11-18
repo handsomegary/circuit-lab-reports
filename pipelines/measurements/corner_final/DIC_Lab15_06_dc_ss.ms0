@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 15: 06_dc_ss'
+ cmos_low         ratio_low        ratio_static_current
+ cmos_off_low     cmos_off_high    n_junction       p_junction      
+ temper           alter#          
+  9.5462582e-10    1.0031691e-01   -3.4646625e-05   -3.9745984e-14  
+ -3.5704772e-13    4.3254000e-16   -2.6348400e-16    2.5000000e+01  
+1               

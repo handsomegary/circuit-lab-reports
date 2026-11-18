@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* dic lab 20: static dff hold both data directions'
+ q_capture        q_held           data_offset      initial_level   
+ final_level      temper           alter#          
+  8.6787912e-06    5.9324656e-06    2.0000000e-10      0.           
+  1.0000000e+00    2.7000000e+01   1               

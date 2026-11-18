@@ -1,0 +1,160 @@
+{
+  "decks": 14,
+  "cases": 415,
+  "records": [
+    {
+      "lab": 4,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab04\\01_geometry.sp",
+      "public_sha256": "60c3712903bec8b045aee4584632ec5f5bc1102c49137cc40e2746170b03346e",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab04_01_geometry.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab04_01_geometry.lis",
+      "completed": 1,
+      "expected": 1,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 4,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab04\\02_junction_capacitance.sp",
+      "public_sha256": "74eeb78279aa09629468a6a8ea822525d331c145d5581bd346faf5d16db33c3f",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab04_02_junction_capacitance.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab04_02_junction_capacitance.lis",
+      "completed": 5,
+      "expected": 5,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 4,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab04\\03_constant_capacitance.sp",
+      "public_sha256": "06848792852642d4478c7ff2c2b9f8d7540e9ea611551a0334b1be136c546fe7",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab04_03_constant_capacitance.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab04_03_constant_capacitance.lis",
+      "completed": 1,
+      "expected": 1,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 7,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab07\\01_ring_oscillators.sp",
+      "public_sha256": "e8b7e21960a12dc321d299395c5950a511bad1ca039ff0b02a896579c13564de",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab07_01_ring_oscillators.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab07_01_ring_oscillators.lis",
+      "completed": 4,
+      "expected": 4,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 7,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab07\\02_body_threshold.sp",
+      "public_sha256": "a82f407694d12872f35b4ea3cd6cd8971ec33edb063904456cc6bf6a72f6d4b1",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab07_02_body_threshold.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab07_02_body_threshold.lis",
+      "completed": 1,
+      "expected": 1,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 10,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab10\\01_size_load.sp",
+      "public_sha256": "f44d91eaa9d0c0d281de9bed9863290c3c8d935774c79c128ea3cdfa545592ae",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab10_01_size_load.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab10_01_size_load.lis",
+      "completed": 16,
+      "expected": 16,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 10,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab10\\02_slew_load.sp",
+      "public_sha256": "0517cd8144be4283a3fdb5756224e32286d8e03bea6415b550ab5d59caa8df69",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab10_02_slew_load.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab10_02_slew_load.lis",
+      "completed": 16,
+      "expected": 16,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 11,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab11\\01_driver_sizing.sp",
+      "public_sha256": "fb71906994ea896a05e3e297ed4eeef24c074db6b3e52ef72ade63077cda99c7",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab11_01_driver_sizing.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab11_01_driver_sizing.lis",
+      "completed": 45,
+      "expected": 45,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 11,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab11\\02_wire_length.sp",
+      "public_sha256": "a64f6cbe14390a5244c44803778a4c83a4d50d3cb8bf64c88c8bd1f51b86d815",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab11_02_wire_length.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab11_02_wire_length.lis",
+      "completed": 30,
+      "expected": 30,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 11,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab11\\03_coupled_wires.sp",
+      "public_sha256": "a18bd2e5ca411ac7ece5306eac8ea0d26175e65d126c6b9038bc9398c6eae874",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab11_03_coupled_wires.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab11_03_coupled_wires.lis",
+      "completed": 180,
+      "expected": 180,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 13,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab13\\01_ratio.sp",
+      "public_sha256": "46494a92b810d620146305ce1d29ed3598710d8d2c198f567f6425af083be095",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab13_01_ratio.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab13_01_ratio.lis",
+      "completed": 6,
+      "expected": 6,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 13,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab13\\02_frequency.sp",
+      "public_sha256": "a9d66c17ee72dd7a9e9940a61c6890f5bca739f2faab5b717260d36e34026d25",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab13_02_frequency.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab13_02_frequency.lis",
+      "completed": 40,
+      "expected": 40,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 13,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab13\\03_dc_power.sp",
+      "public_sha256": "f8065249039a510a6775c205f9af08bf8a458d82e66f4ebaad2a0a7be4980c3c",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab13_03_dc_power.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab13_03_dc_power.lis",
+      "completed": 1,
+      "expected": 1,
+      "errors": 0,
+      "failed": 0
+    },
+    {
+      "lab": 13,
+      "public_netlist": "outputs\\Circuit_Labs_Release\\DIC\\Lab13\\04_frequency_refinement.sp",
+      "public_sha256": "d85e383a73ffd5812bb3446f15a42b9204e931b75923f72089ec851d2cc50e60",
+      "staged_netlist": "WORKSPACE/work/dic_missing/sim/DIC_Lab13_04_frequency_refinement.sp",
+      "listing": "WORKSPACE/work/dic_missing/sim/DIC_Lab13_04_frequency_refinement.lis",
+      "completed": 69,
+      "expected": 69,
+      "errors": 0,
+      "failed": 0
+    }
+  ]
+}

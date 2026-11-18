@@ -1,0 +1,10 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 16: six four-switch chains with optional midpoint inverter'
+ highslot1        lowslot1         highslot2        lowslot2        
+ highslot3        lowslot3         highslot4        lowslot4        
+ highslot5        lowslot5         highslot6        lowslot6        
+ temper           alter#          
+  9.7211521e-01    3.8966057e-06    6.0712526e-06    9.9164860e-01  
+  9.9999818e-01    5.2325664e-03    2.5349180e-03    9.9999556e-01  
+  9.9999818e-01    3.9465730e-06    3.9329693e-06    9.9999816e-01  
+  2.5000000e+01   1               

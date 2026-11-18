@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'corner library availability check'
+ current_at_08    temper           alter#          
+ -9.179e-05         25.0000        1               

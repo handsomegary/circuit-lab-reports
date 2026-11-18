@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'case_037'
+ c_power          p_power          c_low            c_high          
+ p_low            p_high           p_ilo            temper          
+ alter#          
+  5.538319599e-05  1.060242970e-04  9.766959749e-04  3.768741985e-01
+  7.913702480e-02  5.601945536e-01 -1.099082299e-04  2.700000000e+01
+38              

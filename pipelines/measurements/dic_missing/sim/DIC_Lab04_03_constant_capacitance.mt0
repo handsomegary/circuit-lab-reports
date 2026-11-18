@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 4: constant-capacitance approximation'
+ d2_tphl          d2_tplh          d3_tphl          d3_tplh         
+ f2_tphl          f2_tplh          f3_tphl          f3_tplh         
+ temper           alter#          
+  8.485276502e-11  1.610128314e-10  7.575189412e-11  1.389993524e-10
+  8.832181675e-11  1.718016796e-10  7.829992292e-11  1.450646233e-10
+  2.700000000e+01 1               

@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 8: 01_dc_transfer'
+ vth0             vth1             vth2             temper          
+ alter#          
+  4.214154591e-01  4.825376489e-01  5.458966158e-01  2.500000000e+01
+1               

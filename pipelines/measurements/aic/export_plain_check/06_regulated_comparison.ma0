@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 01 - regulated and complete regulated cascode mirrors'
+ gr               rrout            gc               rcout           
+ phase_vsr        phase_vsc        temper           alter#          
+  2.2637882e-06    4.4173745e+05    1.8265397e-07    5.4748331e+06  
+  5.0041619e-05    1.4057272e-05    2.7000000e+01   1               

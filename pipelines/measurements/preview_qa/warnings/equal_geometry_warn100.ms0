@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 1 question 2: equal-geometry n/p comparison'
+ n_at_08          p_at_08          magnitude_ratio  temper          
+ alter#          
+ -1.1177343e-04    2.0463701e-05      0.18308198      25.00000000   
+1               

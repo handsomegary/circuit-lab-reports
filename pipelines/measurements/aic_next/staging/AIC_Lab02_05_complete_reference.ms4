@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'bias_resistor'
+ ref1             supply_i         temper           alter#          
+  2.2661664e-01    2.0308451e-04    2.7000000e+01   5               

@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'ratio_4'
+ tr_y             tf_y             tphl_y           tplh_y          
+ temper           alter#          
+  1.738323753e-10  1.134934998e-10  1.008169765e-10  1.203198330e-10
+  2.500000000e+01 2               

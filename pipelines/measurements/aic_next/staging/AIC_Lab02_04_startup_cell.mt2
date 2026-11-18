@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'startup_disconnected'
+ nx_final         inject_peak      inject_final     core_final      
+ temper           alter#          
+  5.0325991e-01    8.6934005e-11    3.8028232e-15    1.0308910e-04  
+  2.7000000e+01   3               

@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 2: threshold reference and zero-current equilibrium'
+ ref1             output_i         temper           alter#          
+  3.9865894e-01    8.0999720e-05    2.7000000e+01   1               

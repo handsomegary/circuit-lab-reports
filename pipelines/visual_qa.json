@@ -1,0 +1,250 @@
+{
+  "AIC01/en": {
+    "pdf_sha256": "e85b21a5ec010664ab2a0fa459aa537eea603de58c809aed010db9506058854d",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "AIC01/zh": {
+    "pdf_sha256": "631d0268a63c9bb32723e1df175064c86f040d37019a800d03895110d18f1292",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "AIC02/en": {
+    "pdf_sha256": "702ded34ff509381e937979429ea175fb993ad8afa258da1c41a19b6a6e0e2ae",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "AIC02/zh": {
+    "pdf_sha256": "be1d72d84b6794b5d786d83c157826cd8d65465caeb799bbd33045387705ee13",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "AIC03/en": {
+    "pdf_sha256": "7fc4128a58cf5ed2153f993785febe6ad9aa2ab04770444c630d8798926678c8",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "AIC03/zh": {
+    "pdf_sha256": "fad59fde931bf0e31bc283a0890d5a3e045462c047a4cea55143369fe25a2184",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "AIC04/en": {
+    "pdf_sha256": "e9298f4b6de776ec0f4c316c57e4c84e11332d7cd98ae2fb0cd4d8c2bdafb592",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "AIC04/zh": {
+    "pdf_sha256": "5bc040f9a1a90b4648785e76007755ee4ca07bc63fdb06e8bc5a989e1c61265c",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "AIC05/en": {
+    "pdf_sha256": "1d344a890d70d2e34eb8fbd94f7682dc5751a308d8dd7f74a314a94e2bfdd91a",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "AIC05/zh": {
+    "pdf_sha256": "e92c20b8c77efbc6762146a1ee605836e5416ed399d74389aafd02ae501e624c",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC01/en": {
+    "pdf_sha256": "450c916c06cb50b0bbe1aaabe14bfd8bd8cc15d413b4a9bbe0ddb7bb7a5a9164",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC01/zh": {
+    "pdf_sha256": "4bf4309080921e87ae137941da364d597a813eae15b0b2e6681ede3f59a558bc",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC02/en": {
+    "pdf_sha256": "4c07f97bd2e4e7a689bacde7d47058bdad79a11a964bc132741958805590c828",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC02/zh": {
+    "pdf_sha256": "0f87ad3544351364549ea973b94998ce6be3fc6b8c8b1b2ec5001728d204a65b",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC04/en": {
+    "pdf_sha256": "fdec855110dbbe90981cd540220f54d7462efb9842737a5eab0472580e1093c7",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC04/zh": {
+    "pdf_sha256": "6c398e3323c7ec3c24b9dcb5389aca731363007dc6582cf4a24e322dcad06365",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC05/en": {
+    "pdf_sha256": "7c8484870b196cb6ab752fe3499241d098ef0bf3a50f580419a25c3cab7a9a90",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC05/zh": {
+    "pdf_sha256": "23a994d2253f915c71c15696944df26acaffb967207c66fdcc603e3157b16335",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC06/en": {
+    "pdf_sha256": "e82ae2f18c181b5fd10021835990720c045e965745be3c49bea51a1428c09c15",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC06/zh": {
+    "pdf_sha256": "538f3043c68e821135dddafea112047dbf4aa87293a12c8c0402070e66fabfe0",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC07/en": {
+    "pdf_sha256": "4edc992d49bdcbfc6aec2338378f18cbb284a56ca53e3ac98843a8ecd88b4b91",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC07/zh": {
+    "pdf_sha256": "ad0071b9cd9ed937e0449986d8524b60bb791899519d68b169e348f840aa7a4e",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC08/en": {
+    "pdf_sha256": "c6bb54d3d39c3900c7676af553a63b0d3d0110c656a6b53e3f31baf6ca3e7bee",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC08/zh": {
+    "pdf_sha256": "baf0af441d5a8fb3f0a4614597b4ab0626c652f208a9b1e971d88de142e349e5",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC09/en": {
+    "pdf_sha256": "b0a23b5edfbd020d4e690420b5fcd74f766257f65083c6fdb35d07f8e535064f",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC09/zh": {
+    "pdf_sha256": "28cdbd93bc187005e3df6cdc3fb08685dc657547c58add3a4ef7090e957a7927",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC10/en": {
+    "pdf_sha256": "ccc1f66ae31801a58542a4d547f11d6b55029a0fb88a3e27f7bd118954b325e7",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC10/zh": {
+    "pdf_sha256": "be57df2f3cbc53b5f80bae2a3cb46a726f6c0cd1c0ab3bdb6ea63baeb5872d30",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC11/en": {
+    "pdf_sha256": "80eedddd2ab92936547fb18a3c849a85479da359df85528fe81624ba3f5a785f",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC11/zh": {
+    "pdf_sha256": "65bc2167b9f756be0c176301729adc4d4a8827c53adef146c52126dc756f0ca6",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC12/en": {
+    "pdf_sha256": "c5a10ffd4aafdc5b0e09c1326ec88671a081caecb324cb1f0e5743a03d05d7e5",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC12/zh": {
+    "pdf_sha256": "87ee1969d8a470201f1c27c473b98fdfd0a6521b5ed39635c733ba5b80f1f815",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC13/en": {
+    "pdf_sha256": "ff90640802e8a003945ec6309c7f98c4d192245171378a9be53aae58ec4e75d5",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC13/zh": {
+    "pdf_sha256": "60a319d4f12dca25276372791d9dc3db4e2fee45b16f161257a96c037c65b16c",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC14/en": {
+    "pdf_sha256": "de4d5a2fd9bcc0300be44f05ae7231441ee5f93079c3d492857b0ea10cfdb46a",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC14/zh": {
+    "pdf_sha256": "001e23dbb2544dcda3af08a125ef4795144c1ceef0987848d68db19bcef99d4a",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC15/en": {
+    "pdf_sha256": "c3be7e54b466f570b137f66f9d45ff811c493f0921ddeaa96f60b3954d95d7aa",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC15/zh": {
+    "pdf_sha256": "a075d43ee5cc091a3742feee7ac3f448afaa7a61f6da697d7a0214180613daef",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC16/en": {
+    "pdf_sha256": "d0f94996b724c16eb868384a5ed968571a265e32ad85a656a84eea850dfacd79",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC16/zh": {
+    "pdf_sha256": "2e2108d40156a5dc757cbf8e38310e7a8f7681f11a922dae9b53ed6c50863c20",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC17/en": {
+    "pdf_sha256": "d4dd5109ae2a0ffc6eaf0588786f5d036b6013cf0117b1bff9a3d15ca103fd57",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC17/zh": {
+    "pdf_sha256": "599945cb78e1411f17a0d8fe6d92ef5bee4d131b7bd4b8b262bf356db6e2138e",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC21/en": {
+    "pdf_sha256": "3828bb1fe11a80582c831e431da12702a629058cbdb95de8ad68896633ea9303",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC21/zh": {
+    "pdf_sha256": "b776ff3b116b4afb3100eb010ca9ad483b93865134d84b37f500657492ad2045",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC25/en": {
+    "pdf_sha256": "ce36a56345b8b80867ebfe19e069723e31bcebbaab747c80cb1bbf42c9e8974b",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC25/zh": {
+    "pdf_sha256": "aa04d316bc81e9669317aa2cb31e2b8730b14204ea249d60a2c2262028f7b41e",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC26/en": {
+    "pdf_sha256": "0eff8cfe158b27a51dd3253e9f72d8f4ceb3330eab79262f60154a9883d14d7a",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC26/zh": {
+    "pdf_sha256": "49c2c18bf63e8fca8864e7304a706e624e663b05597875cceba5d046b7133e93",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC27/en": {
+    "pdf_sha256": "9ea9811bce5e023d450bbc06383444a2281c31a27bfd8986c8715189a3b011a1",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC27/zh": {
+    "pdf_sha256": "c6944ebe28ddc7ef8bde73effb33359f5f4c583ec03c6412dcada0641a1a70f8",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC28/en": {
+    "pdf_sha256": "6744b4d886e316f0352af3241d5a3a56ee6f24cb10ed5a1e3733d24815dabd6a",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC28/zh": {
+    "pdf_sha256": "b27054acc70741b930eb56cee6c277162663b01f97b430faa5fa58e9eabe98cd",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC19/en": {
+    "pdf_sha256": "9051c00cca330034fec6e203c0486cd68ed8690fb9e87a00761d6255fca22ead",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC19/zh": {
+    "pdf_sha256": "8ec6af41e0cac7c6923a6ebd936788aca6b5c42e0c82c3769260674e5368b16f",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC20/en": {
+    "pdf_sha256": "b145d074da3cd256efe352a9ccc8f4ac6b35a4cf1ef7699ec66a87b4ea0e5894",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC20/zh": {
+    "pdf_sha256": "7f6832ed238cf36fbd43585c4b633f7eec6c7a1ae8fbc7dac5688f25958a0d07",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC22/en": {
+    "pdf_sha256": "ba63d0885988df471d15002d77e4acafb927f82d4d2d7ee1db541166fb53c607",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC22/zh": {
+    "pdf_sha256": "18a3d7747f5d59815a8d8e04f12aa4824dab1a06ce0b9cde2976c716aadbcf80",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC23/en": {
+    "pdf_sha256": "a062618ab7ed42d256eaed089db34876e81a0ad4912b16db4b538a910573d338",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC23/zh": {
+    "pdf_sha256": "c02c9d407478a2b058efccce307f575c205046762ec13d52faa133ce199ff748",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC24/en": {
+    "pdf_sha256": "fad195c6406c68c7569a6d247a3fc5486b7f010ea505947736f6a45a6e954f2b",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  },
+  "DIC24/zh": {
+    "pdf_sha256": "756132248068365d5d10deff52fb901e74395d59a9d5a490597413efec3fba48",
+    "review": "Rendered pages visually inspected; clipping, missing glyphs and problematic orphan pages addressed."
+  }
+}

@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'supply_positive'
+ gain1            gain_db          temper           alter#          
+  9.9965650e-01   -2.9841381e-03    2.7000000e+01   3               

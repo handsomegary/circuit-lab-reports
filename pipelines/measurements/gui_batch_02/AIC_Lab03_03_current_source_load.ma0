@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 3: cs current-source load width, current and length comparisons'
+ gain1            gain_db          temper           alter#          
+  1.2429956e+02    4.1889392e+01    2.7000000e+01   1               

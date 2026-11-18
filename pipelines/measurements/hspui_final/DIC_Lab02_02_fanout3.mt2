@@ -1,0 +1,14 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'edge_slow_2us'
+ tr1              tf1              tr2              tf2             
+ tr3              tf3              tr4              tf4             
+ tr5              tf5              tr6              tf6             
+ tr7              tf7              tr8              tf8             
+ rise_change_78   fall_change_78   pavg             temper          
+ alter#          
+  5.8584621e-08    6.0718772e-08    3.8990180e-09    3.8155795e-09  
+  7.1443135e-10    6.4574538e-10    3.5419330e-10    2.4494386e-10  
+  3.2258361e-10    2.0801850e-10    3.2063492e-10    2.0668915e-10  
+  3.2049919e-10    2.0662816e-10    3.2355823e-10    2.1714480e-10  
+  9.4543855e-03    4.8431482e-02    4.8086944e-07     25.00000000   
+3               

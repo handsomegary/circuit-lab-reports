@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 16: six pass-device charge and discharge cases'
+ final_nc         final_nd         final_pc         final_pd        
+ final_tc         final_td         temper           alter#          
+  6.4298571e-01    3.6594531e-06    1.0000015e+00    3.4787283e-01  
+  1.0000030e+00    3.6929150e-06    2.5000000e+01   1               

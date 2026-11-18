@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'period_1n'
+ sync_power       async_power      clock_charge     temper          
+ alter#          
+  2.6727592e-04    1.1629380e-04    7.6797460e-14    2.5000000e+01  
+7               

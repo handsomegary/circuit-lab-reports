@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 25: long evaluation with no keeper and three remedies'
+ final0           output0          final1           output1         
+ final2           output2          final3           output3         
+ temper           alter#          
+  5.3783423e-01    2.8978001e-02    9.9896256e-01    3.9221926e-06  
+  9.9896336e-01    3.9216004e-06    5.8576853e-01    1.1118421e-02  
+  2.5000000e+01   1               

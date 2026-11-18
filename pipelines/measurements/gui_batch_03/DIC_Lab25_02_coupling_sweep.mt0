@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 25: capacitive aggressor at dynamic node versus inverter output'
+ dynamic_after    inv_after        output_coupled_min
+ output_coupled_final temper           alter#          
+  8.2773915e-01    3.8455734e-05   -2.6319705e-01    4.2804730e-06  
+  2.5000000e+01   1               

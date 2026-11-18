@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 15: 03_inverter_ss'
+ tphl             tplh             pavg             temper          
+ alter#          
+  1.6856395e-10    1.4959713e-10    1.0150446e-05    1.1500000e+02  
+1               

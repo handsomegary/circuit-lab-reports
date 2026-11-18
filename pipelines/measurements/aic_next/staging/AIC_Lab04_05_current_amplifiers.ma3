@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'biased_load_ratio200'
+ gain_s           gain_c           gain_d           rin_s           
+ rin_c            rin_d            temper           alter#          
+  1.2790731e+02    1.5094064e+02    1.5117300e+03    4.0094042e+03  
+  9.1345919e+03    1.2138973e+05    2.7000000e+01   4               

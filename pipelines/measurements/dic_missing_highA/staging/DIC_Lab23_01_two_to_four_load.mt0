@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* dic lab 23: nand and nor two-to-four decoder'
+ rise_n           fall_n           power_n          rise_r          
+ fall_r           power_r          temper           alter#          
+  1.1244548e-10    1.5608394e-10    5.4837565e-05    1.5499534e-10  
+  6.2553766e-11    5.5568133e-05    2.7000000e+01   1               

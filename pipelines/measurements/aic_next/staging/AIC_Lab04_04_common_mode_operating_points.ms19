@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'common_mode_19'
+ common_mode      temper           alter#          
+  9.5000000e-01    2.7000000e+01   20              

@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'drain_030'
+ n_at_015         n_at_025         p_at_015         p_at_025        
+ temper           alter#          
+ -1.2238144e-08   -1.4316819e-07    1.2378750e-08    1.3974590e-07  
+   25.00000000    3               

@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'output_resistance_ratio20'
+ gain_s           gain_c           gain_d           rin_s           
+ rin_c            rin_d            temper           alter#          
+  1.5154585e-09    1.9331051e-09    1.5159665e-09    7.4752573e-01  
+  2.5044950e-02    6.6843585e-01    2.7000000e+01   6               

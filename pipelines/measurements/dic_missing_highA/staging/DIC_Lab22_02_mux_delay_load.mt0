@@ -1,0 +1,12 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* dic lab 22: mux data path delay versus output load'
+ rise_g           fall_g           rise_c           fall_c          
+ rise_f           fall_f           power_g          data_power_g    
+ combined_power_g power_c          data_power_c     combined_power_c
+ power_f          data_power_f     combined_power_f temper          
+ alter#          
+  3.8186314e-10    5.6061117e-10    2.3089848e-10    3.6448007e-10  
+  5.2162635e-11    9.2845923e-11    1.4466691e-05    5.3765817e-07  
+  1.5004349e-05    1.4555874e-05    7.2331328e-07    1.5279187e-05  
+  1.6746590e-07    3.8643078e-05    3.8810544e-05    2.7000000e+01  
+1               

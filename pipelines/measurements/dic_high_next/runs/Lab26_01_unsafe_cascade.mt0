@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 26: 01_unsafe_cascade'
+ output_min       output_final     temper           alter#          
+  6.5533881e-01    6.5533881e-01    2.5000000e+01   1               

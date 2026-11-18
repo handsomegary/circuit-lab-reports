@@ -21,3 +21,6 @@
 __pycache__/
 work/
 report/LaTeX/
+
+# Archived native HSPICE measurement results (small text files)
+!pipelines/measurements/**

@@ -1,0 +1,12 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 16: transmission-gate full adder truth table and delay'
+ sum0             carry0           sum1             carry1          
+ sum2             carry2           sum3             carry3          
+ sum4             carry4           sum5             carry5          
+ sum6             carry6           sum7             carry7          
+ temper           alter#          
+  3.9335503e-06    3.9335832e-06    9.9999877e-01    3.8778422e-06  
+  9.9999819e-01    3.9237306e-06    4.0566519e-06    9.9999811e-01  
+  9.9999822e-01    3.9155708e-06    3.8664388e-06    9.9999789e-01  
+  3.8797431e-06    9.9999815e-01    9.9999837e-01    9.9999786e-01  
+  2.5000000e+01   1               

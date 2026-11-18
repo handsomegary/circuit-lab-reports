@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 4: simple, cascode and differential current amplifiers'
+ gain_s           gain_c           gain_d           rin_s           
+ rin_c            rin_d            temper           alter#          
+  5.0083706e-01    5.0303584e-01    7.3112095e-01    4.0606850e+03  
+  9.1271431e+03    7.9580137e+03    2.7000000e+01   1               

@@ -1,0 +1,149 @@
+[
+  {
+    "path": "AIC/Lab02/01_two_device_divider.sp",
+    "sha256": "ee5f08a69add7ca33a54cdd0366e7e88dcc4d3f2cadf9f36a4093700537133cb",
+    "cases": 3,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab02/02_three_device_divider.sp",
+    "sha256": "ee758b24f204674c151d17ca7516d6a492ba0de649ffe0f17d309e3df0466369",
+    "cases": 3,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab02/03_threshold_self_bias.sp",
+    "sha256": "1ea9483f0b35f773c497e30434ff8d4d19c18f1308bcd50e713017f7d6d507b2",
+    "cases": 2,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab02/04_startup_cell.sp",
+    "sha256": "e2f238235184dff3a60c0ec5f423291ffacede9cd82935e9ab0a0aa1c60ede95",
+    "cases": 4,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab02/05_complete_reference.sp",
+    "sha256": "ed7f58f96b4933301723760b9d0837f0d8558417855262f401e9efaeafe32a4a",
+    "cases": 5,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab02/06_complete_startup.sp",
+    "sha256": "89363f3c2009e6c82e232e9135a6cd6b26f2a72cf62f48c6b61c4c5f1f943394",
+    "cases": 5,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab03/01_p_diode_load.sp",
+    "sha256": "bafdd253ce28179c40dddafa5a69d7af8235783499b43b6895aaaa1298cc69d8",
+    "cases": 3,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab03/02_n_diode_load.sp",
+    "sha256": "8da8648a9750a6c25ccb8d8001c50b72c8cfcafed6d99a382f1b656e469c9d26",
+    "cases": 3,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab03/03_current_source_load.sp",
+    "sha256": "e6836dff655cdb971e693dcb4ecc4e0b8a996cb762cbf8606f7309a5ca8d5a04",
+    "cases": 10,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab03/04_source_followers.sp",
+    "sha256": "416a5163603bff64c3c92122a47eb9d83606b1c5b2be326a93c1348a970c6272",
+    "cases": 4,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab03/05_small_signal_transient.sp",
+    "sha256": "bcd8b37051bdd965c71cc2b0a07d9ec4ef4c2d621faf9106d802ff3030312a52",
+    "cases": 3,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab04/01_basic_differential.sp",
+    "sha256": "04ec93b401837b7cebd14c4e2c5af19f833a5e8e709891aed937969397d706bc",
+    "cases": 7,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab04/02_load_cascode.sp",
+    "sha256": "53db7ac3badee3a259c527a6a9ded19af111a315859d609052dcb5712e01be5b",
+    "cases": 5,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab04/03_full_cascode.sp",
+    "sha256": "203048f3e922e43fa6c3c0a0441f8a0b8afda66a172d93bcb2436a1178d54af2",
+    "cases": 5,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab04/04_common_mode_operating_points.sp",
+    "sha256": "cda9fc9f4b2509a603a5bd51c0b2662e692b7128bc04261003366d22f36869fa",
+    "cases": 21,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab04/05_current_amplifiers.sp",
+    "sha256": "4409bfcd50a3158a3a448f1d23185e749469f7e3eb746ccc01901c883823d804",
+    "cases": 14,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab05/01_open_loop_compensation.sp",
+    "sha256": "0616b31e4a8b3d5d0b97df66f8f738aba58b35fd3978ebc88087a2a28c3a871d",
+    "cases": 5,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab05/02_rejection_families.sp",
+    "sha256": "491570b927b46acde056d6d58685167de38362d73f5cfd44aed741da2e81badf",
+    "cases": 4,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab05/03_unity_buffer_dc.sp",
+    "sha256": "d3c588373b1baa1b9758fcce1ad5fb6e0719d343287de440543695a0b7c9d4f3",
+    "cases": 3,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab05/04_inverting_output_swing.sp",
+    "sha256": "1fae000c84a484f6671d60cba3ff49b043d9c318f53c14f98143395a6457d1c6",
+    "cases": 3,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  },
+  {
+    "path": "AIC/Lab05/05_unity_buffer_steps.sp",
+    "sha256": "0061f401acf74fa19c9d4594df613d09df6cc45dc8386406990742607ac092c0",
+    "cases": 4,
+    "preflight_body_matches": true,
+    "preflight_concluded": true
+  }
+]

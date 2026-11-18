@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'amplitude_3m'
+ cs_pp            follower_pp      temper           alter#          
+  7.4587533e-01    1.6674748e-02    2.7000000e+01   3               

@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'coupling_15f'
+ n_peak           p_peak           n_final          p_final         
+ temper           alter#          
+  4.4334562e-04    1.0002815e+00   -1.0543345e-05    9.9998986e-01  
+  2.5000000e+01   5               

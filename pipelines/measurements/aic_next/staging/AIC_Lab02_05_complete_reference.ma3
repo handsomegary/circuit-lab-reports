@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'reference_ratio'
+ supply_to_output temper           alter#          
+  5.3493549e-02    2.7000000e+01   4               

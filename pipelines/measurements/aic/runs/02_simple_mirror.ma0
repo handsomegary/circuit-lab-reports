@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 01 - simple mirror ratios and original four output voltages'
+ gout             rout             phase_vs         temper          
+ alter#          
+  2.1534618e-06    4.6436858e+05    1.6652965e-06    2.7000000e+01  
+1               

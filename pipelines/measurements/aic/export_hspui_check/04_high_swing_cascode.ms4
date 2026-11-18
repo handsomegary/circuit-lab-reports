@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'bias_length_350u_at_1u'
+ iout             vref             vbias            vmid            
+ isupply          temper           alter#          
+  2.0132767e-06    3.9373290e-02    4.0192660e-01    3.9859250e-02  
+ -2.0000000e-06    2.7000000e+01   5               

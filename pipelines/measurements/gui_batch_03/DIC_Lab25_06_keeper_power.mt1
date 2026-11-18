@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'case_1'
+ always_power     feedback_power   always_eval_current
+ feedback_eval_current temper           alter#          
+  2.4854290e-06    1.6582330e-06    1.8481701e-06    6.6641352e-07  
+  2.5000000e+01   2               

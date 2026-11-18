@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 25: compare all three charge-sharing remedies'
+ before0          after0           before1          after1          
+ before2          after2           before3          after3          
+ temper           alter#          
+  1.1271654e+00    8.8253323e-01    1.0834957e+00    9.3498803e-01  
+  1.0831701e+00    9.3487135e-01    1.1271739e+00    1.1373370e+00  
+  2.5000000e+01   1               

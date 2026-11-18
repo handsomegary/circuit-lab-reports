@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'series_rc_2p'
+ low_before       high_final       low_final        out_max         
+ out_min          temper           alter#          
+  5.9998896e-01    7.4997856e-01    5.9999241e-01    7.8183044e-01  
+  5.2560763e-01    2.7000000e+01   3               

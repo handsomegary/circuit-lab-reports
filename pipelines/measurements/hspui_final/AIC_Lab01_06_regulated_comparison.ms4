@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'complete_bias_resized_50u'
+ irout            icout            vrr              vbr             
+ vrc              vbc              vpc              isupply         
+ temper           alter#          
+  9.9903313e-05    9.9587123e-05    4.4057739e-01    9.7456347e-01  
+  4.4057002e-01    8.8014557e-01    6.1593723e-01   -2.4832700e-04  
+  2.7000000e+01   5               

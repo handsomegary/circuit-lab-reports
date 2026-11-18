@@ -1,0 +1,146 @@
+{
+  "deck_count": 10,
+  "case_count": 188,
+  "decks": [
+    {
+      "deck": "DIC/Lab19/01_ir_drop_decoupling.sp",
+      "source_sha256": "28540eaaaf157ddaf8b45d01fa66d331a31f2ae7d04da49c6b144851f3f5a2a8",
+      "staged_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab19_01_ir_drop_decoupling.sp",
+      "staged_sha256": "d24770639cbab543d7eb0b41e85e2f34fa2ca16120229b8ee6b2e9ed103aa471",
+      "listing_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab19_01_ir_drop_decoupling.lis",
+      "listing_sha256": "1e41757ec4aaa8831baba693e3b0fd4461d844d68bd46b5bc978a976af0468ee",
+      "cases": 4,
+      "concluded": true,
+      "errors": [],
+      "model_transformation_only": true,
+      "convergence_retry_notices": 0
+    },
+    {
+      "deck": "DIC/Lab20/01_chain_pulse_filter.sp",
+      "source_sha256": "71d3938f24258f77f33ee5e74a073820208da1b56cae20269f20e1d563f791e7",
+      "staged_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab20_01_chain_pulse_filter.sp",
+      "staged_sha256": "e24b3dd381f332e8bb09338322352379f01007d90f7109bd1bd4e262e1338334",
+      "listing_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab20_01_chain_pulse_filter.lis",
+      "listing_sha256": "b8826d9cd9eda1a35b5fed441c841c472be720555d8b143a4e4ef225bd17cdd7",
+      "cases": 6,
+      "concluded": true,
+      "errors": [],
+      "model_transformation_only": true,
+      "convergence_retry_notices": 0
+    },
+    {
+      "deck": "DIC/Lab20/02_setup_sweep.sp",
+      "source_sha256": "c246216ff91695e79aede71b2bff68c77a3556ffc6f2c4f215b8e6610135cd79",
+      "staged_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab20_02_setup_sweep.sp",
+      "staged_sha256": "5715bd6a6d2c5d84b20005a3ed0039b81b6cc61cf2745a146b651503d76a5953",
+      "listing_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab20_02_setup_sweep.lis",
+      "listing_sha256": "07a270af6843b42028a9aee6a4194b4eecacfaee696276eb8d18cdca260856ff",
+      "cases": 62,
+      "concluded": true,
+      "errors": [],
+      "model_transformation_only": true,
+      "convergence_retry_notices": 0
+    },
+    {
+      "deck": "DIC/Lab20/03_hold_sweep.sp",
+      "source_sha256": "d364cec5ffa758a86e1ddd3f7934caefb7ee447df44893eb379cb43948f2bb71",
+      "staged_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab20_03_hold_sweep.sp",
+      "staged_sha256": "f13d2f284606b4f122d17ec28e8b9bd0ffb7dd9e545a6647f53b5febac001119",
+      "listing_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab20_03_hold_sweep.lis",
+      "listing_sha256": "5a1e824d5100dfd9b2a381aa84f88129bdb59156da27ba9016754140308bfdae",
+      "cases": 102,
+      "concluded": true,
+      "errors": [],
+      "model_transformation_only": true,
+      "convergence_retry_notices": 0
+    },
+    {
+      "deck": "DIC/Lab22/01_mux_truth_table.sp",
+      "source_sha256": "0f963dc9dcf5d7b136f2a4b0b1db537634204470e820278ee89d1d5c6991d774",
+      "staged_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab22_01_mux_truth_table.sp",
+      "staged_sha256": "d09ed627845a5f3ea467964618fed6473f733d18b51cfdecff7aa89cf0b7a0a5",
+      "listing_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab22_01_mux_truth_table.lis",
+      "listing_sha256": "1348ab5b7b7cca2dc93d7d68c53053eaf46918cbe1485bb376309873ca443400",
+      "cases": 1,
+      "concluded": true,
+      "errors": [],
+      "model_transformation_only": true,
+      "convergence_retry_notices": 0
+    },
+    {
+      "deck": "DIC/Lab22/02_mux_delay_load.sp",
+      "source_sha256": "6006c4ac9d7e7c78b7304f3aaa715315f9921defad431f3ba53c97d49553c442",
+      "staged_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab22_02_mux_delay_load.sp",
+      "staged_sha256": "4491ea060a5cc3a031bb856853fdc9f872689c144926670cc81eaca3df549e43",
+      "listing_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab22_02_mux_delay_load.lis",
+      "listing_sha256": "efcb0491908532eee348672f6ee421ce4ec3e0fe171345539ca069d8cd9eaa82",
+      "cases": 5,
+      "concluded": true,
+      "errors": [],
+      "model_transformation_only": true,
+      "convergence_retry_notices": 0
+    },
+    {
+      "deck": "DIC/Lab23/01_two_to_four_load.sp",
+      "source_sha256": "6cdc2ba8adfaf05d3c2e9344c16c53d31ba25f88e37f7f6e613e0ce9d41a95d1",
+      "staged_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab23_01_two_to_four_load.sp",
+      "staged_sha256": "c30a889d4a57aa9f1ca41539f4815d7a3fbc4af8aed4162a533713987fe8d999",
+      "listing_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab23_01_two_to_four_load.lis",
+      "listing_sha256": "ce983409ddf5756cdc092db8d25f3f5d3db641aac059c321a7ce284c14964448",
+      "cases": 4,
+      "concluded": true,
+      "errors": [],
+      "model_transformation_only": true,
+      "convergence_retry_notices": 0
+    },
+    {
+      "deck": "DIC/Lab23/02_three_to_eight_truth.sp",
+      "source_sha256": "37d3363654b2e4abe68a0ca1ac35a12e7d18ef20526a802866529713d9cfce93",
+      "staged_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab23_02_three_to_eight_truth.sp",
+      "staged_sha256": "4a54301dff7e7baef086bafdb9e83eb1da771ee089038a6a1c92d43923115020",
+      "listing_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab23_02_three_to_eight_truth.lis",
+      "listing_sha256": "4844347c157ebe520ab083cd77dd5d38e43d72aa0860c961a15d99a372df754e",
+      "cases": 1,
+      "concluded": true,
+      "errors": [],
+      "model_transformation_only": true,
+      "convergence_retry_notices": 3
+    },
+    {
+      "deck": "DIC/Lab23/03_eight_to_256_truth.sp",
+      "source_sha256": "8bc96b4a917f0651881a055d308154beccdbcc8c3123e846a6c6ac2f3dd91691",
+      "staged_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab23_03_eight_to_256_truth.sp",
+      "staged_sha256": "e1b7e907712a61ee6757301cb6bf46f4cac9df623fbe2b6a6b8fbf43e265c1d2",
+      "listing_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab23_03_eight_to_256_truth.lis",
+      "listing_sha256": "fc17f418ff6448e9e22cc9664dca1e10c3c126a1cdbc6a36ee7b942b184249c4",
+      "cases": 1,
+      "concluded": true,
+      "errors": [],
+      "model_transformation_only": true,
+      "convergence_retry_notices": 255
+    },
+    {
+      "deck": "DIC/Lab23/04_eight_to_256_timing.sp",
+      "source_sha256": "91b1569dcc8403b3c58c1e115e272414db22a6ab94db1eb00ac7088b823c9902",
+      "staged_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab23_04_eight_to_256_timing.sp",
+      "staged_sha256": "7d8c8ebecfdb0cf80a826b28ce89e2ba0567cc3285d445421a5e9803205f5165",
+      "listing_path": "WORKSPACE/work/dic_missing_highA/staging/DIC_Lab23_04_eight_to_256_timing.lis",
+      "listing_sha256": "8ecfaa5315b79c633ab0882cfa7d6889eaf8b19a6db558f555474f1eb552b2cd",
+      "cases": 2,
+      "concluded": true,
+      "errors": [],
+      "model_transformation_only": true,
+      "convergence_retry_notices": 0
+    }
+  ],
+  "truth_checks": {
+    "MUX_three_architectures": 192,
+    "decoder3": 8,
+    "decoder8_two_architectures": 512
+  },
+  "limits": [
+    "Lab23 500fF fails 16 of 18 architecture/time-slot rail checks at 2 ns per code.",
+    "DFF timing is 10 ps grid nominal functional capture/hold threshold, not library characterization.",
+    "TG tree power comparison includes data-source energy separately; ideal select energy excluded."
+  ]
+}

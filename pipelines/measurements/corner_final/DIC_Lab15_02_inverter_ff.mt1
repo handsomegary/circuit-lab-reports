@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'process_only_at_nominal'
+ tphl             tplh             pavg             temper          
+ alter#          
+  7.0574956e-11    8.3609006e-11    1.2239737e-05    2.5000000e+01  
+2               

@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 1 step 1: diode-connected nmos'
+ source_current_at_limit temper           alter#          
+ -1.9849086e-04     25.00000000    1               

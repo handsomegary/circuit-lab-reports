@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'hot'
+ supply_to_output temper           alter#          
+  4.7271855e-01    8.5000000e+01   3               

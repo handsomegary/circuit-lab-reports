@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 25: keeper contention and power at 500 mhz'
+ always_power     feedback_power   always_eval_current
+ feedback_eval_current temper           alter#          
+  1.6126300e-05    1.6544853e-05    9.9346819e-06    8.2380840e-06  
+  2.5000000e+01   1               

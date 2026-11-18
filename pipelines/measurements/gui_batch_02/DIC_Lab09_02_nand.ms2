@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'stack_2p5'
+ vth_both         vth_a            vth_b            temper          
+ alter#          
+  5.362148506e-01  4.814349309e-01  4.725981028e-01  2.500000000e+01
+3               

@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 01 - conventional cascode mirror'
+ gout             rout             phase_vs         temper          
+ alter#          
+  2.2255161e-06    4.4933398e+05    3.5520450e-05    2.7000000e+01  
+1               

@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 24: 03_period_refinement'
+ sync_power       async_power      clock_charge     temper          
+ alter#          
+  5.2812829e-05    1.9741707e-05    7.7488029e-14    2.5000000e+01  
+1               

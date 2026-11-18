@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'data_1_to_0_offset_p000'
+ q_capture        q_held           data_offset      initial_level   
+ final_level      temper           alter#          
+  9.9996907e-01    9.9997415e-01      0.             1.0000000e+00  
+    0.             2.7000000e+01   82              

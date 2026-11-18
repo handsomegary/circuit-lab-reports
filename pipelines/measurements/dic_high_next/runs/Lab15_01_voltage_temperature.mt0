@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 15: voltage and temperature delay/power'
+ tphl             tplh             pavg             temper          
+ alter#          
+  9.0807181e-11    1.2062023e-10    3.4744726e-06    2.5000000e+01  
+1               

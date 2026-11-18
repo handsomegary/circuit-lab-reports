@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 26: 03_speed_comparison'
+ n_delay          p_delay          temper           alter#          
+  3.6771996e-10    6.5732781e-10    2.5000000e+01   1               

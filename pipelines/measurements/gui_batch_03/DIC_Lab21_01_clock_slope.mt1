@@ -1,0 +1,12 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'case_1'
+ direct2          direct3          direct4          direct5         
+ direct6          direct7          direct8          direct9         
+ buffer2          buffer3          buffer4          buffer5         
+ buffer6          buffer7          buffer8          buffer9         
+ temper           alter#          
+  3.9678304e-06    9.9999797e-01    3.9242192e-06    9.9999812e-01  
+  3.9267076e-06    9.9999827e-01    3.8744732e-06    9.9999797e-01  
+  4.0532102e-06    9.9999942e-01    4.0318643e-06    9.9999973e-01  
+  4.0199598e-06    9.9999895e-01    4.0451687e-06    9.9999939e-01  
+  2.5000000e+01   2               

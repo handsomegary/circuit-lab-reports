@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'slow_ramp'
+ nx_final         inject_peak      inject_final     core_final      
+ temper           alter#          
+  5.0326796e-01    3.9783963e-09    3.8009368e-09    1.0309802e-04  
+  2.7000000e+01   2               

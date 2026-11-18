@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'width_times_4'
+ source_current_at_limit temper           alter#          
+  4.5196328e-04     25.00000000    3               

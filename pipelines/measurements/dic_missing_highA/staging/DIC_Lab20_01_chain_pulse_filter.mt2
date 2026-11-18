@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'width_50p'
+ output_peak      output_low       temper           alter#          
+  8.9407960e-03   -7.5424963e-03    2.7000000e+01   3               

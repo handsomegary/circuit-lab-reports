@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'cascode_lower_rout_1000u'
+ gain_s           gain_c           gain_d           rin_s           
+ rin_c            rin_d            temper           alter#          
+  2.5168923e-09    2.6000548e-09    2.5168807e-09    7.6999104e-02  
+  8.0419814e-02    1.4499709e-01    2.7000000e+01   12              

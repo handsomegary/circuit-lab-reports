@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 25: gate-position dependence of parasitic coupling'
+ upper_before     upper_after      lower_before     lower_after     
+ temper           alter#          
+  1.1391199e+00    9.4524417e-01    1.1256408e+00    1.0763899e+00  
+  2.5000000e+01   1               

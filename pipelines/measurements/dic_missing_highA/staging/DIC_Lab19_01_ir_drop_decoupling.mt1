@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'decoupling_10p'
+ rail_min         rail_max         supply_min       ground_max      
+ rp_peak          rn_peak          power            temper          
+ alter#          
+  9.3485740e-01    9.9715882e-01    9.6743008e-01    3.2572682e-02  
+  3.2569922e-02    3.2572682e-02    9.9302325e-03    2.7000000e+01  
+2               

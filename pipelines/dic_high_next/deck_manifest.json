@@ -1,0 +1,238 @@
+[
+  {
+    "lab": 15,
+    "deck": "01_voltage_temperature.sp",
+    "title": "Voltage and temperature delay/power",
+    "pdf_pages": "62-64",
+    "specs": [
+      "Step1: inverter delay and power under the three stated environmental pairs"
+    ]
+  },
+  {
+    "lab": 15,
+    "deck": "02_off_state_current.sp",
+    "title": "Off-state supply current versus temperature",
+    "pdf_pages": "62-64",
+    "specs": [
+      "Q1: mixed process corners in ratioed logic, discussed",
+      "Q2: leakage versus environment; current is aggregate, not isolated junction leakage"
+    ]
+  },
+  {
+    "lab": 16,
+    "deck": "01_charge_discharge.sp",
+    "title": "Six pass-device charge and discharge cases",
+    "pdf_pages": "65-73",
+    "specs": [
+      "Step1: six cases in Tables16.1-16.2, final voltage"
+    ]
+  },
+  {
+    "lab": 16,
+    "deck": "02_six_delay_chains.sp",
+    "title": "Six four-switch chains with optional midpoint inverter",
+    "pdf_pages": "67-72",
+    "specs": [
+      "Step2: all six chains, every node and both propagation directions",
+      "Table16.3: case6 first two PMOS lengths follow printed .6um entries"
+    ]
+  },
+  {
+    "lab": 16,
+    "deck": "03_dc_current_paths.sp",
+    "title": "Charging and discharging current trajectories",
+    "pdf_pages": "72",
+    "specs": [
+      "Q1: DC current trajectories while output voltage changes"
+    ]
+  },
+  {
+    "lab": 16,
+    "deck": "04_hold_leakage.sp",
+    "title": "Transmission-gate floating-node retention",
+    "pdf_pages": "72",
+    "specs": [
+      "Q2: microsecond off-state retention and minimum refresh limit"
+    ]
+  },
+  {
+    "lab": 16,
+    "deck": "05_tg_full_adder.sp",
+    "title": "Transmission-gate full adder truth table and delay",
+    "pdf_pages": "72-73",
+    "specs": [
+      "Q3: all eight full-adder truth states and Sum/Carry delays",
+      "Mux-equivalent TG implementation with explicit output buffering"
+    ]
+  },
+  {
+    "lab": 17,
+    "deck": "01_hazards.sp",
+    "title": "Static dynamic and weak-keeper DFF with data hazards",
+    "pdf_pages": "74-77",
+    "specs": [
+      "Step1: latch transparency, edge capture and between-edge hazards",
+      "Fig17.1c weak keeper comparison"
+    ]
+  },
+  {
+    "lab": 17,
+    "deck": "02_noise.sp",
+    "title": "Equal capacitive noise at master and slave storage nodes",
+    "pdf_pages": "76-77",
+    "specs": [
+      "Step2: identical coupled noise, static versus dynamic immunity"
+    ]
+  },
+  {
+    "lab": 17,
+    "deck": "03_frequency_sweep.sp",
+    "title": "Sampled capture versus clock period",
+    "pdf_pages": "75-77",
+    "specs": [
+      "Step1: estimate maximum operating frequency using a declared finite sweep"
+    ]
+  },
+  {
+    "lab": 17,
+    "deck": "04_async_reset.sp",
+    "title": "Static DFF with asynchronous output reset",
+    "pdf_pages": "77",
+    "specs": [
+      "Q4: output reset low during both clock phases",
+      "Q1-3: overlap, clock slope and setup/hold relation, discussed"
+    ]
+  },
+  {
+    "lab": 21,
+    "deck": "01_clock_slope.sp",
+    "title": "Direct and two-inverter clock slew versus period",
+    "pdf_pages": "85-87",
+    "specs": [
+      "Steps1-2: increasing direct/buffered slew and highest tested correct clock rate"
+    ]
+  },
+  {
+    "lab": 21,
+    "deck": "02_three_stage_skew.sp",
+    "title": "Three buffered-clock DFFs with signed clock skew",
+    "pdf_pages": "87",
+    "specs": [
+      "Step3: first two DFFs share clock, third clock leads/lags; raw source edges fixed .2ns"
+    ]
+  },
+  {
+    "lab": 21,
+    "deck": "03_low_frequency_retention.sp",
+    "title": "Dynamic DFF at microsecond clock periods",
+    "pdf_pages": "87",
+    "specs": [
+      "Q1: floating storage nodes at very low clock rate",
+      "Q2-3: edge restoration versus clock skew and race-safe topology discussion"
+    ]
+  },
+  {
+    "lab": 25,
+    "deck": "01_charge_sharing.sp",
+    "title": "Charge redistribution in a dynamic NAND",
+    "pdf_pages": "99-100,105",
+    "specs": [
+      "Step1: input A rises during evaluation while B remains low"
+    ]
+  },
+  {
+    "lab": 25,
+    "deck": "02_coupling_sweep.sp",
+    "title": "Capacitive aggressor at dynamic node versus inverter output",
+    "pdf_pages": "100-101,105",
+    "specs": [
+      "Steps2-4: sweep coupling size, locate inverter error, move same capacitance to driven output"
+    ]
+  },
+  {
+    "lab": 25,
+    "deck": "03_parasitic_coupling.sp",
+    "title": "Gate-position dependence of parasitic coupling",
+    "pdf_pages": "101-102,105-106",
+    "specs": [
+      "Steps5-6: Fig25.3d/e upper-versus-lower transistor gate coupling"
+    ]
+  },
+  {
+    "lab": 25,
+    "deck": "04_leakage_and_restoration.sp",
+    "title": "Long evaluation with no keeper and three remedies",
+    "pdf_pages": "103-106",
+    "specs": [
+      "Step7: leakage during long evaluation",
+      "Step8: always-on and feedback keepers improve retention",
+      "Step9: internal precharge alone does not actively restore output"
+    ]
+  },
+  {
+    "lab": 25,
+    "deck": "05_sharing_remedies.sp",
+    "title": "Compare all three charge-sharing remedies",
+    "pdf_pages": "103-106",
+    "specs": [
+      "Steps8-9: sharing under always-on keeper, feedback keeper and internal precharge"
+    ]
+  },
+  {
+    "lab": 25,
+    "deck": "06_keeper_power.sp",
+    "title": "Keeper contention and power at 500 MHz",
+    "pdf_pages": "105-106",
+    "specs": [
+      "Step8: compare average power at handout500MHz and settled evaluate-state contention at50MHz"
+    ]
+  },
+  {
+    "lab": 27,
+    "deck": "01_four_topologies.sp",
+    "title": "Four two-phase circuits with overlap and fixed-input tests",
+    "pdf_pages": "111-114",
+    "specs": [
+      "Step1: all four circuits with and without clock skew",
+      "Q1: each topology with input fixed low and high",
+      "Q2: compare glitch magnitude and race protection of b/c/d"
+    ]
+  },
+  {
+    "lab": 28,
+    "deck": "01_latch_equivalence.sp",
+    "title": "Full and simplified N/P latches",
+    "pdf_pages": "115-117",
+    "specs": [
+      "Step1: Fig28.1a versus c and b versus d, compare behavior and differences"
+    ]
+  },
+  {
+    "lab": 28,
+    "deck": "02_doubled_clocked_inverters.sp",
+    "title": "Double N/P clocked inverters during hold",
+    "pdf_pages": "116-117",
+    "specs": [
+      "Step2: changing input during hold does not change intended output state"
+    ]
+  },
+  {
+    "lab": 28,
+    "deck": "03_two_stage_dff.sp",
+    "title": "Two cascaded full and reduced-stage DFFs",
+    "pdf_pages": "118",
+    "specs": [
+      "Q1: combine P then N latch into positive-edge DFF, cascade two",
+      "Q2: remove first stage, cascade two and examine internal-node limitations"
+    ]
+  },
+  {
+    "lab": 28,
+    "deck": "04_hold_phase_input_changes.sp",
+    "title": "Input changes during the reduced first-stage hold phase",
+    "pdf_pages": "118",
+    "specs": [
+      "Q2: distinguish reduced internal-node erasure from output-state retention"
+    ]
+  }
+]

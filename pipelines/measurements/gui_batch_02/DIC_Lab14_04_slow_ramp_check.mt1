@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'slower_ramp'
+ vp_yi            vm_yi            vp_ys1           vm_ys1          
+ vp_ys2           vm_ys2           vp_ys3           vm_ys3          
+ vp_ya            vm_ya            temper           alter#          
+  4.826308244e-01  4.824421075e-01  5.928091349e-01  3.960746690e-01
+  6.340942607e-01  3.564498441e-01  6.565283159e-01  3.337859332e-01
+  6.324538908e-01  8.734049179e-02  2.500000000e+01 2               

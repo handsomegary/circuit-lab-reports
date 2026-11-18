@@ -1,0 +1,10 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 17: static dynamic and weak-keeper dff with data hazards'
+ qs_0             qs_1             qs_2             qs_3            
+ qd_0             qd_1             qd_2             qd_3            
+ qk_0             qk_1             qk_2             qk_3            
+ temper           alter#          
+  9.9998183e-01    3.6236808e-06    4.6613536e-06    4.3541791e-06  
+  9.9999606e-01    3.8142638e-06    4.0509434e-06    3.9570981e-06  
+  9.9989577e-01    8.0925618e-06    4.5493415e-06    3.1788632e-06  
+  2.5000000e+01   1               

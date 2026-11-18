@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 21: dynamic dff at microsecond clock periods'
+ x_hold           z_hold           temper           alter#          
+  5.8268513e-01    8.4037894e-02    2.5000000e+01   1               

@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'gain100'
+ iout             vgate            vmid             temper          
+ alter#          
+  7.8141238e-05    8.0877405e-01    1.4841206e-01    2.7000000e+01  
+3               

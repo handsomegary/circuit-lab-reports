@@ -1,0 +1,4 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'comparison_7'
+ gain1            gain_db          temper           alter#          
+  2.2709763e+02    4.7124252e+01    2.7000000e+01   8               

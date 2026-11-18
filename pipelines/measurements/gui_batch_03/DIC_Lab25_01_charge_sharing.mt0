@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 25: charge redistribution in a dynamic nand'
+ before           after            internal_after   temper          
+ alter#          
+  1.1728049e+00    7.0101021e-01    6.2239522e-01    2.5000000e+01  
+1               

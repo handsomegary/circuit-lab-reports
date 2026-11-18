@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* dic lab 23: hierarchical decoder transition comparison'
+ rise_t           fall_t           power_t          rise_h          
+ fall_h           power_h          temper           alter#          
+  7.4472084e-10    5.9030272e-10    5.2269025e-04    1.3602156e-09  
+  9.2494005e-10    2.3878384e-04    2.7000000e+01   1               

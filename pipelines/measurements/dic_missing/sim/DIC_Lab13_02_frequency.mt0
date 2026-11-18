@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 13: 02_frequency'
+ c_power          p_power          c_low            c_high          
+ p_low            p_high           p_ilo            temper          
+ alter#          
+  9.683897040e-07  2.734071685e-05  3.749970066e-06  9.999961696e-01
+  7.550190483e-02  9.999963180e-01 -5.454854684e-05  2.700000000e+01
+1               

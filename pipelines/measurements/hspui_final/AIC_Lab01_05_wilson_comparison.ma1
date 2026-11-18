@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'lower_current_10u'
+ gw               rwout            gm               rmout           
+ gq               rqout            phase_vsw        phase_vsm       
+ phase_vsq        temper           alter#          
+  2.0241469e-08    4.9403528e+07    2.1052129e-08    4.7501133e+07  
+  2.3713679e-05    4.2169754e+04    2.4711622e-04    2.4264141e-04  
+  3.2720336e-07    2.7000000e+01   2               

@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'case_081'
+ tin              tout             delay            temper          
+ alter#          
+  2.005000000e-08  2.093646586e-08  8.864658596e-10  2.700000000e+01
+82              

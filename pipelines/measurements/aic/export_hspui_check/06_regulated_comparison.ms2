@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'lower_current_1u'
+ irout            icout            vrr              vbr             
+ vrc              vbc              vpc              isupply         
+ temper           alter#          
+  1.9985810e-06    1.9985219e-06    3.5342229e-01    7.8186855e-01  
+  3.5342039e-01    7.8209339e-01    6.3831605e-01   -5.0165668e-06  
+  2.7000000e+01   3               

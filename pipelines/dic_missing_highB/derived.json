@@ -1,0 +1,150 @@
+{
+  "frequency": [
+    {
+      "period_ns": 20,
+      "frequency_MHz": 50.0,
+      "sync_correct": 260,
+      "async_correct": 260,
+      "samples": 260,
+      "sync_power_uW": 16.508486,
+      "async_power_uW": 6.0340111
+    },
+    {
+      "period_ns": 10,
+      "frequency_MHz": 100.0,
+      "sync_correct": 260,
+      "async_correct": 260,
+      "samples": 260,
+      "sync_power_uW": 32.086656,
+      "async_power_uW": 11.911349
+    },
+    {
+      "period_ns": 6,
+      "frequency_MHz": 166.66666666666666,
+      "sync_correct": 260,
+      "async_correct": 260,
+      "samples": 260,
+      "sync_power_uW": 52.812829,
+      "async_power_uW": 19.741707
+    },
+    {
+      "period_ns": 5,
+      "frequency_MHz": 200.0,
+      "sync_correct": 260,
+      "async_correct": 228,
+      "samples": 260,
+      "sync_power_uW": 63.178972,
+      "async_power_uW": 23.658084
+    },
+    {
+      "period_ns": 3,
+      "frequency_MHz": 333.3333333333333,
+      "sync_correct": 260,
+      "async_correct": 195,
+      "samples": 260,
+      "sync_power_uW": 103.08724,
+      "async_power_uW": 39.356256
+    },
+    {
+      "period_ns": 2.5,
+      "frequency_MHz": 400.0,
+      "sync_correct": 130,
+      "async_correct": 130,
+      "samples": 260,
+      "sync_power_uW": 124.39271000000001,
+      "async_power_uW": 47.214743
+    },
+    {
+      "period_ns": 2,
+      "frequency_MHz": 500.0,
+      "sync_correct": 130,
+      "async_correct": 130,
+      "samples": 260,
+      "sync_power_uW": 157.70285,
+      "async_power_uW": 58.923809
+    },
+    {
+      "period_ns": 1.5,
+      "frequency_MHz": 666.6666666666666,
+      "sync_correct": 0,
+      "async_correct": 97,
+      "samples": 260,
+      "sync_power_uW": 253.04198,
+      "async_power_uW": 78.318601
+    },
+    {
+      "period_ns": 1,
+      "frequency_MHz": 1000.0,
+      "sync_correct": 0,
+      "async_correct": 0,
+      "samples": 260,
+      "sync_power_uW": 267.27592,
+      "async_power_uW": 116.29379999999999
+    }
+  ],
+  "clock_loading": {
+    "sync_power": 1.6511429e-05,
+    "async_power": 6.0345121e-06,
+    "sync_clock_charge": 6.0449642e-14,
+    "async_clock_charge": 1.347376e-14,
+    "temper": 25.0,
+    "alter#": 1.0
+  },
+  "transistor_counts": {
+    "counter_flipflop": 22,
+    "clock_gating_cell": 18,
+    "sync_counter": 414,
+    "async_counter": 98,
+    "all_transistors": 512
+  },
+  "transition_delays": [
+    {
+      "architecture": "ripple",
+      "clock_index": 9,
+      "node": "a0",
+      "delay_from_source_edge_ps": 532.3536784755921
+    },
+    {
+      "architecture": "ripple",
+      "clock_index": 9,
+      "node": "a1",
+      "delay_from_source_edge_ps": 1181.672940543444
+    },
+    {
+      "architecture": "ripple",
+      "clock_index": 9,
+      "node": "a2",
+      "delay_from_source_edge_ps": 1816.1821526504443
+    },
+    {
+      "architecture": "ripple",
+      "clock_index": 9,
+      "node": "a3",
+      "delay_from_source_edge_ps": 2263.3289127694775
+    },
+    {
+      "architecture": "synchronous",
+      "clock_index": 33,
+      "node": "b0",
+      "delay_from_source_edge_ps": 1142.3203281728245
+    },
+    {
+      "architecture": "synchronous",
+      "clock_index": 33,
+      "node": "b2",
+      "delay_from_source_edge_ps": 1011.861381206233
+    },
+    {
+      "architecture": "synchronous",
+      "clock_index": 33,
+      "node": "b3",
+      "delay_from_source_edge_ps": 1012.0551546257293
+    },
+    {
+      "architecture": "synchronous",
+      "clock_index": 33,
+      "node": "b4",
+      "delay_from_source_edge_ps": 1012.3777481595065
+    }
+  ]
+}

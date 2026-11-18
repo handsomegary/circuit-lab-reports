@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'slow_ramp'
+ ref_final        ref_last_avg     supply_avg       temper          
+ alter#          
+  4.4410377e-01    4.4410376e-01    3.1195205e-04    2.7000000e+01  
+2               

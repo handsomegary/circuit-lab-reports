@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* dic lab 22: four-to-one tg and static mux truth table'
+ power_g          data_power_g     combined_power_g power_c         
+ data_power_c     combined_power_c power_f          data_power_f    
+ combined_power_f temper           alter#          
+  2.3885805e-05    2.9434050e-06    2.6829210e-05    1.9059785e-05  
+  2.3113042e-06    2.1371089e-05   -1.7195893e-06    6.6417212e-05  
+  6.4697622e-05    2.7000000e+01   1               

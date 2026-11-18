@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 17: static dff with asynchronous output reset'
+ q_reset_high_phase q_reset_low_phase q_recapture     
+ temper           alter#          
+  1.9758688e-04    3.3946131e-06    9.9997853e-01    2.5000000e+01  
+1               

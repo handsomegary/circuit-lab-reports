@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 01 - high-swing cascode and bias-device sizing'
+ gout             rout             phase_vs         temper          
+ alter#          
+  9.9785967e-08    1.0021449e+07    2.5512623e-05    2.7000000e+01  
+1               

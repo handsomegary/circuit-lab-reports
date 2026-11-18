@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'resized_50u_w30u'
+ iwout            imout            iqout            vrw             
+ vrm              vrq              isupply          temper          
+ alter#          
+  9.8142678e-05    9.9834353e-05    1.8181622e-05    9.7344201e-01  
+  9.7579254e-01    2.8089734e+00   -1.5000000e-04    2.7000000e+01  
+4               

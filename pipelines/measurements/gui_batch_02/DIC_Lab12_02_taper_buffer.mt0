@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 12: 02_taper_buffer'
+ tr_n5            tf_n5            tphl_n5          tplh_n5         
+ temper           alter#          
+  1.209867682e-09  6.313222850e-10  9.313664366e-10  1.185209567e-09
+  2.500000000e+01 1               

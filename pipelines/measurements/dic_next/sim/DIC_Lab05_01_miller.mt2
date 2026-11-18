@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'coupling_5f'
+ ymax             ymin             overshoot        undershoot      
+ tr_y             tf_y             temper           alter#          
+  1.188795967e+00 -1.827210686e-01  1.887959667e-01  1.827210686e-01
+  1.894945504e-10  1.339457720e-10  2.500000000e+01 3               

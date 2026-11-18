@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '* aic lab 01 - wilson, modified wilson and diode-swapped variant'
+ gw               rwout            gm               rmout           
+ gq               rqout            phase_vsw        phase_vsm       
+ phase_vsq        temper           alter#          
+  8.7796865e-06    1.1389928e+05    1.0407075e-05    9.6088480e+04  
+  2.5522233e-05    3.9181525e+04    3.5319358e-05    3.4085198e-05  
+  3.3314592e-07    2.7000000e+01   1               

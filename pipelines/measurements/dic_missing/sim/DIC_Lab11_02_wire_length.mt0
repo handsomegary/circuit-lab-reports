@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'dic lab 11: 02_wire_length'
+ t1_tphl          t1_tplh          t2_tphl          t2_tplh         
+ t3_r             t3_f             temper           alter#          
+  1.537970702e-10  2.843203075e-10  1.749513622e-10  3.062158034e-10
+  3.489627234e-10  4.690230293e-10  2.700000000e+01 1               
